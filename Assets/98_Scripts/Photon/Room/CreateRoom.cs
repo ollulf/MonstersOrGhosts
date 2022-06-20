@@ -8,6 +8,7 @@ using Photon.Realtime;
 public class CreateRoom :MonoBehaviourPunCallbacks
 {
     [SerializeField] private Text roomName;
+    [SerializeField] private LobbyCanvas lobbyCanvas;
 
     public void OnClickCreateRoom()
     {
@@ -20,11 +21,13 @@ public class CreateRoom :MonoBehaviourPunCallbacks
         options.MaxPlayers = 6;
 
         PhotonNetwork.JoinOrCreateRoom(roomName.text, options, TypedLobby.Default);
+
     }
 
     public override void OnCreatedRoom()
     {
         Debug.Log("Created Room" + this);
+        lobbyCanvas.CreateOrJoinRoom();
     }
     public override void OnCreateRoomFailed(short returnCode, string message)
     {

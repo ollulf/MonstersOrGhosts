@@ -10,6 +10,7 @@ public class TestConnection : MonoBehaviourPunCallbacks
     void Start()
     {
         Debug.Log("Connecting to Server");
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = MasterManager.GameSetting.NickName;
         PhotonNetwork.GameVersion = MasterManager.GameSetting.GameVersion;
         PhotonNetwork.ConnectUsingSettings();
@@ -19,7 +20,10 @@ public class TestConnection : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to Server");
         Debug.Log(PhotonNetwork.LocalPlayer.NickName);
-        PhotonNetwork.JoinLobby();
+        if (!PhotonNetwork.InLobby)
+        {
+            PhotonNetwork.JoinLobby();
+        }
     }
 
     public override void OnDisconnected(DisconnectCause cause)

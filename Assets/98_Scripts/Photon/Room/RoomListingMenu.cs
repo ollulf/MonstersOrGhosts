@@ -19,7 +19,7 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
             if (info.RemovedFromList)
             {
                 int index = listings.FindIndex(x => x.GetComponent<RoomListing>().RoomInfo.Name == info.Name);
-                if(index != -1)
+                if (index != -1)
                 {
                     Destroy(listings[index]);
                     listings.RemoveAt(index);
@@ -27,13 +27,28 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
             }
             else
             {
-                GameObject listing = Instantiate(roomListing, content);
-                if (listing != null)
+                int index = listings.FindIndex(x => x.GetComponent<RoomListing>().RoomInfo.Name == info.Name);
+                if (index == -1)
                 {
-                    listing.GetComponent<RoomListing>().SetRoomName(info);
-                    listings.Add(listing);
+                    GameObject listing = Instantiate(roomListing, content);
+                    if (listing != null)
+                    {
+                        listing.GetComponent<RoomListing>().SetRoomName(info);
+                        listings.Add(listing);
+                    }
+                }
+                else
+                {
+
                 }
             }
         }
+    }
+
+    public override void OnJoinedRoom()
+    {
+        transform.root.GetComponent<LobbyCanvas>().CreateOrJoinRoom();
+        content.DestroyChildren();
+        listings.Clear();
     }
 }

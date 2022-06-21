@@ -11,6 +11,8 @@ public class TestConnection : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connecting to Server");
         PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.SendRate = 20;
+        PhotonNetwork.SerializationRate = 5;
         PhotonNetwork.NickName = MasterManager.GameSetting.NickName;
         PhotonNetwork.GameVersion = MasterManager.GameSetting.GameVersion;
         PhotonNetwork.ConnectUsingSettings();

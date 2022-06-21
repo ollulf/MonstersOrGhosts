@@ -10,6 +10,21 @@ public class TestInstantiate : MonoBehaviour
         Vector2 offset = Random.insideUnitCircle * 3f;
         Vector3 position = new Vector3(transform.position.x + offset.x, 0.76f, transform.position.z + offset.y);
 
-        PhotonNetwork.Instantiate("TestMultiplayerPlayer", position, Quaternion.identity);
+        Charakter newCharakter = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];
+
+        switch (newCharakter)
+        {
+            case Charakter.Bird:
+                {
+                    PhotonNetwork.Instantiate("Bird", position, transform.rotation);
+                    break;
+                }
+            case Charakter.Fish:
+                {
+                    PhotonNetwork.Instantiate("Fish", position, Quaternion.Euler(90,0,0));
+                    break;
+                }
+        }
+
     }
 }

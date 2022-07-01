@@ -24,6 +24,21 @@ public class TestInstantiate : MonoBehaviour
                     PhotonNetwork.Instantiate("Fish", position, Quaternion.Euler(90,0,0));
                     break;
                 }
+            case Charakter.Bacteria:
+                {
+                    PhotonNetwork.Instantiate("Bacteria", position, transform.rotation);
+                    break;
+                }
+            case Charakter.Deer:
+                {
+                    PhotonNetwork.Instantiate("Deer", position, Quaternion.Euler(90, 0, 0));
+                    break;
+                }
+            case Charakter.Machine:
+                {
+                    PhotonNetwork.Instantiate("Machine", position, transform.rotation);
+                    break;
+                }
         }
 
     }

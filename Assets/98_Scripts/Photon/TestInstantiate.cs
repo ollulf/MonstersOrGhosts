@@ -5,10 +5,12 @@ using Photon.Pun;
 
 public class TestInstantiate : MonoBehaviour
 {
+    [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition;
+
     private void Awake()
     {
-        Vector2 offset = Random.insideUnitCircle * 3f;
-        Vector3 position = new Vector3(transform.position.x + offset.x, 0.76f, transform.position.z + offset.y);
+
+
 
         Charakter newCharakter = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];
 
@@ -16,27 +18,27 @@ public class TestInstantiate : MonoBehaviour
         {
             case Charakter.Bird:
                 {
-                    PhotonNetwork.Instantiate("Bird", position, transform.rotation);
+                    PhotonNetwork.Instantiate("Bird", birdPosition.position, transform.rotation);
                     break;
                 }
             case Charakter.Fish:
                 {
-                    PhotonNetwork.Instantiate("Fish", position, Quaternion.Euler(90,0,0));
+                    PhotonNetwork.Instantiate("Fish", fishPosition.position, Quaternion.Euler(90, 0, 0));
                     break;
                 }
             case Charakter.Bacteria:
                 {
-                    PhotonNetwork.Instantiate("Bacteria", position, transform.rotation);
+                    PhotonNetwork.Instantiate("Bacteria", bacteriaPosition.position, transform.rotation);
                     break;
                 }
             case Charakter.Deer:
                 {
-                    PhotonNetwork.Instantiate("Deer", position, Quaternion.Euler(90, 0, 0));
+                    PhotonNetwork.Instantiate("Deer", deerPosition.position, Quaternion.Euler(90, 0, 0));
                     break;
                 }
             case Charakter.Machine:
                 {
-                    PhotonNetwork.Instantiate("Machine", position, transform.rotation);
+                    PhotonNetwork.Instantiate("Machine", machinePosition.position, transform.rotation);
                     break;
                 }
         }

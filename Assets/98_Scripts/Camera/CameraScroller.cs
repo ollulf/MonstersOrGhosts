@@ -6,26 +6,34 @@ using NaughtyAttributes;
 
 public class CameraScroller : MonoBehaviourPun
 {
-    [SerializeField] Transform farPosition, closePosition;
+    [SerializeField] Transform farPosition, closePosition, animalSight;
     [SerializeField] AnimationCurve acellerationCurve;
     [SerializeField] float speed = 1f;
 
-    [ShowNonSerializedField ] private float distance, currentDistance = 1;
+    [ShowNonSerializedField] private float distance, currentDistance = 1;
+
+    private int index;
+    private Vector3 fakeVector;
+    private Quaternion fakeAngle;
+    [ShowNonSerializedField] private bool fin;
+
     private void Awake()
     {
-        if (!base.photonView.IsMine) 
+        index = 1;
+        fin = false;
+        if (!base.photonView.IsMine)
             Destroy(this.gameObject);
     }
 
     void Start()
     {
-        gameObject.transform.position = farPosition.position;
+        gameObject.transform.position = closePosition.position;
         distance = Vector3.Distance(farPosition.position, closePosition.position);
     }
 
-    public void SetClosePosition(Transform newTransform)
+    public void SetFarPosition(Transform newTransform)
     {
-        closePosition = newTransform;
+        farPosition = newTransform;
     }
 
     // Update is called once per frame
@@ -36,23 +44,64 @@ public class CameraScroller : MonoBehaviourPun
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) //forward
         {
-            currentDistance = Mathf.Clamp(currentDistance -= distance * speed * Time.deltaTime, 0, 1);
+            index--;
+            if (index < 0)
+            {
+                index = 0;
+            }
         }
 
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f) //backwards
         {
-           currentDistance = Mathf.Clamp(currentDistance += distance * speed * Time.deltaTime, 0, 1);
-           
+            index++;
+            if (index > 2)
+            {
+                index = 2;
+            }
         }
+        IndexChecker();
+    }
 
-        Vector3 rotation = new Vector3 (
-            Mathf.LerpAngle(farPosition.transform.eulerAngles.x, closePosition.transform.eulerAngles.x, t),
-            Mathf.LerpAngle(farPosition.transform.eulerAngles.y, closePosition.transform.eulerAngles.y, t),
-            Mathf.LerpAngle(farPosition.transform.eulerAngles.z, closePosition.transform.eulerAngles.z, t));
-        gameObject.transform.eulerAngles = rotation;
+    private void IndexChecker()
+    {
+        switch (index)
+        {
+            case 0:
+                {
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, animalSight.position, speed * Time.deltaTime);
+                    Vector3 rotation = new Vector3(
+    Mathf.LerpAngle(gameObject.transform.eulerAngles.x, animalSight.eulerAngles.x, speed * Time.deltaTime),
+    Mathf.LerpAngle(gameObject.transform.eulerAngles.y, animalSight.eulerAngles.y, speed * Time.deltaTime),
+    Mathf.LerpAngle(gameObject.transform.eulerAngles.z, animalSight.eulerAngles.z, speed * Time.deltaTime));
+                    gameObject.transform.eulerAngles = rotation;
+                    break;
+                }
+            case 1:
+                {
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, closePosition.position, speed * Time.deltaTime);
+                    Vector3 rotation = new Vector3(
+Mathf.LerpAngle(gameObject.transform.eulerAngles.x, closePosition.eulerAngles.x, speed * Time.deltaTime),
+Mathf.LerpAngle(gameObject.transform.eulerAngles.y, closePosition.eulerAngles.y, speed * Time.deltaTime),
+Mathf.LerpAngle(gameObject.transform.eulerAngles.z, closePosition.eulerAngles.z, speed * Time.deltaTime));
+                    gameObject.transform.eulerAngles = rotation;
+                    fin = false;
+                    break;
+                }
+            case 2:
+                {
+                    if(!fin)
+                    {
+                        fin = true;
+                        fakeVector = closePosition.position ;
+                        fakeAngle = Quaternion.Euler(closePosition.eulerAngles);
+                    }
+                    fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, speed * Time.deltaTime);
+                    fakeAngle.eulerAngles = Vector3.Lerp(fakeAngle.eulerAngles, farPosition.eulerAngles, speed * Time.deltaTime);
 
-        Vector3 position = Vector3.Lerp(farPosition.position, closePosition.position, t);
-        gameObject.transform.position = position;
-
+                    gameObject.transform.position = fakeVector;
+                    gameObject.transform.eulerAngles = fakeAngle.eulerAngles;
+                    break;
+                }
+        }
     }
 }

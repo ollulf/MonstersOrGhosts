@@ -23,6 +23,11 @@ public class CameraScroller : MonoBehaviourPun
         distance = Vector3.Distance(farPosition.position, closePosition.position);
     }
 
+    public void SetClosePosition(Transform newTransform)
+    {
+        closePosition = newTransform;
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -9,8 +9,7 @@ public class TestInstantiate : MonoBehaviour
 
     private void Awake()
     {
-
-
+        Camera mainCamera = Camera.main;
 
         Charakter newCharakter = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];
 
@@ -18,27 +17,32 @@ public class TestInstantiate : MonoBehaviour
         {
             case Charakter.Bird:
                 {
-                    PhotonNetwork.Instantiate("Bird", birdPosition.position, transform.rotation);
+                    GameObject bird = PhotonNetwork.Instantiate("Bird", birdPosition.position, transform.rotation);
+                    mainCamera.GetComponent<CameraScroller>().SetClosePosition(bird.transform);
                     break;
                 }
             case Charakter.Fish:
                 {
-                    PhotonNetwork.Instantiate("Fish", fishPosition.position, Quaternion.Euler(90, 0, 0));
+                    GameObject fish = PhotonNetwork.Instantiate("Fish", fishPosition.position, Quaternion.Euler(90, 0, 0));
+                    mainCamera.GetComponent<CameraScroller>().SetClosePosition(fish.transform);
                     break;
                 }
             case Charakter.Bacteria:
                 {
-                    PhotonNetwork.Instantiate("Bacteria", bacteriaPosition.position, transform.rotation);
+                    GameObject bacteria = PhotonNetwork.Instantiate("Bacteria", bacteriaPosition.position, transform.rotation);
+                    mainCamera.GetComponent<CameraScroller>().SetClosePosition(bacteria.transform);
                     break;
                 }
             case Charakter.Deer:
                 {
-                    PhotonNetwork.Instantiate("Deer", deerPosition.position, Quaternion.Euler(90, 0, 0));
+                    GameObject deer = PhotonNetwork.Instantiate("Deer", deerPosition.position, Quaternion.Euler(90, 0, 0));
+                    mainCamera.GetComponent<CameraScroller>().SetClosePosition(deer.transform);
                     break;
                 }
             case Charakter.Machine:
                 {
-                    PhotonNetwork.Instantiate("Machine", machinePosition.position, transform.rotation);
+                    GameObject machine = PhotonNetwork.Instantiate("Machine", machinePosition.position, transform.rotation);
+                    mainCamera.GetComponent<CameraScroller>().SetClosePosition(machine.transform);
                     break;
                 }
         }

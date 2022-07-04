@@ -44,7 +44,7 @@ public class FishMovment : MonoBehaviourPun
 
     private void TurnFish()
     {
-        transform.Rotate(0, 0, movement.x * turnspeed);
+        transform.Rotate(0, 0, -movement.x * turnspeed);
     }
 
     public void FeedFish(int newFood)

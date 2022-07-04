@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class BirdFood : MonoBehaviour
 {
@@ -19,6 +20,6 @@ public class BirdFood : MonoBehaviour
     internal void DestroySelf()
     {
         Instantiate(collectEffect, transform.position, transform.rotation);
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 }

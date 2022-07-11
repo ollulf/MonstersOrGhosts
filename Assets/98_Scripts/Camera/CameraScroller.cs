@@ -36,6 +36,11 @@ public class CameraScroller : MonoBehaviourPun
         farPosition = newTransform;
     }
 
+    public void SetIndex(int newInt)
+    {
+        index = newInt;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -89,10 +94,10 @@ Mathf.LerpAngle(gameObject.transform.eulerAngles.z, closePosition.eulerAngles.z,
                 }
             case 2:
                 {
-                    if(!fin)
+                    if (!fin)
                     {
                         fin = true;
-                        fakeVector = closePosition.position ;
+                        fakeVector = closePosition.position;
                         fakeAngle = Quaternion.Euler(closePosition.eulerAngles);
                     }
                     fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, speed * Time.deltaTime);

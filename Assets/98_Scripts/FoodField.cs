@@ -22,7 +22,7 @@ public class FoodField : MonoBehaviour
         if(other.GetComponent<FishMovment>())
         {
             Debug.LogError(timer.CurrentTime);
-            timer.RunningTimer();
+            timer.Tick();
             if (timer.CurrentTime <= 0)
             {
                 foodValue -= 1;

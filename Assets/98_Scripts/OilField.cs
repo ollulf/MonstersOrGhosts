@@ -18,7 +18,7 @@ public class OilField : MonoBehaviour
     {
         if (other.GetComponent<FishMovment>())
         {
-            timer.RunningTimer();
+            timer.Tick();
             if (timer.CurrentTime <= 0)
             {
                 other.GetComponent<FishMovment>().PoisenFish(poisenPerTimer);

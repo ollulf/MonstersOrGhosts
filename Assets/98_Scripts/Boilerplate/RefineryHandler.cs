@@ -2,27 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using NaughtyAttributes;
 
 public class RefineryHandler : Singleton<RefineryHandler>
 {
-    [SerializeField] private List<GameObject> refinery;
+    private List<GameObject> refinery;
+
+    [SerializeField] private int moneyPerRefinery, refineryCost;
+
+    private int money;
 
     [SerializeField] private float chanceOfOilSpawning, timerforSpawn;
     private Timer timer;
-    private GameObject oilField;
-    void Start()
+
+    public static int Money { get => Instance.money;}
+    public static int RefineryCost { get => Instance.refineryCost;}
+
+    //private GameObject oilField;
+
+    public override void Awake()
     {
+        base.Awake();
+        refinery = new List<GameObject>();
         timer = new Timer();
         timer.SetStartTime(timerforSpawn);
+
+    }
+
+    public static void GetRefineries(GameObject newRefinery)
+    {
+        Instance.refinery.Add(newRefinery);
+    }
+
+    public static void SetMoney()
+    {
+        Instance.money -= Instance.refineryCost;
     }
 
     void Update()
     {
-        timer.RunningTimer();
+        timer.Tick();
         if(timer.CurrentTime <= 0)
         {
-            Destroy(oilField);
-            oilField = PhotonNetwork.Instantiate("FishGame/Oil", new Vector3(refinery[0].transform.position.x + Random.Range(-5f, 5f), Random.Range(0f, 8f), refinery[0].transform.position.z + Random.Range(-5f, 5f)), Quaternion.identity);
+            if (refinery.Count > 0)
+            {
+                for (int i = 0; i < refinery.Count; i++)
+                {
+                    //Destroy(oilField);
+                    GameObject oilField = PhotonNetwork.Instantiate("FishGame/Oil", new Vector3(refinery[i].transform.position.x + Random.Range(-5f, 5f), Random.Range(0f, 8f), refinery[i].transform.position.z + Random.Range(-5f, 5f)), Quaternion.identity);
+                }
+                money += moneyPerRefinery * refinery.Count;
+
+            }
             timer.ResetTimer();
         }
     }

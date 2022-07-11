@@ -14,7 +14,7 @@ public class Timer
         currentTime = time;
     }
 
-    public void RunningTimer()
+    public void Tick()
     {
         currentTime -= Time.deltaTime;
     }

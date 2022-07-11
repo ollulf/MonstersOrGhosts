@@ -40,7 +40,7 @@ public class TestInstantiate : MonoBehaviour
                 }
             case Charakter.Machine:
                 {
-                    GameObject machine = PhotonNetwork.Instantiate("Machine", machinePosition.position, transform.rotation);
+                    GameObject machine = PhotonNetwork.Instantiate("MachineGame/Machine", machinePosition.position, transform.rotation);
                     machine.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition);
                     break;
                 }

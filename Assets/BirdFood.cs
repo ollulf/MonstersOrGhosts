@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class BirdFood : MonoBehaviour
+public class BirdFood : MonoBehaviourPun
 {
     public int foodAmount = 15;
     private SphereCollider clickCollider;
 
-    [SerializeField] GameObject collectEffect;
-    // Start is called before the first frame update
     void Start()
     {
         clickCollider = GetComponent<SphereCollider>();
@@ -19,7 +17,8 @@ public class BirdFood : MonoBehaviour
 
     internal void DestroySelf()
     {
-        Instantiate(collectEffect, transform.position, transform.rotation);
+        base.photonView.RequestOwnership();
+        PhotonNetwork.Instantiate("BirdGame/CollectEffect", transform.position, transform.rotation);
         PhotonNetwork.Destroy(gameObject);
     }
 }

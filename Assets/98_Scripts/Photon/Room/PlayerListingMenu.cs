@@ -8,12 +8,16 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField] private Transform content;
     [SerializeField] private GameObject playerListing;
+    [SerializeField] private GameObject button;
 
     private List<GameObject> listings = new List<GameObject>();
+
+
 
     public override void OnEnable()
     {
         base.OnEnable();
+        SetInActive();
         GetAllPlayer();
     }
 
@@ -84,6 +88,14 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
             PhotonNetwork.LoadLevel(1);
+        }
+    }
+
+    private void SetInActive()
+    {
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            button.SetActive(false);
         }
     }
 }

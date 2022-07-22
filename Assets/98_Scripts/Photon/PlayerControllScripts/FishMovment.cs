@@ -14,6 +14,13 @@ public class FishMovment : MonoBehaviourPun
     [ShowNonSerializedField] private int poisen;
     [ShowNonSerializedField] private int population = 1;
 
+    public int Population { get => population;}
+
+    private void Start()
+    {
+        PlayerBaseDataHandler.SetFish(this);
+    }
+
     void Update()
     {
         if (base.photonView.IsMine)

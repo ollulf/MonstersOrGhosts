@@ -13,13 +13,14 @@ public class BirdController : MonoBehaviour
     [ShowNonSerializedField]private int birdFood= 0, birdPopulation = 100;
     [SerializeField] public TextMeshProUGUI foodAmount, population;
 
+    public int BirdPopulation { get => birdPopulation;}
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        PlayerBaseDataHandler.SetBird(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckforClick();

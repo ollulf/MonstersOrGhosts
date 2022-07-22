@@ -17,6 +17,7 @@ public class RefineryHandler : Singleton<RefineryHandler>
 
     public static int Money { get => Instance.money;}
     public static int RefineryCost { get => Instance.refineryCost;}
+    public static List<GameObject> Refinery { get => Instance.refinery;}
 
     //private GameObject oilField;
 
@@ -29,7 +30,7 @@ public class RefineryHandler : Singleton<RefineryHandler>
 
     }
 
-    public static void GetRefineries(GameObject newRefinery)
+    public static void AddRefineries(GameObject newRefinery)
     {
         Instance.refinery.Add(newRefinery);
     }

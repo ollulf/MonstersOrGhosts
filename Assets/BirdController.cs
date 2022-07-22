@@ -4,8 +4,9 @@ using UnityEngine;
 using NaughtyAttributes;
 using System;
 using TMPro;
+using Photon.Pun;
 
-public class BirdController : MonoBehaviour
+public class BirdController : MonoBehaviourPun
 {
     public int amounOfFoodNeededForNest = 10;
     public int birdPopulationIncreaseAmount = 10;
@@ -50,6 +51,7 @@ public class BirdController : MonoBehaviour
 
                 if (hit.collider.gameObject.layer == 6) //6 = BirdFood Layer
                 {
+                    hit.collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
                     if (TryAddToBirdFood(hit.collider.gameObject.GetComponent<BirdFood>().foodAmount))
                         hit.collider.gameObject.GetComponentInChildren<BirdFood>().DestroySelf();
 
@@ -60,10 +62,9 @@ public class BirdController : MonoBehaviour
                         hit.collider.gameObject.GetComponentInChildren<BreedingSpot>().DestroySelf();
                 }
             }
-
         }
     }
-
+    
     public bool TryAddToBirdFood(int amount)
     {
         birdFood += amount;

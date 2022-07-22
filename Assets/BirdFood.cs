@@ -14,10 +14,8 @@ public class BirdFood : MonoBehaviourPun
         clickCollider = GetComponent<SphereCollider>();
     }
 
-
     internal void DestroySelf()
     {
-        base.photonView.RequestOwnership();
         PhotonNetwork.Instantiate("BirdGame/CollectEffect", transform.position, transform.rotation);
         PhotonNetwork.Destroy(gameObject);
     }

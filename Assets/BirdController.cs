@@ -4,8 +4,9 @@ using UnityEngine;
 using NaughtyAttributes;
 using System;
 using TMPro;
+using Photon.Pun;
 
-public class BirdController : MonoBehaviour
+public class BirdController : MonoBehaviourPun
 {
     public int amounOfFoodNeededForNest = 10;
     public int birdPopulationIncreaseAmount = 10;
@@ -13,13 +14,14 @@ public class BirdController : MonoBehaviour
     [ShowNonSerializedField]private int birdFood= 0, birdPopulation = 100;
     [SerializeField] public TextMeshProUGUI foodAmount, population;
 
+    public int BirdPopulation { get => birdPopulation;}
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        PlayerBaseDataHandler.SetBird(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckforClick();
@@ -49,6 +51,7 @@ public class BirdController : MonoBehaviour
 
                 if (hit.collider.gameObject.layer == 6) //6 = BirdFood Layer
                 {
+                    hit.collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
                     if (TryAddToBirdFood(hit.collider.gameObject.GetComponent<BirdFood>().foodAmount))
                         hit.collider.gameObject.GetComponentInChildren<BirdFood>().DestroySelf();
 
@@ -59,10 +62,9 @@ public class BirdController : MonoBehaviour
                         hit.collider.gameObject.GetComponentInChildren<BreedingSpot>().DestroySelf();
                 }
             }
-
         }
     }
-
+    
     public bool TryAddToBirdFood(int amount)
     {
         birdFood += amount;

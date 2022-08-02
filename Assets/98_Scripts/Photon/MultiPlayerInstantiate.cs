@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class TestInstantiate : MonoBehaviour
+public class MultiPlayerInstantiate : MonoBehaviour
 {
     [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition, overViewPosition;
 

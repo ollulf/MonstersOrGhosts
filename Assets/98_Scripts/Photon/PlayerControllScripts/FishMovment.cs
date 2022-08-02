@@ -12,13 +12,14 @@ public class FishMovment : MonoBehaviourPun
 
     [ShowNonSerializedField] private int food;
     [ShowNonSerializedField] private int poisen;
-    [ShowNonSerializedField] private int population = 1;
+    [ShowNonSerializedField] private int population = 30;
 
     public int Population { get => population;}
 
     private void Start()
     {
         PlayerBaseDataHandler.SetFish(this);
+        PlayerBaseDataHandler.RaiseBirdFood(population);
     }
 
     void Update()
@@ -61,6 +62,7 @@ public class FishMovment : MonoBehaviourPun
         {
             food = 0;
             population += 1;
+            PlayerBaseDataHandler.RaiseBirdFood(1);
         }
     }
 
@@ -70,12 +72,13 @@ public class FishMovment : MonoBehaviourPun
         if (poisen >= 100)
         {
             poisen = 0;
-            population -= 1;
+            ReducePopulation(1);
+            PlayerBaseDataHandler.ReduceBirdFood(1);
         }
+    }
 
-        if (population <= 0)
-        {
-            PhotonNetwork.Destroy(gameObject);
-        }
+    public void ReducePopulation(int newPop)
+    {
+        population -= newPop;
     }
 }

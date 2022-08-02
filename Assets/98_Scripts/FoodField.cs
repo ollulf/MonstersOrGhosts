@@ -22,7 +22,6 @@ public class FoodField : MonoBehaviourPun
     {
         if(other.GetComponent<FishMovment>())
         {
-            Debug.LogError(timer.CurrentTime);
             timer.Tick();
             if (timer.CurrentTime <= 0)
             {

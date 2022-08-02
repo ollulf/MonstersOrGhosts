@@ -52,7 +52,7 @@ public class BirdController : MonoBehaviourPun
                 if (hit.collider.gameObject.layer == 6) //6 = BirdFood Layer
                 {
                     hit.collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-                    if (TryAddToBirdFood(hit.collider.gameObject.GetComponent<BirdFood>().foodAmount))
+                    if (TryAddToBirdFood(hit.collider.gameObject.GetComponent<BirdFood>().FoodAmount))
                         hit.collider.gameObject.GetComponentInChildren<BirdFood>().DestroySelf();
 
                 }

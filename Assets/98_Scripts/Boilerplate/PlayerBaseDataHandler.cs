@@ -5,7 +5,7 @@ using NaughtyAttributes;
 
 public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
 {
-    private int deerPopulation, oilRigs, fisherBoats;
+    private int deerPopulation, oilRigs, fisherBoats, birdFood;
     private float temperature;
 
     private FishMovment fishPopulation;
@@ -43,4 +43,19 @@ public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
     {
         return RefineryHandler.Refinery.Count;
     }
-}
+
+    public static void RaiseBirdFood(int newFood)
+    {
+        Instance.birdFood += newFood;
+    }
+
+    public static void ReduceBirdFood(int newFood)
+    {
+        Instance.birdFood -= newFood;
+    }
+
+    public static int GetBirdFood()
+    {
+        return Instance.birdFood;
+    }
+} 

@@ -11,7 +11,7 @@ public class OilField : MonoBehaviour
     private void Start()
     {
         timer = new Timer();
-        timer.SetStartTime(setTimer);
+        timer.SetStartTime(setTimer, true);
     }
 
     private void OnTriggerStay(Collider other)

@@ -26,7 +26,7 @@ public class DeerController : MonoBehaviour
     void Start()
     {
         timer = new Timer();
-        timer.SetStartTime(timeUntilTick);
+        timer.SetStartTime(timeUntilTick, true);
     }
     private void FixedUpdate()
     {

@@ -15,12 +15,12 @@ public class FoodField : MonoBehaviourPun
     private void Start()
     {
         timer = new Timer();
-        timer.SetStartTime(setTimer);
+        timer.SetStartTime(setTimer, true);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.GetComponent<FishMovment>())
+        if (other.GetComponent<FishMovment>())
         {
             timer.Tick();
             if (timer.CurrentTime <= 0)

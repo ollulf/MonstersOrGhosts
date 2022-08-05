@@ -15,9 +15,9 @@ public class RefineryHandler : Singleton<RefineryHandler>
     [SerializeField] private float chanceOfOilSpawning, timerforSpawn;
     private Timer timer;
 
-    public static int Money { get => Instance.money;}
-    public static int RefineryCost { get => Instance.refineryCost;}
-    public static List<GameObject> Refinery { get => Instance.refinery;}
+    public static int Money { get => Instance.money; }
+    public static int RefineryCost { get => Instance.refineryCost; }
+    public static List<GameObject> Refinery { get => Instance.refinery; }
 
     //private GameObject oilField;
 
@@ -26,7 +26,7 @@ public class RefineryHandler : Singleton<RefineryHandler>
         base.Awake();
         refinery = new List<GameObject>();
         timer = new Timer();
-        timer.SetStartTime(timerforSpawn);
+        timer.SetStartTime(timerforSpawn, true);
 
     }
 
@@ -43,7 +43,7 @@ public class RefineryHandler : Singleton<RefineryHandler>
     void Update()
     {
         timer.Tick();
-        if(timer.CurrentTime <= 0)
+        if (timer.CurrentTime <= 0)
         {
             if (refinery.Count > 0)
             {

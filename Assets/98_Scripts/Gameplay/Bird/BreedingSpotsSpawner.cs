@@ -14,7 +14,7 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
     void Start()
     {
         timer = new Timer();
-        timer.SetStartTime(spawningTime);
+        timer.SetStartTime(spawningTime, true);
         breedingSpots = new List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {

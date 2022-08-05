@@ -6,21 +6,49 @@ public class Timer
 {
     private float currentTime, startTime;
 
+    private bool backwards;
+
     public float CurrentTime { get => currentTime;}
 
-    public void SetStartTime(float time)
+    public void SetStartTime(float time, bool backward)
     {
-        startTime = time;
-        currentTime = time;
+        if (backward)
+        {
+            startTime = time;
+            currentTime = time;
+            backwards = backward;
+        }
+        else
+        {
+            startTime = 0;
+            currentTime = 0;
+            backwards = backward;
+        }
     }
 
     public void Tick()
     {
-        currentTime -= Time.deltaTime;
+        if (backwards)
+        {
+            currentTime -= Time.deltaTime;
+        }
+        else
+        {
+            currentTime += Time.deltaTime;
+        }
     }
+
+
 
     public void ResetTimer()
     {
-        currentTime = startTime;
+        if (backwards)
+        {
+            currentTime = startTime;
+        }
+        else
+        {
+            currentTime = 0;
+        }
     }
 }

@@ -17,7 +17,7 @@ public class OilCraterGenerator : MonoBehaviour
     {
         index = 0;
         timer = new Timer();
-        timer.SetStartTime(spawningTime);
+        timer.SetStartTime(spawningTime, true);
     }
 
     void Update()

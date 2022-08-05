@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
+using System;
+using TMPro;
 
 public class FishMovment : MonoBehaviourPun
 {
@@ -13,6 +15,8 @@ public class FishMovment : MonoBehaviourPun
     [ShowNonSerializedField] private int food;
     [ShowNonSerializedField] private int poisen;
     [ShowNonSerializedField] private int population = 30;
+
+    [SerializeField] private TextMeshProUGUI populationTextField;
 
     public int Population { get => population;}
 
@@ -32,11 +36,18 @@ public class FishMovment : MonoBehaviourPun
 
     private void FixedUpdate()
     {
+        UpdateUI();
+
         if (base.photonView.IsMine)
         {
             MovePlayer();
             TurnFish();
         }
+    }
+
+    private void UpdateUI()
+    {
+        populationTextField.text = "" + population;
     }
 
     private void GetAxis()

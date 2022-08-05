@@ -5,11 +5,11 @@ using NaughtyAttributes;
 
 public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
 {
-    private int deerPopulation, oilRigs, fisherBoats, birdFood;
-    private float temperature;
+    [ShowNonSerializedField] private int deerPopulation, oilRigs, fisherBoats, birdFood;
+    [ShowNonSerializedField] private float temperature;
 
-    private FishMovment fishPopulation;
-    private BirdController birdPopulation;
+    [ShowNonSerializedField] private FishMovment fishPopulation;
+    [ShowNonSerializedField] private BirdController birdPopulation;
 
     public static FishMovment FishPopulation { get => Instance.fishPopulation;}
     public static BirdController BirdPopulation { get => Instance.birdPopulation;}

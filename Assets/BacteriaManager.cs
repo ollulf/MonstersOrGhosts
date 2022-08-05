@@ -29,7 +29,7 @@ public class BacteriaManager : MonoBehaviour
         //Debug.Log("Press " + currendKey);
 
         timer = new Timer();
-        timer.SetStartTime(time);
+        timer.SetStartTime(time, true);
     }
 
   

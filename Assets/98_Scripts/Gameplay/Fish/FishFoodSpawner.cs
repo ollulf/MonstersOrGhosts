@@ -13,9 +13,9 @@ public class FishFoodSpawner : MonoBehaviourPun
     void Start()
     {
         timer = new Timer();
-        timer.SetStartTime(spawningTime);
+        timer.SetStartTime(spawningTime, true);
         fishFoodSpawner = new List<Transform>();
-        for(int i = 0;i < transform.childCount;i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             fishFoodSpawner.Add(transform.GetChild(i));
         }
@@ -24,7 +24,7 @@ public class FishFoodSpawner : MonoBehaviourPun
     void Update()
     {
         timer.Tick();
-        if(timer.CurrentTime <= 0)
+        if (timer.CurrentTime <= 0)
         {
             SpawningFood();
             timer.ResetTimer();
@@ -33,11 +33,11 @@ public class FishFoodSpawner : MonoBehaviourPun
 
     private void SpawningFood()
     {
-        foreach(Transform child in fishFoodSpawner)
+        foreach (Transform child in fishFoodSpawner)
         {
-            if(child.childCount == 0)
+            if (child.childCount == 0)
             {
-                GameObject food  = PhotonNetwork.Instantiate("FishGame/Food", child.transform.position, Quaternion.identity);
+                GameObject food = PhotonNetwork.Instantiate("FishGame/Food", child.transform.position, Quaternion.identity);
                 food.transform.parent = child.transform;
                 return;
             }

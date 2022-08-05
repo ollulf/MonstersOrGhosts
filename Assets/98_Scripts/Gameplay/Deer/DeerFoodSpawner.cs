@@ -16,7 +16,7 @@ public class DeerFoodSpawner : MonoBehaviourPun
     void Start()
     {
         timer = new Timer();
-        timer.SetStartTime(spawningTime);
+        timer.SetStartTime(spawningTime, true);
         foodSpot = new List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {

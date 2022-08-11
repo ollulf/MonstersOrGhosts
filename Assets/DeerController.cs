@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using TMPro;
+using System;
 
 public class DeerController : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class DeerController : MonoBehaviour
     public float eatAmount = 50;
     public float populationGrowth = 50;
     public float timeUntilTick = 1f;
+
+    [SerializeField] private TextMeshProUGUI populationTF, co2TF, hungerTF;
 
     [ShowNonSerializedField]private DeerFood currentFoodSource;
     private Timer timer;
@@ -71,6 +75,8 @@ public class DeerController : MonoBehaviour
 
     private void TickUpdate()
     {
+        UpdateUI();
+
         if (!currentFoodSource) 
         {
             currentFoodSource = null;
@@ -94,6 +100,13 @@ public class DeerController : MonoBehaviour
             if(hunger > hungerValueUntilStarving)
                 hunger = hungerValueUntilStarving;
         }
+    }
+
+    private void UpdateUI()
+    {
+        populationTF.text = "" + population;
+        hungerTF.text = "" + hunger;
+        co2TF.text = "" + co2Compressed;
     }
 
     private void CheckTimer()

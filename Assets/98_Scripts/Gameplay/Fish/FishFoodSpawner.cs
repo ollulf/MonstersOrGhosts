@@ -37,7 +37,7 @@ public class FishFoodSpawner : MonoBehaviourPun
         {
             if (child.childCount == 0)
             {
-                GameObject food = PhotonNetwork.Instantiate("FishGame/Food", child.transform.position, Quaternion.identity);
+                GameObject food = PhotonNetwork.Instantiate("FishGame/FishFood", child.transform.position, Quaternion.identity);
                 food.transform.parent = child.transform;
                 return;
             }

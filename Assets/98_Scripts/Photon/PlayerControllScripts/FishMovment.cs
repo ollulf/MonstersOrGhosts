@@ -22,6 +22,7 @@ public class FishMovment : MonoBehaviourPun
 
     public int Population { get => population;}
 
+
     private void Start()
     {
         PlayerBaseDataHandler.SetFish(this);
@@ -93,8 +94,11 @@ public class FishMovment : MonoBehaviourPun
         if (poisen >= 100)
         {
             poisen = 0;
-            ReducePopulation(1);
-            PlayerBaseDataHandler.ReduceBirdFood(1);
+            if (population > 0)
+            {
+                ReducePopulation(1);
+                PlayerBaseDataHandler.ReduceBirdFood(1);
+            }
         }
     }
 
@@ -111,4 +115,8 @@ public class FishMovment : MonoBehaviourPun
         flocki.transform.parent = GlobalFlock.Instance.transform;
     }
 
+    public bool CheckMovement()
+    {
+        return movement.y > 0;
+    }
 }

@@ -7,15 +7,13 @@ using Photon.Pun;
 public class Flocking : MonoBehaviourPun
 {
     private Transform target;
-    [SerializeField] private float radius, nighbourDistance, maxDistance, minDistance, rotationSpeed;
+    [SerializeField] private float radius, nighbourDistance, maxDistance, rotationSpeed;
     [SerializeField] private Transform motherFlock;
     private List<Transform> flock;
 
     private Vector3 direction;
 
     private float speedX, speedY, speedZ;
-
-    bool turning;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +27,6 @@ public class Flocking : MonoBehaviourPun
     // Update is called once per frame
     void FixedUpdate()
     {
-        CheckList();
-
         direction = target.position - transform.position;
 
 
@@ -45,6 +41,14 @@ public class Flocking : MonoBehaviourPun
                 ApplyRules();
             }
         }
+
+        if(PlayerBaseDataHandler.FishPopulation.CheckMovement() || Vector3.Distance(target.position,transform.position) > maxDistance + 0.5f)
+        {
+            speedX = 11;
+            speedY = 11;
+            speedZ = 11;
+        }
+
         Movement();
     }
 
@@ -68,7 +72,7 @@ public class Flocking : MonoBehaviourPun
 
     private bool CheckTurning()
     {
-        return turning = Vector3.Distance(transform.position, target.position) >= maxDistance;
+        return Vector3.Distance(transform.position, target.position) >= maxDistance;
     }
 
     private void Movement()
@@ -163,13 +167,5 @@ public class Flocking : MonoBehaviourPun
     public void SetFlock(List<Transform> newList)
     {
         flock = new List<Transform>(newList);
-    }
-
-    private void CheckList()
-    {
-        if(GlobalFlock.FishFlock.Count < flock.Count)
-        {
-            flock = new List<Transform>(GlobalFlock.FishFlock);
-        }
     }
 }

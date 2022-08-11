@@ -15,7 +15,7 @@ public class GlobalFlock : Singleton<GlobalFlock>
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
         CheckFishFlock();
     }
@@ -28,7 +28,7 @@ public class GlobalFlock : Singleton<GlobalFlock>
             fishFlock.RemoveAt(fishFlock.Count - 1);
             foreach(Transform fish in fishFlock)
             {
-
+                fish.GetComponent<Flocking>().SetFlock(FishFlock);
             }
         }
     }

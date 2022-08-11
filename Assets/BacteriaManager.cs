@@ -10,6 +10,7 @@ public class BacteriaManager : MonoBehaviour
     [SerializeField] Transform spawnPoint;
 
     [SerializeField] TextMeshProUGUI timerUI, scoreUI, buttonUI, highscoreUI;
+    [SerializeField] GameObject startUI;
 
     [SerializeField] private KeyCode[] keyCodes;
     private KeyCode currendKey;
@@ -18,6 +19,7 @@ public class BacteriaManager : MonoBehaviour
     private int highscore = 0;
     private int time = 30;
     private Timer timer;
+    private bool waitingForGameToStart = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +27,6 @@ public class BacteriaManager : MonoBehaviour
         SetNewKey();
         GameObject obj = Instantiate(bacteriaObject,spawnPoint);
         obj.GetComponent<Bacteria>().SetCenterTransform(spawnPoint);
-
-        //Debug.Log("Press " + currendKey);
 
         timer = new Timer();
         timer.SetStartTime(time, true);
@@ -36,9 +36,15 @@ public class BacteriaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer.Tick();
+        if(!waitingForGameToStart) timer.Tick();
 
-        if(Input.GetKeyDown(currendKey))
+        if (waitingForGameToStart && Input.GetKeyDown(KeyCode.R))
+        {
+            waitingForGameToStart=false;
+            ToggleStartUI();
+        }
+
+        if(!waitingForGameToStart && Input.GetKeyDown(currendKey))
         {
             score++;
             SetNewKey();
@@ -52,6 +58,11 @@ public class BacteriaManager : MonoBehaviour
         
     }
 
+    private void ToggleStartUI()
+    {
+        startUI.SetActive(!startUI.activeSelf);
+    }
+
     private void CheckTimer()
     {
         if(timer.CurrentTime < 0)
@@ -60,7 +71,15 @@ public class BacteriaManager : MonoBehaviour
             highscore = score;
             score = 0;
             SetNewKey();
+            ToggleStartUI();
+            BacteriaExplosion();
+            waitingForGameToStart = true;
         }
+    }
+
+    private void BacteriaExplosion()
+    {
+        throw new NotImplementedException();
     }
 
     private void UpdateUI()

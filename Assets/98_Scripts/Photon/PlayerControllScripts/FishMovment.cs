@@ -8,6 +8,8 @@ using TMPro;
 
 public class FishMovment : MonoBehaviourPun
 {
+    private Transform motherFlock;
+
     [SerializeField] private float movementSpeed;
     [SerializeField] private float turnspeed;
     private Vector2 movement;
@@ -24,6 +26,13 @@ public class FishMovment : MonoBehaviourPun
     {
         PlayerBaseDataHandler.SetFish(this);
         PlayerBaseDataHandler.RaiseBirdFood(population);
+        if (population > 0)
+        {
+            for (int i = 0; i < population; i++)
+            {
+                AddFlock();
+            }
+        }
     }
 
     void Update()
@@ -74,6 +83,7 @@ public class FishMovment : MonoBehaviourPun
             food = 0;
             population += 1;
             PlayerBaseDataHandler.RaiseBirdFood(1);
+            AddFlock();
         }
     }
 
@@ -92,4 +102,13 @@ public class FishMovment : MonoBehaviourPun
     {
         population -= newPop;
     }
+
+    private void AddFlock()
+    {
+        GameObject flocki = PhotonNetwork.Instantiate("FishGame/flock",this.transform.position,Quaternion.identity);
+        flocki.GetComponent<Flocking>().SetTarget(this.transform);
+        flocki.GetComponent<Flocking>().SetMotherFlock(GlobalFlock.Instance.transform);
+        flocki.transform.parent = GlobalFlock.Instance.transform;
+    }
+
 }

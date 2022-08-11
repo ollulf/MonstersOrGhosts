@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bacteria : MonoBehaviour
 {
     [SerializeField] private float forceIntensity = 1;
-
+    [SerializeField] private int maxDistance;
     private Transform center;
     private Rigidbody rb;
 
@@ -32,6 +32,10 @@ public class Bacteria : MonoBehaviour
         else
         {
             rb.AddForce(-pushDirection * forceIntensity);
+            if(MaxDistanceReached())
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -43,5 +47,10 @@ public class Bacteria : MonoBehaviour
     public void LetsExplode()
     {
         explode = true;
+    }
+
+    private bool MaxDistanceReached()
+    {
+        return Vector3.Distance(center.position, transform.position) > maxDistance;
     }
 }

@@ -17,7 +17,10 @@ public class GlobalFlock : Singleton<GlobalFlock>
     // Update is called once per frame
     private void Update()
     {
-        CheckFishFlock();
+        if (PlayerBaseDataHandler.FishPopulation != null)
+        {
+            CheckFishFlock();
+        }
     }
 
     private void CheckFishFlock()

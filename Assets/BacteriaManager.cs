@@ -79,7 +79,10 @@ public class BacteriaManager : MonoBehaviour
 
     private void BacteriaExplosion()
     {
-        throw new NotImplementedException();
+        foreach(Transform child in spawnPoint)
+        {
+            child.GetComponent<Bacteria>().LetsExplode();
+        }
     }
 
     private void UpdateUI()

@@ -64,6 +64,9 @@ public class CameraScroller : MonoBehaviourPun
                 index = 2;
             }
         }
+
+
+        
         IndexChecker();
     }
 
@@ -100,6 +103,7 @@ Mathf.LerpAngle(gameObject.transform.eulerAngles.z, closePosition.eulerAngles.z,
                         fakeVector = closePosition.position;
                         fakeAngle = Quaternion.Euler(closePosition.eulerAngles);
                     }
+
                     fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, speed * Time.deltaTime);
                     fakeAngle.eulerAngles = Vector3.Lerp(fakeAngle.eulerAngles, farPosition.eulerAngles, speed * Time.deltaTime);
 

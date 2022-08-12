@@ -5,14 +5,14 @@ using Photon.Pun;
 
 public class OilCrater : MonoBehaviourPun
 {
-    private void OnMouseDown()
+    public void Down()
     {
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine && RefineryHandler.Money >= RefineryHandler.RefineryCost)
         {
             base.photonView.RequestOwnership();
             PhotonNetwork.Instantiate("MachineGame/seaRefinery", new Vector3(transform.position.x, 13.6f, transform.position.z), Quaternion.identity);
             RefineryHandler.SetMoney();
-            PhotonNetwork.Destroy(gameObject);
+            PhotonNetwork.Destroy(photonView.gameObject);
         }
     }
 }

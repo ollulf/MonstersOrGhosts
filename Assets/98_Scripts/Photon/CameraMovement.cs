@@ -7,14 +7,7 @@ public class CameraMovement : MonoBehaviourPun
 {
     [SerializeField] float scrollSpeed;
     private int horizontal, vertical;
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (!photonView.IsMine)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     // Update is called once per frame
     void Update()

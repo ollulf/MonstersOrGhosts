@@ -6,6 +6,7 @@ using Photon.Pun;
 
 public class Flocking : MonoBehaviourPun
 {
+    [ShowNonSerializedField]
     private Transform target;
     [SerializeField] private float radius, nighbourDistance, maxDistance, rotationSpeed;
     [SerializeField] private Transform motherFlock;
@@ -27,29 +28,32 @@ public class Flocking : MonoBehaviourPun
     // Update is called once per frame
     void FixedUpdate()
     {
-        direction = target.position - transform.position;
+        if (target != null)
+        {
+            direction = target.position - transform.position;
 
 
-        if (CheckTurning())
-        {
-            SetTurningAndSpeed();
-        }
-        else
-        {
-            if (Random.Range(0, 5) < 1)
+            if (CheckTurning())
             {
-                ApplyRules();
+                SetTurningAndSpeed();
             }
-        }
+            else
+            {
+                if (Random.Range(0, 5) < 1)
+                {
+                    ApplyRules();
+                }
+            }
 
-        if(PlayerBaseDataHandler.FishPopulation.CheckMovement() || Vector3.Distance(target.position,transform.position) > maxDistance + 0.5f)
-        {
-            speedX = 11;
-            speedY = 11;
-            speedZ = 11;
-        }
+            if (PlayerBaseDataHandler.FishPopulation.CheckMovement() || Vector3.Distance(target.position, transform.position) > maxDistance + 0.5f)
+            {
+                speedX = 11;
+                speedY = 11;
+                speedZ = 11;
+            }
 
-        Movement();
+            Movement();
+        }
     }
 
     private void SetTurningAndSpeed()

@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
+using System;
 
 public class CameraScroller : MonoBehaviourPun
 {
     [SerializeField] Transform farPosition, closePosition, animalSight;
     [SerializeField] AnimationCurve acellerationCurve;
     [SerializeField] float speed = 1f;
+
+    [SerializeField] private AudioSource underwaterAmbient, enterWaterSound, exitWaterSound;
+    [ShowNonSerializedField] private bool isCameraUnderwater;
 
     [ShowNonSerializedField] private float distance, currentDistance = 1;
 
@@ -31,6 +35,11 @@ public class CameraScroller : MonoBehaviourPun
     {
         gameObject.transform.position = closePosition.position;
         distance = Vector3.Distance(farPosition.position, closePosition.position);
+
+        underwaterAmbient.Play();
+        if (!(gameObject.transform.position.y < 12))
+            underwaterAmbient.Pause();
+
     }
 
     public void SetFarPosition(Transform newTransform)
@@ -46,6 +55,8 @@ public class CameraScroller : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        UpdateAmbientSound();
+
         distance = Vector3.Distance(farPosition.position, closePosition.position);
         float t = acellerationCurve.Evaluate(currentDistance);
 
@@ -70,6 +81,29 @@ public class CameraScroller : MonoBehaviourPun
         MouseCheck();
     }
 
+    private void UpdateAmbientSound()
+    {
+        bool tempUnderWater = isCameraUnderwater;
+        isCameraUnderwater = (gameObject.transform.position.y < 12);
+
+        if (isCameraUnderwater != tempUnderWater)
+        {
+            if (isCameraUnderwater)
+            {
+                Debug.Log("Enters Water");
+                enterWaterSound.Play();
+                underwaterAmbient.UnPause();
+
+            }
+            if (!isCameraUnderwater)
+            {
+                Debug.Log("Exits Water");
+                exitWaterSound.Play();
+                underwaterAmbient.Pause();
+            }
+        }
+
+    }
     private void IndexChecker()
     {
         switch (index)

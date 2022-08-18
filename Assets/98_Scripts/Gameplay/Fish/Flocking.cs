@@ -76,6 +76,7 @@ public class Flocking : MonoBehaviourPun
     {
         if (Vector3.Distance(target.position, transform.position) > maxDistance + 0.5f)
         {
+            
             if ((target.position.x - transform.position.x) > maxDistance)
             {
                 transform.Translate(speedX * Time.deltaTime * followUpSpeed, speedY * Time.deltaTime, speedZ * Time.deltaTime);
@@ -85,10 +86,8 @@ public class Flocking : MonoBehaviourPun
                 transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, speedZ * Time.deltaTime * followUpSpeed);
             }
         }
-        else
-        {
+
             transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, speedZ * Time.deltaTime);
-        }
     }
 
     private void ApplyRules()

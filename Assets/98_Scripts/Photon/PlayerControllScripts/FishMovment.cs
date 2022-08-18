@@ -84,7 +84,7 @@ public class FishMovment : MonoBehaviourPun
 
 
         Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y + movement.x * 20, tempEulerAngles.eulerAngles.z), Time.deltaTime * fishPrefTurnSpeed);
-        fishPref.transform.eulerAngles = rotation.eulerAngles;
+        fishPref.transform.eulerAngles =  rotation.eulerAngles;
     }
 
     public void FeedFish(int newFood)

@@ -27,7 +27,7 @@ public class GetAndSetAnimationSpeed : MonoBehaviour
             float oneYearInSeconds;
             animationInSeconds = clip.length;
             oneYearInSeconds = animationInSeconds / animationInYears;
-            anim.SetFloat("speed",oneYearInSeconds/ WorldTime.OneYearInSeconds);
+            anim.SetFloat("speed",oneYearInSeconds/ 5);
         }
     }
 }

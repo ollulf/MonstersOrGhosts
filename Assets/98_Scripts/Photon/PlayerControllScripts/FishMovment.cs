@@ -11,7 +11,8 @@ public class FishMovment : MonoBehaviourPun
     private Transform motherFlock;
 
     [SerializeField] private float movementSpeed;
-    [SerializeField] private float turnspeed;
+    [SerializeField] private float turnspeed, fishPrefTurnSpeed;
+    [SerializeField] private Transform fishPref;
     private Vector2 movement;
 
     [ShowNonSerializedField] private int food;
@@ -20,7 +21,7 @@ public class FishMovment : MonoBehaviourPun
 
     [SerializeField] private TextMeshProUGUI populationTextField;
 
-    public int Population { get => population;}
+    public int Population { get => population; }
 
 
     private void Start()
@@ -52,6 +53,7 @@ public class FishMovment : MonoBehaviourPun
         {
             MovePlayer();
             TurnFish();
+            TurnFishPref();
         }
     }
 
@@ -74,6 +76,15 @@ public class FishMovment : MonoBehaviourPun
     private void TurnFish()
     {
         transform.Rotate(0, 0, -movement.x * turnspeed);
+    }
+
+    private void TurnFishPref()
+    {
+        Quaternion tempEulerAngles = Quaternion.Euler(gameObject.transform.eulerAngles.x - 90, gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
+
+
+        Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y + movement.x * 20, tempEulerAngles.eulerAngles.z), Time.deltaTime * fishPrefTurnSpeed);
+        fishPref.transform.eulerAngles = rotation.eulerAngles;
     }
 
     public void FeedFish(int newFood)
@@ -109,7 +120,7 @@ public class FishMovment : MonoBehaviourPun
 
     private void AddFlock()
     {
-        GameObject flocki = PhotonNetwork.Instantiate("FishGame/flock",this.transform.position,Quaternion.identity);
+        GameObject flocki = PhotonNetwork.Instantiate("FishGame/flock", this.transform.position, Quaternion.identity);
         flocki.GetComponent<Flocking>().SetTarget(this.transform);
         flocki.GetComponent<Flocking>().SetMotherFlock(GlobalFlock.Instance.transform);
         flocki.transform.parent = GlobalFlock.Instance.transform;

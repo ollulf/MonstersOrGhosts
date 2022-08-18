@@ -463,6 +463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 0.2
   turnspeed: 0.5
+  fishPrefTurnSpeed: 10
+  fishPref: {fileID: 6300032656336168202}
   populationTextField: {fileID: 3950314465465879503}
 --- !u!114 &7954062857363133461
 MonoBehaviour:
@@ -839,22 +841,22 @@ PrefabInstance:
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710784
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071058
+      value: -0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
@@ -864,12 +866,12 @@ PrefabInstance:
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2423591455968430560, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2423591455968524494, guid: d92c740b30eabbb4b97832a23d218d8b,
         type: 3}

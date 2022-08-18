@@ -8,7 +8,7 @@ public class Flocking : MonoBehaviourPun
 {
     [ShowNonSerializedField]
     private Transform target;
-    [SerializeField] private float radius, nighbourDistance, maxDistance, rotationSpeed;
+    [SerializeField] private float radius, nighbourDistance, maxDistance, rotationSpeed, followUpSpeed;
     [SerializeField] private Transform motherFlock;
     private List<Transform> flock;
 
@@ -45,13 +45,6 @@ public class Flocking : MonoBehaviourPun
                 }
             }
 
-            if (PlayerBaseDataHandler.FishPopulation.CheckMovement() || Vector3.Distance(target.position, transform.position) > maxDistance + 0.5f)
-            {
-                speedX = 11;
-                speedY = 11;
-                speedZ = 11;
-            }
-
             Movement();
         }
     }
@@ -81,7 +74,21 @@ public class Flocking : MonoBehaviourPun
 
     private void Movement()
     {
-        transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, speedZ * Time.deltaTime);
+        if (Vector3.Distance(target.position, transform.position) > maxDistance + 0.5f)
+        {
+            if ((target.position.x - transform.position.x) > maxDistance)
+            {
+                transform.Translate(speedX * Time.deltaTime * followUpSpeed, speedY * Time.deltaTime, speedZ * Time.deltaTime);
+            }
+            if ((target.position.z - transform.position.z) > maxDistance)
+            {
+                transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, speedZ * Time.deltaTime * followUpSpeed);
+            }
+        }
+        else
+        {
+            transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, speedZ * Time.deltaTime);
+        }
     }
 
     private void ApplyRules()
@@ -99,15 +106,15 @@ public class Flocking : MonoBehaviourPun
 
         AddToFlock();
 
-        foreach(Transform trans in flock)
+        foreach (Transform trans in flock)
         {
-            if(trans != this.transform)
+            if (trans != this.transform)
             {
                 dist = Vector3.Distance(trans.position, this.transform.position);
-                if(dist <= nighbourDistance)
+                if (dist <= nighbourDistance)
                 {
                     groupSize++;
-                    if(dist < 1f)
+                    if (dist < 1f)
                     {
                         vAvoid = vAvoid + (this.transform.position - trans.position);
                     }
@@ -118,14 +125,14 @@ public class Flocking : MonoBehaviourPun
 
                 }
             }
-            if(Vector3.Distance(target.position, this.transform.position) <= radius)
+            if (Vector3.Distance(target.position, this.transform.position) <= radius)
             {
                 vAvoid = (this.transform.position - target.position).normalized;
             }
             vCentre += (trans.position + vAvoid).normalized;
         }
 
-        if(groupSize > 0)
+        if (groupSize > 0)
         {
             vCentre = vCentre / groupSize + (target.position - this.transform.position);
             speedX = gSpeedX / groupSize;
@@ -143,9 +150,9 @@ public class Flocking : MonoBehaviourPun
 
     private void AddToFlock()
     {
-        foreach(Transform child in motherFlock)
+        foreach (Transform child in motherFlock)
         {
-            if(!flock.Contains(child))
+            if (!flock.Contains(child))
             {
                 flock.Add(child);
                 GlobalFlock.AddFishFlock(child);

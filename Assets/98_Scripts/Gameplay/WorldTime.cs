@@ -5,7 +5,7 @@ using NaughtyAttributes;
 using TMPro;
 using Photon.Pun;
 
-public class WorldTime : Singleton<WorldTime>
+public class WorldTime : MonoBehaviourPun
 {
     [SerializeField] private int maxYears, oneYearInSeconds;
     [SerializeField] private TextMeshProUGUI showTimer;
@@ -13,10 +13,6 @@ public class WorldTime : Singleton<WorldTime>
     private int years;
     private Timer timer;
 
-    public static int OneYearInSeconds { get => Instance.oneYearInSeconds;}
-
-
-    // Start is called before the first frame update
     void Start()
     {
         timer = new Timer();
@@ -24,21 +20,34 @@ public class WorldTime : Singleton<WorldTime>
         timer.SetStartTime(0, false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        timer.Tick();
-
-        years = Mathf.RoundToInt(timer.CurrentTime / oneYearInSeconds);
-
-        showTimer.text = years.ToString();
-
-        if(years >= maxYears)
+        if (PhotonNetwork.IsMasterClient)
         {
-            if(PhotonNetwork.IsMasterClient)
+            timer.Tick();
+
+            years = Mathf.RoundToInt(timer.CurrentTime / oneYearInSeconds);
+
+            showTimer.text = years.ToString();
+            photonView.RPC("UpdateUI", RpcTarget.All, years);
+            if (years >= maxYears)
             {
-                PhotonNetwork.LoadLevel(1);
+                photonView.RPC("LevelLoad", RpcTarget.All);
             }
         }
     }
+
+    [PunRPC]
+    private void UpdateUI(int newYear)
+    {
+        showTimer.text = newYear.ToString();
+    }
+
+    [PunRPC]
+
+    private void LevelLoad()
+    {
+        PhotonNetwork.LoadLevel(1);
+    }
+
 }

@@ -65,7 +65,21 @@ public class FishMovment : MonoBehaviourPun
     private void GetAxis()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Mathf.Clamp(Input.GetAxisRaw("Vertical"), 0, 1);
+        if (Input.GetKey(KeyCode.W))
+        {
+            movement.y = Mathf.Clamp(Input.GetAxisRaw("Vertical"), 0, 1);
+        }
+        else
+        {
+            if(movement.y > 0)
+            {
+                movement.y -= Time.deltaTime;
+            }
+            else
+            {
+                movement.y = 0;
+            }
+        }
 
     }
     private void MovePlayer()

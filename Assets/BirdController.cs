@@ -9,9 +9,9 @@ using Photon.Pun;
 public class BirdController : MonoBehaviourPun
 {
     public int amounOfFoodNeededForNest = 10;
-    public int birdPopulationIncreaseAmount = 10;
+    public int birdPopulationIncreaseAmount;
     
-    [ShowNonSerializedField]private int birdFood= 0, birdPopulation = 100;
+    [ShowNonSerializedField]private int birdFood= 0, birdPopulation;
     [SerializeField] public TextMeshProUGUI foodAmount, population;
 
     public int BirdPopulation { get => birdPopulation;}
@@ -19,6 +19,8 @@ public class BirdController : MonoBehaviourPun
 
     void Start()
     {
+        birdPopulationIncreaseAmount = FirstDataGive.BirdPopulation;
+        birdPopulation = FirstDataGive.BirdStartPopulation;
         PlayerBaseDataHandler.SetBird(this);
     }
 

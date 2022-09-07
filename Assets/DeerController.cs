@@ -11,14 +11,14 @@ public class DeerController : MonoBehaviour
 
     [ShowNonSerializedField]private bool isMoving = false, isInFoodArea = false;
 
-    public float co2Compressed = 0;
-    public float population = 10000;
+    public float co2Compressed;
+    public float population;
     public float hunger = 0;
     public float hungerIncrease = 5;
     public float hungerDecrease = 15;
     public float hungerValueUntilStarving = 100;
     public float eatAmount = 50;
-    public float populationGrowth = 50;
+    public float populationGrowth;
     public float timeUntilTick = 1f;
 
     [SerializeField] private TextMeshProUGUI populationTF, co2TF, hungerTF;
@@ -29,6 +29,9 @@ public class DeerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        population = FirstDataGive.DeerStartPopulation;
+        co2Compressed = FirstDataGive.DeerCompress;
+        populationGrowth = FirstDataGive.DeerPopulation;
         timer = new Timer();
         timer.SetStartTime(timeUntilTick, true);
     }

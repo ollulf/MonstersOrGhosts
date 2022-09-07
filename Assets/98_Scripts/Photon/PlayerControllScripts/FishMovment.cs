@@ -17,7 +17,7 @@ public class FishMovment : MonoBehaviourPun
 
     [ShowNonSerializedField] private int food;
     [ShowNonSerializedField] private int poisen;
-    [ShowNonSerializedField] private int population = 30;
+    [ShowNonSerializedField] private int population;
 
     [SerializeField] private TextMeshProUGUI populationTextField;
 
@@ -26,8 +26,11 @@ public class FishMovment : MonoBehaviourPun
 
     private void Start()
     {
+        population = FirstDataGive.FishStartPopulation;
         PlayerBaseDataHandler.SetFish(this);
         PlayerBaseDataHandler.RaiseBirdFood(population);
+
+
         if (population > 0)
         {
             for (int i = 0; i < population; i++)

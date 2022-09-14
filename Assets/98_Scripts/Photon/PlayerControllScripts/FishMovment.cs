@@ -31,12 +31,9 @@ public class FishMovment : MonoBehaviourPun
         PlayerBaseDataHandler.RaiseBirdFood(population);
 
 
-        if (population > 0)
+        for (int i = 0; i < 20; i++)
         {
-            for (int i = 0; i < population; i++)
-            {
-                AddFlock();
-            }
+            AddFlock();
         }
     }
 
@@ -74,7 +71,7 @@ public class FishMovment : MonoBehaviourPun
         }
         else
         {
-            if(movement.y > 0)
+            if (movement.y > 0)
             {
                 movement.y -= Time.deltaTime;
             }
@@ -101,7 +98,7 @@ public class FishMovment : MonoBehaviourPun
 
 
         Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y + movement.x * 20, tempEulerAngles.eulerAngles.z), Time.deltaTime * fishPrefTurnSpeed);
-        fishPref.transform.eulerAngles =  rotation.eulerAngles;
+        fishPref.transform.eulerAngles = rotation.eulerAngles;
     }
 
     public void FeedFish(int newFood)
@@ -137,10 +134,13 @@ public class FishMovment : MonoBehaviourPun
 
     private void AddFlock()
     {
-        GameObject flocki = PhotonNetwork.Instantiate("FishGame/flock", this.transform.position, Quaternion.identity);
-        flocki.GetComponent<Flocking>().SetTarget(this.transform);
-        flocki.GetComponent<Flocking>().SetMotherFlock(GlobalFlock.Instance.transform);
-        flocki.transform.parent = GlobalFlock.Instance.transform;
+        if (GlobalFlock.FishFlock.Count <= 20)
+        {
+            GameObject flocki = PhotonNetwork.Instantiate("FishGame/flock", this.transform.position, Quaternion.identity);
+            flocki.GetComponent<Flocking>().SetTarget(this.transform);
+            flocki.GetComponent<Flocking>().SetMotherFlock(GlobalFlock.Instance.transform);
+            flocki.transform.parent = GlobalFlock.Instance.transform;
+        }
     }
 
     public bool CheckMovement()

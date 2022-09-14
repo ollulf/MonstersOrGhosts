@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3299582661861353417}
   - component: {fileID: 3628223068149039542}
   - component: {fileID: 2767648981728247368}
+  - component: {fileID: 7048391533204990593}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -114,6 +115,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78d8225dd9c5b8146bc4ac3b723f2d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7048391533204990593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204129915791628062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffbbc7f8298f5094aa3cc654dbfa6b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4041185100431729236
@@ -372,7 +385,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7519475397904949552}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7048391533204990593}
+        m_TargetAssemblyTypeName: BuyingShip, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7162478182872655560
 GameObject:
   m_ObjectHideFlags: 0

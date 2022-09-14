@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    [SerializeField] float movementSpeed;
+    [SerializeField] float movementSpeed, maxDistance;
     private List<GameObject> wayPoint;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
+    {
+        Move();
+        if(CheckDistance())
+        {
+            RemoveFromList();
+        }
+    }
+
+    private void Move()
     {
         Vector3 direction = (wayPoint[0].transform.position - transform.position).normalized;
 
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         Vector3 rotation = lookRotation.eulerAngles;
-
+        transform.rotation = Quaternion.Euler(rotation);
 
         transform.position += direction * movementSpeed * Time.deltaTime;
+    }
+
+    private bool CheckDistance()
+    {
+        return Vector3.Distance(transform.position, wayPoint[0].transform.position) <= maxDistance;
     }
 
     public void GetWayPoint(WayPointPlacingSystem newWayPointPlacingSystem)
@@ -37,7 +39,7 @@ public class ShipMovement : MonoBehaviour
 
     public void RemoveFromList()
     {
-        wayPoints.Remove(wayPoints[0]);
+        wayPoint.Remove(wayPoint[0]);
     }
 
 }

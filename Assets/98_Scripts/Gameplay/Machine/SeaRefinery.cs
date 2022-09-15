@@ -7,7 +7,7 @@ public class SeaRefinery : MonoBehaviour
 
     void Start()
     {
-        RefineryHandler.AddRefineries(gameObject);
+        ShipHandler.AddShip(gameObject);
     }
 
     // Update is called once per frame

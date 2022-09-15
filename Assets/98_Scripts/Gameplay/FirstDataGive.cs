@@ -26,14 +26,14 @@ public class FirstDataGive : Singleton<FirstDataGive>
     [SerializeField] private float minutes;
     [Header("Start Money in Million")]
     [SerializeField] private int startMoney;
-    [Header("Money income per factory in million per second")]
+    [Header("Money income per Ship in million per second")]
     [SerializeField] private int income;
     [Header("Income per environmental building in million per second")]
     [SerializeField] private float environmentalIncome;
     [Header("Passiv income in million per second")]
     [SerializeField] private float passiveIncome;
-    [Header("Factory cost in million")]
-    [SerializeField] private int factoryCost;
+    [Header("Ship cost in million")]
+    [SerializeField] private int shipCost;
     [Header("Environmental cost in million")]
     [SerializeField] private int enviCost;
     [Header("Building spot spawn in sec")]
@@ -50,4 +50,8 @@ public class FirstDataGive : Singleton<FirstDataGive>
     public static int BirdPopulation { get => Instance.birdPopulation;}
     public int FishPopulation { get => fishPopulation; set => fishPopulation = value; }
     public static int DeerPopulation { get => Instance.deerPopulation;}
+    public static int ShipCost { get => Instance.shipCost;}
+    public static float PassiveIncome { get => Instance.passiveIncome;}
+    public static int Income { get => Instance.income;}
+    public static int StartMoney { get => Instance.startMoney;}
 }

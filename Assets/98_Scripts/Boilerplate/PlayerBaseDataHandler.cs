@@ -41,7 +41,7 @@ public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
 
     public static int GetOilRigs()
     {
-        return RefineryHandler.Refinery.Count;
+        return ShipHandler.Ship.Count;
     }
 
     public static void RaiseBirdFood(int newFood)

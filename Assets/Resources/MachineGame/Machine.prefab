@@ -283,7 +283,6 @@ GameObject:
   - component: {fileID: 3299582661861353417}
   - component: {fileID: 3628223068149039542}
   - component: {fileID: 2767648981728247368}
-  - component: {fileID: 7048391533204990593}
   - component: {fileID: 3762443218838063627}
   m_Layer: 5
   m_Name: Canvas
@@ -386,18 +385,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78d8225dd9c5b8146bc4ac3b723f2d90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7048391533204990593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204129915791628062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbbc7f8298f5094aa3cc654dbfa6b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3762443218838063627
@@ -1437,6 +1424,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1204129915791628062}
+  prefab:
+  - {fileID: 6686914158683961998, guid: 34ab003042a85654c9749994cb8a55e5, type: 3}
+  - {fileID: 6686914158683961998, guid: f4a96b891e7ec184f97804f225c71ec9, type: 3}
+  - {fileID: 6686914158683961998, guid: 86237081b8f1ce44e91d06e8b07cf8bb, type: 3}
+  - {fileID: 6686914158683961998, guid: 0cbe8754de0d2c94c9eda9e79e901a33, type: 3}
+  cameraScroller: {fileID: 0}
 --- !u!114 &2741717582184746137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,9 +1575,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7048391533204990593}
-        m_TargetAssemblyTypeName: BuyingShip, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 6265418219275451290}
+        m_TargetAssemblyTypeName: MachineController, Assembly-CSharp
+        m_MethodName: BuyOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

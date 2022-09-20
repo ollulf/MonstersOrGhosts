@@ -77,8 +77,12 @@ public class CameraScroller : MonoBehaviourPun
                 index = 2;
             }
         }
-        IndexChecker();
         MouseCheck();
+    }
+
+    private void LateUpdate()
+    {
+        IndexChecker();
     }
 
     private void UpdateAmbientSound()
@@ -110,14 +114,14 @@ public class CameraScroller : MonoBehaviourPun
         {
             case 0:
                 {
-                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, animalSight.position, speed * Time.deltaTime);
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, animalSight.position, speed);
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(animalSight.eulerAngles), speed * Time.deltaTime);
                     gameObject.transform.eulerAngles = rotation.eulerAngles;
                     break;
                 }
             case 1:
                 {
-                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, closePosition.position, speed * Time.deltaTime);
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, closePosition.position, speed);
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(closePosition.eulerAngles), speed * Time.deltaTime);
                     gameObject.transform.eulerAngles = rotation.eulerAngles;
                     fin = false;
@@ -132,7 +136,7 @@ public class CameraScroller : MonoBehaviourPun
                         fakeAngle = Quaternion.Euler(closePosition.eulerAngles);
                     }
 
-                    fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, speed * Time.deltaTime);
+                    fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, 1 * Time.deltaTime);
                     fakeAngle =  Quaternion.Lerp(fakeAngle, Quaternion.Euler(farPosition.eulerAngles), speed * Time.deltaTime);
 
                     gameObject.transform.position = fakeVector;
@@ -151,15 +155,14 @@ public class CameraScroller : MonoBehaviourPun
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                Debug.DrawRay(ray.origin, ray.direction * 1000f, Color.yellow, Mathf.Infinity);
-
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
+                //Debug.DrawRay(ray.origin, ray.direction * 1000f, Color.yellow, Mathf.Infinity);
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    Debug.Log(hit.collider.gameObject);
-
-                    if (hit.collider.gameObject.layer == 8)
+                    if (hit.collider.gameObject.tag == "Ship")
                     {
-                        hit.collider.gameObject.GetComponent<ShowBuildUI>().CanvasShow();
+                        Debug.Log(hit.collider.gameObject);
+                        closePosition = hit.collider.transform.GetChild(1);
+                        speed = hit.collider.GetComponent<ShipMovement>().MovementSpeed;
                     }
                 }
             }

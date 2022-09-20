@@ -25,10 +25,6 @@ public class ShipHandler : Singleton<ShipHandler>
         ship = new List<GameObject>();
         timer = new Timer();
         timer.SetStartTime(timerforSpawn, true);
-        Debug.LogError(FirstDataGive.StartMoney);
-        Debug.LogError(FirstDataGive.Income);
-        Debug.LogError(FirstDataGive.ShipCost);
-        Debug.LogError(FirstDataGive.PassiveIncome);
         money = FirstDataGive.StartMoney;
         moneyPerShip = FirstDataGive.Income;
         shipCost = FirstDataGive.ShipCost;

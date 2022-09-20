@@ -7,6 +7,8 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] float movementSpeed, maxDistance;
     private List<GameObject> wayPoint;
 
+    public float MovementSpeed { get => movementSpeed;}
+
     private void Start()
     {
         ShipHandler.AddShip(gameObject);

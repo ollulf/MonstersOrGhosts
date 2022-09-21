@@ -18,6 +18,7 @@ public class CameraScroller : MonoBehaviourPun
 
     [SerializeField] private LayerMask mask;
 
+    private GameObject selectedShip;
     private int index;
     private Vector3 fakeVector;
     private Quaternion fakeAngle;
@@ -159,10 +160,16 @@ public class CameraScroller : MonoBehaviourPun
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
                     if (hit.collider.gameObject.tag == "Ship")
-                    {
+                    {                       
                         Debug.Log(hit.collider.gameObject);
                         closePosition = hit.collider.transform.GetChild(1);
                         speed = hit.collider.GetComponent<ShipMovement>().MovementSpeed;
+                        hit.collider.GetComponent<ShipMovement>().IsSelected();
+                        if(selectedShip != null)
+                        {
+                            selectedShip.GetComponent<ShipMovement>().IsSelected();
+                        }
+                        selectedShip = hit.collider.gameObject;
                     }
                 }
             }

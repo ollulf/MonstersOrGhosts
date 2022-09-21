@@ -5,12 +5,16 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
     [SerializeField] float movementSpeed, maxDistance;
+    [SerializeField] GameObject selectCircle;
     private List<GameObject> wayPoint;
+
+    private bool isSelected;
 
     public float MovementSpeed { get => movementSpeed;}
 
     private void Start()
     {
+        isSelected = false;
         ShipHandler.AddShip(gameObject);
     }
 
@@ -49,4 +53,9 @@ public class ShipMovement : MonoBehaviour
         wayPoint.Remove(wayPoint[0]);
     }
 
+    public void IsSelected()
+    {
+        isSelected = !isSelected;
+        selectCircle.SetActive(isSelected);
+    }
 }

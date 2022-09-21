@@ -46,6 +46,11 @@ public class ShipHandler : Singleton<ShipHandler>
         return Instance.passiveIncome + Instance.moneyPerShip * Ship.Count;
     }
 
+    public static void RiseShipCost()
+    {
+        Instance.shipCost = Mathf.RoundToInt(ShipCost * FirstDataGive.InduShipMulti.Evaluate(Ship.Count));
+    }
+
     void Update()
     {
         timer.Tick();

@@ -12,11 +12,14 @@ public class WorldTime : MonoBehaviourPun
 
     private int years;
     private Timer timer;
+    private float motionFloat;
+    private Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         timer = new Timer();
-
+        motionFloat = 1f / maxYears;
         timer.SetStartTime(0, false);
     }
 
@@ -27,6 +30,8 @@ public class WorldTime : MonoBehaviourPun
             timer.Tick();
 
             years = Mathf.RoundToInt(timer.CurrentTime / oneYearInSeconds);
+
+            anim.SetFloat("Time", motionFloat * years);
 
             showTimer.text = years.ToString();
             photonView.RPC("UpdateUI", RpcTarget.All, years);

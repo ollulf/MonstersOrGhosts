@@ -38,7 +38,7 @@ public class CameraScroller : MonoBehaviourPun
         distance = Vector3.Distance(farPosition.position, closePosition.position);
 
 
-        if (!(gameObject.transform.position.y < 12))
+        if (!(gameObject.transform.position.y < 0))
         {
             arcticAmbient.Play();
         }
@@ -97,7 +97,7 @@ public class CameraScroller : MonoBehaviourPun
     private void UpdateAmbientSound()
     {
         bool tempUnderWater = isCameraUnderwater;
-        isCameraUnderwater = (gameObject.transform.position.y < 12);
+        isCameraUnderwater = (gameObject.transform.position.y < 0);
 
         if (isCameraUnderwater != tempUnderWater)
         {

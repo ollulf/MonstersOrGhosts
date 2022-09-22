@@ -12,10 +12,10 @@ public class WorldTime : MonoBehaviourPun
 
     private int years;
     private Timer timer;
-    private float motionFloat;
+    private float motionFloat, dayFloat, monthFloat, indexFloat;
     private Animator anim;
 
-    private int dayInt = 0, monthInt = 1;
+    private int dayInt = 1, monthInt = 1;
 
     void Start()
     {
@@ -23,6 +23,10 @@ public class WorldTime : MonoBehaviourPun
         timer = new Timer();
         motionFloat = 1f / maxYears;
         timer.SetStartTime(0, false);
+        monthFloat = oneYearInSeconds / 12f;
+        dayFloat = monthFloat / 30f;
+        Debug.LogError(dayFloat);
+        indexFloat = 0;
     }
 
     void Update()
@@ -31,12 +35,10 @@ public class WorldTime : MonoBehaviourPun
         {
             timer.Tick();
 
-            years = Mathf.RoundToInt(timer.CurrentTime / oneYearInSeconds);
-
-            anim.SetFloat("Time", motionFloat * years);
-
+            YearMonthDayCalculater();
             showTimer.text = years.ToString();
-            photonView.RPC("UpdateUI", RpcTarget.All, years);
+
+            photonView.RPC("UpdateUI", RpcTarget.All, years, monthInt, dayInt);
             if (years >= maxYears)
             {
                 photonView.RPC("LevelLoad", RpcTarget.All);
@@ -44,19 +46,20 @@ public class WorldTime : MonoBehaviourPun
         }
     }
 
-    [PunRPC]
-    private void UpdateUI(int newYear)
+    private void LateUpdate()
     {
-        dayInt++;
-        if (dayInt > 30)
-        {
-            dayInt = 1;
-            monthInt++;
-        }
-        if (monthInt > 12)
-            monthInt = 1;
+        anim.SetFloat("Time", motionFloat * years);
+    }
 
-        showTimer.text = dayInt + "_"+ monthInt +"_" + (1950 + newYear);
+    private void YearMonthDayCalculater()
+    {
+        years = Mathf.RoundToInt(timer.CurrentTime / oneYearInSeconds);
+    }
+
+    [PunRPC]
+    private void UpdateUI(int newYear, int newMonth, int newDay)
+    {
+        showTimer.text = newDay + "_" + newMonth + "_" + (1950 + newYear);
     }
 
     [PunRPC]

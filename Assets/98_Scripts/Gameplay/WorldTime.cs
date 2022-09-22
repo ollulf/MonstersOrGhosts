@@ -15,6 +15,8 @@ public class WorldTime : MonoBehaviourPun
     private float motionFloat;
     private Animator anim;
 
+    private int dayInt = 0, monthInt = 1;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,7 +47,16 @@ public class WorldTime : MonoBehaviourPun
     [PunRPC]
     private void UpdateUI(int newYear)
     {
-        showTimer.text = newYear.ToString();
+        dayInt++;
+        if (dayInt > 30)
+        {
+            dayInt = 1;
+            monthInt++;
+        }
+        if (monthInt > 12)
+            monthInt = 1;
+
+        showTimer.text = dayInt + "_"+ monthInt +"_" + (1950 + newYear);
     }
 
     [PunRPC]

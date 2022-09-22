@@ -11,7 +11,7 @@ public class CameraScroller : MonoBehaviourPun
     [SerializeField] AnimationCurve acellerationCurve;
     [SerializeField] float speed = 1f;
 
-    [SerializeField] private AudioSource underwaterAmbient, enterWaterSound, exitWaterSound;
+    [SerializeField] private AudioSource arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
     [ShowNonSerializedField] private bool isCameraUnderwater;
 
     [ShowNonSerializedField] private float distance, currentDistance = 1;
@@ -37,9 +37,17 @@ public class CameraScroller : MonoBehaviourPun
         gameObject.transform.position = closePosition.position;
         distance = Vector3.Distance(farPosition.position, closePosition.position);
 
-        underwaterAmbient.Play();
+
         if (!(gameObject.transform.position.y < 12))
-            underwaterAmbient.Pause();
+        {
+            arcticAmbient.Play();
+        }
+        else
+        {
+            underwaterAmbient.Play();
+        }
+            
+        
 
     }
 
@@ -98,6 +106,7 @@ public class CameraScroller : MonoBehaviourPun
                 Debug.Log("Enters Water");
                 enterWaterSound.Play();
                 underwaterAmbient.UnPause();
+                arcticAmbient.Pause();
 
             }
             if (!isCameraUnderwater)
@@ -105,6 +114,7 @@ public class CameraScroller : MonoBehaviourPun
                 Debug.Log("Exits Water");
                 exitWaterSound.Play();
                 underwaterAmbient.Pause();
+                arcticAmbient.UnPause();
             }
         }
 

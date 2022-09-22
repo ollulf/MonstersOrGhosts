@@ -8,7 +8,6 @@ public class MachineController : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject canvas;
     [SerializeField] private List<GameObject> prefab;
-    [SerializeField] private CameraScroller cameraScroller;
 
     private void Start()
     {

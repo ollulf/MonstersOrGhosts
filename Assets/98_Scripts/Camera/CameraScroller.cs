@@ -11,13 +11,14 @@ public class CameraScroller : MonoBehaviourPun
     [SerializeField] AnimationCurve acellerationCurve;
     [SerializeField] float speed = 1f;
 
-    [SerializeField] private AudioSource underwaterAmbient, enterWaterSound, exitWaterSound;
+    [SerializeField] private AudioSource arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
     [ShowNonSerializedField] private bool isCameraUnderwater;
 
     [ShowNonSerializedField] private float distance, currentDistance = 1;
 
     [SerializeField] private LayerMask mask;
 
+    private GameObject selectedShip;
     private int index;
     private Vector3 fakeVector;
     private Quaternion fakeAngle;
@@ -36,9 +37,17 @@ public class CameraScroller : MonoBehaviourPun
         gameObject.transform.position = closePosition.position;
         distance = Vector3.Distance(farPosition.position, closePosition.position);
 
-        underwaterAmbient.Play();
-        if (!(gameObject.transform.position.y < 12))
-            underwaterAmbient.Pause();
+
+        if (!(gameObject.transform.position.y < 0))
+        {
+            arcticAmbient.Play();
+        }
+        else
+        {
+            underwaterAmbient.Play();
+        }
+            
+        
 
     }
 
@@ -77,14 +86,18 @@ public class CameraScroller : MonoBehaviourPun
                 index = 2;
             }
         }
-        IndexChecker();
         MouseCheck();
+    }
+
+    private void LateUpdate()
+    {
+        IndexChecker();
     }
 
     private void UpdateAmbientSound()
     {
         bool tempUnderWater = isCameraUnderwater;
-        isCameraUnderwater = (gameObject.transform.position.y < 12);
+        isCameraUnderwater = (gameObject.transform.position.y < 0);
 
         if (isCameraUnderwater != tempUnderWater)
         {
@@ -93,6 +106,7 @@ public class CameraScroller : MonoBehaviourPun
                 Debug.Log("Enters Water");
                 enterWaterSound.Play();
                 underwaterAmbient.UnPause();
+                arcticAmbient.Pause();
 
             }
             if (!isCameraUnderwater)
@@ -100,6 +114,7 @@ public class CameraScroller : MonoBehaviourPun
                 Debug.Log("Exits Water");
                 exitWaterSound.Play();
                 underwaterAmbient.Pause();
+                arcticAmbient.UnPause();
             }
         }
 
@@ -110,14 +125,14 @@ public class CameraScroller : MonoBehaviourPun
         {
             case 0:
                 {
-                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, animalSight.position, speed * Time.deltaTime);
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, animalSight.position, speed);
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(animalSight.eulerAngles), speed * Time.deltaTime);
                     gameObject.transform.eulerAngles = rotation.eulerAngles;
                     break;
                 }
             case 1:
                 {
-                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, closePosition.position, speed * Time.deltaTime);
+                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, closePosition.position, speed);
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(closePosition.eulerAngles), speed * Time.deltaTime);
                     gameObject.transform.eulerAngles = rotation.eulerAngles;
                     fin = false;
@@ -132,7 +147,7 @@ public class CameraScroller : MonoBehaviourPun
                         fakeAngle = Quaternion.Euler(closePosition.eulerAngles);
                     }
 
-                    fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, speed * Time.deltaTime);
+                    fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, 1 * Time.deltaTime);
                     fakeAngle =  Quaternion.Lerp(fakeAngle, Quaternion.Euler(farPosition.eulerAngles), speed * Time.deltaTime);
 
                     gameObject.transform.position = fakeVector;
@@ -151,15 +166,20 @@ public class CameraScroller : MonoBehaviourPun
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                Debug.DrawRay(ray.origin, ray.direction * 1000f, Color.yellow, Mathf.Infinity);
-
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
+                //Debug.DrawRay(ray.origin, ray.direction * 1000f, Color.yellow, Mathf.Infinity);
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    Debug.Log(hit.collider.gameObject);
-
-                    if (hit.collider.gameObject.layer == 8)
-                    {
-                        hit.collider.gameObject.GetComponent<ShowBuildUI>().CanvasShow();
+                    if (hit.collider.gameObject.tag == "Ship")
+                    {                       
+                        Debug.Log(hit.collider.gameObject);
+                        closePosition = hit.collider.transform.GetChild(1);
+                        speed = hit.collider.GetComponent<ShipMovement>().MovementSpeed;
+                        hit.collider.GetComponent<ShipMovement>().IsSelected();
+                        if(selectedShip != null)
+                        {
+                            selectedShip.GetComponent<ShipMovement>().IsSelected();
+                        }
+                        selectedShip = hit.collider.gameObject;
                     }
                 }
             }

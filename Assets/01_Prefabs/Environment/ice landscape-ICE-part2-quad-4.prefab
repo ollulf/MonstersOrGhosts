@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3780712901846761830}
   - component: {fileID: 1410538262296065452}
   - component: {fileID: 274682586597208432}
+  - component: {fileID: -6621031080634951353}
   m_Layer: 0
   m_Name: ice landscape-ICE-part2-quad-4
   m_TagString: Untagged
@@ -93,10 +94,31 @@ Animation:
   m_GameObject: {fileID: 618050207861396601}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: -8089398397042941801, guid: dea37c2accdb54561ad71323f06c4e62,
+  m_Animation: {fileID: 8300859248257514737, guid: 2e8d057230c3b4102bc639ab17fa6244,
     type: 3}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 8300859248257514737, guid: 2e8d057230c3b4102bc639ab17fa6244, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &-6621031080634951353
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618050207861396601}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80cf25a5a2e4f1c43812421bc165fb21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

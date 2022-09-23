@@ -8,7 +8,6 @@ public class MachineController : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject canvas;
     [SerializeField] private List<GameObject> prefab;
-    [SerializeField] private CameraScroller cameraScroller;
 
     private void Start()
     {
@@ -26,7 +25,9 @@ public class MachineController : MonoBehaviourPunCallbacks
 
             GameObject ship = PhotonNetwork.Instantiate("MachineGame/" + prefab[Random.Range(0,prefab.Count)].name, wayPoint.GetStartPoint().position, Quaternion.identity);
             ship.GetComponent<ShipMovement>().GetWayPoint(wayPoint);
+            ShipHandler.AddShip(ship);
             ShipHandler.SetMoney();
+            ShipHandler.RiseShipCost();
         }
     }
 }

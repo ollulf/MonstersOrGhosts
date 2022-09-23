@@ -4,39 +4,53 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    [SerializeField] float movementSpeed, maxDistance;
+    [SerializeField] float movementSpeed, maxDistance, routeOffSet, turnspeed;
+    [SerializeField] GameObject selectCircle;
     private List<GameObject> wayPoint;
 
-    public float MovementSpeed { get => movementSpeed;}
+    private bool isSelected;
+
+    public float MovementSpeed { get => movementSpeed; }
 
     private void Start()
     {
-        ShipHandler.AddShip(gameObject);
+        isSelected = false;
     }
 
     private void FixedUpdate()
     {
-        Move();
-        if(CheckDistance())
+        if (wayPoint.Count != 0)
         {
-            RemoveFromList();
+            Move();
+            if (CheckDistance())
+            {
+                RemoveFromList();
+            }
+        }
+        else
+        {
+            GetWayPoint(WayPointHandler.WayPoints[Random.Range(0, WayPointHandler.WayPoints.Count)]);
+            transform.position = wayPoint[0].transform.position + transform.right * routeOffSet;
         }
     }
 
     private void Move()
     {
-        Vector3 direction = (wayPoint[0].transform.position - transform.position).normalized;
+        Vector3 direction = ((wayPoint[0].transform.position + transform.right * routeOffSet) - transform.position).normalized;
 
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         Vector3 rotation = lookRotation.eulerAngles;
-        transform.rotation = Quaternion.Euler(rotation);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), Time.fixedDeltaTime * turnspeed);
 
-        transform.position += direction * movementSpeed * Time.deltaTime;
+        if (transform.rotation == Quaternion.Euler(new Vector3(rotation.x, rotation.y + 1, rotation.z)) || transform.rotation == Quaternion.Euler(new Vector3(rotation.x, rotation.y - 1, rotation.z))) ;
+        {
+            transform.position += direction * movementSpeed * Time.deltaTime;
+        }
     }
 
     private bool CheckDistance()
     {
-        return Vector3.Distance(transform.position, wayPoint[0].transform.position) <= maxDistance;
+        return Vector3.Distance(transform.position, wayPoint[0].transform.position + transform.right * routeOffSet) <= maxDistance;
     }
 
     public void GetWayPoint(WayPointPlacingSystem newWayPointPlacingSystem)
@@ -49,4 +63,9 @@ public class ShipMovement : MonoBehaviour
         wayPoint.Remove(wayPoint[0]);
     }
 
+    public void IsSelected()
+    {
+        isSelected = !isSelected;
+        selectCircle.SetActive(isSelected);
+    }
 }

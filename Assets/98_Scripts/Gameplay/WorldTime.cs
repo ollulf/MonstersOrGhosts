@@ -8,25 +8,26 @@ using Photon.Pun;
 public class WorldTime : MonoBehaviourPun
 {
     [SerializeField] private int maxYears, oneYearInSeconds;
-    [SerializeField] private TextMeshProUGUI showTimer;
+    [SerializeField] private TextMeshProUGUI showYear, showDay;
+    [SerializeField] private Animator animYear, animMonth;
 
-    private int years;
-    private Timer timer;
-    private float motionFloat, dayFloat, monthFloat, indexFloat;
-    private Animator anim;
+    private int years, month = 1, day = 1, lastYear;
+    private Timer timer, timer2;
+    private float motionFloat, dayFloat, monthFloat, motionFloat2, indexFloat;
 
-    private int dayInt = 1, monthInt = 1;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         timer = new Timer();
+        timer2 = new Timer();
         motionFloat = 1f / maxYears;
+        motionFloat2 = 1f / 12f;
         timer.SetStartTime(0, false);
+        timer2.SetStartTime(0, false);
         monthFloat = oneYearInSeconds / 12f;
         dayFloat = monthFloat / 30f;
-        Debug.LogError(dayFloat);
         indexFloat = 0;
+        lastYear = years;
     }
 
     void Update()
@@ -34,11 +35,19 @@ public class WorldTime : MonoBehaviourPun
         if (PhotonNetwork.IsMasterClient)
         {
             timer.Tick();
+            timer2.Tick();
+
+            if (years != lastYear)
+            {
+                timer2.ResetTimer();
+                month = 1;
+                lastYear = years;
+            }
 
             YearMonthDayCalculater();
-            showTimer.text = years.ToString();
+            showYear.text = years.ToString();
 
-            photonView.RPC("UpdateUI", RpcTarget.All, years, monthInt, dayInt);
+            photonView.RPC("UpdateUI", RpcTarget.All, years, day);
             if (years >= maxYears)
             {
                 photonView.RPC("LevelLoad", RpcTarget.All);
@@ -48,18 +57,40 @@ public class WorldTime : MonoBehaviourPun
 
     private void LateUpdate()
     {
-        anim.SetFloat("Time", motionFloat * years);
+        animYear.SetFloat("Time", motionFloat * years);
+        animMonth.SetFloat("Time", motionFloat2 * month);
     }
 
     private void YearMonthDayCalculater()
     {
         years = Mathf.RoundToInt(timer.CurrentTime / oneYearInSeconds);
+        month = Mathf.RoundToInt(timer2.CurrentTime / monthFloat);
+
+        indexFloat += Time.deltaTime;
+        if (indexFloat >= dayFloat)
+        {
+            day++;
+            indexFloat = 0;
+            if (day >= 30)
+            {
+                day = 1;
+            }
+        }
     }
 
     [PunRPC]
-    private void UpdateUI(int newYear, int newMonth, int newDay)
+    private void UpdateUI(int newYear, int newDay)
     {
-        showTimer.text = newDay + "_" + newMonth + "_" + (1950 + newYear);
+        showYear.text = (1950 + newYear).ToString();
+        if (day < 10)
+        {
+            showDay.text = "0" + newDay.ToString();
+
+        }
+        else
+        {
+            showDay.text = newDay.ToString();
+        }
     }
 
     [PunRPC]

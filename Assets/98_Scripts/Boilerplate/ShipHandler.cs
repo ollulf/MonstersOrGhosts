@@ -6,7 +6,7 @@ using NaughtyAttributes;
 
 public class ShipHandler : Singleton<ShipHandler>
 {
-    private List<GameObject> ship;
+    private List<GameObject> ship, npcShips;
 
     private int moneyPerShip, shipCost;
 
@@ -20,11 +20,12 @@ public class ShipHandler : Singleton<ShipHandler>
     public static float Money { get => Instance.money; }
     public static int ShipCost { get => Instance.shipCost; }
     public static List<GameObject> Ship { get => Instance.ship; }
-
+    public static List<GameObject> NpcShips { get => Instance.npcShips;}
 
     public void Start()
     {
         ship = new List<GameObject>();
+        npcShips = new List<GameObject>();
         timer = new Timer();
         timer.SetStartTime(timerForMoney, true);
         money = FirstDataGive.StartMoney;
@@ -67,6 +68,7 @@ public class ShipHandler : Singleton<ShipHandler>
 
             GameObject ship = PhotonNetwork.Instantiate("MachineGame/" + prefab[Random.Range(0, prefab.Count)].name, wayPoint.GetStartPoint().position, Quaternion.identity);
             ship.GetComponent<ShipMovement>().GetWayPoint(wayPoint);
+            npcShips.Add(ship);
         }
     }
 
@@ -80,5 +82,10 @@ public class ShipHandler : Singleton<ShipHandler>
 
             timer.ResetTimer();
         }
+    }
+
+    public static GameObject StartShip()
+    {
+        return NpcShips[Random.Range(0,NpcShips.Count)];
     }
 }

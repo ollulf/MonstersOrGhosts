@@ -61,6 +61,10 @@ public class CameraScroller : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        if(selectedShip == null && (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        {
+            SelectStartShip();
+        }
         UpdateAmbientSound();
 
         distance = Vector3.Distance(farPosition.position, closePosition.position);
@@ -87,11 +91,6 @@ public class CameraScroller : MonoBehaviourPun
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
         {
             MouseCheck();
-
-            if(selectedShip == null)
-            {
-                SelectStartShip();
-            }
         }
     }
 

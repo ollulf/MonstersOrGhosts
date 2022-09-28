@@ -30,4 +30,12 @@ public class MachineController : MonoBehaviourPunCallbacks
             ShipHandler.RiseShipCost();
         }
     }
+
+    public void EnviOnClick()
+    {
+        if (ShipHandler.Money > ShipHandler.EnviCost)
+        {
+            ShipHandler.EnviOption();
+        }
+    }
 }

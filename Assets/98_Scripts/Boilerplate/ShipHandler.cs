@@ -6,32 +6,35 @@ using NaughtyAttributes;
 
 public class ShipHandler : Singleton<ShipHandler>
 {
-    private List<GameObject> ship, npcShips;
+    private List<GameObject> ship;
 
-    private int moneyPerShip, shipCost;
-
-    private float money, passiveIncome;
+    private float money, passiveIncome, moneyPerShip, shipCost, enviCost, enviIncome;
 
     [SerializeField] private List<GameObject> prefab;
-    [SerializeField] private float timerForMoney;
-    [SerializeField] private int amountOfNPCShips;
+    [SerializeField] private float timerForMoney, indexTime;
+    [SerializeField] private int amountOfNPCShips, amountOfEnvi;
     private Timer timer;
+    private int carbonProduced;
 
     public static float Money { get => Instance.money; }
-    public static int ShipCost { get => Instance.shipCost; }
+    public static float ShipCost { get => Instance.shipCost; }
     public static List<GameObject> Ship { get => Instance.ship; }
-    public static List<GameObject> NpcShips { get => Instance.npcShips;}
+    public static float EnviCost { get => Instance.enviCost;}
 
     public void Start()
     {
         ship = new List<GameObject>();
-        npcShips = new List<GameObject>();
         timer = new Timer();
         timer.SetStartTime(timerForMoney, true);
         money = FirstDataGive.StartMoney;
         moneyPerShip = FirstDataGive.Income;
         shipCost = FirstDataGive.ShipCost;
+        enviCost = FirstDataGive.EnviCost;
         passiveIncome = FirstDataGive.PassiveIncome;
+        enviIncome = FirstDataGive.EnvironmentalIncome;
+        amountOfEnvi = 0;
+        carbonProduced = 0;
+        indexTime = 0;
         SpawnNPCShips();
     }
 
@@ -47,17 +50,33 @@ public class ShipHandler : Singleton<ShipHandler>
 
     public static float Income()
     {
-        return Instance.passiveIncome + Instance.moneyPerShip * Ship.Count;
+        return FirstDataGive.PassiveIncome + Instance.moneyPerShip * Ship.Count + Instance.enviIncome * Instance.amountOfEnvi;
     }
 
     public static void RiseShipCost()
     {
-        Instance.shipCost = Mathf.RoundToInt(ShipCost * FirstDataGive.InduShipMulti.Evaluate(Ship.Count));
+        Instance.shipCost += Mathf.RoundToInt(ShipCost * FirstDataGive.InduShipMulti);
+    }
+
+    private void RiseEnviCost()
+    {
+        Instance.enviCost += Mathf.RoundToInt(enviCost * FirstDataGive.EcoShipMulti);
     }
 
     public static int CarbonIncreasePerSecond()
     {
         return Ship.Count * FirstDataGive.InduShipCo2;
+    }
+
+    public static int TotalCarbonProduced()
+    {
+        Instance.indexTime += Time.deltaTime;
+        if(Instance.indexTime >= 1)
+        {
+            Instance.carbonProduced += CarbonIncreasePerSecond();
+        }
+
+        return Instance.carbonProduced;
     }
 
     private void SpawnNPCShips()
@@ -68,8 +87,16 @@ public class ShipHandler : Singleton<ShipHandler>
 
             GameObject ship = PhotonNetwork.Instantiate("MachineGame/" + prefab[Random.Range(0, prefab.Count)].name, wayPoint.GetStartPoint().position, Quaternion.identity);
             ship.GetComponent<ShipMovement>().GetWayPoint(wayPoint);
-            npcShips.Add(ship);
+            AddShip(ship);
         }
+    }
+
+    public static void EnviOption()
+    {
+        Destroy(Ship[0]);
+        Instance.ship.Remove(Ship[0]);
+        Instance.amountOfEnvi++;
+        Instance.RiseEnviCost();
     }
 
     void Update()
@@ -77,7 +104,7 @@ public class ShipHandler : Singleton<ShipHandler>
         timer.Tick();
         if (timer.CurrentTime <= 0)
         {
-            money += passiveIncome + moneyPerShip * ship.Count;
+            money += Income();
 
 
             timer.ResetTimer();
@@ -86,6 +113,6 @@ public class ShipHandler : Singleton<ShipHandler>
 
     public static GameObject StartShip()
     {
-        return NpcShips[Random.Range(0,NpcShips.Count)];
+        return Ship[Random.Range(0,Ship.Count)];
     }
 }

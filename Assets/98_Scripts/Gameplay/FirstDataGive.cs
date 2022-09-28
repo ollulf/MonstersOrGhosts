@@ -43,9 +43,9 @@ public class FirstDataGive : Singleton<FirstDataGive>
     [Header("Passive Compressed CO2 per seconds")]
     [SerializeField] private int passiveCompressedCo2;
     [Header("Invest cost multi for Industrie")]
-    [SerializeField] private AnimationCurve induShipMulti;
+    [SerializeField] private float induShipMulti;
     [Header("Invest cost multi for Eco")]
-    [SerializeField] private AnimationCurve ecoShipMulti;
+    [SerializeField] private float ecoShipMulti;
 
 
     public static int BirdStartPopulation { get => Instance.birdStartPopulation;}
@@ -59,7 +59,9 @@ public class FirstDataGive : Singleton<FirstDataGive>
     public static float PassiveIncome { get => Instance.passiveIncome;}
     public static int Income { get => Instance.income;}
     public static int StartMoney { get => Instance.startMoney;}
-    public static AnimationCurve InduShipMulti { get => Instance.induShipMulti;}
-    public static AnimationCurve EcoShipMulti { get => Instance.ecoShipMulti;}
+    public static float InduShipMulti { get => Instance.induShipMulti;}
+    public static float EcoShipMulti { get => Instance.ecoShipMulti;}
     public static int InduShipCo2 { get => Instance.induShipCo2;}
+    public static int EnviCost { get => Instance.enviCost;}
+    public static float EnvironmentalIncome { get => Instance.environmentalIncome;}
 }

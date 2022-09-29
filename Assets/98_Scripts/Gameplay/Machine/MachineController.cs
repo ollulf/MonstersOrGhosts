@@ -26,7 +26,7 @@ public class MachineController : MonoBehaviourPunCallbacks
             GameObject ship = PhotonNetwork.Instantiate("MachineGame/" + prefab[Random.Range(0,prefab.Count)].name, wayPoint.GetStartPoint().position, Quaternion.identity);
             ship.GetComponent<ShipMovement>().GetWayPoint(wayPoint);
             ShipHandler.AddShip(ship);
-            ShipHandler.SetMoney();
+            ShipHandler.SetMoney(ShipHandler.ShipCost);
             ShipHandler.RiseShipCost();
         }
     }

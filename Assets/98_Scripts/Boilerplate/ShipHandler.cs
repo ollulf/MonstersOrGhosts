@@ -43,9 +43,9 @@ public class ShipHandler : Singleton<ShipHandler>
         Instance.ship.Add(newShip);
     }
 
-    public static void SetMoney()
+    public static void SetMoney(float cost)
     {
-        Instance.money -= Instance.shipCost;
+        Instance.money -= cost;
     }
 
     public static float Income()
@@ -96,6 +96,7 @@ public class ShipHandler : Singleton<ShipHandler>
         Destroy(Ship[0]);
         Instance.ship.Remove(Ship[0]);
         Instance.amountOfEnvi++;
+        SetMoney(EnviCost);
         Instance.RiseEnviCost();
     }
 

@@ -187,7 +187,6 @@ public class CameraScroller : MonoBehaviourPun
             {
                 if (hit.collider.gameObject.tag == "Ship")
                 {
-                    Debug.Log(hit.collider.gameObject);
                     closePosition = hit.collider.transform.GetChild(1);
                     speed = hit.collider.GetComponent<ShipMovement>().MovementSpeed;
                     hit.collider.GetComponent<ShipMovement>().SetIsSelected();

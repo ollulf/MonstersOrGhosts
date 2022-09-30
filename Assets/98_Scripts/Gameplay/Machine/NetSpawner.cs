@@ -24,9 +24,105 @@ public class NetSpawner : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActivateNet()
     {
-        
+        int maxActive = 0;
+
+        if(ShipHandler.Ship.Count > 15)
+        {
+            for(int i = 0;i<induNet.Count;i++)
+            {
+                if (maxActive < 3)
+                {
+                    if (induNet[i].activeSelf)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        induNet[i].SetActive(true);
+                        maxActive++;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < enviNet.Count; i++)
+            {
+                if (maxActive < 3)
+                {
+                    if (enviNet[i].activeSelf)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        enviNet[i].SetActive(true);
+                        maxActive++;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
     }
+
+    public void DeactivateNet()
+    {
+        int maxDeactive = 0;
+
+        if (ShipHandler.Ship.Count > 15)
+        {
+            for (int i = 0; i < induNet.Count; i++)
+            {
+                if (maxDeactive < 3)
+                {
+                    if (!induNet[i].activeSelf)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        induNet[i].SetActive(false);
+                        maxDeactive++;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < enviNet.Count; i++)
+            {
+                if (maxDeactive < 3)
+                {
+                    if (!enviNet[i].activeSelf)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        enviNet[i].SetActive(false);
+                        maxDeactive++;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+    }
+
 }

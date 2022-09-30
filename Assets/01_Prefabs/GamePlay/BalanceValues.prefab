@@ -67,58 +67,12 @@ MonoBehaviour:
   minutes: 10
   startMoney: 20
   income: 12
-  environmentalIncome: 1.5
+  environmentalIncome: 1.2
   passiveIncome: 0.1
   shipCost: 10
-  enviCost: 10
+  enviCost: 350
   buildingSpotSpawn: 6
   induShipCo2: 16000000
   passiveCompressedCo2: 2500
-  induShipMulti:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0.014140389
-      outSlope: 0.014140389
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1000
-      value: 15.1403885
-      inSlope: 0.014140389
-      outSlope: 0.014140389
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ecoShipMulti:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.09375
-      outSlope: 0.09375
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0.09375
-      inSlope: 0.09375
-      outSlope: 0.09375
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  induShipMulti: 0.2
+  ecoShipMulti: 0.2

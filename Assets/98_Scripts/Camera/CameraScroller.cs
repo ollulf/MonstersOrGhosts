@@ -26,7 +26,7 @@ public class CameraScroller : MonoBehaviourPun
 
     private void Awake()
     {
-        index = 1;
+        index = 2;
         fin = false;
         if (!base.photonView.IsMine)
             Destroy(this.gameObject);
@@ -46,9 +46,6 @@ public class CameraScroller : MonoBehaviourPun
         {
             underwaterAmbient.Play();
         }
-            
-        
-
     }
 
     public void SetFarPosition(Transform newTransform)
@@ -64,6 +61,10 @@ public class CameraScroller : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        if(selectedShip == null && (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        {
+            SelectStartShip();
+        }
         UpdateAmbientSound();
 
         distance = Vector3.Distance(farPosition.position, closePosition.position);
@@ -86,7 +87,11 @@ public class CameraScroller : MonoBehaviourPun
                 index = 2;
             }
         }
-        MouseCheck();
+
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        {
+            MouseCheck();
+        }
     }
 
     private void LateUpdate()
@@ -136,7 +141,14 @@ public class CameraScroller : MonoBehaviourPun
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(closePosition.eulerAngles), speed * Time.deltaTime);
                     gameObject.transform.eulerAngles = rotation.eulerAngles;
                     fin = false;
-                    break;
+                    if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+                    {
+                        if(selectedShip != null && selectedShip.GetComponent<ShipMovement>().IsSelected)
+                        {
+                            selectedShip.GetComponent<ShipMovement>().SetIsSelected();
+                        }
+                    }
+                        break;
                 }
             case 2:
                 {
@@ -148,10 +160,17 @@ public class CameraScroller : MonoBehaviourPun
                     }
 
                     fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, 1 * Time.deltaTime);
-                    fakeAngle =  Quaternion.Lerp(fakeAngle, Quaternion.Euler(farPosition.eulerAngles), speed * Time.deltaTime);
+                    fakeAngle = Quaternion.Lerp(fakeAngle, Quaternion.Euler(farPosition.eulerAngles), speed * Time.deltaTime);
 
                     gameObject.transform.position = fakeVector;
                     gameObject.transform.eulerAngles = fakeAngle.eulerAngles;
+                    if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+                    {
+                        if (selectedShip != null && !selectedShip.GetComponent<ShipMovement>().IsSelected)
+                        {
+                            selectedShip.GetComponent<ShipMovement>().SetIsSelected();
+                        }
+                    }
                     break;
                 }
         }
@@ -159,32 +178,34 @@ public class CameraScroller : MonoBehaviourPun
 
     private void MouseCheck()
     {
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                //Debug.DrawRay(ray.origin, ray.direction * 1000f, Color.yellow, Mathf.Infinity);
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                if (hit.collider.gameObject.tag == "Ship")
                 {
-                    if (hit.collider.gameObject.tag == "Ship")
-                    {                       
-                        Debug.Log(hit.collider.gameObject);
-                        closePosition = hit.collider.transform.GetChild(1);
-                        speed = hit.collider.GetComponent<ShipMovement>().MovementSpeed;
-                        hit.collider.GetComponent<ShipMovement>().IsSelected();
-                        if(selectedShip != null)
-                        {
-                            selectedShip.GetComponent<ShipMovement>().IsSelected();
-                        }
-                        selectedShip = hit.collider.gameObject;
+                    closePosition = hit.collider.transform.GetChild(1);
+                    speed = hit.collider.GetComponent<ShipMovement>().MovementSpeed;
+                    hit.collider.GetComponent<ShipMovement>().SetIsSelected();
+                    if (selectedShip != null && selectedShip.GetComponent<ShipMovement>().IsSelected)
+                    {
+                        selectedShip.GetComponent<ShipMovement>().SetIsSelected();
                     }
+                    selectedShip = hit.collider.gameObject;
                 }
             }
-
         }
+    }
 
+    private void SelectStartShip()
+    {
+        selectedShip = ShipHandler.StartShip();
+
+        closePosition = selectedShip.transform.GetChild(1);
+        speed = selectedShip.GetComponent<ShipMovement>().MovementSpeed;
+        selectedShip.GetComponent<ShipMovement>().SetIsSelected();
     }
 }

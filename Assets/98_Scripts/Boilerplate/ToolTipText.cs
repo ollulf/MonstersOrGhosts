@@ -31,7 +31,6 @@ public class ToolTipText : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (isOver)
         {
             timer.Tick();
-            Debug.LogError("Tick");
             if (timer.CurrentTime >= 1)
             {
                 ShowToolTip();

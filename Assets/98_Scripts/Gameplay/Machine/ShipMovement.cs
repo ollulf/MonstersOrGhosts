@@ -11,6 +11,7 @@ public class ShipMovement : MonoBehaviour
     private bool isSelected;
 
     public float MovementSpeed { get => movementSpeed; }
+    public bool IsSelected { get => isSelected;}
 
     private void Start()
     {
@@ -63,7 +64,7 @@ public class ShipMovement : MonoBehaviour
         wayPoint.Remove(wayPoint[0]);
     }
 
-    public void IsSelected()
+    public void SetIsSelected()
     {
         isSelected = !isSelected;
         selectCircle.SetActive(isSelected);

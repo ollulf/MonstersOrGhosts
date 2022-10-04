@@ -36,7 +36,7 @@ public class NetSpawner : MonoBehaviour
                 {
                     if (induNet[i].activeSelf)
                     {
-                        return;
+
                     }
                     else
                     {
@@ -58,7 +58,7 @@ public class NetSpawner : MonoBehaviour
                 {
                     if (enviNet[i].activeSelf)
                     {
-                        return;
+
                     }
                     else
                     {
@@ -78,6 +78,8 @@ public class NetSpawner : MonoBehaviour
     {
         int maxDeactive = 0;
 
+        Debug.LogError("Deactivate net: " + maxDeactive);
+
         if (ShipHandler.Ship.Count > 15)
         {
             for (int i = 0; i < induNet.Count; i++)
@@ -86,7 +88,7 @@ public class NetSpawner : MonoBehaviour
                 {
                     if (!induNet[i].activeSelf)
                     {
-                        return;
+
                     }
                     else
                     {
@@ -104,14 +106,16 @@ public class NetSpawner : MonoBehaviour
         {
             for (int i = 0; i < enviNet.Count; i++)
             {
+                Debug.LogError("Envi");
                 if (maxDeactive < 3)
                 {
                     if (!enviNet[i].activeSelf)
                     {
-                        return;
+                        Debug.LogError("Envi deactive");
                     }
                     else
                     {
+                        Debug.LogError("envi active");
                         enviNet[i].SetActive(false);
                         maxDeactive++;
                     }

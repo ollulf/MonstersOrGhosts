@@ -9,7 +9,7 @@ public class CameraScroller : MonoBehaviourPun
 {
     [SerializeField] Transform farPosition, closePosition, animalSight;
     [SerializeField] AnimationCurve acellerationCurve;
-    [SerializeField] float speed = 1f;
+    [SerializeField] float speed = 1f, fishFog, overviewFog;
 
     [SerializeField] private AudioSource arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
     [ShowNonSerializedField] private bool isCameraUnderwater;
@@ -36,7 +36,7 @@ public class CameraScroller : MonoBehaviourPun
     {
         gameObject.transform.position = closePosition.position;
         distance = Vector3.Distance(farPosition.position, closePosition.position);
-
+        RenderSettings.fogDensity = overviewFog;
 
         if (!(gameObject.transform.position.y < 0))
         {
@@ -148,7 +148,11 @@ public class CameraScroller : MonoBehaviourPun
                             selectedShip.GetComponent<ShipMovement>().SetIsSelected();
                         }
                     }
-                        break;
+                    if((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Fish)
+                    {
+                        RenderSettings.fogDensity = fishFog;
+                    }
+                    break;
                 }
             case 2:
                 {
@@ -164,6 +168,7 @@ public class CameraScroller : MonoBehaviourPun
 
                     gameObject.transform.position = fakeVector;
                     gameObject.transform.eulerAngles = fakeAngle.eulerAngles;
+                    RenderSettings.fogDensity = overviewFog;
                     if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
                     {
                         if (selectedShip != null && !selectedShip.GetComponent<ShipMovement>().IsSelected)

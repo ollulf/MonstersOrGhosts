@@ -914,10 +914,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7954062857363133460}
     m_Modifications:
+    - target: {fileID: 574798862174570362, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574798862174570362, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 8450808836658823645, guid: 1341ac73a77d34b7c80d0433d21d1c08,
+        type: 3}
     - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
         type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
         type: 3}
@@ -932,7 +948,7 @@ PrefabInstance:
     - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.036675
       objectReference: {fileID: 0}
     - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
         type: 3}
@@ -984,7 +1000,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 574798862174570362, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &772737524954061504 stripped
 Transform:

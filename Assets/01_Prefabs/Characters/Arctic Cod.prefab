@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4951884224226847189}
-  - component: {fileID: 574798862174570362}
+  - component: {fileID: 3770176920983097154}
   m_Layer: 0
   m_Name: Arctic Cod
   m_TagString: Untagged
@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 5761072436977513327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 53.2035, y: 0, z: 24.565344}
-  m_LocalScale: {x: 0.20000002, y: 0.20000002, z: 0.20000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4037605871189834059}
@@ -225,22 +225,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &574798862174570362
-Animation:
+--- !u!95 &3770176920983097154
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5761072436977513327}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 8450808836658823645, guid: 1341ac73a77d34b7c80d0433d21d1c08,
-    type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b29d35d7e00fc19469a3229a372812db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5803712340734680592
 GameObject:
   m_ObjectHideFlags: 0

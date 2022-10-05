@@ -7,11 +7,13 @@ public class FirstDataGive : Singleton<FirstDataGive>
     [Header("Start Population")]
     [SerializeField] private int birdStartPopulation, fishStartPopulation, deerStartPopulation;
     [Header("Starving per Seconds")]
-    [SerializeField] private int birdPopulationLoss, fishPopulationLoss, deerPopulationLoss;
+    [SerializeField] private int birdPopulationLoss, deerPopulationLoss;
     [Header("RegularLoss")]
     [SerializeField] private int birdLoss, fishLoss, deerLoss;
     [Header("Realistic Increase per tick")]
-    [SerializeField] private int birdPopulation, fishPopulation, deerPopulation;
+    [SerializeField] private int birdPopulation, deerPopulation;
+    [Header("Population increase per Food")]
+    [SerializeField] private int fishPopulation;
     [Header("Spawnrate")]
     [SerializeField] private float birdFood, fishFood, DeerFood;
     [Header("Passive CO2 Production")]
@@ -48,20 +50,20 @@ public class FirstDataGive : Singleton<FirstDataGive>
     [SerializeField] private float ecoShipMulti;
 
 
-    public static int BirdStartPopulation { get => Instance.birdStartPopulation;}
-    public static int FishStartPopulation { get => Instance.fishStartPopulation;}
-    public static int DeerStartPopulation { get => Instance.deerStartPopulation;}
-    public static float DeerCompress { get => Instance.deerCompress;}
-    public static int BirdPopulation { get => Instance.birdPopulation;}
-    public int FishPopulation { get => fishPopulation; set => fishPopulation = value; }
-    public static int DeerPopulation { get => Instance.deerPopulation;}
-    public static int ShipCost { get => Instance.shipCost;}
-    public static float PassiveIncome { get => Instance.passiveIncome;}
-    public static int Income { get => Instance.income;}
-    public static int StartMoney { get => Instance.startMoney;}
-    public static float InduShipMulti { get => Instance.induShipMulti;}
-    public static float EcoShipMulti { get => Instance.ecoShipMulti;}
-    public static int InduShipCo2 { get => Instance.induShipCo2;}
-    public static int EnviCost { get => Instance.enviCost;}
-    public static float EnvironmentalIncome { get => Instance.environmentalIncome;}
+    public static int BirdStartPopulation { get => Instance.birdStartPopulation; }
+    public static int FishStartPopulation { get => Instance.fishStartPopulation; }
+    public static int DeerStartPopulation { get => Instance.deerStartPopulation; }
+    public static float DeerCompress { get => Instance.deerCompress; }
+    public static int BirdPopulation { get => Instance.birdPopulation; }
+    public static int FishPopulation { get => Instance.fishPopulation;}
+    public static int DeerPopulation { get => Instance.deerPopulation; }
+    public static int ShipCost { get => Instance.shipCost; }
+    public static float PassiveIncome { get => Instance.passiveIncome; }
+    public static int Income { get => Instance.income; }
+    public static int StartMoney { get => Instance.startMoney; }
+    public static float InduShipMulti { get => Instance.induShipMulti; }
+    public static float EcoShipMulti { get => Instance.ecoShipMulti; }
+    public static int InduShipCo2 { get => Instance.induShipCo2; }
+    public static int EnviCost { get => Instance.enviCost; }
+    public static float EnvironmentalIncome { get => Instance.environmentalIncome; }
 }

@@ -101,16 +101,11 @@ public class FishMovment : MonoBehaviourPun
         fishPref.transform.eulerAngles = rotation.eulerAngles;
     }
 
-    public void FeedFish(int newFood)
+    public void FeedFish(int newPopulation)
     {
-        food += newFood;
-        if (food >= 100)
-        {
-            food = 0;
-            population += 1;
-            PlayerBaseDataHandler.RaiseBirdFood(1);
-            AddFlock();
-        }
+        population += newPopulation;
+        PlayerBaseDataHandler.RaiseBirdFood(1);
+        AddFlock();
     }
 
     public void PoisenFish(int newPoisen)

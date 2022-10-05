@@ -5,34 +5,12 @@ using Photon.Pun;
 
 public class FoodField : MonoBehaviourPun
 {
-    [SerializeField] private int foodValue;
-    [SerializeField] private int feeding;
-    [SerializeField] private float setTimer;
-    private Timer timer;
-
-    public int FoodValue { get => foodValue; }
-
-    private void Start()
-    {
-        timer = new Timer();
-        timer.SetStartTime(setTimer, true);
-    }
-
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<FishMovment>())
         {
-            timer.Tick();
-            if (timer.CurrentTime <= 0)
-            {
-                foodValue -= feeding;
-                other.GetComponent<FishMovment>().FeedFish(feeding);
-                if (foodValue <= 0)
-                {
-                    PhotonNetwork.Destroy(gameObject);
-                }
-                timer.ResetTimer();
-            }
+            other.GetComponent<FishMovment>().FeedFish(FirstDataGive.FishPopulation);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 }

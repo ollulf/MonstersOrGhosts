@@ -86,7 +86,7 @@ public class FishMovment : MonoBehaviourPun
     }
     private void MovePlayer()
     {
-        rigidbody.transform.position += transform.up * movement.y * movementSpeed;
+            rigidbody.AddRelativeForce(transform.forward * -movement.y * movementSpeed);
     }
 
     private void TurnFish()

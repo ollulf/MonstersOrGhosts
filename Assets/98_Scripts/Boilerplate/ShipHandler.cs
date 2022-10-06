@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
+using Photon.Pun;
 
 public class ShipHandler : Singleton<ShipHandler>
 {
@@ -107,14 +108,16 @@ public class ShipHandler : Singleton<ShipHandler>
 
     void Update()
     {
-        timer.Tick();
-        if (timer.CurrentTime <= 0)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
         {
-            money += Income();
+            timer.Tick();
+            if (timer.CurrentTime <= 0)
+            {
+                money += Income();
+                PlayIncomeSound();
 
-            PlayIncomeSound();
-
-            timer.ResetTimer();
+                timer.ResetTimer();
+            }
         }
     }
 

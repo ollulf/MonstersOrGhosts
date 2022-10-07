@@ -69,5 +69,6 @@ public enum Charakter
     Bird,
     Deer,
     Machine,
-    Bacteria
+    Bacteria,
+    Ice
 }

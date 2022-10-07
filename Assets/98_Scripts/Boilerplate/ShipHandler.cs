@@ -16,6 +16,7 @@ public class ShipHandler : Singleton<ShipHandler>
     [SerializeField] private int amountOfNPCShips, amountOfEnvi;
     private Timer timer;
     private int carbonProduced;
+    private AudioSource audioSource;
 
     public static float Money { get => Instance.money; }
     public static float ShipCost { get => Instance.shipCost; }
@@ -24,6 +25,7 @@ public class ShipHandler : Singleton<ShipHandler>
 
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         ship = new List<GameObject>();
         timer = new Timer();
         timer.SetStartTime(timerForMoney, true);
@@ -110,9 +112,16 @@ public class ShipHandler : Singleton<ShipHandler>
         {
             money += Income();
 
+            PlayIncomeSound();
 
             timer.ResetTimer();
         }
+    }
+
+    private void PlayIncomeSound()
+    {
+        audioSource.pitch = Random.Range(0.8f , 1);
+        audioSource.Play();
     }
 
     public static GameObject StartShip()

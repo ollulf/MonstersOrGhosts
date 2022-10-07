@@ -14,6 +14,7 @@ public class FishMovment : MonoBehaviourPun
     [SerializeField] private float turnspeed, fishPrefTurnSpeed;
     [SerializeField] private Transform fishPref;
     private Vector2 movement;
+    private Rigidbody rigidbody;
 
     [ShowNonSerializedField] private int food;
     [ShowNonSerializedField] private int poisen;
@@ -26,6 +27,7 @@ public class FishMovment : MonoBehaviourPun
 
     private void Start()
     {
+        rigidbody = GetComponent<Rigidbody>();
         population = FirstDataGive.FishStartPopulation;
         PlayerBaseDataHandler.SetFish(this);
         PlayerBaseDataHandler.RaiseBirdFood(population);
@@ -84,7 +86,7 @@ public class FishMovment : MonoBehaviourPun
     }
     private void MovePlayer()
     {
-        transform.position += transform.up * movement.y * movementSpeed;
+            rigidbody.AddRelativeForce(transform.forward * -movement.y * movementSpeed);
     }
 
     private void TurnFish()
@@ -101,16 +103,11 @@ public class FishMovment : MonoBehaviourPun
         fishPref.transform.eulerAngles = rotation.eulerAngles;
     }
 
-    public void FeedFish(int newFood)
+    public void FeedFish(int newPopulation)
     {
-        food += newFood;
-        if (food >= 100)
-        {
-            food = 0;
-            population += 1;
-            PlayerBaseDataHandler.RaiseBirdFood(1);
-            AddFlock();
-        }
+        population += newPopulation;
+        PlayerBaseDataHandler.RaiseBirdFood(1);
+        AddFlock();
     }
 
     public void PoisenFish(int newPoisen)

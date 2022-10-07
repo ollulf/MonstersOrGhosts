@@ -145,3 +145,12 @@ public class FishMovment : MonoBehaviourPun
         return movement.y > 0;
     }
 }
+
+public enum Danger
+{
+    VeryLow,
+    low,
+    normal,
+    high,
+    ExtremHigh
+}

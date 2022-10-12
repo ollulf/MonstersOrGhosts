@@ -9,6 +9,13 @@ public class FoodSpotHandler : MonoBehaviourPun
 {
     private List<Transform> foodSpots;
 
+    private void Awake()
+    {
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Bird)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {

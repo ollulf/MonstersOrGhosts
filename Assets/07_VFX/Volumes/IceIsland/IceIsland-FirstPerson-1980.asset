@@ -136,6 +136,118 @@ MonoBehaviour:
   bladeRotation:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-2314068687854746728
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9392aacf3349be549bb1fd9eece49154, type: 3}
+  m_Name: VolumetricFog
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  sampleCount:
+    m_OverrideState: 0
+    m_Value: 64
+  animateSamplePosition:
+    m_OverrideState: 0
+    m_Value: 0
+  selfShadowingEnabled:
+    m_OverrideState: 0
+    m_Value: 1
+  maximumSelfShadowingOctaves:
+    m_OverrideState: 0
+    m_Value: 1
+  horizonShadowingEnabled:
+    m_OverrideState: 0
+    m_Value: 1
+  maxDistanceVolumetric:
+    m_OverrideState: 0
+    m_Value: 64
+  analyticFogEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  maxDistanceAnalytic:
+    m_OverrideState: 0
+    m_Value: 5000
+  temporalAntiAliasingEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  temporalAntiAliasingIntegrationRate:
+    m_OverrideState: 0
+    m_Value: 0.03
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 20
+  anisotropy:
+    m_OverrideState: 1
+    m_Value: 0.378
+  lightIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  shadowIntensity:
+    m_OverrideState: 0
+    m_Value: 1
+  baseHeight:
+    m_OverrideState: 0
+    m_Value: -30
+  attenuationBoundarySize:
+    m_OverrideState: 0
+    m_Value: 1
+  litColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.014462441, g: 0.23921569, b: 0.6132076, a: 1}
+  shadowedColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.064836234, g: 0.14376885, b: 0.4433962, a: 1}
+  emitColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.0034709796, g: 0.02015797, b: 0.24528301, a: 1}
+  colorRamp:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  colorInfluence:
+    m_OverrideState: 1
+    m_Value: 1
+  noiseTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  octaves:
+    m_OverrideState: 0
+    m_Value: 1
+  lacunarity:
+    m_OverrideState: 0
+    m_Value: 2
+  gain:
+    m_OverrideState: 0
+    m_Value: 0.3
+  noiseTiling:
+    m_OverrideState: 1
+    m_Value: 20
+  noiseWindSpeed:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0, z: 0}
+  noiseMap:
+    m_OverrideState: 1
+    m_Value: {x: 0.2422145, y: 0.8690721}
+  volumeNoise:
+    m_OverrideState: 1
+    m_Value:
+      frequency: 12
+      octaves: 5
+      lacunarity: 3
+      gain: 0.472
+      seed: 1
+      noiseType: 4
+      noiseQuality: 2
+      invert: 0
+      userTexture: {fileID: 0}
 --- !u!114 &-1347137411533618926
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -212,120 +324,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: ArcticCod-FirstPerson-Green
+  m_Name: IceIsland-FirstPerson-1980
   m_EditorClassIdentifier: 
   components:
   - {fileID: -3932314356969270783}
-  - {fileID: 4454205767624890156}
---- !u!114 &4454205767624890156
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9392aacf3349be549bb1fd9eece49154, type: 3}
-  m_Name: VolumetricFog
-  m_EditorClassIdentifier: 
-  active: 1
-  mode:
-    m_OverrideState: 1
-    m_Value: 1
-  sampleCount:
-    m_OverrideState: 0
-    m_Value: 64
-  animateSamplePosition:
-    m_OverrideState: 0
-    m_Value: 0
-  selfShadowingEnabled:
-    m_OverrideState: 0
-    m_Value: 1
-  maximumSelfShadowingOctaves:
-    m_OverrideState: 0
-    m_Value: 1
-  horizonShadowingEnabled:
-    m_OverrideState: 0
-    m_Value: 1
-  maxDistanceVolumetric:
-    m_OverrideState: 0
-    m_Value: 64
-  analyticFogEnabled:
-    m_OverrideState: 0
-    m_Value: 0
-  maxDistanceAnalytic:
-    m_OverrideState: 0
-    m_Value: 5000
-  temporalAntiAliasingEnabled:
-    m_OverrideState: 0
-    m_Value: 0
-  temporalAntiAliasingIntegrationRate:
-    m_OverrideState: 0
-    m_Value: 0.03
-  fogDensity:
-    m_OverrideState: 1
-    m_Value: 20
-  anisotropy:
-    m_OverrideState: 1
-    m_Value: 0.378
-  lightIntensity:
-    m_OverrideState: 0
-    m_Value: 1
-  shadowIntensity:
-    m_OverrideState: 0
-    m_Value: 1
-  baseHeight:
-    m_OverrideState: 0
-    m_Value: -20
-  attenuationBoundarySize:
-    m_OverrideState: 0
-    m_Value: 1
-  litColor:
-    m_OverrideState: 1
-    m_Value: {r: 0.04672481, g: 0.2830189, b: 0.057771347, a: 1}
-  shadowedColor:
-    m_OverrideState: 1
-    m_Value: {r: 0.049394805, g: 0.2830189, b: 0.20055701, a: 1}
-  emitColor:
-    m_OverrideState: 1
-    m_Value: {r: 0.14017443, g: 0.3962264, b: 0.27864394, a: 1}
-  colorRamp:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
-  colorInfluence:
-    m_OverrideState: 1
-    m_Value: 1
-  noiseTexture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
-  octaves:
-    m_OverrideState: 0
-    m_Value: 1
-  lacunarity:
-    m_OverrideState: 0
-    m_Value: 2
-  gain:
-    m_OverrideState: 0
-    m_Value: 0.3
-  noiseTiling:
-    m_OverrideState: 1
-    m_Value: 20
-  noiseWindSpeed:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 0, z: 0}
-  noiseMap:
-    m_OverrideState: 1
-    m_Value: {x: 0.2422145, y: 0.8690721}
-  volumeNoise:
-    m_OverrideState: 1
-    m_Value:
-      frequency: 12
-      octaves: 5
-      lacunarity: 3
-      gain: 0.472
-      seed: 1
-      noiseType: 4
-      noiseQuality: 2
-      invert: 0
-      userTexture: {fileID: 0}
+  - {fileID: -2314068687854746728}

@@ -102,10 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   gaussianStart:
     m_OverrideState: 0
     m_Value: 10
@@ -212,12 +212,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: ArcticCod-FirstPerson-Green
+  m_Name: IceIsland-FirstPerson-2100
   m_EditorClassIdentifier: 
   components:
   - {fileID: -3932314356969270783}
-  - {fileID: 4454205767624890156}
---- !u!114 &4454205767624890156
+  - {fileID: 561565881430907368}
+--- !u!114 &561565881430907368
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,10 +264,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.03
   fogDensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 20
   anisotropy:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.378
   lightIntensity:
     m_OverrideState: 0
@@ -276,20 +276,20 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   baseHeight:
-    m_OverrideState: 0
-    m_Value: -20
+    m_OverrideState: 1
+    m_Value: 0
   attenuationBoundarySize:
     m_OverrideState: 0
     m_Value: 1
   litColor:
     m_OverrideState: 1
-    m_Value: {r: 0.04672481, g: 0.2830189, b: 0.057771347, a: 1}
+    m_Value: {r: 0.26415092, g: 0.03862584, b: 0.03951024, a: 1}
   shadowedColor:
     m_OverrideState: 1
-    m_Value: {r: 0.049394805, g: 0.2830189, b: 0.20055701, a: 1}
+    m_Value: {r: 0.6226415, g: 0, b: 0, a: 1}
   emitColor:
     m_OverrideState: 1
-    m_Value: {r: 0.14017443, g: 0.3962264, b: 0.27864394, a: 1}
+    m_Value: {r: 0.9433962, g: 0, b: 0, a: 1}
   colorRamp:
     m_OverrideState: 0
     m_Value: {fileID: 0}

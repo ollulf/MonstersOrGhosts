@@ -1,5 +1,117 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5776953598756898204
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9392aacf3349be549bb1fd9eece49154, type: 3}
+  m_Name: VolumetricFog
+  m_EditorClassIdentifier: 
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 1
+  sampleCount:
+    m_OverrideState: 0
+    m_Value: 64
+  animateSamplePosition:
+    m_OverrideState: 1
+    m_Value: 1
+  selfShadowingEnabled:
+    m_OverrideState: 0
+    m_Value: 1
+  maximumSelfShadowingOctaves:
+    m_OverrideState: 0
+    m_Value: 1
+  horizonShadowingEnabled:
+    m_OverrideState: 0
+    m_Value: 1
+  maxDistanceVolumetric:
+    m_OverrideState: 0
+    m_Value: 64
+  analyticFogEnabled:
+    m_OverrideState: 0
+    m_Value: 1
+  maxDistanceAnalytic:
+    m_OverrideState: 1
+    m_Value: 10000
+  temporalAntiAliasingEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  temporalAntiAliasingIntegrationRate:
+    m_OverrideState: 0
+    m_Value: 0.03
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 20
+  anisotropy:
+    m_OverrideState: 1
+    m_Value: 0.25
+  lightIntensity:
+    m_OverrideState: 0
+    m_Value: 8
+  shadowIntensity:
+    m_OverrideState: 0
+    m_Value: 10
+  baseHeight:
+    m_OverrideState: 0
+    m_Value: -10
+  attenuationBoundarySize:
+    m_OverrideState: 0
+    m_Value: 20
+  litColor:
+    m_OverrideState: 1
+    m_Value: {r: 3.482202, g: 0.34639707, b: 0.34639707, a: 1}
+  shadowedColor:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  emitColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.608393, g: 0.06052077, b: 0.06052077, a: 1}
+  colorRamp:
+    m_OverrideState: 0
+    m_Value: {fileID: 2800000, guid: c012936ff7c918a45aaa43e0f0cc7e12, type: 3}
+  colorInfluence:
+    m_OverrideState: 1
+    m_Value: 0.283
+  noiseTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  octaves:
+    m_OverrideState: 0
+    m_Value: 2
+  lacunarity:
+    m_OverrideState: 0
+    m_Value: 2
+  gain:
+    m_OverrideState: 1
+    m_Value: 0.54
+  noiseTiling:
+    m_OverrideState: 0
+    m_Value: 50
+  noiseWindSpeed:
+    m_OverrideState: 1
+    m_Value: {x: 5, y: 0, z: 0}
+  noiseMap:
+    m_OverrideState: 1
+    m_Value: {x: 0.30273288, y: 0.7923876}
+  volumeNoise:
+    m_OverrideState: 1
+    m_Value:
+      frequency: 25
+      octaves: 3
+      lacunarity: 6
+      gain: 0.892
+      seed: 10000
+      noiseType: 6
+      noiseQuality: 2
+      invert: 0
+      userTexture: {fileID: 0}
 --- !u!114 &-989958857123291326
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -35,6 +147,7 @@ MonoBehaviour:
   - {fileID: 6895529366630188981}
   - {fileID: 4366812723146144031}
   - {fileID: 4106235006168897209}
+  - {fileID: -5776953598756898204}
 --- !u!114 &178552289476921296
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -135,7 +248,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   red:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -147,7 +260,7 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 1
+          inSlope: 0
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
@@ -157,7 +270,7 @@ MonoBehaviour:
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -304,7 +417,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   hueVsSat:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 3
       m_Loop: 1

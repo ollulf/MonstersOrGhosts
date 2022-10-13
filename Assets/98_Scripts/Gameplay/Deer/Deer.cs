@@ -9,7 +9,7 @@ public class Deer : MonoBehaviour
 
     [SerializeField] private float movementSpeed, maxDistance;
 
-    private GameObject target;
+    [SerializeField] private GameObject target;
 
     private NavMeshAgent agent;
 
@@ -26,7 +26,10 @@ public class Deer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        deerControll.ExecuteState();
+        if (target != null)
+        {
+            deerControll.ExecuteState();
+        }
     }
 
     public void SetTarget(GameObject newTarget)

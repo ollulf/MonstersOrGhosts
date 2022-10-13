@@ -13,8 +13,17 @@ public class FishFoodSpawner : Singleton<FishFoodSpawner>
     [MinValue(0), MaxValue(160)]
     [SerializeField] private int spawningPointsActive;
 
+    private void Awake()
+    {
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Fish)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
+
         fishFoodSpawner = new List<Transform>();
         fishFood = new List<GameObject>();
         for (int i = 0; i < transform.childCount; i++)

@@ -21,7 +21,7 @@ public class DeerController : MonoBehaviour
     public float populationGrowth;
     public float timeUntilTick = 1f;
 
-    [SerializeField] private TextMeshProUGUI populationTF, co2TF, hungerTF;
+    [SerializeField] private TextMeshProUGUI populationTF, co2TF,co2SecTF, hungerTF;
 
     [ShowNonSerializedField] private DeerFood currentFoodSource;
     private Timer timer;
@@ -108,9 +108,31 @@ public class DeerController : MonoBehaviour
 
     private void UpdateUI()
     {
-        populationTF.text = "" + population;
-        hungerTF.text = "" + hunger;
-        co2TF.text = "" + co2Compressed;
+        populationTF.text = population.ToString();
+        hungerTF.text = HungerToState(hunger).ToString();
+        co2TF.text = co2Compressed.ToString();
+        if (isMoving) co2SecTF.text = UnityEngine.Random.Range(45,55).ToString();
+
+
+    }
+
+    private HungerState HungerToState(float hunger)
+    {
+        if (hunger >= hungerValueUntilStarving)
+            return HungerState.starving;
+        else if (hunger > hungerValueUntilStarving / 4 * 3)
+            return HungerState.hungry;
+        else if (hunger > hungerValueUntilStarving / 2)
+            return HungerState.ok;
+        else if (hunger > hungerValueUntilStarving / 4)
+            return HungerState.satisfied;
+        else if (hunger > 0)
+            return HungerState.full;
+        else
+        {
+            Debug.LogWarning("Hunger value out of bounds");
+            return HungerState.error;
+        }
     }
 
     private void CheckTimer()
@@ -145,5 +167,9 @@ public class DeerController : MonoBehaviour
 public enum HungerState
 {
     starving,
-    full
+    hungry,
+    ok,
+    satisfied,
+    full,
+    error
 }

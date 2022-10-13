@@ -256,8 +256,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7304701721736946513}
   - component: {fileID: 7304701721736946512}
-  - component: {fileID: 7304701721736946527}
   - component: {fileID: 7998057456929992834}
+  - component: {fileID: 4202480272075695819}
   m_Layer: 0
   m_Name: DeerFoodSource
   m_TagString: DeerFood
@@ -298,20 +298,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minFoodCapacity: 500
   maxFoodCapacity: 1000
---- !u!64 &7304701721736946527
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7304701721736946526}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: da62b4c8c3e72ea4296788fcdb70972c, type: 3}
+  moveDownIntensity: 1
+  foodVisuals: {fileID: 3678575487231814596}
 --- !u!114 &7998057456929992834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +322,19 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!135 &4202480272075695819
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304701721736946526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.6315675
+  m_Center: {x: 0.18641233, y: 0, z: 0.06743097}
 --- !u!1001 &1296290181359083983
 PrefabInstance:
   m_ObjectHideFlags: 0

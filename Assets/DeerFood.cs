@@ -19,7 +19,6 @@ public class DeerFood : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnAnimation();
         startPosition = transform.position;
         foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
         tempfoodCapacity = foodCapacity;
@@ -30,16 +29,8 @@ public class DeerFood : MonoBehaviour
         foodCapacity -= amount;
 
         if (foodCapacity <= 0)
+            Destroy(gameObject);
 
-            DespawnAnimation();
-    }
-    private void SpawnAnimation() //moves out of the floor
-    {
-        throw new System.NotImplementedException();
-    }
-    private void DespawnAnimation() //move into the foor and destroys self
-    {
-        throw new System.NotImplementedException();
     }
 
     void Update()

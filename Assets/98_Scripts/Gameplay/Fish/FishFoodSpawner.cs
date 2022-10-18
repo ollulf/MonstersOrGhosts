@@ -13,8 +13,10 @@ public class FishFoodSpawner : Singleton<FishFoodSpawner>
     [MinValue(0), MaxValue(160)]
     [SerializeField] private int spawningPointsActive;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Fish)
         {
             Destroy(gameObject);

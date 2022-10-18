@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class MultiPlayerInstantiate : MonoBehaviour
 {
-    [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition, overViewPosition;
+    [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition, overViewPosition, scientificOverViewPosition;
 
     private void Awake()
     {
@@ -17,31 +17,31 @@ public class MultiPlayerInstantiate : MonoBehaviour
             case Charakter.Bird:
                 {
                     GameObject bird = PhotonNetwork.Instantiate("BirdGame/Bird", birdPosition.position, transform.rotation);
-                    bird.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition);
+                    bird.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }
             case Charakter.Fish:
                 {
                     GameObject fish = PhotonNetwork.Instantiate("FishGame/Fish", fishPosition.position, Quaternion.Euler(90, 0, 0));
-                    fish.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition);
+                    fish.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }
             case Charakter.Bacteria:
                 {
                     GameObject bacteria = PhotonNetwork.Instantiate("BacteriaGame/Bacteria", bacteriaPosition.position, transform.rotation);
-                    bacteria.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition);
+                    bacteria.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }
             case Charakter.Deer:
                 {
                     GameObject deer = PhotonNetwork.Instantiate("DeerGame/Deer", deerPosition.position, transform.rotation);
-                    deer.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition);
+                    deer.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }
             case Charakter.Machine:
                 {
                     GameObject machine = PhotonNetwork.Instantiate("MachineGame/Machine", machinePosition.position, transform.rotation);
-                    machine.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition);
+                    machine.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }
         }

@@ -1,739 +1,2195 @@
 fileFormatVersion: 2
 guid: d5f6ee79ad9384996a9e47fdec9908bc
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: ant_10_jnt_L
-    100002: ant_10_jnt_R
-    100004: ant_11_jnt_L
-    100006: ant_12_jnt_L
-    100008: ant_12_jnt_R
-    100010: ant_13_jnt_L
-    100012: ant_13_jnt_R
-    100014: ant_1_jnt_L
-    100016: ant_1_jnt_R
-    100018: ant_2_jnt_L
-    100020: ant_2_jnt_R
-    100022: ant_3_jnt_L
-    100024: ant_3_jnt_R
-    100026: ant_5_jnt_L
-    100028: ant_5_jnt_R
-    100030: ant_7_jnt_L
-    100032: ant_7_jnt_R
-    100034: ant_end_jnt_L
-    100036: ant_end_jnt_R
-    100038: ant_jnt_L
-    100040: ant_jnt_R
-    100042: appendage_jnts
-    100044: Arm_1_cntrl_L
-    100046: Arm_1_cntrl_R
-    100048: Arm_1_jnt_L
-    100050: Arm_1_jnt_R
-    100052: Arm_2_cntrl_L
-    100054: Arm_2_cntrl_R
-    100056: Arm_2_jnt_L
-    100058: Arm_2_jnt_R
-    100060: Arm_3_jnt_L
-    100062: Arm_3_jnt_R
-    100064: Arm_4_jnt_L
-    100066: Arm_4_jnt_R
-    100068: Arm_5_jnt_L
-    100070: Arm_5_jnt_R
-    100072: Arm_6_jnt_L
-    100074: Arm_6_jnt_R
-    100076: Arm_7_jnt_L
-    100078: Arm_7_jnt_R
-    100080: Arm_cntrl_L
-    100082: Arm_cntrl_R
-    100084: Arm_jnt_L
-    100086: Arm_jnt_R
-    100088: Arm_L1
-    100090: Arms
-    100092: Body_geometry
-    100094: bottom_shell
-    100096: circulatory_system
-    100098: digestive_system
-    100100: //RootNode
-    100102: Feediing_Arm_L1
-    100104: Feediing_Arm_L1 1
-    100106: Feediing_Arm_L2
-    100108: Feediing_Arm_L3
-    100110: Feeding_Forearm_L1
-    100112: Feeding_Forearm_L1 1
-    100114: FeedingArm_1_cntrl_R
-    100116: FeedingArm_1_jnt_L
-    100118: FeedingArm_1_jnt_R
-    100120: FeedingArm_2_cntrl_R
-    100122: FeedingArm_2_jnt_L
-    100124: FeedingArm_2_jnt_R
-    100126: FeedingArm_3_jnt_L
-    100128: FeedingArm_3_jnt_R
-    100130: FeedingArm_4_jnt_L
-    100132: FeedingArm_4_jnt_R
-    100134: FeedingArm_cntrl_R
-    100136: FeedingArm_jnt_L
-    100138: FeedingArm_jnt_R
-    100140: FeendingArm_1_cntrl_L
-    100142: FeendingArm_2_cntrl_L
-    100144: FeendingArm_cntrl_L
-    100146: Fore_Arm_Hairs_R
-    100148: ForeArm_Hairs_L
-    100150: ForeArm_L
-    100152: ForeArm_L1
-    100154: ForeArm_L1 1
-    100156: hair1
-    100158: hair1 1
-    100160: hair16
-    100162: hair17
-    100164: hair2
-    100166: hair3
-    100168: hair30
-    100170: hair30 1
-    100172: hair33
-    100174: hair33 1
-    100176: head_1_jnt
-    100178: ikHandle10
-    100180: ikHandle5
-    100182: ikHandle6
-    100184: ikHandle7
-    100186: ikHandle8
-    100188: ikHandle9
-    100190: intrnal_organs
-    100192: joint118
-    100194: joint118 1
-    100196: joint118 10
-    100198: joint118 11
-    100200: joint118 2
-    100202: joint118 3
-    100204: joint118 4
-    100206: joint118 5
-    100208: joint118 6
-    100210: joint118 7
-    100212: joint118 8
-    100214: joint118 9
-    100216: joint119
-    100218: joint119 1
-    100220: joint119 2
-    100222: joint119 3
-    100224: joint120
-    100226: joint120 1
-    100228: joint120 2
-    100230: joint120 3
-    100232: joint155
-    100234: joint156
-    100236: joint156 1
-    100238: joint156 2
-    100240: joint157
-    100242: joint157 1
-    100244: joint157 2
-    100246: joint172
-    100248: joint172 1
-    100250: joint39
-    100252: joint40
-    100254: joint40 1
-    100256: joint40 10
-    100258: joint40 11
-    100260: joint40 12
-    100262: joint40 13
-    100264: joint40 14
-    100266: joint40 15
-    100268: joint40 16
-    100270: joint40 17
-    100272: joint40 2
-    100274: joint40 3
-    100276: joint40 4
-    100278: joint40 5
-    100280: joint40 6
-    100282: joint40 7
-    100284: joint40 8
-    100286: joint40 9
-    100288: joint41
-    100290: joint41 1
-    100292: joint41 2
-    100294: joint41 3
-    100296: joint41 4
-    100298: joints
-    100300: Joints_and_Controls
-    100302: Large_Ant_cntrl_L
-    100304: LargeAnt_cntrl_R
-    100306: Leg_1_1_cntrl_L
-    100308: Leg_1_1_cntrl_R
-    100310: Leg_1_1_jnt_L
-    100312: Leg_1_1_jnt_R
-    100314: Leg_1_2_cntrl_L
-    100316: Leg_1_2_cntrl_R
-    100318: Leg_1_2_jnt_L
-    100320: Leg_1_2_jnt_R
-    100322: Leg_1_3_cntrl_L
-    100324: Leg_1_3_cntrl_R
-    100326: Leg_1_3_jnt_L
-    100328: Leg_1_3_jnt_R
-    100330: Leg_1_4_jnt_L1
-    100332: Leg_1_4_jnt_R
-    100334: Leg_1_5_jnt_L
-    100336: Leg_1_5_jnt_R
-    100338: Leg_1_cntrl_L
-    100340: Leg_1_cntrl_R
-    100342: Leg_1_jnt_L
-    100344: Leg_1_jnt_R
-    100346: Leg_2_1_cntrl_L
-    100348: Leg_2_1_cntrl_R
-    100350: Leg_2_1_jnt_L
-    100352: Leg_2_1_jnt_R
-    100354: Leg_2_2_cntrl_L
-    100356: Leg_2_2_cntrl_R
-    100358: Leg_2_2_jnt_L
-    100360: Leg_2_2_jnt_R
-    100362: Leg_2_3_cntrl_L
-    100364: Leg_2_3_cntrl_R
-    100366: Leg_2_3_jnt_L
-    100368: Leg_2_3_jnt_R
-    100370: Leg_2_4_jnt_L1
-    100372: Leg_2_4_jnt_R1
-    100374: Leg_2_5_jnt_L
-    100376: Leg_2_5_jnt_R
-    100378: Leg_2_cntrl_L
-    100380: Leg_2_cntrl_R
-    100382: Leg_2_jnt_L
-    100384: Leg_2_jnt_R
-    100386: Leg_3_1_cntrl_L
-    100388: Leg_3_1_cntrl_R
-    100390: Leg_3_1_jnt_L
-    100392: Leg_3_1_jnt_R
-    100394: Leg_3_2_cntrl_L
-    100396: Leg_3_2_cntrl_R
-    100398: Leg_3_2_jnt_L
-    100400: Leg_3_2_jnt_R
-    100402: Leg_3_3_cntrl_L
-    100404: Leg_3_3_cntrl_R
-    100406: Leg_3_3_jnt_L
-    100408: Leg_3_3_jnt_R
-    100410: Leg_3_4_jnt_L1
-    100412: Leg_3_4_jnt_R1
-    100414: Leg_3_5_jnt_L
-    100416: Leg_3_5_jnt_R
-    100418: Leg_3_cntrl_L
-    100420: Leg_3_cntrl_R
-    100422: Leg_3_jnt_L
-    100424: Leg_3_jnt_R
-    100426: Leg_4_1_cntrl_L
-    100428: Leg_4_1_cntrl_R
-    100430: Leg_4_1_jnt_L
-    100432: Leg_4_1_jnt_R
-    100434: Leg_4_2_cntrl_L
-    100436: Leg_4_2_cntrl_R
-    100438: Leg_4_2_jnt_L
-    100440: Leg_4_2_jnt_R
-    100442: Leg_4_3_cntrl_L
-    100444: Leg_4_3_cntrl_R
-    100446: Leg_4_3_jnt_L
-    100448: Leg_4_3_jnt_R
-    100450: Leg_4_4_jnt_L1
-    100452: Leg_4_4_jnt_R
-    100454: Leg_4_5_jnt_L
-    100456: Leg_4_5_jnt_R
-    100458: Leg_4_cntrl_L
-    100460: Leg_4_cntrl_R
-    100462: Leg_4_jnt_L
-    100464: Leg_4_jnt_R
-    100466: legs
-    100468: legs 1
-    100470: muscles_guts
-    100472: nose_jnt
-    100474: pasted__group5
-    100476: pasted__Leg_1_R1
-    100478: pasted__Leg_1_R2
-    100480: pasted__Leg_1_R3
-    100482: pasted__Leg_1_R4
-    100484: pasted__Leg_1_R5
-    100486: pasted__Leg_1_R6
-    100488: pasted__Leg_1_R7
-    100490: pasted__Leg_1_R8
-    100492: pasted__Leg_1_Section_1_R
-    100494: pasted__Leg_1_Section_1_R 1
-    100496: pasted__Leg_1_Section_1_R 2
-    100498: pasted__Leg_1_Section_1_R 3
-    100500: pasted__Leg_1_Section_1_R 4
-    100502: pasted__Leg_1_Section_1_R 5
-    100504: pasted__Leg_1_Section_1_R 6
-    100506: pasted__Leg_1_Section_1_R 7
-    100508: pasted__Leg_1_Section_3_R
-    100510: pasted__Leg_1_Section_3_R 1
-    100512: pasted__Leg_1_Section_3_R 2
-    100514: pasted__Leg_1_Section_3_R 3
-    100516: pasted__Leg_1_Section_3_R 4
-    100518: pasted__Leg_1_Section_3_R 5
-    100520: pasted__Leg_1_Section_3_R 6
-    100522: pasted__Leg_1_Section_3_R 7
-    100524: Placement_cntrl
-    100526: polySurface1
-    100528: polySurface2
-    100530: polySurface3
-    100532: polySurface4
-    100534: polySurface5
-    100536: polySurface6
-    100538: Resize_cntrl
-    100540: Root_cntrl
-    100542: root_jnt
-    100544: Small_Ant_Cntrl_L
-    100546: Small_Ant_cntrl_R
-    100548: sp1_cntrl
-    100550: sp1_jnt
-    100552: sp2_cntrl
-    100554: sp2_jnt
-    100556: sp3_cntrl
-    100558: sp3_jnt
-    100560: sp4_cntrl
-    100562: sp4_jnt
-    100564: Tail_1_cntrl
-    100566: tail_1_jnt
-    100568: Tail_2_cntrl
-    100570: Tail_2_cntrl 1
-    100572: tail_2_jnt
-    100574: Tail_3_cntrl
-    100576: tail_3_jnt
-    100578: Tail_4_cntrl
-    100580: tail_4_jnt
-    100582: Tail_5_cntrl
-    100584: tail_5_jnt
-    100586: Tail_6_cntrl
-    100588: tail_6_jnt
-    100590: tail_7_jnt
-    100592: Tail_End_1_cntrl
-    100594: Tail_End_2_cntrl
-    100596: Tail_End_3_cntrl
-    100598: Tail_End_4_cntrl
-    100600: tail_end_jnt
-    100602: tail_hair1
-    100604: tail_hair2
-    100606: tail_hair3
-    100608: tail_hair4
-    100610: tail_hairs
-    100612: top_shell
-    100614: transform5
-    100616: transform6
-    100618: transform7
-    100620: transform8
-    100622: whip_1_jnt
-    100624: whip_2_jnt
-    100626: whip_3_jnt
-    100628: whip_4_jnt
-    400000: ant_10_jnt_L
-    400002: ant_10_jnt_R
-    400004: ant_11_jnt_L
-    400006: ant_12_jnt_L
-    400008: ant_12_jnt_R
-    400010: ant_13_jnt_L
-    400012: ant_13_jnt_R
-    400014: ant_1_jnt_L
-    400016: ant_1_jnt_R
-    400018: ant_2_jnt_L
-    400020: ant_2_jnt_R
-    400022: ant_3_jnt_L
-    400024: ant_3_jnt_R
-    400026: ant_5_jnt_L
-    400028: ant_5_jnt_R
-    400030: ant_7_jnt_L
-    400032: ant_7_jnt_R
-    400034: ant_end_jnt_L
-    400036: ant_end_jnt_R
-    400038: ant_jnt_L
-    400040: ant_jnt_R
-    400042: appendage_jnts
-    400044: Arm_1_cntrl_L
-    400046: Arm_1_cntrl_R
-    400048: Arm_1_jnt_L
-    400050: Arm_1_jnt_R
-    400052: Arm_2_cntrl_L
-    400054: Arm_2_cntrl_R
-    400056: Arm_2_jnt_L
-    400058: Arm_2_jnt_R
-    400060: Arm_3_jnt_L
-    400062: Arm_3_jnt_R
-    400064: Arm_4_jnt_L
-    400066: Arm_4_jnt_R
-    400068: Arm_5_jnt_L
-    400070: Arm_5_jnt_R
-    400072: Arm_6_jnt_L
-    400074: Arm_6_jnt_R
-    400076: Arm_7_jnt_L
-    400078: Arm_7_jnt_R
-    400080: Arm_cntrl_L
-    400082: Arm_cntrl_R
-    400084: Arm_jnt_L
-    400086: Arm_jnt_R
-    400088: Arm_L1
-    400090: Arms
-    400092: Body_geometry
-    400094: bottom_shell
-    400096: circulatory_system
-    400098: digestive_system
-    400100: //RootNode
-    400102: Feediing_Arm_L1
-    400104: Feediing_Arm_L1 1
-    400106: Feediing_Arm_L2
-    400108: Feediing_Arm_L3
-    400110: Feeding_Forearm_L1
-    400112: Feeding_Forearm_L1 1
-    400114: FeedingArm_1_cntrl_R
-    400116: FeedingArm_1_jnt_L
-    400118: FeedingArm_1_jnt_R
-    400120: FeedingArm_2_cntrl_R
-    400122: FeedingArm_2_jnt_L
-    400124: FeedingArm_2_jnt_R
-    400126: FeedingArm_3_jnt_L
-    400128: FeedingArm_3_jnt_R
-    400130: FeedingArm_4_jnt_L
-    400132: FeedingArm_4_jnt_R
-    400134: FeedingArm_cntrl_R
-    400136: FeedingArm_jnt_L
-    400138: FeedingArm_jnt_R
-    400140: FeendingArm_1_cntrl_L
-    400142: FeendingArm_2_cntrl_L
-    400144: FeendingArm_cntrl_L
-    400146: Fore_Arm_Hairs_R
-    400148: ForeArm_Hairs_L
-    400150: ForeArm_L
-    400152: ForeArm_L1
-    400154: ForeArm_L1 1
-    400156: hair1
-    400158: hair1 1
-    400160: hair16
-    400162: hair17
-    400164: hair2
-    400166: hair3
-    400168: hair30
-    400170: hair30 1
-    400172: hair33
-    400174: hair33 1
-    400176: head_1_jnt
-    400178: ikHandle10
-    400180: ikHandle5
-    400182: ikHandle6
-    400184: ikHandle7
-    400186: ikHandle8
-    400188: ikHandle9
-    400190: intrnal_organs
-    400192: joint118
-    400194: joint118 1
-    400196: joint118 10
-    400198: joint118 11
-    400200: joint118 2
-    400202: joint118 3
-    400204: joint118 4
-    400206: joint118 5
-    400208: joint118 6
-    400210: joint118 7
-    400212: joint118 8
-    400214: joint118 9
-    400216: joint119
-    400218: joint119 1
-    400220: joint119 2
-    400222: joint119 3
-    400224: joint120
-    400226: joint120 1
-    400228: joint120 2
-    400230: joint120 3
-    400232: joint155
-    400234: joint156
-    400236: joint156 1
-    400238: joint156 2
-    400240: joint157
-    400242: joint157 1
-    400244: joint157 2
-    400246: joint172
-    400248: joint172 1
-    400250: joint39
-    400252: joint40
-    400254: joint40 1
-    400256: joint40 10
-    400258: joint40 11
-    400260: joint40 12
-    400262: joint40 13
-    400264: joint40 14
-    400266: joint40 15
-    400268: joint40 16
-    400270: joint40 17
-    400272: joint40 2
-    400274: joint40 3
-    400276: joint40 4
-    400278: joint40 5
-    400280: joint40 6
-    400282: joint40 7
-    400284: joint40 8
-    400286: joint40 9
-    400288: joint41
-    400290: joint41 1
-    400292: joint41 2
-    400294: joint41 3
-    400296: joint41 4
-    400298: joints
-    400300: Joints_and_Controls
-    400302: Large_Ant_cntrl_L
-    400304: LargeAnt_cntrl_R
-    400306: Leg_1_1_cntrl_L
-    400308: Leg_1_1_cntrl_R
-    400310: Leg_1_1_jnt_L
-    400312: Leg_1_1_jnt_R
-    400314: Leg_1_2_cntrl_L
-    400316: Leg_1_2_cntrl_R
-    400318: Leg_1_2_jnt_L
-    400320: Leg_1_2_jnt_R
-    400322: Leg_1_3_cntrl_L
-    400324: Leg_1_3_cntrl_R
-    400326: Leg_1_3_jnt_L
-    400328: Leg_1_3_jnt_R
-    400330: Leg_1_4_jnt_L1
-    400332: Leg_1_4_jnt_R
-    400334: Leg_1_5_jnt_L
-    400336: Leg_1_5_jnt_R
-    400338: Leg_1_cntrl_L
-    400340: Leg_1_cntrl_R
-    400342: Leg_1_jnt_L
-    400344: Leg_1_jnt_R
-    400346: Leg_2_1_cntrl_L
-    400348: Leg_2_1_cntrl_R
-    400350: Leg_2_1_jnt_L
-    400352: Leg_2_1_jnt_R
-    400354: Leg_2_2_cntrl_L
-    400356: Leg_2_2_cntrl_R
-    400358: Leg_2_2_jnt_L
-    400360: Leg_2_2_jnt_R
-    400362: Leg_2_3_cntrl_L
-    400364: Leg_2_3_cntrl_R
-    400366: Leg_2_3_jnt_L
-    400368: Leg_2_3_jnt_R
-    400370: Leg_2_4_jnt_L1
-    400372: Leg_2_4_jnt_R1
-    400374: Leg_2_5_jnt_L
-    400376: Leg_2_5_jnt_R
-    400378: Leg_2_cntrl_L
-    400380: Leg_2_cntrl_R
-    400382: Leg_2_jnt_L
-    400384: Leg_2_jnt_R
-    400386: Leg_3_1_cntrl_L
-    400388: Leg_3_1_cntrl_R
-    400390: Leg_3_1_jnt_L
-    400392: Leg_3_1_jnt_R
-    400394: Leg_3_2_cntrl_L
-    400396: Leg_3_2_cntrl_R
-    400398: Leg_3_2_jnt_L
-    400400: Leg_3_2_jnt_R
-    400402: Leg_3_3_cntrl_L
-    400404: Leg_3_3_cntrl_R
-    400406: Leg_3_3_jnt_L
-    400408: Leg_3_3_jnt_R
-    400410: Leg_3_4_jnt_L1
-    400412: Leg_3_4_jnt_R1
-    400414: Leg_3_5_jnt_L
-    400416: Leg_3_5_jnt_R
-    400418: Leg_3_cntrl_L
-    400420: Leg_3_cntrl_R
-    400422: Leg_3_jnt_L
-    400424: Leg_3_jnt_R
-    400426: Leg_4_1_cntrl_L
-    400428: Leg_4_1_cntrl_R
-    400430: Leg_4_1_jnt_L
-    400432: Leg_4_1_jnt_R
-    400434: Leg_4_2_cntrl_L
-    400436: Leg_4_2_cntrl_R
-    400438: Leg_4_2_jnt_L
-    400440: Leg_4_2_jnt_R
-    400442: Leg_4_3_cntrl_L
-    400444: Leg_4_3_cntrl_R
-    400446: Leg_4_3_jnt_L
-    400448: Leg_4_3_jnt_R
-    400450: Leg_4_4_jnt_L1
-    400452: Leg_4_4_jnt_R
-    400454: Leg_4_5_jnt_L
-    400456: Leg_4_5_jnt_R
-    400458: Leg_4_cntrl_L
-    400460: Leg_4_cntrl_R
-    400462: Leg_4_jnt_L
-    400464: Leg_4_jnt_R
-    400466: legs
-    400468: legs 1
-    400470: muscles_guts
-    400472: nose_jnt
-    400474: pasted__group5
-    400476: pasted__Leg_1_R1
-    400478: pasted__Leg_1_R2
-    400480: pasted__Leg_1_R3
-    400482: pasted__Leg_1_R4
-    400484: pasted__Leg_1_R5
-    400486: pasted__Leg_1_R6
-    400488: pasted__Leg_1_R7
-    400490: pasted__Leg_1_R8
-    400492: pasted__Leg_1_Section_1_R
-    400494: pasted__Leg_1_Section_1_R 1
-    400496: pasted__Leg_1_Section_1_R 2
-    400498: pasted__Leg_1_Section_1_R 3
-    400500: pasted__Leg_1_Section_1_R 4
-    400502: pasted__Leg_1_Section_1_R 5
-    400504: pasted__Leg_1_Section_1_R 6
-    400506: pasted__Leg_1_Section_1_R 7
-    400508: pasted__Leg_1_Section_3_R
-    400510: pasted__Leg_1_Section_3_R 1
-    400512: pasted__Leg_1_Section_3_R 2
-    400514: pasted__Leg_1_Section_3_R 3
-    400516: pasted__Leg_1_Section_3_R 4
-    400518: pasted__Leg_1_Section_3_R 5
-    400520: pasted__Leg_1_Section_3_R 6
-    400522: pasted__Leg_1_Section_3_R 7
-    400524: Placement_cntrl
-    400526: polySurface1
-    400528: polySurface2
-    400530: polySurface3
-    400532: polySurface4
-    400534: polySurface5
-    400536: polySurface6
-    400538: Resize_cntrl
-    400540: Root_cntrl
-    400542: root_jnt
-    400544: Small_Ant_Cntrl_L
-    400546: Small_Ant_cntrl_R
-    400548: sp1_cntrl
-    400550: sp1_jnt
-    400552: sp2_cntrl
-    400554: sp2_jnt
-    400556: sp3_cntrl
-    400558: sp3_jnt
-    400560: sp4_cntrl
-    400562: sp4_jnt
-    400564: Tail_1_cntrl
-    400566: tail_1_jnt
-    400568: Tail_2_cntrl
-    400570: Tail_2_cntrl 1
-    400572: tail_2_jnt
-    400574: Tail_3_cntrl
-    400576: tail_3_jnt
-    400578: Tail_4_cntrl
-    400580: tail_4_jnt
-    400582: Tail_5_cntrl
-    400584: tail_5_jnt
-    400586: Tail_6_cntrl
-    400588: tail_6_jnt
-    400590: tail_7_jnt
-    400592: Tail_End_1_cntrl
-    400594: Tail_End_2_cntrl
-    400596: Tail_End_3_cntrl
-    400598: Tail_End_4_cntrl
-    400600: tail_end_jnt
-    400602: tail_hair1
-    400604: tail_hair2
-    400606: tail_hair3
-    400608: tail_hair4
-    400610: tail_hairs
-    400612: top_shell
-    400614: transform5
-    400616: transform6
-    400618: transform7
-    400620: transform8
-    400622: whip_1_jnt
-    400624: whip_2_jnt
-    400626: whip_3_jnt
-    400628: whip_4_jnt
-    2100000: shell_material
-    4300000: polySurface1
-    4300002: polySurface3
-    4300004: polySurface2
-    4300006: polySurface4
-    4300008: polySurface5
-    4300010: polySurface6
-    4300012: ForeArm_L1
-    4300014: hair3
-    4300016: hair2
-    4300018: hair1
-    4300020: ForeArm_L
-    4300022: hair17
-    4300024: hair16
-    4300026: hair1
-    4300028: top_shell
-    4300030: bottom_shell
-    4300032: circulatory_system
-    4300034: digestive_system
-    4300036: muscles_guts
-    4300038: pasted__Leg_1_R1
-    4300040: pasted__Leg_1_Section_1_R
-    4300042: pasted__Leg_1_Section_3_R
-    4300044: pasted__Leg_1_R2
-    4300046: pasted__Leg_1_Section_1_R
-    4300048: pasted__Leg_1_Section_3_R
-    4300050: pasted__Leg_1_R3
-    4300052: pasted__Leg_1_Section_1_R
-    4300054: pasted__Leg_1_Section_3_R
-    4300056: pasted__Leg_1_R4
-    4300058: pasted__Leg_1_Section_1_R
-    4300060: pasted__Leg_1_Section_3_R
-    4300062: pasted__Leg_1_R5
-    4300064: pasted__Leg_1_Section_1_R
-    4300066: pasted__Leg_1_Section_3_R
-    4300068: pasted__Leg_1_R6
-    4300070: pasted__Leg_1_Section_1_R
-    4300072: pasted__Leg_1_Section_3_R
-    4300074: pasted__Leg_1_R7
-    4300076: pasted__Leg_1_Section_1_R
-    4300078: pasted__Leg_1_Section_3_R
-    4300080: pasted__Leg_1_R8
-    4300082: pasted__Leg_1_Section_1_R
-    4300084: pasted__Leg_1_Section_3_R
-    4300086: tail_hair1
-    4300088: tail_hair2
-    4300090: tail_hair3
-    4300092: tail_hair4
-    7400000: swim stroke
-    9500000: //RootNode
-    13700000: bottom_shell
-    13700002: circulatory_system
-    13700004: digestive_system
-    13700006: ForeArm_L
-    13700008: ForeArm_L1
-    13700010: hair1
-    13700012: hair1 1
-    13700014: hair16
-    13700016: hair17
-    13700018: hair2
-    13700020: hair3
-    13700022: muscles_guts
-    13700024: pasted__Leg_1_R1
-    13700026: pasted__Leg_1_R2
-    13700028: pasted__Leg_1_R3
-    13700030: pasted__Leg_1_R4
-    13700032: pasted__Leg_1_R5
-    13700034: pasted__Leg_1_R6
-    13700036: pasted__Leg_1_R7
-    13700038: pasted__Leg_1_R8
-    13700040: pasted__Leg_1_Section_1_R
-    13700042: pasted__Leg_1_Section_1_R 1
-    13700044: pasted__Leg_1_Section_1_R 2
-    13700046: pasted__Leg_1_Section_1_R 3
-    13700048: pasted__Leg_1_Section_1_R 4
-    13700050: pasted__Leg_1_Section_1_R 5
-    13700052: pasted__Leg_1_Section_1_R 6
-    13700054: pasted__Leg_1_Section_1_R 7
-    13700056: pasted__Leg_1_Section_3_R
-    13700058: pasted__Leg_1_Section_3_R 1
-    13700060: pasted__Leg_1_Section_3_R 2
-    13700062: pasted__Leg_1_Section_3_R 3
-    13700064: pasted__Leg_1_Section_3_R 4
-    13700066: pasted__Leg_1_Section_3_R 5
-    13700068: pasted__Leg_1_Section_3_R 6
-    13700070: pasted__Leg_1_Section_3_R 7
-    13700072: polySurface1
-    13700074: polySurface2
-    13700076: polySurface3
-    13700078: polySurface4
-    13700080: polySurface5
-    13700082: polySurface6
-    13700084: tail_hair1
-    13700086: tail_hair2
-    13700088: tail_hair3
-    13700090: tail_hair4
-    13700092: top_shell
-    2186277476908879412: ImportLogs
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: ant_10_jnt_L
+  - first:
+      1: 100002
+    second: ant_10_jnt_R
+  - first:
+      1: 100004
+    second: ant_11_jnt_L
+  - first:
+      1: 100006
+    second: ant_12_jnt_L
+  - first:
+      1: 100008
+    second: ant_12_jnt_R
+  - first:
+      1: 100010
+    second: ant_13_jnt_L
+  - first:
+      1: 100012
+    second: ant_13_jnt_R
+  - first:
+      1: 100014
+    second: ant_1_jnt_L
+  - first:
+      1: 100016
+    second: ant_1_jnt_R
+  - first:
+      1: 100018
+    second: ant_2_jnt_L
+  - first:
+      1: 100020
+    second: ant_2_jnt_R
+  - first:
+      1: 100022
+    second: ant_3_jnt_L
+  - first:
+      1: 100024
+    second: ant_3_jnt_R
+  - first:
+      1: 100026
+    second: ant_5_jnt_L
+  - first:
+      1: 100028
+    second: ant_5_jnt_R
+  - first:
+      1: 100030
+    second: ant_7_jnt_L
+  - first:
+      1: 100032
+    second: ant_7_jnt_R
+  - first:
+      1: 100034
+    second: ant_end_jnt_L
+  - first:
+      1: 100036
+    second: ant_end_jnt_R
+  - first:
+      1: 100038
+    second: ant_jnt_L
+  - first:
+      1: 100040
+    second: ant_jnt_R
+  - first:
+      1: 100042
+    second: appendage_jnts
+  - first:
+      1: 100044
+    second: Arm_1_cntrl_L
+  - first:
+      1: 100046
+    second: Arm_1_cntrl_R
+  - first:
+      1: 100048
+    second: Arm_1_jnt_L
+  - first:
+      1: 100050
+    second: Arm_1_jnt_R
+  - first:
+      1: 100052
+    second: Arm_2_cntrl_L
+  - first:
+      1: 100054
+    second: Arm_2_cntrl_R
+  - first:
+      1: 100056
+    second: Arm_2_jnt_L
+  - first:
+      1: 100058
+    second: Arm_2_jnt_R
+  - first:
+      1: 100060
+    second: Arm_3_jnt_L
+  - first:
+      1: 100062
+    second: Arm_3_jnt_R
+  - first:
+      1: 100064
+    second: Arm_4_jnt_L
+  - first:
+      1: 100066
+    second: Arm_4_jnt_R
+  - first:
+      1: 100068
+    second: Arm_5_jnt_L
+  - first:
+      1: 100070
+    second: Arm_5_jnt_R
+  - first:
+      1: 100072
+    second: Arm_6_jnt_L
+  - first:
+      1: 100074
+    second: Arm_6_jnt_R
+  - first:
+      1: 100076
+    second: Arm_7_jnt_L
+  - first:
+      1: 100078
+    second: Arm_7_jnt_R
+  - first:
+      1: 100080
+    second: Arm_cntrl_L
+  - first:
+      1: 100082
+    second: Arm_cntrl_R
+  - first:
+      1: 100084
+    second: Arm_jnt_L
+  - first:
+      1: 100086
+    second: Arm_jnt_R
+  - first:
+      1: 100088
+    second: Arm_L1
+  - first:
+      1: 100090
+    second: Arms
+  - first:
+      1: 100092
+    second: Body_geometry
+  - first:
+      1: 100094
+    second: bottom_shell
+  - first:
+      1: 100096
+    second: circulatory_system
+  - first:
+      1: 100098
+    second: digestive_system
+  - first:
+      1: 100100
+    second: //RootNode
+  - first:
+      1: 100102
+    second: Feediing_Arm_L1
+  - first:
+      1: 100104
+    second: Feediing_Arm_L1 1
+  - first:
+      1: 100106
+    second: Feediing_Arm_L2
+  - first:
+      1: 100108
+    second: Feediing_Arm_L3
+  - first:
+      1: 100110
+    second: Feeding_Forearm_L1
+  - first:
+      1: 100112
+    second: Feeding_Forearm_L1 1
+  - first:
+      1: 100114
+    second: FeedingArm_1_cntrl_R
+  - first:
+      1: 100116
+    second: FeedingArm_1_jnt_L
+  - first:
+      1: 100118
+    second: FeedingArm_1_jnt_R
+  - first:
+      1: 100120
+    second: FeedingArm_2_cntrl_R
+  - first:
+      1: 100122
+    second: FeedingArm_2_jnt_L
+  - first:
+      1: 100124
+    second: FeedingArm_2_jnt_R
+  - first:
+      1: 100126
+    second: FeedingArm_3_jnt_L
+  - first:
+      1: 100128
+    second: FeedingArm_3_jnt_R
+  - first:
+      1: 100130
+    second: FeedingArm_4_jnt_L
+  - first:
+      1: 100132
+    second: FeedingArm_4_jnt_R
+  - first:
+      1: 100134
+    second: FeedingArm_cntrl_R
+  - first:
+      1: 100136
+    second: FeedingArm_jnt_L
+  - first:
+      1: 100138
+    second: FeedingArm_jnt_R
+  - first:
+      1: 100140
+    second: FeendingArm_1_cntrl_L
+  - first:
+      1: 100142
+    second: FeendingArm_2_cntrl_L
+  - first:
+      1: 100144
+    second: FeendingArm_cntrl_L
+  - first:
+      1: 100146
+    second: Fore_Arm_Hairs_R
+  - first:
+      1: 100148
+    second: ForeArm_Hairs_L
+  - first:
+      1: 100150
+    second: ForeArm_L
+  - first:
+      1: 100152
+    second: ForeArm_L1
+  - first:
+      1: 100154
+    second: ForeArm_L1 1
+  - first:
+      1: 100156
+    second: hair1
+  - first:
+      1: 100158
+    second: hair1 1
+  - first:
+      1: 100160
+    second: hair16
+  - first:
+      1: 100162
+    second: hair17
+  - first:
+      1: 100164
+    second: hair2
+  - first:
+      1: 100166
+    second: hair3
+  - first:
+      1: 100168
+    second: hair30
+  - first:
+      1: 100170
+    second: hair30 1
+  - first:
+      1: 100172
+    second: hair33
+  - first:
+      1: 100174
+    second: hair33 1
+  - first:
+      1: 100176
+    second: head_1_jnt
+  - first:
+      1: 100178
+    second: ikHandle10
+  - first:
+      1: 100180
+    second: ikHandle5
+  - first:
+      1: 100182
+    second: ikHandle6
+  - first:
+      1: 100184
+    second: ikHandle7
+  - first:
+      1: 100186
+    second: ikHandle8
+  - first:
+      1: 100188
+    second: ikHandle9
+  - first:
+      1: 100190
+    second: intrnal_organs
+  - first:
+      1: 100192
+    second: joint118
+  - first:
+      1: 100194
+    second: joint118 1
+  - first:
+      1: 100196
+    second: joint118 10
+  - first:
+      1: 100198
+    second: joint118 11
+  - first:
+      1: 100200
+    second: joint118 2
+  - first:
+      1: 100202
+    second: joint118 3
+  - first:
+      1: 100204
+    second: joint118 4
+  - first:
+      1: 100206
+    second: joint118 5
+  - first:
+      1: 100208
+    second: joint118 6
+  - first:
+      1: 100210
+    second: joint118 7
+  - first:
+      1: 100212
+    second: joint118 8
+  - first:
+      1: 100214
+    second: joint118 9
+  - first:
+      1: 100216
+    second: joint119
+  - first:
+      1: 100218
+    second: joint119 1
+  - first:
+      1: 100220
+    second: joint119 2
+  - first:
+      1: 100222
+    second: joint119 3
+  - first:
+      1: 100224
+    second: joint120
+  - first:
+      1: 100226
+    second: joint120 1
+  - first:
+      1: 100228
+    second: joint120 2
+  - first:
+      1: 100230
+    second: joint120 3
+  - first:
+      1: 100232
+    second: joint155
+  - first:
+      1: 100234
+    second: joint156
+  - first:
+      1: 100236
+    second: joint156 1
+  - first:
+      1: 100238
+    second: joint156 2
+  - first:
+      1: 100240
+    second: joint157
+  - first:
+      1: 100242
+    second: joint157 1
+  - first:
+      1: 100244
+    second: joint157 2
+  - first:
+      1: 100246
+    second: joint172
+  - first:
+      1: 100248
+    second: joint172 1
+  - first:
+      1: 100250
+    second: joint39
+  - first:
+      1: 100252
+    second: joint40
+  - first:
+      1: 100254
+    second: joint40 1
+  - first:
+      1: 100256
+    second: joint40 10
+  - first:
+      1: 100258
+    second: joint40 11
+  - first:
+      1: 100260
+    second: joint40 12
+  - first:
+      1: 100262
+    second: joint40 13
+  - first:
+      1: 100264
+    second: joint40 14
+  - first:
+      1: 100266
+    second: joint40 15
+  - first:
+      1: 100268
+    second: joint40 16
+  - first:
+      1: 100270
+    second: joint40 17
+  - first:
+      1: 100272
+    second: joint40 2
+  - first:
+      1: 100274
+    second: joint40 3
+  - first:
+      1: 100276
+    second: joint40 4
+  - first:
+      1: 100278
+    second: joint40 5
+  - first:
+      1: 100280
+    second: joint40 6
+  - first:
+      1: 100282
+    second: joint40 7
+  - first:
+      1: 100284
+    second: joint40 8
+  - first:
+      1: 100286
+    second: joint40 9
+  - first:
+      1: 100288
+    second: joint41
+  - first:
+      1: 100290
+    second: joint41 1
+  - first:
+      1: 100292
+    second: joint41 2
+  - first:
+      1: 100294
+    second: joint41 3
+  - first:
+      1: 100296
+    second: joint41 4
+  - first:
+      1: 100298
+    second: joints
+  - first:
+      1: 100300
+    second: Joints_and_Controls
+  - first:
+      1: 100302
+    second: Large_Ant_cntrl_L
+  - first:
+      1: 100304
+    second: LargeAnt_cntrl_R
+  - first:
+      1: 100306
+    second: Leg_1_1_cntrl_L
+  - first:
+      1: 100308
+    second: Leg_1_1_cntrl_R
+  - first:
+      1: 100310
+    second: Leg_1_1_jnt_L
+  - first:
+      1: 100312
+    second: Leg_1_1_jnt_R
+  - first:
+      1: 100314
+    second: Leg_1_2_cntrl_L
+  - first:
+      1: 100316
+    second: Leg_1_2_cntrl_R
+  - first:
+      1: 100318
+    second: Leg_1_2_jnt_L
+  - first:
+      1: 100320
+    second: Leg_1_2_jnt_R
+  - first:
+      1: 100322
+    second: Leg_1_3_cntrl_L
+  - first:
+      1: 100324
+    second: Leg_1_3_cntrl_R
+  - first:
+      1: 100326
+    second: Leg_1_3_jnt_L
+  - first:
+      1: 100328
+    second: Leg_1_3_jnt_R
+  - first:
+      1: 100330
+    second: Leg_1_4_jnt_L1
+  - first:
+      1: 100332
+    second: Leg_1_4_jnt_R
+  - first:
+      1: 100334
+    second: Leg_1_5_jnt_L
+  - first:
+      1: 100336
+    second: Leg_1_5_jnt_R
+  - first:
+      1: 100338
+    second: Leg_1_cntrl_L
+  - first:
+      1: 100340
+    second: Leg_1_cntrl_R
+  - first:
+      1: 100342
+    second: Leg_1_jnt_L
+  - first:
+      1: 100344
+    second: Leg_1_jnt_R
+  - first:
+      1: 100346
+    second: Leg_2_1_cntrl_L
+  - first:
+      1: 100348
+    second: Leg_2_1_cntrl_R
+  - first:
+      1: 100350
+    second: Leg_2_1_jnt_L
+  - first:
+      1: 100352
+    second: Leg_2_1_jnt_R
+  - first:
+      1: 100354
+    second: Leg_2_2_cntrl_L
+  - first:
+      1: 100356
+    second: Leg_2_2_cntrl_R
+  - first:
+      1: 100358
+    second: Leg_2_2_jnt_L
+  - first:
+      1: 100360
+    second: Leg_2_2_jnt_R
+  - first:
+      1: 100362
+    second: Leg_2_3_cntrl_L
+  - first:
+      1: 100364
+    second: Leg_2_3_cntrl_R
+  - first:
+      1: 100366
+    second: Leg_2_3_jnt_L
+  - first:
+      1: 100368
+    second: Leg_2_3_jnt_R
+  - first:
+      1: 100370
+    second: Leg_2_4_jnt_L1
+  - first:
+      1: 100372
+    second: Leg_2_4_jnt_R1
+  - first:
+      1: 100374
+    second: Leg_2_5_jnt_L
+  - first:
+      1: 100376
+    second: Leg_2_5_jnt_R
+  - first:
+      1: 100378
+    second: Leg_2_cntrl_L
+  - first:
+      1: 100380
+    second: Leg_2_cntrl_R
+  - first:
+      1: 100382
+    second: Leg_2_jnt_L
+  - first:
+      1: 100384
+    second: Leg_2_jnt_R
+  - first:
+      1: 100386
+    second: Leg_3_1_cntrl_L
+  - first:
+      1: 100388
+    second: Leg_3_1_cntrl_R
+  - first:
+      1: 100390
+    second: Leg_3_1_jnt_L
+  - first:
+      1: 100392
+    second: Leg_3_1_jnt_R
+  - first:
+      1: 100394
+    second: Leg_3_2_cntrl_L
+  - first:
+      1: 100396
+    second: Leg_3_2_cntrl_R
+  - first:
+      1: 100398
+    second: Leg_3_2_jnt_L
+  - first:
+      1: 100400
+    second: Leg_3_2_jnt_R
+  - first:
+      1: 100402
+    second: Leg_3_3_cntrl_L
+  - first:
+      1: 100404
+    second: Leg_3_3_cntrl_R
+  - first:
+      1: 100406
+    second: Leg_3_3_jnt_L
+  - first:
+      1: 100408
+    second: Leg_3_3_jnt_R
+  - first:
+      1: 100410
+    second: Leg_3_4_jnt_L1
+  - first:
+      1: 100412
+    second: Leg_3_4_jnt_R1
+  - first:
+      1: 100414
+    second: Leg_3_5_jnt_L
+  - first:
+      1: 100416
+    second: Leg_3_5_jnt_R
+  - first:
+      1: 100418
+    second: Leg_3_cntrl_L
+  - first:
+      1: 100420
+    second: Leg_3_cntrl_R
+  - first:
+      1: 100422
+    second: Leg_3_jnt_L
+  - first:
+      1: 100424
+    second: Leg_3_jnt_R
+  - first:
+      1: 100426
+    second: Leg_4_1_cntrl_L
+  - first:
+      1: 100428
+    second: Leg_4_1_cntrl_R
+  - first:
+      1: 100430
+    second: Leg_4_1_jnt_L
+  - first:
+      1: 100432
+    second: Leg_4_1_jnt_R
+  - first:
+      1: 100434
+    second: Leg_4_2_cntrl_L
+  - first:
+      1: 100436
+    second: Leg_4_2_cntrl_R
+  - first:
+      1: 100438
+    second: Leg_4_2_jnt_L
+  - first:
+      1: 100440
+    second: Leg_4_2_jnt_R
+  - first:
+      1: 100442
+    second: Leg_4_3_cntrl_L
+  - first:
+      1: 100444
+    second: Leg_4_3_cntrl_R
+  - first:
+      1: 100446
+    second: Leg_4_3_jnt_L
+  - first:
+      1: 100448
+    second: Leg_4_3_jnt_R
+  - first:
+      1: 100450
+    second: Leg_4_4_jnt_L1
+  - first:
+      1: 100452
+    second: Leg_4_4_jnt_R
+  - first:
+      1: 100454
+    second: Leg_4_5_jnt_L
+  - first:
+      1: 100456
+    second: Leg_4_5_jnt_R
+  - first:
+      1: 100458
+    second: Leg_4_cntrl_L
+  - first:
+      1: 100460
+    second: Leg_4_cntrl_R
+  - first:
+      1: 100462
+    second: Leg_4_jnt_L
+  - first:
+      1: 100464
+    second: Leg_4_jnt_R
+  - first:
+      1: 100466
+    second: legs
+  - first:
+      1: 100468
+    second: legs 1
+  - first:
+      1: 100470
+    second: muscles_guts
+  - first:
+      1: 100472
+    second: nose_jnt
+  - first:
+      1: 100474
+    second: pasted__group5
+  - first:
+      1: 100476
+    second: pasted__Leg_1_R1
+  - first:
+      1: 100478
+    second: pasted__Leg_1_R2
+  - first:
+      1: 100480
+    second: pasted__Leg_1_R3
+  - first:
+      1: 100482
+    second: pasted__Leg_1_R4
+  - first:
+      1: 100484
+    second: pasted__Leg_1_R5
+  - first:
+      1: 100486
+    second: pasted__Leg_1_R6
+  - first:
+      1: 100488
+    second: pasted__Leg_1_R7
+  - first:
+      1: 100490
+    second: pasted__Leg_1_R8
+  - first:
+      1: 100492
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      1: 100494
+    second: pasted__Leg_1_Section_1_R 1
+  - first:
+      1: 100496
+    second: pasted__Leg_1_Section_1_R 2
+  - first:
+      1: 100498
+    second: pasted__Leg_1_Section_1_R 3
+  - first:
+      1: 100500
+    second: pasted__Leg_1_Section_1_R 4
+  - first:
+      1: 100502
+    second: pasted__Leg_1_Section_1_R 5
+  - first:
+      1: 100504
+    second: pasted__Leg_1_Section_1_R 6
+  - first:
+      1: 100506
+    second: pasted__Leg_1_Section_1_R 7
+  - first:
+      1: 100508
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      1: 100510
+    second: pasted__Leg_1_Section_3_R 1
+  - first:
+      1: 100512
+    second: pasted__Leg_1_Section_3_R 2
+  - first:
+      1: 100514
+    second: pasted__Leg_1_Section_3_R 3
+  - first:
+      1: 100516
+    second: pasted__Leg_1_Section_3_R 4
+  - first:
+      1: 100518
+    second: pasted__Leg_1_Section_3_R 5
+  - first:
+      1: 100520
+    second: pasted__Leg_1_Section_3_R 6
+  - first:
+      1: 100522
+    second: pasted__Leg_1_Section_3_R 7
+  - first:
+      1: 100524
+    second: Placement_cntrl
+  - first:
+      1: 100526
+    second: polySurface1
+  - first:
+      1: 100528
+    second: polySurface2
+  - first:
+      1: 100530
+    second: polySurface3
+  - first:
+      1: 100532
+    second: polySurface4
+  - first:
+      1: 100534
+    second: polySurface5
+  - first:
+      1: 100536
+    second: polySurface6
+  - first:
+      1: 100538
+    second: Resize_cntrl
+  - first:
+      1: 100540
+    second: Root_cntrl
+  - first:
+      1: 100542
+    second: root_jnt
+  - first:
+      1: 100544
+    second: Small_Ant_Cntrl_L
+  - first:
+      1: 100546
+    second: Small_Ant_cntrl_R
+  - first:
+      1: 100548
+    second: sp1_cntrl
+  - first:
+      1: 100550
+    second: sp1_jnt
+  - first:
+      1: 100552
+    second: sp2_cntrl
+  - first:
+      1: 100554
+    second: sp2_jnt
+  - first:
+      1: 100556
+    second: sp3_cntrl
+  - first:
+      1: 100558
+    second: sp3_jnt
+  - first:
+      1: 100560
+    second: sp4_cntrl
+  - first:
+      1: 100562
+    second: sp4_jnt
+  - first:
+      1: 100564
+    second: Tail_1_cntrl
+  - first:
+      1: 100566
+    second: tail_1_jnt
+  - first:
+      1: 100568
+    second: Tail_2_cntrl
+  - first:
+      1: 100570
+    second: Tail_2_cntrl 1
+  - first:
+      1: 100572
+    second: tail_2_jnt
+  - first:
+      1: 100574
+    second: Tail_3_cntrl
+  - first:
+      1: 100576
+    second: tail_3_jnt
+  - first:
+      1: 100578
+    second: Tail_4_cntrl
+  - first:
+      1: 100580
+    second: tail_4_jnt
+  - first:
+      1: 100582
+    second: Tail_5_cntrl
+  - first:
+      1: 100584
+    second: tail_5_jnt
+  - first:
+      1: 100586
+    second: Tail_6_cntrl
+  - first:
+      1: 100588
+    second: tail_6_jnt
+  - first:
+      1: 100590
+    second: tail_7_jnt
+  - first:
+      1: 100592
+    second: Tail_End_1_cntrl
+  - first:
+      1: 100594
+    second: Tail_End_2_cntrl
+  - first:
+      1: 100596
+    second: Tail_End_3_cntrl
+  - first:
+      1: 100598
+    second: Tail_End_4_cntrl
+  - first:
+      1: 100600
+    second: tail_end_jnt
+  - first:
+      1: 100602
+    second: tail_hair1
+  - first:
+      1: 100604
+    second: tail_hair2
+  - first:
+      1: 100606
+    second: tail_hair3
+  - first:
+      1: 100608
+    second: tail_hair4
+  - first:
+      1: 100610
+    second: tail_hairs
+  - first:
+      1: 100612
+    second: top_shell
+  - first:
+      1: 100614
+    second: transform5
+  - first:
+      1: 100616
+    second: transform6
+  - first:
+      1: 100618
+    second: transform7
+  - first:
+      1: 100620
+    second: transform8
+  - first:
+      1: 100622
+    second: whip_1_jnt
+  - first:
+      1: 100624
+    second: whip_2_jnt
+  - first:
+      1: 100626
+    second: whip_3_jnt
+  - first:
+      1: 100628
+    second: whip_4_jnt
+  - first:
+      4: 400000
+    second: ant_10_jnt_L
+  - first:
+      4: 400002
+    second: ant_10_jnt_R
+  - first:
+      4: 400004
+    second: ant_11_jnt_L
+  - first:
+      4: 400006
+    second: ant_12_jnt_L
+  - first:
+      4: 400008
+    second: ant_12_jnt_R
+  - first:
+      4: 400010
+    second: ant_13_jnt_L
+  - first:
+      4: 400012
+    second: ant_13_jnt_R
+  - first:
+      4: 400014
+    second: ant_1_jnt_L
+  - first:
+      4: 400016
+    second: ant_1_jnt_R
+  - first:
+      4: 400018
+    second: ant_2_jnt_L
+  - first:
+      4: 400020
+    second: ant_2_jnt_R
+  - first:
+      4: 400022
+    second: ant_3_jnt_L
+  - first:
+      4: 400024
+    second: ant_3_jnt_R
+  - first:
+      4: 400026
+    second: ant_5_jnt_L
+  - first:
+      4: 400028
+    second: ant_5_jnt_R
+  - first:
+      4: 400030
+    second: ant_7_jnt_L
+  - first:
+      4: 400032
+    second: ant_7_jnt_R
+  - first:
+      4: 400034
+    second: ant_end_jnt_L
+  - first:
+      4: 400036
+    second: ant_end_jnt_R
+  - first:
+      4: 400038
+    second: ant_jnt_L
+  - first:
+      4: 400040
+    second: ant_jnt_R
+  - first:
+      4: 400042
+    second: appendage_jnts
+  - first:
+      4: 400044
+    second: Arm_1_cntrl_L
+  - first:
+      4: 400046
+    second: Arm_1_cntrl_R
+  - first:
+      4: 400048
+    second: Arm_1_jnt_L
+  - first:
+      4: 400050
+    second: Arm_1_jnt_R
+  - first:
+      4: 400052
+    second: Arm_2_cntrl_L
+  - first:
+      4: 400054
+    second: Arm_2_cntrl_R
+  - first:
+      4: 400056
+    second: Arm_2_jnt_L
+  - first:
+      4: 400058
+    second: Arm_2_jnt_R
+  - first:
+      4: 400060
+    second: Arm_3_jnt_L
+  - first:
+      4: 400062
+    second: Arm_3_jnt_R
+  - first:
+      4: 400064
+    second: Arm_4_jnt_L
+  - first:
+      4: 400066
+    second: Arm_4_jnt_R
+  - first:
+      4: 400068
+    second: Arm_5_jnt_L
+  - first:
+      4: 400070
+    second: Arm_5_jnt_R
+  - first:
+      4: 400072
+    second: Arm_6_jnt_L
+  - first:
+      4: 400074
+    second: Arm_6_jnt_R
+  - first:
+      4: 400076
+    second: Arm_7_jnt_L
+  - first:
+      4: 400078
+    second: Arm_7_jnt_R
+  - first:
+      4: 400080
+    second: Arm_cntrl_L
+  - first:
+      4: 400082
+    second: Arm_cntrl_R
+  - first:
+      4: 400084
+    second: Arm_jnt_L
+  - first:
+      4: 400086
+    second: Arm_jnt_R
+  - first:
+      4: 400088
+    second: Arm_L1
+  - first:
+      4: 400090
+    second: Arms
+  - first:
+      4: 400092
+    second: Body_geometry
+  - first:
+      4: 400094
+    second: bottom_shell
+  - first:
+      4: 400096
+    second: circulatory_system
+  - first:
+      4: 400098
+    second: digestive_system
+  - first:
+      4: 400100
+    second: //RootNode
+  - first:
+      4: 400102
+    second: Feediing_Arm_L1
+  - first:
+      4: 400104
+    second: Feediing_Arm_L1 1
+  - first:
+      4: 400106
+    second: Feediing_Arm_L2
+  - first:
+      4: 400108
+    second: Feediing_Arm_L3
+  - first:
+      4: 400110
+    second: Feeding_Forearm_L1
+  - first:
+      4: 400112
+    second: Feeding_Forearm_L1 1
+  - first:
+      4: 400114
+    second: FeedingArm_1_cntrl_R
+  - first:
+      4: 400116
+    second: FeedingArm_1_jnt_L
+  - first:
+      4: 400118
+    second: FeedingArm_1_jnt_R
+  - first:
+      4: 400120
+    second: FeedingArm_2_cntrl_R
+  - first:
+      4: 400122
+    second: FeedingArm_2_jnt_L
+  - first:
+      4: 400124
+    second: FeedingArm_2_jnt_R
+  - first:
+      4: 400126
+    second: FeedingArm_3_jnt_L
+  - first:
+      4: 400128
+    second: FeedingArm_3_jnt_R
+  - first:
+      4: 400130
+    second: FeedingArm_4_jnt_L
+  - first:
+      4: 400132
+    second: FeedingArm_4_jnt_R
+  - first:
+      4: 400134
+    second: FeedingArm_cntrl_R
+  - first:
+      4: 400136
+    second: FeedingArm_jnt_L
+  - first:
+      4: 400138
+    second: FeedingArm_jnt_R
+  - first:
+      4: 400140
+    second: FeendingArm_1_cntrl_L
+  - first:
+      4: 400142
+    second: FeendingArm_2_cntrl_L
+  - first:
+      4: 400144
+    second: FeendingArm_cntrl_L
+  - first:
+      4: 400146
+    second: Fore_Arm_Hairs_R
+  - first:
+      4: 400148
+    second: ForeArm_Hairs_L
+  - first:
+      4: 400150
+    second: ForeArm_L
+  - first:
+      4: 400152
+    second: ForeArm_L1
+  - first:
+      4: 400154
+    second: ForeArm_L1 1
+  - first:
+      4: 400156
+    second: hair1
+  - first:
+      4: 400158
+    second: hair1 1
+  - first:
+      4: 400160
+    second: hair16
+  - first:
+      4: 400162
+    second: hair17
+  - first:
+      4: 400164
+    second: hair2
+  - first:
+      4: 400166
+    second: hair3
+  - first:
+      4: 400168
+    second: hair30
+  - first:
+      4: 400170
+    second: hair30 1
+  - first:
+      4: 400172
+    second: hair33
+  - first:
+      4: 400174
+    second: hair33 1
+  - first:
+      4: 400176
+    second: head_1_jnt
+  - first:
+      4: 400178
+    second: ikHandle10
+  - first:
+      4: 400180
+    second: ikHandle5
+  - first:
+      4: 400182
+    second: ikHandle6
+  - first:
+      4: 400184
+    second: ikHandle7
+  - first:
+      4: 400186
+    second: ikHandle8
+  - first:
+      4: 400188
+    second: ikHandle9
+  - first:
+      4: 400190
+    second: intrnal_organs
+  - first:
+      4: 400192
+    second: joint118
+  - first:
+      4: 400194
+    second: joint118 1
+  - first:
+      4: 400196
+    second: joint118 10
+  - first:
+      4: 400198
+    second: joint118 11
+  - first:
+      4: 400200
+    second: joint118 2
+  - first:
+      4: 400202
+    second: joint118 3
+  - first:
+      4: 400204
+    second: joint118 4
+  - first:
+      4: 400206
+    second: joint118 5
+  - first:
+      4: 400208
+    second: joint118 6
+  - first:
+      4: 400210
+    second: joint118 7
+  - first:
+      4: 400212
+    second: joint118 8
+  - first:
+      4: 400214
+    second: joint118 9
+  - first:
+      4: 400216
+    second: joint119
+  - first:
+      4: 400218
+    second: joint119 1
+  - first:
+      4: 400220
+    second: joint119 2
+  - first:
+      4: 400222
+    second: joint119 3
+  - first:
+      4: 400224
+    second: joint120
+  - first:
+      4: 400226
+    second: joint120 1
+  - first:
+      4: 400228
+    second: joint120 2
+  - first:
+      4: 400230
+    second: joint120 3
+  - first:
+      4: 400232
+    second: joint155
+  - first:
+      4: 400234
+    second: joint156
+  - first:
+      4: 400236
+    second: joint156 1
+  - first:
+      4: 400238
+    second: joint156 2
+  - first:
+      4: 400240
+    second: joint157
+  - first:
+      4: 400242
+    second: joint157 1
+  - first:
+      4: 400244
+    second: joint157 2
+  - first:
+      4: 400246
+    second: joint172
+  - first:
+      4: 400248
+    second: joint172 1
+  - first:
+      4: 400250
+    second: joint39
+  - first:
+      4: 400252
+    second: joint40
+  - first:
+      4: 400254
+    second: joint40 1
+  - first:
+      4: 400256
+    second: joint40 10
+  - first:
+      4: 400258
+    second: joint40 11
+  - first:
+      4: 400260
+    second: joint40 12
+  - first:
+      4: 400262
+    second: joint40 13
+  - first:
+      4: 400264
+    second: joint40 14
+  - first:
+      4: 400266
+    second: joint40 15
+  - first:
+      4: 400268
+    second: joint40 16
+  - first:
+      4: 400270
+    second: joint40 17
+  - first:
+      4: 400272
+    second: joint40 2
+  - first:
+      4: 400274
+    second: joint40 3
+  - first:
+      4: 400276
+    second: joint40 4
+  - first:
+      4: 400278
+    second: joint40 5
+  - first:
+      4: 400280
+    second: joint40 6
+  - first:
+      4: 400282
+    second: joint40 7
+  - first:
+      4: 400284
+    second: joint40 8
+  - first:
+      4: 400286
+    second: joint40 9
+  - first:
+      4: 400288
+    second: joint41
+  - first:
+      4: 400290
+    second: joint41 1
+  - first:
+      4: 400292
+    second: joint41 2
+  - first:
+      4: 400294
+    second: joint41 3
+  - first:
+      4: 400296
+    second: joint41 4
+  - first:
+      4: 400298
+    second: joints
+  - first:
+      4: 400300
+    second: Joints_and_Controls
+  - first:
+      4: 400302
+    second: Large_Ant_cntrl_L
+  - first:
+      4: 400304
+    second: LargeAnt_cntrl_R
+  - first:
+      4: 400306
+    second: Leg_1_1_cntrl_L
+  - first:
+      4: 400308
+    second: Leg_1_1_cntrl_R
+  - first:
+      4: 400310
+    second: Leg_1_1_jnt_L
+  - first:
+      4: 400312
+    second: Leg_1_1_jnt_R
+  - first:
+      4: 400314
+    second: Leg_1_2_cntrl_L
+  - first:
+      4: 400316
+    second: Leg_1_2_cntrl_R
+  - first:
+      4: 400318
+    second: Leg_1_2_jnt_L
+  - first:
+      4: 400320
+    second: Leg_1_2_jnt_R
+  - first:
+      4: 400322
+    second: Leg_1_3_cntrl_L
+  - first:
+      4: 400324
+    second: Leg_1_3_cntrl_R
+  - first:
+      4: 400326
+    second: Leg_1_3_jnt_L
+  - first:
+      4: 400328
+    second: Leg_1_3_jnt_R
+  - first:
+      4: 400330
+    second: Leg_1_4_jnt_L1
+  - first:
+      4: 400332
+    second: Leg_1_4_jnt_R
+  - first:
+      4: 400334
+    second: Leg_1_5_jnt_L
+  - first:
+      4: 400336
+    second: Leg_1_5_jnt_R
+  - first:
+      4: 400338
+    second: Leg_1_cntrl_L
+  - first:
+      4: 400340
+    second: Leg_1_cntrl_R
+  - first:
+      4: 400342
+    second: Leg_1_jnt_L
+  - first:
+      4: 400344
+    second: Leg_1_jnt_R
+  - first:
+      4: 400346
+    second: Leg_2_1_cntrl_L
+  - first:
+      4: 400348
+    second: Leg_2_1_cntrl_R
+  - first:
+      4: 400350
+    second: Leg_2_1_jnt_L
+  - first:
+      4: 400352
+    second: Leg_2_1_jnt_R
+  - first:
+      4: 400354
+    second: Leg_2_2_cntrl_L
+  - first:
+      4: 400356
+    second: Leg_2_2_cntrl_R
+  - first:
+      4: 400358
+    second: Leg_2_2_jnt_L
+  - first:
+      4: 400360
+    second: Leg_2_2_jnt_R
+  - first:
+      4: 400362
+    second: Leg_2_3_cntrl_L
+  - first:
+      4: 400364
+    second: Leg_2_3_cntrl_R
+  - first:
+      4: 400366
+    second: Leg_2_3_jnt_L
+  - first:
+      4: 400368
+    second: Leg_2_3_jnt_R
+  - first:
+      4: 400370
+    second: Leg_2_4_jnt_L1
+  - first:
+      4: 400372
+    second: Leg_2_4_jnt_R1
+  - first:
+      4: 400374
+    second: Leg_2_5_jnt_L
+  - first:
+      4: 400376
+    second: Leg_2_5_jnt_R
+  - first:
+      4: 400378
+    second: Leg_2_cntrl_L
+  - first:
+      4: 400380
+    second: Leg_2_cntrl_R
+  - first:
+      4: 400382
+    second: Leg_2_jnt_L
+  - first:
+      4: 400384
+    second: Leg_2_jnt_R
+  - first:
+      4: 400386
+    second: Leg_3_1_cntrl_L
+  - first:
+      4: 400388
+    second: Leg_3_1_cntrl_R
+  - first:
+      4: 400390
+    second: Leg_3_1_jnt_L
+  - first:
+      4: 400392
+    second: Leg_3_1_jnt_R
+  - first:
+      4: 400394
+    second: Leg_3_2_cntrl_L
+  - first:
+      4: 400396
+    second: Leg_3_2_cntrl_R
+  - first:
+      4: 400398
+    second: Leg_3_2_jnt_L
+  - first:
+      4: 400400
+    second: Leg_3_2_jnt_R
+  - first:
+      4: 400402
+    second: Leg_3_3_cntrl_L
+  - first:
+      4: 400404
+    second: Leg_3_3_cntrl_R
+  - first:
+      4: 400406
+    second: Leg_3_3_jnt_L
+  - first:
+      4: 400408
+    second: Leg_3_3_jnt_R
+  - first:
+      4: 400410
+    second: Leg_3_4_jnt_L1
+  - first:
+      4: 400412
+    second: Leg_3_4_jnt_R1
+  - first:
+      4: 400414
+    second: Leg_3_5_jnt_L
+  - first:
+      4: 400416
+    second: Leg_3_5_jnt_R
+  - first:
+      4: 400418
+    second: Leg_3_cntrl_L
+  - first:
+      4: 400420
+    second: Leg_3_cntrl_R
+  - first:
+      4: 400422
+    second: Leg_3_jnt_L
+  - first:
+      4: 400424
+    second: Leg_3_jnt_R
+  - first:
+      4: 400426
+    second: Leg_4_1_cntrl_L
+  - first:
+      4: 400428
+    second: Leg_4_1_cntrl_R
+  - first:
+      4: 400430
+    second: Leg_4_1_jnt_L
+  - first:
+      4: 400432
+    second: Leg_4_1_jnt_R
+  - first:
+      4: 400434
+    second: Leg_4_2_cntrl_L
+  - first:
+      4: 400436
+    second: Leg_4_2_cntrl_R
+  - first:
+      4: 400438
+    second: Leg_4_2_jnt_L
+  - first:
+      4: 400440
+    second: Leg_4_2_jnt_R
+  - first:
+      4: 400442
+    second: Leg_4_3_cntrl_L
+  - first:
+      4: 400444
+    second: Leg_4_3_cntrl_R
+  - first:
+      4: 400446
+    second: Leg_4_3_jnt_L
+  - first:
+      4: 400448
+    second: Leg_4_3_jnt_R
+  - first:
+      4: 400450
+    second: Leg_4_4_jnt_L1
+  - first:
+      4: 400452
+    second: Leg_4_4_jnt_R
+  - first:
+      4: 400454
+    second: Leg_4_5_jnt_L
+  - first:
+      4: 400456
+    second: Leg_4_5_jnt_R
+  - first:
+      4: 400458
+    second: Leg_4_cntrl_L
+  - first:
+      4: 400460
+    second: Leg_4_cntrl_R
+  - first:
+      4: 400462
+    second: Leg_4_jnt_L
+  - first:
+      4: 400464
+    second: Leg_4_jnt_R
+  - first:
+      4: 400466
+    second: legs
+  - first:
+      4: 400468
+    second: legs 1
+  - first:
+      4: 400470
+    second: muscles_guts
+  - first:
+      4: 400472
+    second: nose_jnt
+  - first:
+      4: 400474
+    second: pasted__group5
+  - first:
+      4: 400476
+    second: pasted__Leg_1_R1
+  - first:
+      4: 400478
+    second: pasted__Leg_1_R2
+  - first:
+      4: 400480
+    second: pasted__Leg_1_R3
+  - first:
+      4: 400482
+    second: pasted__Leg_1_R4
+  - first:
+      4: 400484
+    second: pasted__Leg_1_R5
+  - first:
+      4: 400486
+    second: pasted__Leg_1_R6
+  - first:
+      4: 400488
+    second: pasted__Leg_1_R7
+  - first:
+      4: 400490
+    second: pasted__Leg_1_R8
+  - first:
+      4: 400492
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      4: 400494
+    second: pasted__Leg_1_Section_1_R 1
+  - first:
+      4: 400496
+    second: pasted__Leg_1_Section_1_R 2
+  - first:
+      4: 400498
+    second: pasted__Leg_1_Section_1_R 3
+  - first:
+      4: 400500
+    second: pasted__Leg_1_Section_1_R 4
+  - first:
+      4: 400502
+    second: pasted__Leg_1_Section_1_R 5
+  - first:
+      4: 400504
+    second: pasted__Leg_1_Section_1_R 6
+  - first:
+      4: 400506
+    second: pasted__Leg_1_Section_1_R 7
+  - first:
+      4: 400508
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      4: 400510
+    second: pasted__Leg_1_Section_3_R 1
+  - first:
+      4: 400512
+    second: pasted__Leg_1_Section_3_R 2
+  - first:
+      4: 400514
+    second: pasted__Leg_1_Section_3_R 3
+  - first:
+      4: 400516
+    second: pasted__Leg_1_Section_3_R 4
+  - first:
+      4: 400518
+    second: pasted__Leg_1_Section_3_R 5
+  - first:
+      4: 400520
+    second: pasted__Leg_1_Section_3_R 6
+  - first:
+      4: 400522
+    second: pasted__Leg_1_Section_3_R 7
+  - first:
+      4: 400524
+    second: Placement_cntrl
+  - first:
+      4: 400526
+    second: polySurface1
+  - first:
+      4: 400528
+    second: polySurface2
+  - first:
+      4: 400530
+    second: polySurface3
+  - first:
+      4: 400532
+    second: polySurface4
+  - first:
+      4: 400534
+    second: polySurface5
+  - first:
+      4: 400536
+    second: polySurface6
+  - first:
+      4: 400538
+    second: Resize_cntrl
+  - first:
+      4: 400540
+    second: Root_cntrl
+  - first:
+      4: 400542
+    second: root_jnt
+  - first:
+      4: 400544
+    second: Small_Ant_Cntrl_L
+  - first:
+      4: 400546
+    second: Small_Ant_cntrl_R
+  - first:
+      4: 400548
+    second: sp1_cntrl
+  - first:
+      4: 400550
+    second: sp1_jnt
+  - first:
+      4: 400552
+    second: sp2_cntrl
+  - first:
+      4: 400554
+    second: sp2_jnt
+  - first:
+      4: 400556
+    second: sp3_cntrl
+  - first:
+      4: 400558
+    second: sp3_jnt
+  - first:
+      4: 400560
+    second: sp4_cntrl
+  - first:
+      4: 400562
+    second: sp4_jnt
+  - first:
+      4: 400564
+    second: Tail_1_cntrl
+  - first:
+      4: 400566
+    second: tail_1_jnt
+  - first:
+      4: 400568
+    second: Tail_2_cntrl
+  - first:
+      4: 400570
+    second: Tail_2_cntrl 1
+  - first:
+      4: 400572
+    second: tail_2_jnt
+  - first:
+      4: 400574
+    second: Tail_3_cntrl
+  - first:
+      4: 400576
+    second: tail_3_jnt
+  - first:
+      4: 400578
+    second: Tail_4_cntrl
+  - first:
+      4: 400580
+    second: tail_4_jnt
+  - first:
+      4: 400582
+    second: Tail_5_cntrl
+  - first:
+      4: 400584
+    second: tail_5_jnt
+  - first:
+      4: 400586
+    second: Tail_6_cntrl
+  - first:
+      4: 400588
+    second: tail_6_jnt
+  - first:
+      4: 400590
+    second: tail_7_jnt
+  - first:
+      4: 400592
+    second: Tail_End_1_cntrl
+  - first:
+      4: 400594
+    second: Tail_End_2_cntrl
+  - first:
+      4: 400596
+    second: Tail_End_3_cntrl
+  - first:
+      4: 400598
+    second: Tail_End_4_cntrl
+  - first:
+      4: 400600
+    second: tail_end_jnt
+  - first:
+      4: 400602
+    second: tail_hair1
+  - first:
+      4: 400604
+    second: tail_hair2
+  - first:
+      4: 400606
+    second: tail_hair3
+  - first:
+      4: 400608
+    second: tail_hair4
+  - first:
+      4: 400610
+    second: tail_hairs
+  - first:
+      4: 400612
+    second: top_shell
+  - first:
+      4: 400614
+    second: transform5
+  - first:
+      4: 400616
+    second: transform6
+  - first:
+      4: 400618
+    second: transform7
+  - first:
+      4: 400620
+    second: transform8
+  - first:
+      4: 400622
+    second: whip_1_jnt
+  - first:
+      4: 400624
+    second: whip_2_jnt
+  - first:
+      4: 400626
+    second: whip_3_jnt
+  - first:
+      4: 400628
+    second: whip_4_jnt
+  - first:
+      21: 2100000
+    second: shell_material
+  - first:
+      43: 4300000
+    second: polySurface1
+  - first:
+      43: 4300002
+    second: polySurface3
+  - first:
+      43: 4300004
+    second: polySurface2
+  - first:
+      43: 4300006
+    second: polySurface4
+  - first:
+      43: 4300008
+    second: polySurface5
+  - first:
+      43: 4300010
+    second: polySurface6
+  - first:
+      43: 4300012
+    second: ForeArm_L1
+  - first:
+      43: 4300014
+    second: hair3
+  - first:
+      43: 4300016
+    second: hair2
+  - first:
+      43: 4300018
+    second: hair1
+  - first:
+      43: 4300020
+    second: ForeArm_L
+  - first:
+      43: 4300022
+    second: hair17
+  - first:
+      43: 4300024
+    second: hair16
+  - first:
+      43: 4300026
+    second: hair1
+  - first:
+      43: 4300028
+    second: top_shell
+  - first:
+      43: 4300030
+    second: bottom_shell
+  - first:
+      43: 4300032
+    second: circulatory_system
+  - first:
+      43: 4300034
+    second: digestive_system
+  - first:
+      43: 4300036
+    second: muscles_guts
+  - first:
+      43: 4300038
+    second: pasted__Leg_1_R1
+  - first:
+      43: 4300040
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300042
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300044
+    second: pasted__Leg_1_R2
+  - first:
+      43: 4300046
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300048
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300050
+    second: pasted__Leg_1_R3
+  - first:
+      43: 4300052
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300054
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300056
+    second: pasted__Leg_1_R4
+  - first:
+      43: 4300058
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300060
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300062
+    second: pasted__Leg_1_R5
+  - first:
+      43: 4300064
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300066
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300068
+    second: pasted__Leg_1_R6
+  - first:
+      43: 4300070
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300072
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300074
+    second: pasted__Leg_1_R7
+  - first:
+      43: 4300076
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300078
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300080
+    second: pasted__Leg_1_R8
+  - first:
+      43: 4300082
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      43: 4300084
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      43: 4300086
+    second: tail_hair1
+  - first:
+      43: 4300088
+    second: tail_hair2
+  - first:
+      43: 4300090
+    second: tail_hair3
+  - first:
+      43: 4300092
+    second: tail_hair4
+  - first:
+      74: 7400000
+    second: swim stroke
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: bottom_shell
+  - first:
+      137: 13700002
+    second: circulatory_system
+  - first:
+      137: 13700004
+    second: digestive_system
+  - first:
+      137: 13700006
+    second: ForeArm_L
+  - first:
+      137: 13700008
+    second: ForeArm_L1
+  - first:
+      137: 13700010
+    second: hair1
+  - first:
+      137: 13700012
+    second: hair1 1
+  - first:
+      137: 13700014
+    second: hair16
+  - first:
+      137: 13700016
+    second: hair17
+  - first:
+      137: 13700018
+    second: hair2
+  - first:
+      137: 13700020
+    second: hair3
+  - first:
+      137: 13700022
+    second: muscles_guts
+  - first:
+      137: 13700024
+    second: pasted__Leg_1_R1
+  - first:
+      137: 13700026
+    second: pasted__Leg_1_R2
+  - first:
+      137: 13700028
+    second: pasted__Leg_1_R3
+  - first:
+      137: 13700030
+    second: pasted__Leg_1_R4
+  - first:
+      137: 13700032
+    second: pasted__Leg_1_R5
+  - first:
+      137: 13700034
+    second: pasted__Leg_1_R6
+  - first:
+      137: 13700036
+    second: pasted__Leg_1_R7
+  - first:
+      137: 13700038
+    second: pasted__Leg_1_R8
+  - first:
+      137: 13700040
+    second: pasted__Leg_1_Section_1_R
+  - first:
+      137: 13700042
+    second: pasted__Leg_1_Section_1_R 1
+  - first:
+      137: 13700044
+    second: pasted__Leg_1_Section_1_R 2
+  - first:
+      137: 13700046
+    second: pasted__Leg_1_Section_1_R 3
+  - first:
+      137: 13700048
+    second: pasted__Leg_1_Section_1_R 4
+  - first:
+      137: 13700050
+    second: pasted__Leg_1_Section_1_R 5
+  - first:
+      137: 13700052
+    second: pasted__Leg_1_Section_1_R 6
+  - first:
+      137: 13700054
+    second: pasted__Leg_1_Section_1_R 7
+  - first:
+      137: 13700056
+    second: pasted__Leg_1_Section_3_R
+  - first:
+      137: 13700058
+    second: pasted__Leg_1_Section_3_R 1
+  - first:
+      137: 13700060
+    second: pasted__Leg_1_Section_3_R 2
+  - first:
+      137: 13700062
+    second: pasted__Leg_1_Section_3_R 3
+  - first:
+      137: 13700064
+    second: pasted__Leg_1_Section_3_R 4
+  - first:
+      137: 13700066
+    second: pasted__Leg_1_Section_3_R 5
+  - first:
+      137: 13700068
+    second: pasted__Leg_1_Section_3_R 6
+  - first:
+      137: 13700070
+    second: pasted__Leg_1_Section_3_R 7
+  - first:
+      137: 13700072
+    second: polySurface1
+  - first:
+      137: 13700074
+    second: polySurface2
+  - first:
+      137: 13700076
+    second: polySurface3
+  - first:
+      137: 13700078
+    second: polySurface4
+  - first:
+      137: 13700080
+    second: polySurface5
+  - first:
+      137: 13700082
+    second: polySurface6
+  - first:
+      137: 13700084
+    second: tail_hair1
+  - first:
+      137: 13700086
+    second: tail_hair2
+  - first:
+      137: 13700088
+    second: tail_hair3
+  - first:
+      137: 13700090
+    second: tail_hair4
+  - first:
+      137: 13700092
+    second: top_shell
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -742,6 +2198,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -762,6 +2219,7 @@ ModelImporter:
     - serializedVersion: 16
       name: swim stroke
       takeName: Take 001
+      internalID: 0
       firstFrame: 101
       lastFrame: 525
       wrapMode: 0
@@ -794,25 +2252,34 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -821,10 +2288,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -834,13 +2301,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

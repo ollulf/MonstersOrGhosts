@@ -7,12 +7,12 @@ using System;
 
 public class CameraScroller : MonoBehaviourPun
 {
-    [SerializeField] Transform farPosition, closePosition, animalSight;
+    [SerializeField] Transform scientificPosition, farPosition, closePosition, animalSight;
     [SerializeField] AnimationCurve acellerationCurve;
     [SerializeField] float speed = 1f, fishFog, overviewFog;
 
     [SerializeField] private AudioSource arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
-    [ShowNonSerializedField] private bool isCameraUnderwater;
+    [ShowNonSerializedField] private bool isCameraUnderwater, camerChange;
 
     [ShowNonSerializedField] private float distance, currentDistance = 1;
 
@@ -24,17 +24,22 @@ public class CameraScroller : MonoBehaviourPun
     private Quaternion fakeAngle;
     [ShowNonSerializedField] private bool fin;
 
+    [SerializeField] private GameObject scientificCamera, mainCamera, scientificButton;
+
     private void Awake()
     {
-        index = 2;
+        index = 1;
+        IndexChecker();
         fin = false;
-        if (!base.photonView.IsMine)
-            Destroy(this.gameObject);
+        if (!mainCamera.GetComponent<PhotonView>().IsMine)
+            Destroy(mainCamera);
+
+        camerChange = false;
     }
 
     void Start()
     {
-        gameObject.transform.position = closePosition.position;
+        mainCamera.transform.position = closePosition.position;
         distance = Vector3.Distance(farPosition.position, closePosition.position);
         RenderSettings.fogDensity = overviewFog;
 
@@ -48,9 +53,10 @@ public class CameraScroller : MonoBehaviourPun
         }
     }
 
-    public void SetFarPosition(Transform newTransform)
+    public void SetFarPosition(Transform newFarPosition, Transform newScientificPosition)
     {
-        farPosition = newTransform;
+        farPosition = newFarPosition;
+        scientificPosition = newScientificPosition;
     }
 
     public void SetIndex(int newInt)
@@ -61,48 +67,59 @@ public class CameraScroller : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        if(selectedShip == null && (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        if (camerChange == false)
         {
-            SelectStartShip();
-        }
-        UpdateAmbientSound();
-
-        distance = Vector3.Distance(farPosition.position, closePosition.position);
-        float t = acellerationCurve.Evaluate(currentDistance);
-
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) //forward
-        {
-            index--;
-            if (index < 0)
+            if (selectedShip == null && (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
             {
-                index = 0;
+                SelectStartShip();
             }
-        }
+            UpdateAmbientSound();
 
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) //backwards
-        {
-            index++;
-            if (index > 2)
+            distance = Vector3.Distance(farPosition.position, closePosition.position);
+            float t = acellerationCurve.Evaluate(currentDistance);
+
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f) //forward
             {
-                index = 2;
+                index--;
+                if (index < 0)
+                {
+                    index = 0;
+                }
             }
-        }
 
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
-        {
-            MouseCheck();
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f) //backwards
+            {
+                index++;
+                if (index > 2)
+                {
+                    index = 2;
+                }
+            }
+
+            if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+            {
+                MouseCheck();
+            }
         }
     }
 
     private void LateUpdate()
     {
-        IndexChecker();
+        Debug.LogError(camerChange);
+        if (camerChange == false)
+        {
+            IndexChecker();
+        }
+        else
+        {
+            Science();
+        }
     }
 
     private void UpdateAmbientSound()
     {
         bool tempUnderWater = isCameraUnderwater;
-        isCameraUnderwater = (gameObject.transform.position.y < 0);
+        isCameraUnderwater = (mainCamera.transform.position.y < 0);
 
         if (isCameraUnderwater != tempUnderWater)
         {
@@ -124,31 +141,33 @@ public class CameraScroller : MonoBehaviourPun
         }
 
     }
+
     private void IndexChecker()
     {
         switch (index)
         {
             case 0:
                 {
-                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, animalSight.position, speed);
-                    Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(animalSight.eulerAngles), speed * Time.deltaTime);
-                    gameObject.transform.eulerAngles = rotation.eulerAngles;
+                    mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, animalSight.position, speed);
+                    Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(mainCamera.transform.eulerAngles), Quaternion.Euler(animalSight.eulerAngles), speed * Time.deltaTime);
+                    mainCamera.transform.eulerAngles = rotation.eulerAngles;
                     break;
                 }
             case 1:
                 {
-                    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, closePosition.position, speed);
-                    Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(gameObject.transform.eulerAngles), Quaternion.Euler(closePosition.eulerAngles), speed * Time.deltaTime);
-                    gameObject.transform.eulerAngles = rotation.eulerAngles;
+                    mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, closePosition.position, speed);
+                    Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(mainCamera.transform.eulerAngles), Quaternion.Euler(closePosition.eulerAngles), speed * Time.deltaTime);
+                    mainCamera.transform.eulerAngles = rotation.eulerAngles;
                     fin = false;
+                    scientificButton.SetActive(false);
                     if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
                     {
-                        if(selectedShip != null && selectedShip.GetComponent<ShipMovement>().IsSelected)
+                        if (selectedShip != null && selectedShip.GetComponent<ShipMovement>().IsSelected)
                         {
                             selectedShip.GetComponent<ShipMovement>().SetIsSelected();
                         }
                     }
-                    if((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Fish)
+                    if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Fish)
                     {
                         RenderSettings.fogDensity = fishFog;
                     }
@@ -159,6 +178,7 @@ public class CameraScroller : MonoBehaviourPun
                     if (!fin)
                     {
                         fin = true;
+                        scientificButton.SetActive(true);
                         fakeVector = closePosition.position;
                         fakeAngle = Quaternion.Euler(closePosition.eulerAngles);
                     }
@@ -166,8 +186,8 @@ public class CameraScroller : MonoBehaviourPun
                     fakeVector = Vector3.Lerp(fakeVector, farPosition.localPosition, 1 * Time.deltaTime);
                     fakeAngle = Quaternion.Lerp(fakeAngle, Quaternion.Euler(farPosition.eulerAngles), speed * Time.deltaTime);
 
-                    gameObject.transform.position = fakeVector;
-                    gameObject.transform.eulerAngles = fakeAngle.eulerAngles;
+                    mainCamera.transform.position = fakeVector;
+                    mainCamera.transform.eulerAngles = fakeAngle.eulerAngles;
                     RenderSettings.fogDensity = overviewFog;
                     if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
                     {
@@ -179,6 +199,13 @@ public class CameraScroller : MonoBehaviourPun
                     break;
                 }
         }
+    }
+
+    private void Science()
+    {
+        scientificCamera.transform.position = scientificPosition.position;
+        Quaternion rotation = Quaternion.Euler(scientificPosition.eulerAngles);
+        scientificCamera.transform.eulerAngles = rotation.eulerAngles;
     }
 
     private void MouseCheck()
@@ -212,5 +239,12 @@ public class CameraScroller : MonoBehaviourPun
         closePosition = selectedShip.transform.GetChild(1);
         speed = selectedShip.GetComponent<ShipMovement>().MovementSpeed;
         selectedShip.GetComponent<ShipMovement>().SetIsSelected();
+    }
+
+    public void ChangeCameraOnClick()
+    {
+        camerChange = !camerChange;
+        mainCamera.SetActive(!camerChange);
+        scientificCamera.SetActive(camerChange);
     }
 }

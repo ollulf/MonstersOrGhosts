@@ -28,6 +28,6 @@ public class TempretureHandler : Singleton<TempretureHandler>
     private void ShowTempreture()
     {
         tempreture = (cO2 / FirstDataGive.CO2NeededFor1C);
-        tempretureText.text = tempreture.ToString("f2") + "°C";
+        tempretureText.text = tempreture.ToString("F2") + "°C";
     }
 }

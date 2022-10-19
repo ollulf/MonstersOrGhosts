@@ -72,7 +72,7 @@ public class ShipHandler : Singleton<ShipHandler>
 
     public static int CarbonIncreasePerSecond()
     {
-        return Ship.Count * FirstDataGive.InduShipCo2;
+        return Ship.Count * FirstDataGive.InduShipCo2 + FirstDataGive.PassiveCo2;
     }
 
     public static int TotalCarbonProduced()

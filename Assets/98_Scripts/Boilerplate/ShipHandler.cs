@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
-using Photon.Pun;
+using TMPro;
 
 public class ShipHandler : Singleton<ShipHandler>
 {
@@ -18,6 +18,8 @@ public class ShipHandler : Singleton<ShipHandler>
     private Timer timer;
     private int carbonProduced;
     private AudioSource audioSource;
+
+    [SerializeField] private TextMeshProUGUI carbonIncreaseText, carbonProduceText;
 
     public static float Money { get => Instance.money; }
     public static float ShipCost { get => Instance.shipCost; }
@@ -79,6 +81,7 @@ public class ShipHandler : Singleton<ShipHandler>
         if(Instance.indexTime >= 1)
         {
             Instance.carbonProduced += CarbonIncreasePerSecond();
+            TempretureHandler.AddCO2(CarbonIncreasePerSecond());
         }
 
         return Instance.carbonProduced;
@@ -110,6 +113,9 @@ public class ShipHandler : Singleton<ShipHandler>
     {
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
         {
+            carbonIncreaseText.text = CarbonIncreasePerSecond().ToString();
+            carbonProduceText.text = TotalCarbonProduced().ToString();
+
             timer.Tick();
             if (timer.CurrentTime <= 0)
             {

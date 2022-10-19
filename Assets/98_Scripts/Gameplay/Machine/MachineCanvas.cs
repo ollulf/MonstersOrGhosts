@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class MachineCanvas : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI moneyText, incomeText, shipIndustrieCost, induShips ,carbonIncrease, enviCost,carbonProduce, tempreture;
+    [SerializeField] private TextMeshProUGUI moneyText, incomeText, shipIndustrieCost, induShips ,enviCost;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,5 @@ public class MachineCanvas : MonoBehaviour
         shipIndustrieCost.text = ShipHandler.ShipCost.ToString() + "€";
         induShips.text = ShipHandler.Ship.Count.ToString();
         enviCost.text = ShipHandler.EnviCost.ToString() + "€";
-        carbonIncrease.text = ShipHandler.CarbonIncreasePerSecond().ToString();
-        carbonProduce.text = ShipHandler.TotalCarbonProduced().ToString();
     }
 }

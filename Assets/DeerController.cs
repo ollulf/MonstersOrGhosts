@@ -12,6 +12,8 @@ public class DeerController : MonoBehaviourPun
 
     [ShowNonSerializedField] private bool isMoving = false, isInFoodArea = false;
 
+    private float co2CompressedTotal;
+
     public float co2Compressed;
     public float population;
     public float hunger = 0;
@@ -22,7 +24,7 @@ public class DeerController : MonoBehaviourPun
     public float populationGrowth;
     public float timeUntilTick = 1f;
 
-    [SerializeField] private TextMeshProUGUI populationTF, co2TF,co2SecTF, hungerTF;
+    [SerializeField] private TextMeshProUGUI populationTF, co2TF, co2SecTF, hungerTF;
 
     [ShowNonSerializedField] private DeerFood currentFoodSource;
     private Timer timer;
@@ -49,7 +51,7 @@ public class DeerController : MonoBehaviourPun
     {
         if (base.photonView.IsMine)
         {
-            if(movement.y < 0 || movement.y > 0)
+            if (movement.y < 0 || movement.y > 0)
             {
                 isMoving = true;
             }
@@ -69,7 +71,10 @@ public class DeerController : MonoBehaviourPun
             population += populationGrowth;
 
         if (isMoving)
-            co2Compressed++;
+        {
+            co2CompressedTotal += co2Compressed;
+            TempretureHandler.AddCompressedCO2(co2Compressed);
+        }
     }
 
     private void MovePlayer()
@@ -87,7 +92,7 @@ public class DeerController : MonoBehaviourPun
         Quaternion tempEulerAngles = Quaternion.Euler(gameObject.transform.eulerAngles.x, gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
 
 
-        Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y - movement.x * 20, tempEulerAngles.eulerAngles.z ), Time.deltaTime * fishPrefTurnSpeed);
+        Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y - movement.x * 20, tempEulerAngles.eulerAngles.z), Time.deltaTime * fishPrefTurnSpeed);
         deerPref.transform.eulerAngles = rotation.eulerAngles;
     }
 
@@ -143,8 +148,8 @@ public class DeerController : MonoBehaviourPun
     {
         populationTF.text = population.ToString();
         hungerTF.text = HungerToState(hunger).ToString();
-        co2TF.text = co2Compressed.ToString();
-        if (isMoving) co2SecTF.text = UnityEngine.Random.Range(45,55).ToString();
+        co2TF.text = co2CompressedTotal.ToString();
+        if (isMoving) co2SecTF.text = UnityEngine.Random.Range(45, 55).ToString();
 
 
     }

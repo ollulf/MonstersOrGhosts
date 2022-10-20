@@ -10,6 +10,8 @@ public class FirstDataGive : Singleton<FirstDataGive>
     [SerializeField] private int birdPopulationLoss, deerPopulationLoss;
     [Header("RegularLoss")]
     [SerializeField] private int birdLoss, fishLoss, deerLoss;
+    [Header("FishNet Fish Loss")]
+    [SerializeField] private int fishNetLoss;
     [Header("Realistic Increase per tick")]
     [SerializeField] private int birdPopulation, deerPopulation;
     [Header("Population increase per Food")]
@@ -69,4 +71,6 @@ public class FirstDataGive : Singleton<FirstDataGive>
     public static float EnvironmentalIncome { get => Instance.environmentalIncome; }
     public static float CO2NeededFor1C { get => Instance.cO2NeededFor1C;}
     public static int PassiveCo2 { get => Instance.passiveCo2;}
+    public static int FishNetLoss { get => Instance.fishNetLoss;}
+    public static int FishLoss { get => Instance.fishLoss;}
 }

@@ -743,6 +743,7 @@ MonoBehaviour:
   birdLoss: 5714
   fishLoss: 4300
   deerLoss: 365
+  fishNetLoss: 0
   birdPopulation: 228571
   deerPopulation: 7307
   fishPopulation: 107500
@@ -2954,6 +2955,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6697721799234689400, guid: c418daef35a722e4dbed700df1e5d6ee,
+        type: 3}
+      propertyPath: fishNetLoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697721799234689400, guid: c418daef35a722e4dbed700df1e5d6ee,
+        type: 3}
+      propertyPath: birdPopulationLoss
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6697721799234689401, guid: c418daef35a722e4dbed700df1e5d6ee,
         type: 3}
       propertyPath: m_RootOrder

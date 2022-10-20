@@ -27,8 +27,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_3BBD749B:
+    - Texture2D_1:
         m_Texture: {fileID: 2800000, guid: 3cb0090dce5be428fb5b41fe4cb76d6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_3BBD749B:
+        m_Texture: {fileID: 2800000, guid: 4ca423af57b2c4397b68ea7d162cc2e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_A3A6C379:
@@ -134,14 +138,15 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_38C7ABF9: 0
-    - Vector1_8A4EC87F: 2.15
-    - Vector1_A3A2F54C: 0.08
+    - Vector1_8A4EC87F: 1
+    - Vector1_A3A2F54C: 1
     - Vector1_F7F0AA3E: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
+    - _Alpha: 1
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaCutoffPostpass: 0.5

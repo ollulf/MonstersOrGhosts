@@ -10,12 +10,14 @@ public class BirdFood : MonoBehaviourPun
     [ShowNonSerializedField]
     private int foodAmount;
     private SphereCollider clickCollider;
+    [SerializeField ]private Animator anim;
 
     public int FoodAmount { get => foodAmount;}
 
     void Start()
     {
         clickCollider = GetComponent<SphereCollider>();
+        anim.Play("FishJump",-1,UnityEngine.Random.Range(0f,1f));
     }
 
     internal void DestroySelf()

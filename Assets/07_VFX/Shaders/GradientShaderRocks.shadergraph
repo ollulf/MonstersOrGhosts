@@ -445,7 +445,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "1b6a0a0e04fc458eb018c00dfb19b6d8",
     "m_Id": 0,
-    "m_DisplayName": "Occlusion (1)",
+    "m_DisplayName": "occlusion",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -607,7 +607,7 @@
     "m_Guid": {
         "m_GuidSerialized": "02001b15-798c-45c7-8d21-28689c530d0f"
     },
-    "m_Name": "Occlusion (1)",
+    "m_Name": "occlusion",
     "m_DefaultRefNameVersion": 0,
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_A3A6C379",
@@ -897,7 +897,7 @@
     "m_Guid": {
         "m_GuidSerialized": "691ef923-7499-4564-bd11-9d5e9f034a28"
     },
-    "m_Name": "Occlusion",
+    "m_Name": "Normal",
     "m_DefaultRefNameVersion": 0,
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_18D62FC3",
@@ -1113,7 +1113,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Offset",
     "m_StageCapability": 3,
-    "m_Value": 0.5,
+    "m_Value": 10.0,
     "m_DefaultValue": 0.5,
     "m_Labels": [
         "X"
@@ -1236,7 +1236,7 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
-    "m_DefaultType": 0
+    "m_DefaultType": 3
 }
 
 {
@@ -1331,9 +1331,9 @@
         "m_SerializableColors": []
     },
     "m_Value": {
-        "x": 0.0,
-        "y": -3.0,
-        "z": 3.0
+        "x": 10.0,
+        "y": -10.0,
+        "z": 10.0
     }
 }
 
@@ -1506,10 +1506,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -693.0001220703125,
-            "y": 124.0,
+            "x": -696.0,
+            "y": 125.0,
             "width": 208.0,
-            "height": 435.00006103515627
+            "height": 435.0
         }
     },
     "m_Slots": [
@@ -1546,7 +1546,7 @@
         "m_SerializableColors": []
     },
     "m_TextureType": 1,
-    "m_NormalMapSpace": 0,
+    "m_NormalMapSpace": 1,
     "m_EnableGlobalMipBias": true
 }
 
@@ -1976,9 +1976,9 @@
     "m_ShaderOutputName": "BaseColor",
     "m_StageCapability": 2,
     "m_Value": {
-        "x": 0.5471698045730591,
-        "y": 0.031089194118976594,
-        "z": 0.0
+        "x": 0.19811320304870606,
+        "y": 0.08955342322587967,
+        "z": 0.027100397273898126
     },
     "m_DefaultValue": {
         "x": 0.0,

@@ -22,11 +22,15 @@ public class FishMovment : MonoBehaviourPun
 
     [SerializeField] private TextMeshProUGUI populationTextField;
 
+    private Timer timer;
+
     public int Population { get => population; }
 
 
     private void Start()
     {
+        timer = new Timer();
+        timer.SetStartTime(0, false);
         rigidbody = GetComponent<Rigidbody>();
         population = FirstDataGive.FishStartPopulation;
         PlayerBaseDataHandler.SetFish(this);
@@ -44,6 +48,13 @@ public class FishMovment : MonoBehaviourPun
         if (base.photonView.IsMine)
         {
             GetAxis();
+        }
+
+        timer.Tick();
+        if(timer.CurrentTime >= 1)
+        {
+            ReducePopulation(FirstDataGive.FishLoss);
+            timer.ResetTimer();
         }
     }
 
@@ -110,23 +121,10 @@ public class FishMovment : MonoBehaviourPun
         AddFlock();
     }
 
-    public void PoisenFish(int newPoisen)
-    {
-        poisen += newPoisen;
-        if (poisen >= 100)
-        {
-            poisen = 0;
-            if (population > 0)
-            {
-                ReducePopulation(1);
-                PlayerBaseDataHandler.ReduceBirdFood(1);
-            }
-        }
-    }
-
     public void ReducePopulation(int newPop)
     {
         population -= newPop;
+        PlayerBaseDataHandler.ReduceBirdFood(newPop);
     }
 
     private void AddFlock()
@@ -144,6 +142,7 @@ public class FishMovment : MonoBehaviourPun
     {
         return movement.y > 0;
     }
+
 }
 
 public enum Danger

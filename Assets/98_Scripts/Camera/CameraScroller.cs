@@ -26,6 +26,8 @@ public class CameraScroller : MonoBehaviourPun
 
     [SerializeField] private GameObject scientificCamera, mainCamera, scientificButton;
 
+    [SerializeField] private GameObject firstPersonVolume;
+
     private void Awake()
     {
         index = 1;
@@ -151,6 +153,7 @@ public class CameraScroller : MonoBehaviourPun
                     mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, animalSight.position, speed);
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(mainCamera.transform.eulerAngles), Quaternion.Euler(animalSight.eulerAngles), speed * Time.deltaTime);
                     mainCamera.transform.eulerAngles = rotation.eulerAngles;
+                    firstPersonVolume.SetActive(true);
                     break;
                 }
             case 1:
@@ -171,6 +174,7 @@ public class CameraScroller : MonoBehaviourPun
                     {
                         RenderSettings.fogDensity = fishFog;
                     }
+                    firstPersonVolume.SetActive(false);
                     break;
                 }
             case 2:
@@ -196,6 +200,7 @@ public class CameraScroller : MonoBehaviourPun
                             selectedShip.GetComponent<ShipMovement>().SetIsSelected();
                         }
                     }
+                    firstPersonVolume.SetActive(false);
                     break;
                 }
         }

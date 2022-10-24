@@ -5093,6 +5093,7 @@ GameObject:
   - component: {fileID: 8435407863275079451}
   - component: {fileID: 218926218}
   - component: {fileID: 7623211569698081148}
+  - component: {fileID: 884700058}
   m_Layer: 0
   m_Name: DataVisualisations
   m_TagString: Untagged
@@ -5137,7 +5138,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 0
+  sceneViewId: 6
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &218926218
@@ -5153,15 +5154,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fish:
-  - {fileID: 3725229947623007463}
+  - {fileID: 4106269306351181237}
   - {fileID: 3783800904851169735}
   - {fileID: 6222598227043417661}
   - {fileID: 5909007630292029826}
   bird:
   - {fileID: 2989000636728690715}
   - {fileID: 8517463029096443053}
+  - {fileID: 3725229947623007463}
   - {fileID: 7319786550157212138}
-  - {fileID: 5309468771207980968}
   machine:
   - {fileID: 6892769934319125423}
   - {fileID: 5265642873800320121}
@@ -5169,12 +5170,14 @@ MonoBehaviour:
   - {fileID: 8767274337697297528}
   deer:
   - {fileID: 5309468771207980968}
-  - {fileID: 706463308382952547}
+  - {fileID: 3293123267413357038}
+  - {fileID: 380445961832408848}
   - {fileID: 5052957450904040691}
   bacteria:
   - {fileID: 706463308382952547}
   - {fileID: 5191395369173664554}
-  - {fileID: 5052957450904040691}
+  - {fileID: 4202028489600467747}
+  - {fileID: 5765906884010229735}
   ice: []
 --- !u!114 &7623211569698081148
 MonoBehaviour:
@@ -5196,8 +5199,8 @@ MonoBehaviour:
   bird:
   - {fileID: 2989000636728690715}
   - {fileID: 8517463029096443053}
+  - {fileID: 3725229947623007463}
   - {fileID: 7319786550157212138}
-  - {fileID: 5309468771207980968}
   machine:
   - {fileID: 6892769934319125423}
   - {fileID: 5265642873800320121}
@@ -5205,12 +5208,52 @@ MonoBehaviour:
   - {fileID: 8767274337697297528}
   deer:
   - {fileID: 5309468771207980968}
-  - {fileID: 706463308382952547}
+  - {fileID: 3293123267413357038}
+  - {fileID: 380445961832408848}
   - {fileID: 5052957450904040691}
   bacteria:
   - {fileID: 706463308382952547}
   - {fileID: 5191395369173664554}
+  - {fileID: 4202028489600467747}
+  - {fileID: 5765906884010229735}
+  ice: []
+--- !u!114 &884700058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156330665155289654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e081f47492454b449811c8b8dbb38fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish:
+  - {fileID: 3725229947623007463}
+  - {fileID: 3783800904851169735}
+  - {fileID: 6222598227043417661}
+  - {fileID: 5909007630292029826}
+  bird:
+  - {fileID: 2989000636728690715}
+  - {fileID: 8517463029096443053}
+  - {fileID: 3725229947623007463}
+  - {fileID: 7319786550157212138}
+  machine:
+  - {fileID: 6892769934319125423}
+  - {fileID: 5265642873800320121}
+  - {fileID: 5032380164890157111}
+  - {fileID: 8767274337697297528}
+  deer:
+  - {fileID: 5309468771207980968}
+  - {fileID: 3293123267413357038}
+  - {fileID: 380445961832408848}
   - {fileID: 5052957450904040691}
+  bacteria:
+  - {fileID: 706463308382952547}
+  - {fileID: 5191395369173664554}
+  - {fileID: 4202028489600467747}
+  - {fileID: 5765906884010229735}
   ice: []
 --- !u!1 &6247287041473697385
 GameObject:
@@ -7973,6 +8016,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2ced7d7ab798664489f76efb40b2883, type: 3}
+--- !u!1 &380445961832408848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5404602255986744441, guid: b2ced7d7ab798664489f76efb40b2883,
+    type: 3}
+  m_PrefabInstance: {fileID: 5640367707885796201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &706463308382952547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5155284743563945738, guid: b2ced7d7ab798664489f76efb40b2883,
@@ -7985,6 +8034,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5640367707885796201}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3293123267413357038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7202692462750648967, guid: b2ced7d7ab798664489f76efb40b2883,
+    type: 3}
+  m_PrefabInstance: {fileID: 5640367707885796201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3725229947623007463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9075932396614492046, guid: b2ced7d7ab798664489f76efb40b2883,
@@ -7994,6 +8049,18 @@ GameObject:
 --- !u!1 &3783800904851169735 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8846299385968548526, guid: b2ced7d7ab798664489f76efb40b2883,
+    type: 3}
+  m_PrefabInstance: {fileID: 5640367707885796201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4106269306351181237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8555426034126366428, guid: b2ced7d7ab798664489f76efb40b2883,
+    type: 3}
+  m_PrefabInstance: {fileID: 5640367707885796201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4202028489600467747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8364880153560021066, guid: b2ced7d7ab798664489f76efb40b2883,
     type: 3}
   m_PrefabInstance: {fileID: 5640367707885796201}
   m_PrefabAsset: {fileID: 0}
@@ -8024,6 +8091,12 @@ GameObject:
 --- !u!1 &5309468771207980968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 570155313684831425, guid: b2ced7d7ab798664489f76efb40b2883,
+    type: 3}
+  m_PrefabInstance: {fileID: 5640367707885796201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5765906884010229735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2180306581880915086, guid: b2ced7d7ab798664489f76efb40b2883,
     type: 3}
   m_PrefabInstance: {fileID: 5640367707885796201}
   m_PrefabAsset: {fileID: 0}

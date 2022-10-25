@@ -151,21 +151,21 @@ public class CameraScroller : MonoBehaviourPun
     {
         if (lastIndex != index)
         {
-            if (!underwaterAmbient.clip) 
+            if (underwaterAmbient.clip) 
             {
                 if (index == 0) underwaterAmbient.clip = underwaterAmbientVariantClip;
                 else if (index == 1) underwaterAmbient.clip = underwaterAmbientClip;
                 underwaterAmbient.Play();
             }
 
-            if (!arcticAmbient.clip)
+            if (arcticAmbient.clip)
             {
                 if (index == 0) arcticAmbient.clip = arcticAmbientVariantClip;
                 else if (index == 1) arcticAmbient.clip = arcticAmbientClip;
                 arcticAmbient.Play();
             }
 
-            if (!characterAmbient.clip) 
+            if (characterAmbient.clip) 
             { 
                 if (index == 0) characterAmbient.clip = characterAmbientVariantClip;
                 else if (index == 1) characterAmbient.clip = characterAmbientClip;

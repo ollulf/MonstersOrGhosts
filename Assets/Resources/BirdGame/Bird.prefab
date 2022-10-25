@@ -369,6 +369,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2180597492157892345}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &4232445161765281672 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
+    type: 3}
+  m_PrefabInstance: {fileID: 2180597492157892345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &6492476650136453055 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: -4297875774875403962, guid: aad67955ecabdda45ac93d397db23027,
@@ -880,10 +886,20 @@ MonoBehaviour:
   speed: 1
   fishFog: 0.02
   overviewFog: 0
+  characterAmbient: {fileID: 4232445161765281672}
   arcticAmbient: {fileID: 1919734815447458733}
   underwaterAmbient: {fileID: 8838055920432129921}
   enterWaterSound: {fileID: 6492476650136453055}
   exitWaterSound: {fileID: 3321323905747286511}
+  characterAmbientClip: {fileID: 0}
+  arcticAmbientClip: {fileID: 8300000, guid: 94bf484708090664caf07bebfe883020, type: 3}
+  underwaterAmbientClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46,
+    type: 3}
+  characterAmbientVariantClip: {fileID: 0}
+  arcticAmbientVariantClip: {fileID: 8300000, guid: cba99b97714ddfb4b97128b3652070ac,
+    type: 3}
+  underwaterAmbientVariantClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46,
+    type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 0

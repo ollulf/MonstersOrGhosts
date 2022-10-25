@@ -28,7 +28,13 @@ public class CarbonVolumeAdjuster : MonoBehaviour
     }
     void Update()
     {
+        GetCurrentTemp();
         UpdateVolumeConstrast();
+    }
+
+    private void GetCurrentTemp()
+    {
+        curentTempIncrease = TempretureHandler.Tempreture;
     }
 
     private void UpdateVolumeConstrast()

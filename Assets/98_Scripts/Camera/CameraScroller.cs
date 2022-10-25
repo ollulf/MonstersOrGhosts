@@ -11,7 +11,8 @@ public class CameraScroller : MonoBehaviourPun
     [SerializeField] AnimationCurve acellerationCurve;
     [SerializeField] float speed = 1f, fishFog, overviewFog;
 
-    [SerializeField] private AudioSource arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
+    [SerializeField] private AudioSource characterAmbient, arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
+    [SerializeField] private AudioClip characterAmbientClip, arcticAmbientClip, underwaterAmbientClip, characterAmbientVariantClip, arcticAmbientVariantClip, underwaterAmbientVariantClip; 
     [ShowNonSerializedField] private bool isCameraUnderwater, camerChange;
 
     [ShowNonSerializedField] private float distance, currentDistance = 1;
@@ -19,7 +20,7 @@ public class CameraScroller : MonoBehaviourPun
     [SerializeField] private LayerMask mask;
 
     private GameObject selectedShip;
-    private int index;
+    private int index, lastIndex;
     private Vector3 fakeVector;
     private Quaternion fakeAngle;
     [ShowNonSerializedField] private bool fin;
@@ -31,6 +32,7 @@ public class CameraScroller : MonoBehaviourPun
     private void Awake()
     {
         index = 1;
+        lastIndex = index;
         IndexChecker();
         fin = false;
         if (!mainCamera.GetComponent<PhotonView>().IsMine)
@@ -53,6 +55,7 @@ public class CameraScroller : MonoBehaviourPun
         {
             underwaterAmbient.Play();
         }
+        if (characterAmbient.clip) characterAmbient.Play();
     }
 
     public void SetFarPosition(Transform newFarPosition, Transform newScientificPosition)
@@ -144,8 +147,39 @@ public class CameraScroller : MonoBehaviourPun
 
     }
 
+    private void TogglePerceptionSounds()
+    {
+        if (lastIndex != index)
+        {
+            if (!underwaterAmbient.clip) 
+            {
+                if (index == 0) underwaterAmbient.clip = underwaterAmbientVariantClip;
+                else if (index == 1) underwaterAmbient.clip = underwaterAmbientClip;
+                underwaterAmbient.Play();
+            }
+
+            if (!arcticAmbient.clip)
+            {
+                if (index == 0) arcticAmbient.clip = arcticAmbientVariantClip;
+                else if (index == 1) arcticAmbient.clip = arcticAmbientClip;
+                arcticAmbient.Play();
+            }
+
+            if (!characterAmbient.clip) 
+            { 
+                if (index == 0) characterAmbient.clip = characterAmbientVariantClip;
+                else if (index == 1) characterAmbient.clip = characterAmbientClip;
+                 characterAmbient.Play();
+            }
+
+            lastIndex = index;
+        }
+        
+    }
+
     private void IndexChecker()
     {
+
         switch (index)
         {
             case 0:
@@ -154,6 +188,7 @@ public class CameraScroller : MonoBehaviourPun
                     Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(mainCamera.transform.eulerAngles), Quaternion.Euler(animalSight.eulerAngles), speed * Time.deltaTime);
                     mainCamera.transform.eulerAngles = rotation.eulerAngles;
                     firstPersonVolume.SetActive(true);
+                    TogglePerceptionSounds();
                     break;
                 }
             case 1:
@@ -175,6 +210,7 @@ public class CameraScroller : MonoBehaviourPun
                         RenderSettings.fogDensity = fishFog;
                     }
                     firstPersonVolume.SetActive(false);
+                    TogglePerceptionSounds();
                     break;
                 }
             case 2:

@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 1178605334359402034}
   - component: {fileID: 3983286662937012286}
   - component: {fileID: 6845916610059343814}
+  - component: {fileID: 481113471805007181}
   m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
@@ -181,10 +182,20 @@ MonoBehaviour:
   speed: 1
   fishFog: 0.02
   overviewFog: 0
+  characterAmbient: {fileID: 2851097087822809563}
   arcticAmbient: {fileID: 543193265259771390}
   underwaterAmbient: {fileID: 7460950321903595986}
   enterWaterSound: {fileID: 5130834574500555244}
   exitWaterSound: {fileID: 3691330739151253436}
+  characterAmbientClip: {fileID: 0}
+  arcticAmbientClip: {fileID: 8300000, guid: 94bf484708090664caf07bebfe883020, type: 3}
+  underwaterAmbientClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46,
+    type: 3}
+  characterAmbientVariantClip: {fileID: 0}
+  arcticAmbientVariantClip: {fileID: 8300000, guid: cba99b97714ddfb4b97128b3652070ac,
+    type: 3}
+  underwaterAmbientVariantClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46,
+    type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 0
@@ -192,6 +203,18 @@ MonoBehaviour:
   mainCamera: {fileID: 3030256530332767986}
   scientificButton: {fileID: 1071275189377318314}
   firstPersonVolume: {fileID: 910929283381711698}
+--- !u!114 &481113471805007181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406171971831676444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e69388cbb6c6d4491f592947b26c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &192744436008181842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,6 +399,12 @@ PrefabInstance:
 --- !u!82 &543193265259771390 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 353336278388827476, guid: aad67955ecabdda45ac93d397db23027,
+    type: 3}
+  m_PrefabInstance: {fileID: 247278088666124458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2851097087822809563 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
     type: 3}
   m_PrefabInstance: {fileID: 247278088666124458}
   m_PrefabAsset: {fileID: 0}

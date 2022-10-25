@@ -36,6 +36,7 @@ public class FishTrawlerSpawn : MonoBehaviour
                 else
                 {
                     induNet[i].SetActive(true);
+                    break;
                 }
             }
         }
@@ -50,6 +51,7 @@ public class FishTrawlerSpawn : MonoBehaviour
                 else
                 {
                     enviNet[i].SetActive(true);
+                    break;
                 }
             }
         }
@@ -70,6 +72,7 @@ public class FishTrawlerSpawn : MonoBehaviour
                 else
                 {
                     induNet[i].SetActive(false);
+                    break;
                 }
             }
         }
@@ -79,12 +82,12 @@ public class FishTrawlerSpawn : MonoBehaviour
             {
                 if (!enviNet[i].activeSelf)
                 {
-                    Debug.LogError("Envi deactive");
+
                 }
                 else
                 {
-                    Debug.LogError("envi active");
                     enviNet[i].SetActive(false);
+                    break;
                 }
             }
         }

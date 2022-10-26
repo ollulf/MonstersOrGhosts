@@ -23,7 +23,7 @@ public class CameraScroller : MonoBehaviourPun
     private int index, lastIndex;
     private Vector3 fakeVector;
     private Quaternion fakeAngle;
-    [ShowNonSerializedField] private bool fin;
+    [ShowNonSerializedField] private bool fin, materialChange;
 
     [SerializeField] private GameObject scientificCamera, mainCamera, scientificButton;
 
@@ -35,6 +35,7 @@ public class CameraScroller : MonoBehaviourPun
         lastIndex = index;
         IndexChecker();
         fin = false;
+        materialChange = false;
         if (!mainCamera.GetComponent<PhotonView>().IsMine)
             Destroy(mainCamera);
 
@@ -151,21 +152,21 @@ public class CameraScroller : MonoBehaviourPun
     {
         if (lastIndex != index)
         {
-            if (!underwaterAmbient.clip) 
+            if (underwaterAmbient.clip) 
             {
                 if (index == 0) underwaterAmbient.clip = underwaterAmbientVariantClip;
                 else if (index == 1) underwaterAmbient.clip = underwaterAmbientClip;
                 underwaterAmbient.Play();
             }
 
-            if (!arcticAmbient.clip)
+            if (arcticAmbient.clip)
             {
                 if (index == 0) arcticAmbient.clip = arcticAmbientVariantClip;
                 else if (index == 1) arcticAmbient.clip = arcticAmbientClip;
                 arcticAmbient.Play();
             }
 
-            if (!characterAmbient.clip) 
+            if (characterAmbient.clip) 
             { 
                 if (index == 0) characterAmbient.clip = characterAmbientVariantClip;
                 else if (index == 1) characterAmbient.clip = characterAmbientClip;
@@ -189,6 +190,10 @@ public class CameraScroller : MonoBehaviourPun
                     mainCamera.transform.eulerAngles = rotation.eulerAngles;
                     firstPersonVolume.SetActive(true);
                     TogglePerceptionSounds();
+                    if (!materialChange)
+                    {
+                        MaterialChange();
+                    }
                     break;
                 }
             case 1:
@@ -211,6 +216,11 @@ public class CameraScroller : MonoBehaviourPun
                     }
                     firstPersonVolume.SetActive(false);
                     TogglePerceptionSounds();
+                    if (materialChange)
+                    {
+                        MaterialChange();
+                    }
+
                     break;
                 }
             case 2:
@@ -247,6 +257,20 @@ public class CameraScroller : MonoBehaviourPun
         scientificCamera.transform.position = scientificPosition.position;
         Quaternion rotation = Quaternion.Euler(scientificPosition.eulerAngles);
         scientificCamera.transform.eulerAngles = rotation.eulerAngles;
+    }
+
+    private void MaterialChange()
+    {
+        if(!materialChange)
+        {
+            MaterialHandler.StartEvent();
+            materialChange = true;
+        }
+        else
+        {
+            MaterialHandler.StartDefaultEvent();
+            materialChange = false;
+        }
     }
 
     private void MouseCheck()

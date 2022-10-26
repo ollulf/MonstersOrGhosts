@@ -14,6 +14,7 @@ public class ShipHandler : Singleton<ShipHandler>
     [SerializeField] private List<GameObject> prefab;
     [SerializeField] private NetSpawner netSpawner;
     [SerializeField] private FishTrawlerSpawn fishTrawlerSpawn;
+    [SerializeField] private OilrigSpawner oilrigSpawner;
     [SerializeField] private float timerForMoney, indexTime;
     [SerializeField] private int amountOfNPCShips, amountOfEnvi;
     private Timer timer;
@@ -64,6 +65,7 @@ public class ShipHandler : Singleton<ShipHandler>
     {
         Instance.netSpawner.ActivateNet();
         Instance.fishTrawlerSpawn.ActivateNet();
+        Instance.oilrigSpawner.ActivateNet();
         Instance.shipCost += Mathf.RoundToInt(ShipCost * FirstDataGive.InduShipMulti);
     }
 
@@ -105,6 +107,7 @@ public class ShipHandler : Singleton<ShipHandler>
     {
         Instance.netSpawner.DeactivateNet();
         Instance.fishTrawlerSpawn.DeactivateNet();
+        Instance.oilrigSpawner.DeactivateNet();
         Destroy(Ship[0]);
         Instance.ship.Remove(Ship[0]);
         Instance.amountOfEnvi++;

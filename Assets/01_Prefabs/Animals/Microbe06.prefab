@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 591147890325701633}
   - component: {fileID: 3445494053364641995}
   - component: {fileID: 1411616889178444720}
+  - component: {fileID: 1067761520}
   m_Layer: 0
   m_Name: Microbe06
   m_TagString: Untagged
@@ -93,10 +94,24 @@ Rigidbody:
   m_GameObject: {fileID: 3805584454683627806}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 4
+  m_Drag: 0.1
+  m_AngularDrag: 0.4
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1067761520
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805584454683627806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -233734891662440024, guid: 946f9003120bb4c109edd0b305c77213, type: 3}

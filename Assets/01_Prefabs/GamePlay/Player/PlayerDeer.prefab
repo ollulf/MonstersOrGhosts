@@ -70,75 +70,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6603750981954749303, guid: 45af4d516d768e94fbe96455b068b909, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 45af4d516d768e94fbe96455b068b909, type: 3}
---- !u!1001 &1563667808206223181
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3008849359507139199}
-    m_Modifications:
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5789310091632565330, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5790075126082332244, guid: 4166968281b47a74dac6c29a1ebb6198,
-        type: 3}
-      propertyPath: m_Name
-      value: Deer
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4166968281b47a74dac6c29a1ebb6198, type: 3}
 --- !u!1001 &4578032027171917045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 2982262970364741202, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: sceneViewId
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
@@ -384,28 +315,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7572716108718266787}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1606639031777610138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5084674619256514850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6de61b161056e4d8ef94886a8eefa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveAmount: 0.01
-  co2Compressed: 0
-  population: 10000
-  hunger: 0
-  hungerIncrease: 5
-  hungerDecrease: 20
-  hungerValueUntilStarving: 100
-  eatAmount: 50
-  populationGrowth: 50
-  timeUntilTick: 1
 --- !u!54 &315976854
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -436,3 +345,33 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1606639031777610138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084674619256514850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6de61b161056e4d8ef94886a8eefa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAmount: 0.01
+  co2Compressed: 0
+  population: 10000
+  hunger: 0
+  hungerIncrease: 5
+  hungerDecrease: 20
+  hungerValueUntilStarving: 100
+  eatAmount: 50
+  populationGrowth: 50
+  timeUntilTick: 1
+  populationTF: {fileID: 0}
+  co2TF: {fileID: 0}
+  co2SecTF: {fileID: 0}
+  hungerTF: {fileID: 0}
+  movementSpeed: 0
+  turnspeed: 0
+  fishPrefTurnSpeed: 0
+  deerPref: {fileID: 0}

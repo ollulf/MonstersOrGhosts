@@ -164,7 +164,7 @@ public class DeerController : MonoBehaviourPun
             return HungerState.ok;
         else if (hunger > hungerValueUntilStarving / 4)
             return HungerState.satisfied;
-        else if (hunger > 0)
+        else if (hunger >= 0)
             return HungerState.full;
         else
         {

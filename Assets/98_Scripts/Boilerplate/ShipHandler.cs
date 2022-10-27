@@ -26,7 +26,7 @@ public class ShipHandler : Singleton<ShipHandler>
     public static float Money { get => Instance.money; }
     public static float ShipCost { get => Instance.shipCost; }
     public static List<GameObject> Ship { get => Instance.ship; }
-    public static float EnviCost { get => Instance.enviCost;}
+    public static float EnviCost { get => Instance.enviCost; }
 
     public void Start()
     {
@@ -82,10 +82,11 @@ public class ShipHandler : Singleton<ShipHandler>
     public static int TotalCarbonProduced()
     {
         Instance.indexTime += Time.deltaTime;
-        if(Instance.indexTime >= 1)
+        if (Instance.indexTime >= 1)
         {
             Instance.carbonProduced += CarbonIncreasePerSecond();
             TempretureHandler.AddCO2(CarbonIncreasePerSecond());
+            Instance.indexTime = 0;
         }
 
         return Instance.carbonProduced;
@@ -117,10 +118,11 @@ public class ShipHandler : Singleton<ShipHandler>
 
     void Update()
     {
+        carbonIncreaseText.text = CarbonIncreasePerSecond().ToString();
+        carbonProduceText.text = TotalCarbonProduced().ToString();
+
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
         {
-            carbonIncreaseText.text = CarbonIncreasePerSecond().ToString();
-            carbonProduceText.text = TotalCarbonProduced().ToString();
 
             timer.Tick();
             if (timer.CurrentTime <= 0)
@@ -135,12 +137,13 @@ public class ShipHandler : Singleton<ShipHandler>
 
     private void PlayIncomeSound()
     {
-        audioSource.pitch = Random.Range(0.8f , 1);
+        audioSource.pitch = Random.Range(0.8f, 1);
         audioSource.Play();
     }
 
     public static GameObject StartShip()
     {
-        return Ship[Random.Range(0,Ship.Count)];
+        return Ship[Random.Range(0, Ship.Count)];
     }
+
 }

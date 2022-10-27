@@ -57,8 +57,10 @@ public class WorldTime : MonoBehaviourPun
 
     private void LateUpdate()
     {
-        animYear.SetFloat("Time", motionFloat * years);
-        animMonth.SetFloat("Time", motionFloat2 * month);
+        if(PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC("UpdateAnimator", RpcTarget.All, years, month);
+        }
     }
 
     private void YearMonthDayCalculater()
@@ -91,6 +93,14 @@ public class WorldTime : MonoBehaviourPun
         {
             showDay.text = newDay.ToString();
         }
+    }
+
+    [PunRPC]
+
+    private void UpdateAnimator(int newYear, int newMonth)
+    {
+        animYear.SetFloat("Time", motionFloat * years);
+        animMonth.SetFloat("Time", motionFloat2 * month);
     }
 
     [PunRPC]

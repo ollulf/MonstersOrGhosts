@@ -45,7 +45,6 @@ public class WorldTime : MonoBehaviourPun
             }
 
             YearMonthDayCalculater();
-            showYear.text = years.ToString();
 
             photonView.RPC("UpdateUI", RpcTarget.All, years, day);
             if (years >= maxYears)
@@ -96,15 +95,13 @@ public class WorldTime : MonoBehaviourPun
     }
 
     [PunRPC]
-
     private void UpdateAnimator(int newYear, int newMonth)
     {
-        animYear.SetFloat("Time", motionFloat * years);
-        animMonth.SetFloat("Time", motionFloat2 * month);
+        animYear.SetFloat("Time", motionFloat * newYear);
+        animMonth.SetFloat("Time", motionFloat2 * newMonth);
     }
 
     [PunRPC]
-
     private void LevelLoad()
     {
         PhotonNetwork.LoadLevel(1);

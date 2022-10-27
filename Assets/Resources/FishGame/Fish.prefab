@@ -25,7 +25,7 @@ RectTransform:
   m_GameObject: {fileID: 1388730583148621952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6269916564663409761}
@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 6915301946496397112}
   - component: {fileID: 6145967870353835606}
   - component: {fileID: 2081327140151197976}
+  - component: {fileID: 5105075937910685553}
   m_Layer: 4
   m_Name: Canvas
   m_TagString: Untagged
@@ -311,6 +312,18 @@ MonoBehaviour:
   mainCamera: {fileID: 1887142079202697900}
   scientificButton: {fileID: 8371238451256632682}
   firstPersonVolume: {fileID: 5149483281076817138}
+--- !u!114 &5105075937910685553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646090050210072057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d8225dd9c5b8146bc4ac3b723f2d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7176796270887853671
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +496,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7954062857363133460}
     m_Modifications:
+    - target: {fileID: 2982262970364741202, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: speed
@@ -932,6 +950,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7954062857363133460}
     m_Modifications:
+    - target: {fileID: 2982262970364741202, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: speed

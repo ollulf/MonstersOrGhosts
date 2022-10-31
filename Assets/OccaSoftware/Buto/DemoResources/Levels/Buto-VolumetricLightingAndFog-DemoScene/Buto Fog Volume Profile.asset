@@ -62,10 +62,10 @@ MonoBehaviour:
     m_Value: 0.03
   fogDensity:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 5
   anisotropy:
     m_OverrideState: 1
-    m_Value: -0.61
+    m_Value: -0.68
   lightIntensity:
     m_OverrideState: 0
     m_Value: 8
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {fileID: 2800000, guid: c012936ff7c918a45aaa43e0f0cc7e12, type: 3}
   colorInfluence:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.01
   noiseTexture:
     m_OverrideState: 0
@@ -110,18 +110,18 @@ MonoBehaviour:
     m_Value: 50
   noiseWindSpeed:
     m_OverrideState: 1
-    m_Value: {x: 3, y: 0, z: 0}
+    m_Value: {x: 0, y: 0, z: 10}
   noiseMap:
     m_OverrideState: 1
     m_Value: {x: 0.32868445, y: 0.7145329}
   volumeNoise:
     m_OverrideState: 1
     m_Value:
-      frequency: 10
+      frequency: 5
       octaves: 3
       lacunarity: 4
       gain: 0.376
-      seed: 6
+      seed: 100
       noiseType: 2
       noiseQuality: 2
       invert: 0

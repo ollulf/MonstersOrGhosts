@@ -300,7 +300,7 @@ public class CameraScroller : MonoBehaviourPun
     private void SelectStartShip()
     {
         selectedShip = ShipHandler.StartShip();
-
+        animalSight = selectedShip.transform.GetChild(1);
         closePosition = selectedShip.transform.GetChild(1);
         speed = selectedShip.GetComponent<ShipMovement>().MovementSpeed;
         selectedShip.GetComponent<ShipMovement>().SetIsSelected();

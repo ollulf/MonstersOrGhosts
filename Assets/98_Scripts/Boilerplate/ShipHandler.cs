@@ -21,6 +21,8 @@ public class ShipHandler : Singleton<ShipHandler>
     private int carbonProduced;
     private AudioSource audioSource;
 
+    private PhotonView photonView;
+
     [SerializeField] private TextMeshProUGUI carbonIncreaseText, carbonProduceText;
 
     public static float Money { get => Instance.money; }
@@ -43,6 +45,7 @@ public class ShipHandler : Singleton<ShipHandler>
         amountOfEnvi = 0;
         carbonProduced = 0;
         indexTime = 0;
+        photonView = GetComponent<PhotonView>();
         SpawnNPCShips();
     }
 
@@ -74,23 +77,6 @@ public class ShipHandler : Singleton<ShipHandler>
         Instance.enviCost += Mathf.RoundToInt(enviCost * FirstDataGive.EcoShipMulti);
     }
 
-    public static int CarbonIncreasePerSecond()
-    {
-        return Ship.Count * FirstDataGive.InduShipCo2 + FirstDataGive.PassiveCo2;
-    }
-
-    public static int TotalCarbonProduced()
-    {
-        Instance.indexTime += Time.deltaTime;
-        if (Instance.indexTime >= 1)
-        {
-            Instance.carbonProduced += CarbonIncreasePerSecond();
-            TempretureHandler.AddCO2(CarbonIncreasePerSecond());
-            Instance.indexTime = 0;
-        }
-
-        return Instance.carbonProduced;
-    }
 
     private void SpawnNPCShips()
     {
@@ -118,11 +104,9 @@ public class ShipHandler : Singleton<ShipHandler>
 
     void Update()
     {
-        carbonIncreaseText.text = CarbonIncreasePerSecond().ToString();
-        carbonProduceText.text = TotalCarbonProduced().ToString();
-
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
         {
+            photonView.RPC("ShowAllData", RpcTarget.All, CarbonIncreasePerSecond(), TotalCarbonProduced());
 
             timer.Tick();
             if (timer.CurrentTime <= 0)
@@ -133,6 +117,32 @@ public class ShipHandler : Singleton<ShipHandler>
                 timer.ResetTimer();
             }
         }
+    }
+
+    [PunRPC]
+    private void ShowAllData(int carbonIncreasePerSec, int totalCarbonProd)
+    {
+        carbonIncreaseText.text = carbonIncreasePerSec.ToString();
+        carbonProduceText.text = totalCarbonProd.ToString();
+    }
+
+
+    public static int CarbonIncreasePerSecond()
+    {
+        return Ship.Count * FirstDataGive.InduShipCo2 + FirstDataGive.PassiveCo2;
+    }
+
+    public static int TotalCarbonProduced()
+    {
+        Instance.indexTime += Time.deltaTime;
+        if (Instance.indexTime >= 1)
+        {
+            Instance.carbonProduced += CarbonIncreasePerSecond();
+            TempretureHandler.AddCO2(CarbonIncreasePerSecond());
+            Instance.indexTime = 0;
+        }
+
+        return Instance.carbonProduced;
     }
 
     private void PlayIncomeSound()

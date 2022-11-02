@@ -7,7 +7,16 @@ using NaughtyAttributes;
 
 public class FoodSpotHandler : MonoBehaviourPun
 {
+    [SerializeField] private int minFoodCapacity = 500, maxFoodCapacity = 1000; 
+    [SerializeField] private float spawningTime;
+
     private List<Transform> foodSpots;
+
+    private Timer timer;
+
+    private float currentTempIncrease;
+
+    [ShowNonSerializedField] private int foodCapacity;
 
     private void Awake()
     {
@@ -19,106 +28,50 @@ public class FoodSpotHandler : MonoBehaviourPun
 
     void Start()
     {
+        timer = new Timer();
         foodSpots = new List<Transform>();
-        for (int i = 0; i < transform.childCount; i++)
+        foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
+        timer.SetStartTime(0, true);
+        foreach (Transform child in transform)
         {
-            foodSpots.Add(transform.GetChild(i));
+            foodSpots.Add(child);
         }
     }
 
     void Update()
     {
-        if (PlayerBaseDataHandler.GetBirdFood() > 0)
-        {
-            FillFoodSpawn();
-        }
-        if (PlayerBaseDataHandler.GetBirdFood() < 0)
-        {
-            ReduceFoodSpawn();
-        }
+        GetCurrentTemp();
 
+        timer.Tick();
+        if (timer.CurrentTime <= 0)
+        {
+            SpawningFeedSpots();
+            foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
+            timer.SetStartTime(60 / 1 + currentTempIncrease, true);
+            timer.ResetTimer();
+        }
     }
 
-    private void FillFoodSpawn()
+    private void SpawningFeedSpots()
     {
-        for (int i = 0; i < foodSpots.Count; i++)
+        int rand = Random.Range(1, foodSpots.Count);
+
+        for (int i = 0; i < rand; i++)
         {
-            if (foodSpots[i].childCount == 0 && PlayerBaseDataHandler.GetBirdFood() > 0)
-            {
-                GameObject food = PhotonNetwork.Instantiate("BirdGame/BirdFood", foodSpots[i].position, Quaternion.identity);
-                food.transform.parent = foodSpots[i];
-                if (PlayerBaseDataHandler.GetBirdFood() >= 15)
-                {
-                    food.GetComponent<BirdFood>().SetFoodAmount(15);
-                    PlayerBaseDataHandler.ReduceBirdFood(15);
-                }
-                else
-                {
-                    food.GetComponent<BirdFood>().SetFoodAmount(PlayerBaseDataHandler.GetBirdFood());
-                    PlayerBaseDataHandler.ReduceBirdFood(PlayerBaseDataHandler.GetBirdFood());
-                    return;
-                }
-            }
+            int index = Random.Range(0, foodSpots.Count);
 
-            else if (foodSpots[i].childCount == 1 && PlayerBaseDataHandler.GetBirdFood() > 0 && foodSpots[i].GetChild(0).GetComponent<BirdFood>().FoodAmount < 15)
+            if (foodSpots[index].childCount == 0)
             {
-                int index = 15 - foodSpots[i].GetChild(0).GetComponent<BirdFood>().FoodAmount;
-                if (index < PlayerBaseDataHandler.GetBirdFood())
-                {
-                    foodSpots[i].GetChild(0).GetComponent<BirdFood>().SetFoodAmount(index);
-                    PlayerBaseDataHandler.ReduceBirdFood(index);
-                }
-                else
-                {
-                    foodSpots[i].GetChild(0).GetComponent<BirdFood>().SetFoodAmount(PlayerBaseDataHandler.GetBirdFood());
-                    PlayerBaseDataHandler.ReduceBirdFood(PlayerBaseDataHandler.GetBirdFood());
-                    return;
-                }
-            }
-
-            if (PlayerBaseDataHandler.GetBirdFood() == 0)
-            {
-                return;
+                GameObject foodSpot = PhotonNetwork.Instantiate("BirdGame/BirdFood", foodSpots[index].transform.position, Quaternion.identity);
+                foodSpot.transform.parent = foodSpots[index].transform;
+                foodSpot.GetComponent<BirdFood>().SetFoodAmount(foodCapacity);
             }
         }
     }
 
-    private void ReduceFoodSpawn()
+    private void GetCurrentTemp()
     {
-        for (int i = 0; i < foodSpots.Count; i++)
-        {
-            if (foodSpots[i].childCount == 1 && PlayerBaseDataHandler.GetBirdFood() < 0)
-            {
-                int index = PlayerBaseDataHandler.GetBirdFood() * -1;
-
-
-                if (foodSpots[i].GetChild(0).GetComponent<BirdFood>().FoodAmount > index)
-                {
-                    foodSpots[i].GetChild(0).GetComponent<BirdFood>().SetFoodAmount(PlayerBaseDataHandler.GetBirdFood());
-                    PlayerBaseDataHandler.RaiseBirdFood(index);
-                    return;
-                }
-                else
-                {
-                    if (foodSpots[i].GetChild(0).GetComponent<BirdFood>().FoodAmount == index)
-                    {
-                        foodSpots[i].GetChild(0).GetComponent<BirdFood>().SetFoodAmount(PlayerBaseDataHandler.GetBirdFood());
-                        PlayerBaseDataHandler.RaiseBirdFood(index);
-                        PhotonNetwork.Destroy(foodSpots[i].GetChild(0).gameObject);
-                        return;
-                    }
-                    else
-                    {
-                        int negativ = foodSpots[i].GetChild(0).GetComponent<BirdFood>().FoodAmount * -1;
-                        foodSpots[i].GetChild(0).GetComponent<BirdFood>().SetFoodAmount(negativ);
-                        index = negativ * -1;
-                        PlayerBaseDataHandler.RaiseBirdFood(index);
-                        PhotonNetwork.Destroy(foodSpots[i].GetChild(0).gameObject);
-                    }
-                }
-
-            }
-        }
+        currentTempIncrease = TempretureHandler.Tempreture;
     }
 
 #if UNITY_EDITOR

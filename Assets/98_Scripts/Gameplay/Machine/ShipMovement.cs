@@ -20,7 +20,7 @@ public class ShipMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (wayPoint.Count != 0 || wayPoint != null)
+        if (wayPoint.Count != 0 && wayPoint != null)
         {
             Move();
             if (CheckDistance())

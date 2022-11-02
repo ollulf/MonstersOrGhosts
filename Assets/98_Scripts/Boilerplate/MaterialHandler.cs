@@ -21,23 +21,22 @@ public class MaterialHandler : Singleton<MaterialHandler>
 
     public static void StartEvent()
     {
-        for(int i = 0;i<Instance.materialEvents.Count;i++)
+        foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
             Debug.Log("Start event");
-
-            Instance.materialEvents[i].ChangeMaterial();
+            materialSwitcher.ChangeMaterial();
             Debug.Log("End Event");
-
         }
     }
 
     public static void StartDefaultEvent()
     {
         Debug.Log("Start default event");
-        for (int i = 0; i < Instance.materialEvents.Count; i++)
+        foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
-            Instance.materialEvents[i].ChangeMaterialToDefault();
+            Debug.Log("Start event");
+            materialSwitcher.ChangeMaterialToDefault();
+            Debug.Log("End Event");
         }
-        Debug.Log("End Event");
     }
 }

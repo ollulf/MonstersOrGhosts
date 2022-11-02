@@ -36,8 +36,10 @@ public class DeerFood : MonoBehaviour
         foodCapacity -= amount;
 
         if (foodCapacity <= 0)
+        {
             timer.SetStartTime(60/ 1 + currentTempIncrease, true);
-
+            foodCapacity = 0;
+        }
     }
 
     void Update()
@@ -55,7 +57,7 @@ public class DeerFood : MonoBehaviour
 
         if(tempfoodCapacity != foodCapacity)
         {
-            foodVisuals.transform.position = new Vector3 (startPosition.x, startPosition.y + (foodCapacity+1)/maxFoodCapacity*moveDownIntensity, startPosition.z);
+            foodVisuals.transform.position = new Vector3 (startPosition.x, startPosition.y - ((1- (foodCapacity+1)/maxFoodCapacity)) * moveDownIntensity, startPosition.z);
         }
     }
 

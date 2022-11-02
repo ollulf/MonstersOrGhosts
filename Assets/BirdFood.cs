@@ -29,6 +29,6 @@ public class BirdFood : MonoBehaviourPun
 
     public void SetFoodAmount(int newAmount)
     {
-        foodAmount += newAmount;
+        foodAmount = newAmount;
     }
 }

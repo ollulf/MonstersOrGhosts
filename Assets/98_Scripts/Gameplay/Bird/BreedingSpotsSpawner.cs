@@ -18,9 +18,9 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
         timer = new Timer();
         timer.SetStartTime(spawningTime, true);
         breedingSpots = new List<Transform>();
-        for (int i = 0; i < transform.childCount; i++)
+        foreach (Transform child in transform)
         {
-            breedingSpots.Add(transform.GetChild(i));
+            breedingSpots.Add(child);
         }
     }
 
@@ -37,16 +37,20 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
 
     private void SpawningBreedingSpot()
     {
-        foreach (Transform child in breedingSpots)
+        int rand = Random.Range(1, breedingSpots.Count);
+
+        for (int i = 0; i < rand; i++)
         {
-            if (child.childCount == 0)
+            int index = Random.Range(0, breedingSpots.Count);
+
+            if (breedingSpots[index].childCount == 0)
             {
-                GameObject breedingSpot = PhotonNetwork.Instantiate("BirdGame/BirdBreedingSpot", child.transform.position, Quaternion.identity);
-                breedingSpot.transform.parent = child.transform;
-                return;
+                GameObject breedingSpot = PhotonNetwork.Instantiate("BirdGame/BirdBreedingSpot", breedingSpots[index].transform.position, Quaternion.identity);
+                breedingSpot.transform.parent = breedingSpots[index].transform;
             }
         }
     }
+
 #if UNITY_EDITOR
 
     [Button]

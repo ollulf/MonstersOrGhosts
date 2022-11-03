@@ -106,7 +106,6 @@ public class ShipHandler : Singleton<ShipHandler>
     {
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
         {
-            photonView.RPC("ShowAllData", RpcTarget.All, CarbonIncreasePerSecond(), TotalCarbonProduced());
 
             timer.Tick();
             if (timer.CurrentTime <= 0)
@@ -116,6 +115,10 @@ public class ShipHandler : Singleton<ShipHandler>
 
                 timer.ResetTimer();
             }
+        }
+        if (photonView.Owner.IsMasterClient)
+        {
+            photonView.RPC("ShowAllData", RpcTarget.All, CarbonIncreasePerSecond(), TotalCarbonProduced());
         }
     }
 

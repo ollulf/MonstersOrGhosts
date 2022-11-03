@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class BacteriumMovement : MonoBehaviour
+public class BacteriumMovement : MonoBehaviourPun
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField] private AnimationCurve addingForce;
@@ -24,31 +25,45 @@ public class BacteriumMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (photonView.IsMine)
         {
-            Debug.Log("HUI");
-            timerRunning = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("HUI");
+                timerRunning = true;
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        RotationBacterium();
-
-        if (timerRunning)
+        if (photonView.IsMine)
         {
-            timer.Tick();
-            Move();
+            RotationBacterium();
 
-            if (addingForce.Evaluate(timer.CurrentTime) <= 0)
+            if (timerRunning)
             {
-                Debug.Log("OHH");
-                timer.ResetTimer();
-                timerRunning = false;
+                timer.Tick();
+                Move();
+
+                if (addingForce.Evaluate(timer.CurrentTime) <= 0)
+                {
+                    Debug.Log("OHH");
+                    timer.ResetTimer();
+                    timerRunning = false;
+                }
             }
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "BacteriaFood")
+        {
+            Destroy(collision.gameObject);
+            PhotonNetwork.Instantiate("BacteriaGame/BacteriaClone", transform.position, Quaternion.identity);
+        }
+    }
 
     private void RotationBacterium()
     {

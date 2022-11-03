@@ -22,7 +22,6 @@ public class BirdFood : MonoBehaviourPun
 
     internal void DestroySelf()
     {
-        PlayerBaseDataHandler.FishPopulation.ReducePopulation(FoodAmount);
         PhotonNetwork.Instantiate("BirdGame/CollectEffect", transform.position, transform.rotation);
         PhotonNetwork.Destroy(gameObject);
     }

@@ -16,6 +16,8 @@ public class BirdController : MonoBehaviourPun
     [ShowNonSerializedField]private int birdFood= 0, birdPopulation;
     [SerializeField] public TextMeshProUGUI foodAmount, population;
     [SerializeField] private float movementSpeed, turnSpeed, maxDistance;
+    [SerializeField] private LayerMask layerMask;
+
 
     public int BirdPopulation { get => birdPopulation;}
 
@@ -70,12 +72,14 @@ public class BirdController : MonoBehaviourPun
            
             //Debug.DrawRay(ray.origin, ray.direction * 1000f , Color.yellow, Mathf.Infinity);
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity)) 
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) 
             {
                 Debug.Log(hit.collider.gameObject);
 
                 if (hit.collider.gameObject.layer == 6) //6 = BirdFood Layer
                 {
+                    Debug.Log("Hit FishFood");
+
                     hit.collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
                     if (TryAddToBirdFood(hit.collider.gameObject.GetComponent<BirdFood>().FoodAmount))
                         hit.collider.gameObject.GetComponentInChildren<BirdFood>().DestroySelf();
@@ -83,6 +87,8 @@ public class BirdController : MonoBehaviourPun
                 }
                 else if (hit.collider.gameObject.layer == 7) //7 = BirdNest Layer
                 {
+                    Debug.Log("Hit Nest");
+
                     if (TryBuildNest())
                         hit.collider.gameObject.GetComponentInChildren<BreedingSpot>().DestroySelf();
                 }

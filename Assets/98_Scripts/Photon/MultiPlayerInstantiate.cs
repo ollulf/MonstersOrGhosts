@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class MultiPlayerInstantiate : MonoBehaviour
 {
-    [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition, overViewPosition, scientificOverViewPosition;
+    [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition, icePosition, overViewPosition, scientificOverViewPosition;
 
     private void Awake()
     {
@@ -41,6 +41,12 @@ public class MultiPlayerInstantiate : MonoBehaviour
             case Charakter.Machine:
                 {
                     GameObject machine = PhotonNetwork.Instantiate("MachineGame/Machine", machinePosition.position, transform.rotation);
+                    machine.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
+                    break;
+                }
+            case Charakter.Ice:
+                {
+                    GameObject machine = PhotonNetwork.Instantiate("IceGame/Ice", machinePosition.position, transform.rotation);
                     machine.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }

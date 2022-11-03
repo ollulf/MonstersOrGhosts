@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.098407626, g: 0.16654387, b: 0.29998446, a: 1}
+  m_IndirectSpecularColor: {r: 0.09841844, g: 0.16645457, b: 0.3000598, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1531,6 +1531,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3270144018855037155, guid: 4e6b8a17c26ac96458bda0b4b189beeb,
+        type: 3}
+      propertyPath: icePosition
+      value: 
+      objectReference: {fileID: 3263323593882178751}
     - target: {fileID: 3270144018855037155, guid: 4e6b8a17c26ac96458bda0b4b189beeb,
         type: 3}
       propertyPath: birdPosition
@@ -3130,6 +3135,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68bc7be863f8a6948bbe1e900af681ed, type: 3}
+--- !u!4 &3263323593882178751 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6639632793482922191, guid: 68bc7be863f8a6948bbe1e900af681ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 3263323593882178750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3378982533244453932
 PrefabInstance:
   m_ObjectHideFlags: 0

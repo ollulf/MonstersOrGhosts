@@ -5,12 +5,14 @@ using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
 
+
 public class BirdFood : MonoBehaviourPun
 {
     [ShowNonSerializedField]
     private int foodAmount;
     private SphereCollider clickCollider;
     [SerializeField ]private Animator anim;
+    [SerializeField] private GameObject soundObject;
 
     public int FoodAmount { get => foodAmount;}
 
@@ -22,6 +24,7 @@ public class BirdFood : MonoBehaviourPun
 
     internal void DestroySelf()
     {
+        Instantiate(soundObject, transform.position, transform.rotation);
         PhotonNetwork.Instantiate("BirdGame/CollectEffect", transform.position, transform.rotation);
         PhotonNetwork.Destroy(gameObject);
     }

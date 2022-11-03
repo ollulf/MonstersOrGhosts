@@ -6,6 +6,7 @@ using Photon.Pun;
 public class CameraMovement : MonoBehaviourPun
 {
     [SerializeField] private float dragSpeed = 15;
+    [SerializeField] private GameObject scinceSpot;
     private Vector3 dragOrigin;
 
 
@@ -31,5 +32,6 @@ public class CameraMovement : MonoBehaviourPun
         Vector3 move = new Vector3(pos.y * dragSpeed, 0, -pos.x * dragSpeed);
 
         transform.Translate(move, Space.World);
+        scinceSpot.transform.Translate(move, Space.World);
     }
 }

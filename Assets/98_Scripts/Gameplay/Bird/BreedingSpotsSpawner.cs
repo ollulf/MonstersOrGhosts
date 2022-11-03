@@ -45,8 +45,10 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
 
             if (breedingSpots[index].childCount == 0)
             {
-                GameObject breedingSpot = PhotonNetwork.Instantiate("BirdGame/BirdBreedingSpot", breedingSpots[index].transform.position, Quaternion.identity);
-                breedingSpot.transform.parent = breedingSpots[index].transform;
+                Transform tempTrans = breedingSpots[index].transform;
+                GameObject breedingSpot = PhotonNetwork.Instantiate("BirdGame/BirdBreedingSpot", tempTrans.position,
+                    Quaternion.Euler( tempTrans.rotation.eulerAngles.x, Random.Range(0f,360f) , tempTrans.rotation.eulerAngles.z));
+                breedingSpot.transform.parent = tempTrans;
             }
         }
     }

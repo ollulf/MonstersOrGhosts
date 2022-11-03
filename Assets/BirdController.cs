@@ -17,16 +17,20 @@ public class BirdController : MonoBehaviourPun
     [SerializeField] public TextMeshProUGUI foodAmount, population;
     [SerializeField] private float movementSpeed, turnSpeed, maxDistance;
     [SerializeField] private LayerMask layerMask;
-
+    private Timer timer;
 
     public int BirdPopulation { get => birdPopulation;}
 
 
     void Start()
     {
+        timer = new Timer();
+        timer.SetStartTime(0,false);
+
         birdPopulationIncreaseAmount = FirstDataGive.BirdPopulation;
         birdPopulation = FirstDataGive.BirdStartPopulation;
-        PlayerBaseDataHandler.SetBird(this);
+        PlayerBaseDataHandler.SetBird(this); 
+        UpdateUI();
     }
 
     void Update()
@@ -36,7 +40,18 @@ public class BirdController : MonoBehaviourPun
             birdRoute = new List<GameObject>(BirdRouteHandler.BirdRoute.GetWayPoints());
         }
         CheckforClick();
-        UpdateUI();
+        timer.Tick();
+        if(timer.CurrentTime >= 1)
+        {
+            birdPopulation -= FirstDataGive.BirdLoss;
+
+            if (birdPopulation <= 0) birdPopulation = 0; //temporary death state -> please add death state to game
+
+            UpdateUI();
+            timer.ResetTimer();
+        }
+
+        
     }
 
     private void FixedUpdate()
@@ -90,7 +105,11 @@ public class BirdController : MonoBehaviourPun
                     Debug.Log("Hit Nest");
 
                     if (TryBuildNest())
+                    {
                         hit.collider.gameObject.GetComponentInChildren<BreedingSpot>().DestroySelf();
+                    }
+
+
                 }
             }
         }

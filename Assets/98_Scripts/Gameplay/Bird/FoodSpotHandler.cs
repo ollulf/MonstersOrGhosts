@@ -9,6 +9,7 @@ public class FoodSpotHandler : MonoBehaviourPun
 {
     [SerializeField] private int minFoodCapacity = 500, maxFoodCapacity = 1000; 
     [SerializeField] private float spawningTime;
+    [SerializeField] private int onStartSpawnAmount = 10;
 
     private List<Transform> foodSpots;
 
@@ -28,6 +29,8 @@ public class FoodSpotHandler : MonoBehaviourPun
 
     void Start()
     {
+        
+
         timer = new Timer();
         foodSpots = new List<Transform>();
         foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
@@ -35,6 +38,11 @@ public class FoodSpotHandler : MonoBehaviourPun
         foreach (Transform child in transform)
         {
             foodSpots.Add(child);
+        }
+        
+        for(int i = 0; i < onStartSpawnAmount; i++)
+        {
+            SpawningFeedSpots();
         }
     }
 

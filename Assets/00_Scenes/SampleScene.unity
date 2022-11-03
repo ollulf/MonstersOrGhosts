@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.09841844, g: 0.16645457, b: 0.3000598, a: 1}
+  m_IndirectSpecularColor: {r: 0.098407626, g: 0.16654387, b: 0.29998446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1742,11 +1742,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5640688171654182138, guid: 9e611895863b3b64ebabf6c49c83f235,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5640688172947211720, guid: 9e611895863b3b64ebabf6c49c83f235,
         type: 3}
       propertyPath: m_Name
@@ -1805,11 +1800,6 @@ PrefabInstance:
     - target: {fileID: 5640688172947211723, guid: 9e611895863b3b64ebabf6c49c83f235,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432311985460441222, guid: 9e611895863b3b64ebabf6c49c83f235,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432311985460441228, guid: 9e611895863b3b64ebabf6c49c83f235,
@@ -2380,6 +2370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipRoutes
       objectReference: {fileID: 0}
+    - target: {fileID: 4925306305670994446, guid: 03278cb5db5ece046a63c4683bcaa797,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6100010936565059987, guid: 03278cb5db5ece046a63c4683bcaa797,
         type: 3}
       propertyPath: m_RootOrder
@@ -2596,6 +2591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShipHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135716848766993317, guid: 4f276c5cc18f5414d8dc9d7028ba51c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2135716848766993318, guid: 4f276c5cc18f5414d8dc9d7028ba51c4,
         type: 3}
@@ -3318,11 +3318,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 295469606380157862, guid: fd649e5562ae9c5478b90706afb3835f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -8.07
-      objectReference: {fileID: 0}
     - target: {fileID: 3355315749970436928, guid: fd649e5562ae9c5478b90706afb3835f,
         type: 3}
       propertyPath: m_RootOrder
@@ -3382,11 +3377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BirdContent
-      objectReference: {fileID: 0}
-    - target: {fileID: 7767341966231983309, guid: fd649e5562ae9c5478b90706afb3835f,
-        type: 3}
-      propertyPath: spawningTime
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd649e5562ae9c5478b90706afb3835f, type: 3}
@@ -4552,6 +4542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FishContent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203373766960986272, guid: e65633fb8565db649a8e1553d69dc0fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65633fb8565db649a8e1553d69dc0fe, type: 3}

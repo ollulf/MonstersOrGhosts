@@ -23,28 +23,28 @@ public class TextureSwitcher : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        currentSin = Time.time % 4 / 4;
-        if (!goesUp) currentSin = 1 - currentSin;
+        currentSin = Time.time % 2 / 2;
+        if (!goesUp) Mathf.Clamp(currentSin = 1 - currentSin , 0 , sinMax);
 
         materialInstance.SetFloat("_LerpValue", currentSin);
 
         if (currentSin <= sinMin && !goesUp)
         {
             Debug.LogWarning("Reached sin MIN");
-            materialInstance.SetTexture("_Texture1", textures[nextIndex]);
+            materialInstance.SetTexture("_Texture2", textures[nextIndex]);
             nextIndex++;
             goesUp = true;
         }
         else if (currentSin >= sinMax && goesUp)
         {
             Debug.LogWarning("Reached sin MAX");
-            materialInstance.SetTexture("_Texture2", textures[nextIndex]);
+            materialInstance.SetTexture("_Texture1", textures[nextIndex]);
             nextIndex++;
             goesUp = false;
         }
 
-        if(nextIndex == textures.Length) nextIndex = textures.Length - 1;
+        if(nextIndex == textures.Length) nextIndex = textures.Length - 2;
     }
 }

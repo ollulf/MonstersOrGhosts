@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6203957942235494713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6724773972721312643}
+  - component: {fileID: 7709293781322279974}
+  - component: {fileID: 5555223747721910508}
+  - component: {fileID: 6546416575936054379}
+  m_Layer: 0
+  m_Name: PercipitationPlane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6724773972721312643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203957942235494713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 753.06525, y: 753.06525, z: 753.06525}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7709293781322279974
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203957942235494713}
+  m_Mesh: {fileID: 2534964839176971238, guid: 723e7de7cee5611489625daff735c828, type: 3}
+--- !u!23 &5555223747721910508
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203957942235494713}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 61eca758d70a6004992df95f7ed5acbe, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6546416575936054379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203957942235494713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e779e35eba7be4199fe2548026d246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 5555223747721910508}
+  textures:
+  - {fileID: 2800000, guid: 170cc2b206af04646928fda887946799, type: 3}
+  - {fileID: 2800000, guid: 66ffbef48aaa1874dbf340ae7a7e6509, type: 3}
+  - {fileID: 2800000, guid: d32344e7486008b4894b974bc34e60fa, type: 3}
+  - {fileID: 2800000, guid: ff2ae72db6e0dbb42899ef302b2363b5, type: 3}
+  - {fileID: 2800000, guid: daa95286aead8e942af3a483206bddbf, type: 3}
+  - {fileID: 2800000, guid: 0a285a9b280109342903745c911fbc1b, type: 3}
+  - {fileID: 2800000, guid: 305741d150130b2439ab1a0124ddd098, type: 3}
+  - {fileID: 2800000, guid: 38176132dc406e1468365339cddd6c92, type: 3}
+  - {fileID: 2800000, guid: a6b2d01913db937429ec7cb934803801, type: 3}
+  - {fileID: 2800000, guid: 891f1248a8349e84080aa2e4d33385de, type: 3}
+  - {fileID: 2800000, guid: 1acf12f1e54ea9a4895bb00d68941f10, type: 3}
+  - {fileID: 2800000, guid: a5b16712afa9f6243b9174109251cf19, type: 3}
+  - {fileID: 2800000, guid: f5b14641ceaa2b84a8658311086a3b0c, type: 3}
+  - {fileID: 2800000, guid: bf75158bb364a1341b0f96c0a08c9f41, type: 3}
+  - {fileID: 2800000, guid: 5a4de558fe54d1f4bacfd2b970d9626e, type: 3}
+  - {fileID: 2800000, guid: f6c1c3f573dfd5f41bf21a11d480ceb7, type: 3}
+  - {fileID: 2800000, guid: d1560df7ccdd01b4e8c8725df494ad8d, type: 3}
+  - {fileID: 2800000, guid: 1b57d2f23c0997844977419018ca1eb5, type: 3}
+  - {fileID: 2800000, guid: ad864a288f417984cb59f20de2698447, type: 3}
+  - {fileID: 2800000, guid: ace24b70cb709a44ca24ee67aec58540, type: 3}
+  materialInstance: {fileID: 0}
+  sinMin: 0.016
+  sinMax: 0.984
+  nextIndex: 2

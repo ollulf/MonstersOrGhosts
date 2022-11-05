@@ -3439,8 +3439,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6330276140654508001}
-  - component: {fileID: 2609168658045856717}
   - component: {fileID: 1043816295464055379}
+  - component: {fileID: -8963805468114483418}
   m_Layer: 0
   m_Name: Arctic Tern
   m_TagString: Untagged
@@ -3468,28 +3468,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &2609168658045856717
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6670526149122583899}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 3694615665854428786, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  - {fileID: 310787072974001287, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  - {fileID: -2481596286897056705, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  - {fileID: -5252816984213320552, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  - {fileID: 4461826734956849724, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  - {fileID: 7256719764317532699, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  - {fileID: -3419257869308726280, guid: e7ae7e0f167d9fb4e9a725e03454d391, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &1043816295464055379
 Animator:
   serializedVersion: 4
@@ -3500,7 +3478,7 @@ Animator:
   m_GameObject: {fileID: 6670526149122583899}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5574c87b3a02e4d198a5d1a1c0060973, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3510,6 +3488,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8963805468114483418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670526149122583899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 2100000, guid: d317b2175a06f4757a0b9e4317729555, type: 2}
+  fishMaterial: {fileID: 2100000, guid: a16e22cad7a63470ab57a0d600b6470d, type: 2}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 0}
+  iceMaterial: {fileID: 0}
 --- !u!1 &6785379507296881164
 GameObject:
   m_ObjectHideFlags: 0

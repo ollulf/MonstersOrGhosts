@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740695709122744716}
   - component: {fileID: 6751681061555484703}
+  - component: {fileID: 5853720578014846089}
   m_Layer: 0
   m_Name: Reindeer
   m_TagString: Untagged
@@ -47,11 +48,30 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: -1498010087492872569, guid: 549ec73c03f5840b698d3ab660fd75df,
     type: 3}
-  m_Animations: []
+  m_Animations:
+  - {fileID: -1498010087492872569, guid: 549ec73c03f5840b698d3ab660fd75df, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &5853720578014846089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75622752678742838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 5b1f8a1a9a73f4570af70a172d8ae429, type: 2}
+  birdMaterial: {fileID: 2100000, guid: d317b2175a06f4757a0b9e4317729555, type: 2}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 0}
+  iceMaterial: {fileID: 0}
 --- !u!1 &103604529104389959
 GameObject:
   m_ObjectHideFlags: 0

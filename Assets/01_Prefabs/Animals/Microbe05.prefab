@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2397529730885926371}
   - component: {fileID: 1523308575341500386}
   - component: {fileID: -8381406074633542447}
-  - component: {fileID: 821256340982124404}
+  - component: {fileID: 3154436577023487584}
   m_Layer: 0
   m_Name: Microbe05
   m_TagString: Untagged
@@ -115,17 +115,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialForce: 0.1
---- !u!64 &821256340982124404
-MeshCollider:
+--- !u!136 &3154436577023487584
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198833585744714806}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e52c6f0d903d149d3bf72b482c7780f0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1279330103383472411, guid: 8b77fb4481548439795f62a6550f011a, type: 3}
+  m_Radius: 0.2664935
+  m_Height: 0.19626927
+  m_Direction: 1
+  m_Center: {x: 0.00000009313226, y: 0, z: 0.2664935}

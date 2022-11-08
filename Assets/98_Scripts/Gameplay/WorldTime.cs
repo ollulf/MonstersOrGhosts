@@ -15,6 +15,7 @@ public class WorldTime : MonoBehaviourPun
     private Timer timer, timer2;
     private float motionFloat, dayFloat, monthFloat, motionFloat2, indexFloat;
 
+    public int Years { get => years; }
 
     void Start()
     {

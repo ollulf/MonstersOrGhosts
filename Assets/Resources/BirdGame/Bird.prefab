@@ -195,12 +195,12 @@ PrefabInstance:
     - target: {fileID: 8632360011571320532, guid: c761b9bfa9140f845b60ed8636d86206,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 27.6
+      value: 27.599976
       objectReference: {fileID: 0}
     - target: {fileID: 8632360011571320532, guid: c761b9bfa9140f845b60ed8636d86206,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 31.2
+      value: 31.200012
       objectReference: {fileID: 0}
     - target: {fileID: 8632360011571320532, guid: c761b9bfa9140f845b60ed8636d86206,
         type: 3}
@@ -238,6 +238,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2225267560348832764}
     m_Modifications:
+    - target: {fileID: -4297875774875403962, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d61903a8ea21c3345a0e4cfdc02ddd65, type: 3}
+    - target: {fileID: 353336278388827476, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d6f0cd7f42c67472293a01c2844a96db, type: 3}
+    - target: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2942d52e0e7d848b6be079ba463965f6, type: 3}
     - target: {fileID: 2982262970364741202, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: sceneViewId
@@ -271,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
@@ -281,27 +296,27 @@ PrefabInstance:
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9999996
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.0009604795
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
@@ -313,11 +328,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2982262970364741206, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: field of view
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741208, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_Name
       value: OverviewCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3482619120346316566, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cb7e3dafd54f0a42bc049378b7bfba2, type: 3}
+    - target: {fileID: 7269967400647844216, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed, type: 3}
     m_RemovedComponents:
     - {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aad67955ecabdda45ac93d397db23027, type: 3}
@@ -1126,14 +1156,15 @@ MonoBehaviour:
   underwaterAmbient: {fileID: 8838055920432129921}
   enterWaterSound: {fileID: 6492476650136453055}
   exitWaterSound: {fileID: 3321323905747286511}
-  characterAmbientClip: {fileID: 0}
-  arcticAmbientClip: {fileID: 8300000, guid: 94bf484708090664caf07bebfe883020, type: 3}
-  underwaterAmbientClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46,
+  characterAmbientClip: {fileID: 8300000, guid: 2942d52e0e7d848b6be079ba463965f6,
+    type: 3}
+  arcticAmbientClip: {fileID: 8300000, guid: d6f0cd7f42c67472293a01c2844a96db, type: 3}
+  underwaterAmbientClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
     type: 3}
   characterAmbientVariantClip: {fileID: 0}
-  arcticAmbientVariantClip: {fileID: 8300000, guid: cba99b97714ddfb4b97128b3652070ac,
+  arcticAmbientVariantClip: {fileID: 8300000, guid: d6f0cd7f42c67472293a01c2844a96db,
     type: 3}
-  underwaterAmbientVariantClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46,
+  underwaterAmbientVariantClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
     type: 3}
   mask:
     serializedVersion: 2
@@ -1181,11 +1212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 21afbc3e55fb86b48b46caaf6e6410a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.49
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 21afbc3e55fb86b48b46caaf6e6410a3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.15
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 21afbc3e55fb86b48b46caaf6e6410a3, type: 3}
       propertyPath: m_LocalRotation.w

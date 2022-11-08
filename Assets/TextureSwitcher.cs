@@ -32,14 +32,14 @@ public class TextureSwitcher : MonoBehaviour
 
         if (currentSin <= sinMin && !goesUp)
         {
-            Debug.LogWarning("Reached sin MIN");
+            //Debug.LogWarning("Reached sin MIN");
             materialInstance.SetTexture("_Texture2", textures[nextIndex]);
             nextIndex++;
             goesUp = true;
         }
         else if (currentSin >= sinMax && goesUp)
         {
-            Debug.LogWarning("Reached sin MAX");
+            //Debug.LogWarning("Reached sin MAX");
             materialInstance.SetTexture("_Texture1", textures[nextIndex]);
             nextIndex++;
             goesUp = false;

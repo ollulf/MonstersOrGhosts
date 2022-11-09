@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 5f55c7e6b81f85e44ada1965100047ed, type: 2}
+  m_SubtractiveShadowColor: {r: 0.18093629, g: 0.23166615, b: 0.3584906, a: 0.54509807}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 29b0c5c2c49028d4e8d337d82cc78539, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1598933403}
-  m_IndirectSpecularColor: {r: 0.042729814, g: 0.035404403, b: 0.03885069, a: 1}
+  m_IndirectSpecularColor: {r: 0.642527, g: 0.7613851, b: 0.9213374, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2022,6 +2022,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 799739cad473242d498a8364241424ec, type: 2}
+    - target: {fileID: 6044214719502320952, guid: 9e611895863b3b64ebabf6c49c83f235,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044214719502320952, guid: 9e611895863b3b64ebabf6c49c83f235,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6045634431800757316, guid: 9e611895863b3b64ebabf6c49c83f235,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2547,6 +2557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CloudPlane northernlights
       objectReference: {fileID: 0}
+    - target: {fileID: 2553266747369581948, guid: be792a3f16ac04120bc8ee33b57a51af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be792a3f16ac04120bc8ee33b57a51af, type: 3}
 --- !u!1001 &237063178869140337
@@ -2742,6 +2757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 647420155618742019, guid: 08daaa564864244879d495a875a4674e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 647420155618742020, guid: 08daaa564864244879d495a875a4674e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2795,6 +2815,11 @@ PrefabInstance:
     - target: {fileID: 647420155618742020, guid: 08daaa564864244879d495a875a4674e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 647420155618742021, guid: 08daaa564864244879d495a875a4674e,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4509,7 +4534,7 @@ PrefabInstance:
     - target: {fileID: 3785306654911279982, guid: 0d70df0ed6ab14fd7b5b1a271349befc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d70df0ed6ab14fd7b5b1a271349befc, type: 3}

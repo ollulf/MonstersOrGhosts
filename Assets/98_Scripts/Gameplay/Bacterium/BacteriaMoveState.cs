@@ -13,7 +13,7 @@ public class BacteriaMoveState : BaseState
 
     public override void OnEnter()
     {
-
+        Debug.Log(clone.Target);
     }
 
     public override void OnExecute()
@@ -23,6 +23,7 @@ public class BacteriaMoveState : BaseState
             Vector3 direction = (clone.Target.transform.position - clone.transform.position).normalized;
 
             clone._Rigidbody.transform.position += direction * clone.MovementSpeed * Time.deltaTime;
+            Debug.Log("Move to target");
         }
     }
 

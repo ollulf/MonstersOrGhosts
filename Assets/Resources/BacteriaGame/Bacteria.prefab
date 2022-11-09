@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1036175111320691509}
   - component: {fileID: 1036175111320691510}
-  - component: {fileID: 1036175111320691499}
   - component: {fileID: 1036175111320691508}
   - component: {fileID: 7882490921714249045}
   - component: {fileID: 7125003215760311895}
+  - component: {fileID: 371820426}
   m_Layer: 0
   m_Name: Bacteria
   m_TagString: Untagged
@@ -89,20 +89,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!136 &1036175111320691499
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036175111320691511}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.6
-  m_Height: 3.47
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  clone: {fileID: 2034286114043349591, guid: edaecee68b5ef7343a31c6d254ba7292, type: 3}
 --- !u!54 &1036175111320691508
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,6 +145,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!135 &371820426
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036175111320691511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1036175112506409796
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,8 +489,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5971210900993330237, guid: fec5e50f50dc66b4687c1dc460d9e31b,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fec5e50f50dc66b4687c1dc460d9e31b, type: 3}
+--- !u!1 &6818397008268971222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5971210900993330231, guid: fec5e50f50dc66b4687c1dc460d9e31b,
+    type: 3}
+  m_PrefabInstance: {fileID: 883214984842084577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6818397008268971227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5971210900993330234, guid: fec5e50f50dc66b4687c1dc460d9e31b,
@@ -606,6 +617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 2810839459946298660}
+    - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
       propertyPath: animalSight
       value: 
       objectReference: {fileID: 1899467958062097743}
@@ -614,6 +630,11 @@ PrefabInstance:
       propertyPath: closePosition
       value: 
       objectReference: {fileID: 943917618867925229}
+    - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: scientificCamera
+      value: 
+      objectReference: {fileID: 6818397008268971222}
     - target: {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: arcticAmbientClip
@@ -716,6 +737,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad67955ecabdda45ac93d397db23027, type: 3}
+--- !u!1 &2810839459946298660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2982262970364741208, guid: aad67955ecabdda45ac93d397db23027,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036175112033516412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2810839459946298665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
@@ -820,6 +847,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036175111320691509}
     m_Modifications:
+    - target: {fileID: 602284286929526512, guid: 3a40bfc3e3d4f314e924ec114c33ebb9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2378661198364979691, guid: 3a40bfc3e3d4f314e924ec114c33ebb9,
         type: 3}
       propertyPath: m_RootOrder
@@ -880,7 +912,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Methanosarcina
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2378661198364979689, guid: 3a40bfc3e3d4f314e924ec114c33ebb9, type: 3}
+    - {fileID: 7426732320504122949, guid: 3a40bfc3e3d4f314e924ec114c33ebb9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a40bfc3e3d4f314e924ec114c33ebb9, type: 3}
 --- !u!4 &4348352728393381995 stripped
 Transform:

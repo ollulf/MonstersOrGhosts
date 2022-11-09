@@ -7,6 +7,7 @@ public class BacteriumMovement : MonoBehaviourPun
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField] private AnimationCurve addingForce;
+    [SerializeField] private GameObject clone;
 
     private Rigidbody rigidbody;
     private Timer timer;
@@ -29,7 +30,6 @@ public class BacteriumMovement : MonoBehaviourPun
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("HUI");
                 timerRunning = true;
             }
         }
@@ -48,7 +48,6 @@ public class BacteriumMovement : MonoBehaviourPun
 
                 if (addingForce.Evaluate(timer.CurrentTime) <= 0)
                 {
-                    Debug.Log("OHH");
                     timer.ResetTimer();
                     timerRunning = false;
                 }
@@ -60,14 +59,17 @@ public class BacteriumMovement : MonoBehaviourPun
     {
         if(collision.gameObject.tag == "BacteriaFood")
         {
+            collision.gameObject.GetComponent<BacteriaFood>().RemoveFromList();
             Destroy(collision.gameObject);
-            PhotonNetwork.Instantiate("BacteriaGame/BacteriaClone", transform.position, Quaternion.identity);
+            Instantiate(clone, transform.position, Quaternion.identity);
+            //PhotonNetwork.Instantiate("BacteriaGame/BacteriaClone", transform.position, Quaternion.identity);
         }
     }
 
     private void RotationBacterium()
     {
-        transform.Rotate(new Vector3(Input.GetAxis("Mouse X"), 0, -Input.GetAxis("Mouse Y")) * rotationSpeed);
+        transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"),0) * rotationSpeed);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
     }
 
     private void Move()

@@ -32,6 +32,4 @@ public class DeerStateMachine : BaseStateMachine
     {
         return Vector3.Distance(deer.Target.transform.position, deer.transform.position) < deer.MaxDistance;
     }
-
-
 }

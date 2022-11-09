@@ -402,7 +402,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: hoverAmount
+      value: 2.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &6192364250397976656 stripped
 Transform:
@@ -708,7 +714,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &7753706389791270926 stripped
 Transform:
@@ -798,7 +805,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: hoverAmount
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &8164711593149625079 stripped
 Transform:
@@ -983,7 +996,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &109532520830969291 stripped
 Transform:
@@ -991,68 +1005,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4989288309245955102}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &778827601653006193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
-    type: 3}
-  m_PrefabInstance: {fileID: 4989288309245955102}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2718384131517960969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778827601653006193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000f0a4a13db2704b83ff9efa9ffc8ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.47076195
-      outSlope: 0.47076195
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.19375
-    - serializedVersion: 3
-      time: 0.29230958
-      value: 0.051109113
-      inSlope: 0.0043863454
-      outSlope: 0.0043863454
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 0.75
-      value: -0.034998834
-      inSlope: -0.001790299
-      outSlope: -0.001790299
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0.41630727
-      outSlope: 0.41630727
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.3153062
-      outWeight: 0
-    m_PreInfinity: 1
-    m_PostInfinity: 1
-    m_RotationOrder: 4
-  speed: 0.5
-  hoverAmount: 3
 --- !u!1001 &5951947032452560577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1230,7 +1182,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &1663599255786293336 stripped
 Transform:
@@ -1238,68 +1191,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6030015073133126029}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2043959238514922210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
-    type: 3}
-  m_PrefabInstance: {fileID: 6030015073133126029}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5964558433177252904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043959238514922210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000f0a4a13db2704b83ff9efa9ffc8ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.47076195
-      outSlope: 0.47076195
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.19375
-    - serializedVersion: 3
-      time: 0.29230958
-      value: 0.051109113
-      inSlope: 0.0043863454
-      outSlope: 0.0043863454
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 0.75
-      value: -0.034998834
-      inSlope: -0.001790299
-      outSlope: -0.001790299
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0.41630727
-      outSlope: 0.41630727
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.3153062
-      outWeight: 0
-    m_PreInfinity: 1
-    m_PostInfinity: 1
-    m_RotationOrder: 4
-  speed: 0.6
-  hoverAmount: 4
 --- !u!1001 &6785987009004459407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1477,7 +1368,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &3423455313099588945 stripped
 Transform:
@@ -1567,7 +1459,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arctic Cod (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
 --- !u!4 &3999535995282724033 stripped
 Transform:
@@ -1575,68 +1468,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8302830919464647956}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4380564690745904763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
-    type: 3}
-  m_PrefabInstance: {fileID: 8302830919464647956}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8311827101705218127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4380564690745904763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000f0a4a13db2704b83ff9efa9ffc8ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.47076195
-      outSlope: 0.47076195
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.19375
-    - serializedVersion: 3
-      time: 0.29230958
-      value: 0.051109113
-      inSlope: 0.0043863454
-      outSlope: 0.0043863454
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 0.75
-      value: -0.034998834
-      inSlope: -0.001790299
-      outSlope: -0.001790299
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0.41630727
-      outSlope: 0.41630727
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.3153062
-      outWeight: 0
-    m_PreInfinity: 1
-    m_PostInfinity: 1
-    m_RotationOrder: 4
-  speed: 0.6
-  hoverAmount: 4
 --- !u!1001 &8630268961215952228
 PrefabInstance:
   m_ObjectHideFlags: 0

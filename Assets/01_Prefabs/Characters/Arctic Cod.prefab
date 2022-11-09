@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 4951884224226847189}
   - component: {fileID: 3770176920983097154}
   - component: {fileID: 8671313094653839936}
+  - component: {fileID: 2718384131517960969}
   m_Layer: 0
   m_Name: Arctic Cod
   m_TagString: Untagged
@@ -218,7 +219,7 @@ Transform:
   m_GameObject: {fileID: 5761072436977513327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 53.2035, y: 0, z: 24.565344}
-  m_LocalScale: {x: 0.2, y: 0.19999997, z: 0.19999997}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4037605871189834059}
@@ -284,6 +285,62 @@ MonoBehaviour:
     m_RotationOrder: 4
   speed: 1
   hoverAmount: 3
+--- !u!114 &2718384131517960969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761072436977513327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000f0a4a13db2704b83ff9efa9ffc8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.47076195
+      outSlope: 0.47076195
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.19375
+    - serializedVersion: 3
+      time: 0.29230958
+      value: 0.051109113
+      inSlope: 0.0043863454
+      outSlope: 0.0043863454
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.75
+      value: -0.034998834
+      inSlope: -0.001790299
+      outSlope: -0.001790299
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.41630727
+      outSlope: 0.41630727
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3153062
+      outWeight: 0
+    m_PreInfinity: 1
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  speed: 0.5
+  hoverAmount: 3
 --- !u!1 &5803712340734680592
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3032862752892205103}
   - component: {fileID: 5419235227240731043}
+  - component: {fileID: 932127489786425009}
   m_Layer: 0
   m_Name: cod
   m_TagString: Untagged
@@ -378,6 +436,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0034446153, y: 0.04678696, z: 0.0006963713}
     m_Extent: {x: 0.014154041, y: 0.05710109, z: 0.025550142}
   m_DirtyAABB: 0
+--- !u!114 &932127489786425009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803712340734680592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 2100000, guid: a16e22cad7a63470ab57a0d600b6470d, type: 2}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 0}
+  iceMaterial: {fileID: 0}
 --- !u!1 &6623136825400923748
 GameObject:
   m_ObjectHideFlags: 0

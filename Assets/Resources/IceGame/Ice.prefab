@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ac82ac50b510d4988608025963a0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 7
   turnspeed: 0.5
 --- !u!54 &975685457535711791
 Rigidbody:
@@ -877,6 +877,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3467070007692905432}
     m_Modifications:
+    - target: {fileID: 3819501950835441529, guid: 19f365db263ef45578d08089d32cd45f,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819501950835441529, guid: 19f365db263ef45578d08089d32cd45f,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: -2104111294640076814, guid: 1c0d7f4a22a7e4d56a589deb1747a1a9,
+        type: 3}
     - target: {fileID: 5894102833633401403, guid: 19f365db263ef45578d08089d32cd45f,
         type: 3}
       propertyPath: m_RootOrder

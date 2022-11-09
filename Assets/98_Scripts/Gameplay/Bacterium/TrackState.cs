@@ -19,6 +19,7 @@ public class TrackState : BaseState
     {
         if (BacteriaFoodHandler.Food.Count > 0)
         {
+            Debug.Log("Tracking target");
             clone.SetTarget();
         }
 

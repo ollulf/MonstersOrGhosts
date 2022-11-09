@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 82269961254056778}
   - component: {fileID: 330751290800276681}
   - component: {fileID: 7584779410199823020}
+  - component: {fileID: 2171962290312868021}
   m_Layer: 0
   m_Name: Microbe01
   m_TagString: Untagged
@@ -128,3 +129,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.46265617
   m_Center: {x: 0.0000001937151, y: -0.00000002980233, z: 0.46021807}
+--- !u!114 &2171962290312868021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477755452461117703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 2100000, guid: 799739cad473242d498a8364241424ec, type: 2}
+  machineMaterial: {fileID: 0}
+  iceMaterial: {fileID: 0}

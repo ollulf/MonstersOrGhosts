@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Value: 1
   maxDistanceAnalytic:
     m_OverrideState: 1
-    m_Value: 300
+    m_Value: 100
   temporalAntiAliasingEnabled:
     m_OverrideState: 0
     m_Value: 0
@@ -48,25 +48,25 @@ MonoBehaviour:
     m_Value: 0.03
   fogDensity:
     m_OverrideState: 1
-    m_Value: 7
+    m_Value: 3
   anisotropy:
     m_OverrideState: 1
     m_Value: 0.42
   lightIntensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 3
   shadowIntensity:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   baseHeight:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -2
   attenuationBoundarySize:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 10
   litColor:
     m_OverrideState: 1
-    m_Value: {r: 0.7983268, g: 0.86125076, b: 0.8679245, a: 1}
+    m_Value: {r: 0.7573869, g: 0.8614223, b: 0.8679245, a: 1}
   shadowedColor:
     m_OverrideState: 1
     m_Value: {r: 0.14066394, g: 0.14221406, b: 0.2735849, a: 1}
@@ -99,14 +99,14 @@ MonoBehaviour:
     m_Value: {x: 2, y: -1, z: 0.5}
   noiseMap:
     m_OverrideState: 1
-    m_Value: {x: 0.3459956, y: 1}
+    m_Value: {x: 0.3934426, y: 0.6229509}
   volumeNoise:
     m_OverrideState: 1
     m_Value:
-      frequency: 8
-      octaves: 4
+      frequency: 6
+      octaves: 5
       lacunarity: 2
-      gain: 0.35
+      gain: 0.094
       seed: 0
       noiseType: 5
       noiseQuality: 2

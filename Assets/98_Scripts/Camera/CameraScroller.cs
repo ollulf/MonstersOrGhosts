@@ -111,7 +111,7 @@ public class CameraScroller : MonoBehaviourPun
 
     private void LateUpdate()
     {
-        Debug.LogError(camerChange);
+        //Debug.LogError(camerChange);
         if (camerChange == false)
         {
             IndexChecker();

@@ -32,6 +32,7 @@ public class DeerController : MonoBehaviourPun
     [SerializeField] private float movementSpeed;
     [SerializeField] private float turnspeed, fishPrefTurnSpeed;
     [SerializeField] private Transform deerPref;
+    [SerializeField] private Animator anim;
     private Vector2 movement;
     private Rigidbody rigidbody;
 
@@ -54,10 +55,12 @@ public class DeerController : MonoBehaviourPun
             if (movement.y < 0 || movement.y > 0)
             {
                 isMoving = true;
+                anim.SetBool("IsWalking", true);
             }
             else
             {
                 isMoving = false;
+                anim.SetBool("IsWalking", false);
             }
 
             MovePlayer();
@@ -192,13 +195,17 @@ public class DeerController : MonoBehaviourPun
     private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "DeerFood" && currentFoodSource)
+        {
             isInFoodArea = true;
+            anim.SetBool("IsGrazing", true);
+        }
     }
 
     private void OnTriggerExit(Collider collision)
     {
         currentFoodSource = null;
         isInFoodArea = false;
+        anim.SetBool("IsGrazing", false);
     }
 }
 

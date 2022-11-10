@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 2982262970364741202}
   - component: {fileID: 2982262970364741207}
   - component: {fileID: 2982262970364741204}
-  - component: {fileID: 2982262970364741203}
   - component: {fileID: 7269967400647844216}
   - component: {fileID: -4297875774875403962}
   - component: {fileID: 3482619120346316566}
   - component: {fileID: 353336278388827476}
   - component: {fileID: 2666029474704447857}
-  m_Layer: 0
+  - component: {fileID: 9054532837799713885}
+  m_Layer: 4
   m_Name: OverviewCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -65,8 +65,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 800
+  field of view: 35
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -147,67 +147,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &2982262970364741203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2982262970364741208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0f493a29ec1c349a253553e2032fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scientificPosition: {fileID: 0}
-  farPosition: {fileID: 0}
-  closePosition: {fileID: 0}
-  animalSight: {fileID: 0}
-  acellerationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.26700616
-      outSlope: 0.26700616
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.99586374
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.21474384
-      outSlope: 0.21474384
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.9983583
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  speed: 1
-  fishFog: 0.02
-  overviewFog: 0
-  characterAmbient: {fileID: 0}
-  arcticAmbient: {fileID: 353336278388827476}
-  underwaterAmbient: {fileID: 7269967400647844216}
-  enterWaterSound: {fileID: -4297875774875403962}
-  exitWaterSound: {fileID: 3482619120346316566}
-  characterAmbientClip: {fileID: 0}
-  arcticAmbientClip: {fileID: 0}
-  underwaterAmbientClip: {fileID: 0}
-  characterAmbientVariantClip: {fileID: 0}
-  arcticAmbientVariantClip: {fileID: 0}
-  underwaterAmbientVariantClip: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
-  scientificCamera: {fileID: 0}
-  mainCamera: {fileID: 0}
-  scientificButton: {fileID: 0}
-  firstPersonVolume: {fileID: 0}
 --- !u!82 &7269967400647844216
 AudioSource:
   m_ObjectHideFlags: 0
@@ -218,7 +157,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9166ec51ca4f0df4283e32c289877c46, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -314,7 +253,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7e642828366d89b4899e63a54e16eefb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d61903a8ea21c3345a0e4cfdc02ddd65, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -410,7 +349,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 56857248a534be546b1c0b4e81d8fc3e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2cb7e3dafd54f0a42bc049378b7bfba2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -506,7 +445,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 94bf484708090664caf07bebfe883020, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8ff7aab3e4791c7459b8c13ed2b017a2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -602,7 +541,103 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ffceb4882f8bb224c868c15ec85005d2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &9054532837799713885
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982262970364741208}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f813a74ab46e78943bf7441bd935ebdf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

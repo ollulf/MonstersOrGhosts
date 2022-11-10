@@ -23,13 +23,7 @@ public class DeerStateMachine : BaseStateMachine
         moveState.AddTransition(TargetInRange, iDLEState);
     }
 
-    private bool TargetNotInRange()
-    {
-        return Vector3.Distance(deer.Target.transform.position, deer.transform.position) > deer.MaxDistance;
-    }
+    private bool TargetNotInRange() => Vector3.Distance(deer.Target.transform.position, deer.transform.position) > deer.MaxDistance && deer.Target != null;
 
-    private bool TargetInRange()
-    {
-        return Vector3.Distance(deer.Target.transform.position, deer.transform.position) < deer.MaxDistance;
-    }
+    private bool TargetInRange() => Vector3.Distance(deer.Target.transform.position, deer.transform.position) < deer.MaxDistance;
 }

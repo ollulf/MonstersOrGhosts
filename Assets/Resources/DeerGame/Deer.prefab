@@ -622,6 +622,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdbf5c36898c847c5bbdbe02da2bc782, type: 3}
+--- !u!4 &1171446446422642809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 740695709122744716, guid: fdbf5c36898c847c5bbdbe02da2bc782,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875373781250245109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1948370865667836611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 75622752678742838, guid: fdbf5c36898c847c5bbdbe02da2bc782,
@@ -801,10 +807,10 @@ MonoBehaviour:
   co2TF: {fileID: 6286739016567221328}
   co2SecTF: {fileID: 8514793984042921286}
   hungerTF: {fileID: 7178330365810261723}
-  movementSpeed: 12
+  movementSpeed: 30
   turnspeed: 5
   fishPrefTurnSpeed: 4
-  deerPref: {fileID: 0}
+  deerPref: {fileID: 1171446446422642809}
 --- !u!114 &1577967144582472285
 MonoBehaviour:
   m_ObjectHideFlags: 0

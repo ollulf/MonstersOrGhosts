@@ -10,6 +10,7 @@ public class DeerHandler :Singleton<DeerHandler>
     {
         foreach(GameObject deer in Instance.deerFollower)
         {
+            Debug.Log(newTarget);
             deer.GetComponent<Deer>().SetTarget(newTarget);
         }
     }

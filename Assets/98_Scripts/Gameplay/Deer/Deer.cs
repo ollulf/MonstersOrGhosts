@@ -21,7 +21,6 @@ public class Deer : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        deerControll = new DeerStateMachine(this);
     }
 
     private void FixedUpdate()
@@ -35,5 +34,6 @@ public class Deer : MonoBehaviour
     public void SetTarget(GameObject newTarget)
     {
         target = newTarget;
+        deerControll = new DeerStateMachine(this);
     }
 }

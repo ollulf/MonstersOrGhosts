@@ -28,29 +28,30 @@ public class EndScreen : MonoBehaviour
     /// </summary>
     public void UpdateGameValues(EndGameValues endGameValues)
     {
+        Color red = new Color(1, 0.5f, 0.5f);
+        Color green = new Color(0.8f, 1, 0.5f);
+        Color orange = new Color(1, 0.8f, 0.5f);
+
         arcticTern.UpdateValues(endGameValues.Tern);
         arcticCod.UpdateValues(endGameValues.Cod);
         deer.UpdateValues(endGameValues.Deer);
 
         realTemperatureIncreaseTMP.text = realTotalTemperatureIncrease.ToString();
         
-        gameTotalTemperatureIncreaseTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease 
-            ? new Color(255, 129, 129, 255) : new Color(222, 255, 129, 255);
+        gameTotalTemperatureIncreaseTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease ? red : green;
         gameTotalTemperatureIncreaseTMP.text = endGameValues.GameTotalTemperatureIncrease.ToString();
 
         CarbonDioxideTMP.text = endGameValues.TotalCarbonDioxide.ToString();
         MoneyGeneratedTotalTMP.text = endGameValues.MoneyGeneratedTotal.ToString();
 
         iceCoverage = (int) (endGameValues.GameTotalTemperatureIncrease / maxTempIncrease * 1000);
-        iceCoverageChangeTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease 
-            ? new Color(255, 129, 129, 255) : new Color(222, 255, 129, 255);
+        iceCoverageChangeTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease ? red : green;
         iceCoverageChangeTMP.text = iceCoverage.ToString() + " %";
 
-        methaneProductionTMP.color = CalculateMethaneEnum(
-            endGameValues.TotalAmountOfCollectedAcetate, mediumInAmount, mediumOutAmount) == MethaneProduction.medium
-            ? new Color(255,200,129, 255) : new Color(255, 129, 129, 255);
-        methaneProductionTMP.text = CalculateMethaneEnum(
-            endGameValues.TotalAmountOfCollectedAcetate, mediumInAmount, mediumOutAmount).ToString();
+        MethaneProduction tempMethane = CalculateMethaneEnum(
+            endGameValues.TotalAmountOfCollectedAcetate, mediumInAmount, mediumOutAmount);
+        methaneProductionTMP.color = tempMethane == MethaneProduction.low ? green : (tempMethane == MethaneProduction.medium ? orange : red);
+        methaneProductionTMP.text = tempMethane.ToString();
     }
 
     private MethaneProduction CalculateMethaneEnum(int totalAmountOfCollectedAcetate, int mediumInAmount, int mediumOutAmount)
@@ -62,7 +63,7 @@ public class EndScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EndGameValues endGameValues = new EndGameValues(0.1f ,1000, 10000000, 20,
+        EndGameValues endGameValues = new EndGameValues(0.6f ,10000, 10000000, 20,
             new PopulationPair(99,100), new PopulationPair(99, 80), new PopulationPair(99, 100));
 
         UpdateGameValues(endGameValues);
@@ -79,8 +80,7 @@ public class EndScreen : MonoBehaviour
     {
         int dif = pair.endPop - pair.startPop;
 
-        difference.color = dif < 0 ? new Color(255, 129, 129, 255) : new Color(222, 255, 129);
-        difference.color = dif < 0 ? Color.red : Color.green;
+        difference.color = dif < 0 ? new Color(1, 0.5f, 0.5f, 1) : new Color(0.8f, 1, 0.5f);
         start.text = pair.startPop.ToString();
         end.text = pair.endPop.ToString();
         difference.text = dif.ToString();

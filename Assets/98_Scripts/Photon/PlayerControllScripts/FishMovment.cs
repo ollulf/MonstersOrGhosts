@@ -132,9 +132,7 @@ public class FishMovment : MonoBehaviourPun
         if (GlobalFlock.FishFlock.Count <= 20)
         {
             GameObject flocki = PhotonNetwork.Instantiate("FishGame/flock", this.transform.position, Quaternion.identity);
-            flocki.GetComponent<Flocking>().SetTarget(this.transform);
-            flocki.GetComponent<Flocking>().SetMotherFlock(GlobalFlock.Instance.transform);
-            flocki.transform.parent = GlobalFlock.Instance.transform;
+            flocki.GetComponent<FalseFlock>().SetTarget(this.gameObject);
         }
     }
 

@@ -48,31 +48,31 @@ MonoBehaviour:
     m_Value: 0.03
   fogDensity:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 10
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0.378
+    m_Value: 0.43
   lightIntensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   shadowIntensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   baseHeight:
-    m_OverrideState: 0
-    m_Value: -15
-  attenuationBoundarySize:
-    m_OverrideState: 0
-    m_Value: 1
-  litColor:
     m_OverrideState: 1
-    m_Value: {r: 0.40290603, g: 0.4245283, b: 0.0740922, a: 1}
+    m_Value: -2
+  attenuationBoundarySize:
+    m_OverrideState: 1
+    m_Value: 10
+  litColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.4316109, b: 0.26179245, a: 1}
   shadowedColor:
     m_OverrideState: 1
-    m_Value: {r: 0.5195862, g: 0.6226415, b: 0.15566038, a: 1}
+    m_Value: {r: 0.72019964, g: 0.9150943, b: 0.056114297, a: 1}
   emitColor:
     m_OverrideState: 1
-    m_Value: {r: 0.4811321, g: 0.3804526, b: 0.083971165, a: 1}
+    m_Value: {r: 0.5254902, g: 0.41568628, b: 0.078431375, a: 1}
   colorRamp:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -99,16 +99,16 @@ MonoBehaviour:
     m_Value: {x: 1, y: 0, z: 0}
   noiseMap:
     m_OverrideState: 1
-    m_Value: {x: 0.2422145, y: 0.8690721}
+    m_Value: {x: 0.6125849, y: 0.83203506}
   volumeNoise:
     m_OverrideState: 1
     m_Value:
-      frequency: 12
+      frequency: 28
       octaves: 5
       lacunarity: 3
-      gain: 0.472
-      seed: 1
-      noiseType: 4
+      gain: 0.593
+      seed: 100
+      noiseType: 5
       noiseQuality: 2
       invert: 0
       userTexture: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   filter:
     m_OverrideState: 0
     m_Value: 0
---- !u!114 &-3932314356969270783
+--- !u!114 &-3890898372363367705
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,43 +211,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
-  m_Name: DepthOfField
+  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
+  m_Name: MotionBlur
   m_EditorClassIdentifier: 
   active: 1
   mode:
     m_OverrideState: 0
     m_Value: 0
-  gaussianStart:
-    m_OverrideState: 0
-    m_Value: 10
-  gaussianEnd:
-    m_OverrideState: 0
-    m_Value: 30
-  gaussianMaxRadius:
-    m_OverrideState: 0
+  quality:
+    m_OverrideState: 1
+    m_Value: 2
+  intensity:
+    m_OverrideState: 1
     m_Value: 1
-  highQualitySampling:
+  clamp:
     m_OverrideState: 0
-    m_Value: 0
-  focusDistance:
-    m_OverrideState: 0
-    m_Value: 10
-  aperture:
-    m_OverrideState: 0
-    m_Value: 5.6
-  focalLength:
-    m_OverrideState: 0
-    m_Value: 50
-  bladeCount:
-    m_OverrideState: 0
-    m_Value: 5
-  bladeCurvature:
-    m_OverrideState: 0
-    m_Value: 1
-  bladeRotation:
-    m_OverrideState: 0
-    m_Value: 0
+    m_Value: 0.05
 --- !u!114 &-1347137411533618926
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -327,5 +306,75 @@ MonoBehaviour:
   m_Name: ArcticCod-FirstPerson-Yellow
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -3932314356969270783}
   - {fileID: -7613080948156439262}
+  - {fileID: 4395977955717899210}
+  - {fileID: -3890898372363367705}
+  - {fileID: 7733636820714455243}
+--- !u!114 &4395977955717899210
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  xMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+  yMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+  center:
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.5}
+  scale:
+    m_OverrideState: 1
+    m_Value: 1.33
+--- !u!114 &7733636820714455243
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  threshold:
+    m_OverrideState: 0
+    m_Value: 0.5
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+  dirtTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 03f18fd57e7564cb1bafeaba86b66789, type: 3}
+  dirtIntensity:
+    m_OverrideState: 1
+    m_Value: 100

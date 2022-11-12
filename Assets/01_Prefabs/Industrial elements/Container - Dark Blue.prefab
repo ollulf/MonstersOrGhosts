@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 9095010394132389015}
   - component: {fileID: 5222170521404911875}
   - component: {fileID: 1954875633672416852}
+  - component: {fileID: 4830681297748266149}
   m_Layer: 0
   m_Name: BODY
   m_TagString: Untagged
@@ -116,6 +117,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4830681297748266149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466402028676719994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 62d2f8133d56f4f6483411d89183e942, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &3910336123784283158
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +146,7 @@ GameObject:
   - component: {fileID: 478974969914031004}
   - component: {fileID: 1764015713505573824}
   - component: {fileID: 6926787166488161019}
+  - component: {fileID: 2439045201805799247}
   m_Layer: 0
   m_Name: PARTS
   m_TagString: Untagged
@@ -199,3 +219,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2439045201805799247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910336123784283158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 62d2f8133d56f4f6483411d89183e942, type: 2}
+  iceMaterial: {fileID: 0}

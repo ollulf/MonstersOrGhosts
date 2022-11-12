@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1579184821255709197}
   - component: {fileID: 6814956661561745593}
   - component: {fileID: 2747620076389145228}
+  - component: {fileID: 649224251658940507}
   m_Layer: 0
   m_Name: CraneBody_low
   m_TagString: Untagged
@@ -83,6 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &649224251658940507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511157182047356159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 5da2c36f5ee014e7081230bccd260c24, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &8122445612035717926
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +113,7 @@ GameObject:
   - component: {fileID: 2505748740991896201}
   - component: {fileID: 196933554042787686}
   - component: {fileID: 8173742857084259366}
+  - component: {fileID: 9212538485827423236}
   m_Layer: 0
   m_Name: CraneParts_low
   m_TagString: Untagged
@@ -166,6 +186,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9212538485827423236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8122445612035717926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 5da2c36f5ee014e7081230bccd260c24, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &8636443769697903697
 GameObject:
   m_ObjectHideFlags: 0

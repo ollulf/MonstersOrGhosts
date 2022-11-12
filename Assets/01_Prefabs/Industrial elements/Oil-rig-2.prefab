@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4397437204250888688}
   - component: {fileID: 768160896520881749}
   - component: {fileID: 3264539126751949471}
-  - component: {fileID: 7335480919956117417}
   m_Layer: 0
   m_Name: Oil-rig-2
   m_TagString: Untagged
@@ -85,24 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7335480919956117417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3912789673533395786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deerMaterial: {fileID: 0}
-  birdMaterial: {fileID: 2100000, guid: dd04ac45632db4871bb968297169bce8, type: 2}
-  fishMaterial: {fileID: 0}
-  bacteriaMaterial: {fileID: 0}
-  machineMaterial: {fileID: 2100000, guid: 37da51b0ad5b046da8cf03a38b8aacdb, type: 2}
-  iceMaterial: {fileID: 0}
 --- !u!1 &4862006130718539303
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +95,7 @@ GameObject:
   - component: {fileID: 8972999533071521004}
   - component: {fileID: 5134389305055516314}
   - component: {fileID: 2963449451804944027}
+  - component: {fileID: 6142083968278712649}
   m_Layer: 0
   m_Name: maersk rig
   m_TagString: Untagged
@@ -186,3 +168,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6142083968278712649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862006130718539303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 7feff8c1e754548ee86bbe7b6022e0c7, type: 2}
+  birdMaterial: {fileID: 2100000, guid: f5d303b56533142de87dd3dbf293efb9, type: 2}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 8f4a1cf81b057440d8bf1ad27c65b96a, type: 2}
+  iceMaterial: {fileID: 0}

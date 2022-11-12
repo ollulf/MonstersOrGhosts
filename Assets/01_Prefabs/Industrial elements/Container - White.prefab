@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8728348573608234465}
   - component: {fileID: 7493973334951415229}
   - component: {fileID: 2279982223181569158}
+  - component: {fileID: 2862740441599530525}
   m_Layer: 0
   m_Name: PARTS
   m_TagString: Untagged
@@ -83,6 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2862740441599530525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314447699284193899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 62d2f8133d56f4f6483411d89183e942, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &5737543858620437255
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +113,7 @@ GameObject:
   - component: {fileID: 122455079542106858}
   - component: {fileID: 4034129676395382654}
   - component: {fileID: 7252456705943918633}
+  - component: {fileID: 3269736411492249342}
   m_Layer: 0
   m_Name: BODY
   m_TagString: Untagged
@@ -166,6 +186,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3269736411492249342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737543858620437255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 62d2f8133d56f4f6483411d89183e942, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &8220802184854067688
 GameObject:
   m_ObjectHideFlags: 0

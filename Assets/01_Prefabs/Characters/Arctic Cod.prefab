@@ -201,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4951884224226847189}
   - component: {fileID: 3770176920983097154}
+  - component: {fileID: 8671313094653839936}
   m_Layer: 0
   m_Name: Arctic Cod
   m_TagString: Untagged
@@ -245,6 +246,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8671313094653839936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761072436977513327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000f0a4a13db2704b83ff9efa9ffc8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.006248474
+      value: 0.0000013113022
+      inSlope: -0.65894395
+      outSlope: -0.65894395
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.1739118
+    - serializedVersion: 3
+      time: 0.9953625
+      value: -0.0010218937
+      inSlope: -0.40526
+      outSlope: -0.40526
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16196379
+      outWeight: 0
+    m_PreInfinity: 1
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  speed: 1
+  hoverAmount: 4
 --- !u!1 &5803712340734680592
 GameObject:
   m_ObjectHideFlags: 0

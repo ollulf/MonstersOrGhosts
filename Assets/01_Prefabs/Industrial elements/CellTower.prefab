@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4369024171530828}
-  - component: {fileID: 1396124962155180577}
   m_Layer: 0
   m_Name: CellTower
   m_TagString: Untagged
@@ -33,24 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1396124962155180577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465975760731024}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deerMaterial: {fileID: 0}
-  birdMaterial: {fileID: 0}
-  fishMaterial: {fileID: 0}
-  bacteriaMaterial: {fileID: 0}
-  machineMaterial: {fileID: 2100000, guid: 8811e318104c843b7934a674976f819f, type: 2}
-  iceMaterial: {fileID: 0}
 --- !u!1 &1534760776756782
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +43,7 @@ GameObject:
   - component: {fileID: 4239157437289554}
   - component: {fileID: 33804616518531762}
   - component: {fileID: 23660636743313524}
+  - component: {fileID: 2960274293896936885}
   m_Layer: 0
   m_Name: Industrial_032
   m_TagString: Untagged
@@ -134,3 +116,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2960274293896936885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534760776756782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 18852843074717b4ab4bab4fee33c76b, type: 2}
+  birdMaterial: {fileID: 2100000, guid: 18852843074717b4ab4bab4fee33c76b, type: 2}
+  fishMaterial: {fileID: 2100000, guid: 18852843074717b4ab4bab4fee33c76b, type: 2}
+  bacteriaMaterial: {fileID: 2100000, guid: 18852843074717b4ab4bab4fee33c76b, type: 2}
+  machineMaterial: {fileID: 2100000, guid: 8811e318104c843b7934a674976f819f, type: 2}
+  iceMaterial: {fileID: 2100000, guid: 18852843074717b4ab4bab4fee33c76b, type: 2}

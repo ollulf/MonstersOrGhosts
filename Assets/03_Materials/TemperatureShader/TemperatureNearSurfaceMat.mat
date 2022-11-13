@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TemperatureMat
+  m_Name: TemperatureNearSurfaceMat
   m_Shader: {fileID: -6465566751694194690, guid: bcbbebca4faa8864a8c406864d8b7960,
     type: 3}
   m_ValidKeywords: []
@@ -39,11 +39,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture1:
-        m_Texture: {fileID: 2800000, guid: 170cc2b206af04646928fda887946799, type: 3}
+        m_Texture: {fileID: 2800000, guid: b59cb879563084c518b21400a6e355e9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2:
-        m_Texture: {fileID: 2800000, guid: 66ffbef48aaa1874dbf340ae7a7e6509, type: 3}
+        m_Texture: {fileID: 2800000, guid: 12f7edf120cdb44ecbe31fe6514a7991, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -65,8 +65,8 @@ Material:
     - _LerpValue: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _blend: 0
+    - _blend: 5.63
     m_Colors:
-    - _Color1: {r: 0.09083377, g: 0.07320219, b: 0.4433962, a: 0}
-    - _Color2: {r: 1, g: 0.3409729, b: 0, a: 1}
+    - _Color1: {r: 0.090833746, g: 0.07320217, b: 0.44339618, a: 0.4392157}
+    - _Color2: {r: 1, g: 0.19999993, b: 0, a: 0.09803922}
   m_BuildTextureStacks: []

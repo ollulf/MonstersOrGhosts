@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6973830957029975679}
   - component: {fileID: 5128739090710401717}
   - component: {fileID: 7667044767235300976}
+  - component: {fileID: 7929049563786928046}
   m_Layer: 0
   m_Name: cracked ice test5
   m_TagString: Untagged
@@ -41,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6641698358066656096}
-  m_Mesh: {fileID: 2212009239438826721, guid: b399e4b78a0254d719ca991322e8ecb4, type: 3}
+  m_Mesh: {fileID: 4493585093827132993, guid: d107e15c11f5c47e0b9308a13e521ebe, type: 3}
 --- !u!23 &5128739090710401717
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,4 +98,24 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2212009239438826721, guid: b399e4b78a0254d719ca991322e8ecb4, type: 3}
+  m_Mesh: {fileID: 4493585093827132993, guid: d107e15c11f5c47e0b9308a13e521ebe, type: 3}
+--- !u!95 &7929049563786928046
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6641698358066656096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33044e09ba39e45de9fb74a2b8a0af8d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

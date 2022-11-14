@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2114881235807688221}
   - component: {fileID: 4897388120358099621}
   - component: {fileID: 5329702885049107965}
+  - component: {fileID: 8380480064870603017}
   m_Layer: 0
   m_Name: OilPipeLine002
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb8b75be42e1547f4ad50181d1101221, type: 2}
+  - {fileID: 2100000, guid: b216a7bc048e341c9a183617dfc7e54d, type: 2}
   - {fileID: 2100000, guid: 1787bc1444462419192f1582362c6dba, type: 2}
   - {fileID: 2100000, guid: b9788f887359442e88283a19f291c6f1, type: 2}
   m_StaticBatchInfo:
@@ -120,6 +121,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8380480064870603017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390088553156574483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 5bfb642919f2141ee8cf8319f0d8da89, type: 2}
+  birdMaterial: {fileID: 2100000, guid: 25f1b77ce7e804d1aae2f91843d9d17c, type: 2}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: ab2c3c15395e442daa52f1a6a64b92e6, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &2639948130732678916
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +150,7 @@ GameObject:
   - component: {fileID: 8535604096641345928}
   - component: {fileID: 5128835610573175795}
   - component: {fileID: 8266331394688413881}
+  - component: {fileID: 5132622556864984895}
   m_Layer: 0
   m_Name: OilPipeLine003
   m_TagString: Untagged
@@ -181,7 +201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb8b75be42e1547f4ad50181d1101221, type: 2}
+  - {fileID: 2100000, guid: b216a7bc048e341c9a183617dfc7e54d, type: 2}
   - {fileID: 2100000, guid: 1787bc1444462419192f1582362c6dba, type: 2}
   - {fileID: 2100000, guid: b9788f887359442e88283a19f291c6f1, type: 2}
   m_StaticBatchInfo:
@@ -205,6 +225,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5132622556864984895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639948130732678916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 5bfb642919f2141ee8cf8319f0d8da89, type: 2}
+  birdMaterial: {fileID: 2100000, guid: 25f1b77ce7e804d1aae2f91843d9d17c, type: 2}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: ab2c3c15395e442daa52f1a6a64b92e6, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &5334508210668006115
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +254,7 @@ GameObject:
   - component: {fileID: 2711111183015719796}
   - component: {fileID: 4496580264900265909}
   - component: {fileID: 2250399845733485780}
+  - component: {fileID: 1394761567014138290}
   m_Layer: 0
   m_Name: OilPipeLine004
   m_TagString: Untagged
@@ -266,7 +305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb8b75be42e1547f4ad50181d1101221, type: 2}
+  - {fileID: 2100000, guid: b216a7bc048e341c9a183617dfc7e54d, type: 2}
   - {fileID: 2100000, guid: 1787bc1444462419192f1582362c6dba, type: 2}
   - {fileID: 2100000, guid: b9788f887359442e88283a19f291c6f1, type: 2}
   m_StaticBatchInfo:
@@ -290,6 +329,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1394761567014138290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5334508210668006115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 5bfb642919f2141ee8cf8319f0d8da89, type: 2}
+  birdMaterial: {fileID: 2100000, guid: 25f1b77ce7e804d1aae2f91843d9d17c, type: 2}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: ab2c3c15395e442daa52f1a6a64b92e6, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1001 &5775175471774348358
 PrefabInstance:
   m_ObjectHideFlags: 0

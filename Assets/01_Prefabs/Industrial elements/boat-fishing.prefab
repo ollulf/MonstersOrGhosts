@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8170774456474963202}
   - component: {fileID: 1230671654137255513}
   - component: {fileID: 6297422995285940536}
+  - component: {fileID: 1922830459214304348}
   m_Layer: 0
   m_Name: boat-fishing
   m_TagString: Untagged
@@ -119,3 +120,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1922830459214304348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215924391738213095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: efa767f05509c4e71a39013e05cae5b9, type: 2}
+  birdMaterial: {fileID: 2100000, guid: fecd566587f0f4790a5e5438343f4495, type: 2}
+  fishMaterial: {fileID: 2100000, guid: efa767f05509c4e71a39013e05cae5b9, type: 2}
+  bacteriaMaterial: {fileID: 2100000, guid: efa767f05509c4e71a39013e05cae5b9, type: 2}
+  machineMaterial: {fileID: 2100000, guid: 877261bfe84ee45fb8413ac51fc562b7, type: 2}
+  iceMaterial: {fileID: 2100000, guid: efa767f05509c4e71a39013e05cae5b9, type: 2}

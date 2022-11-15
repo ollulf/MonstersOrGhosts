@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BacteriaClone : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private float movementSpeed, lifeTime;
     [SerializeField] private GameObject clone;
 
     private GameObject target;
@@ -13,7 +13,7 @@ public class BacteriaClone : MonoBehaviour
 
     private Rigidbody rigidbody;
 
-
+    private Timer timer;
 
     public GameObject Target { get => target;}
     public Rigidbody _Rigidbody { get => rigidbody;}
@@ -21,13 +21,21 @@ public class BacteriaClone : MonoBehaviour
 
     void Start()
     {
+        timer = new Timer();
+        timer.SetStartTime(lifeTime, true);
         rigidbody = GetComponent<Rigidbody>();
         stateMachine = new BacteriaStateMachine(this);
     }
 
     void Update()
     {
+        timer.Tick();
         stateMachine.ExecuteState();
+
+        if(timer.CurrentTime <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetTarget() => target = BacteriaFoodHandler.GetFood();

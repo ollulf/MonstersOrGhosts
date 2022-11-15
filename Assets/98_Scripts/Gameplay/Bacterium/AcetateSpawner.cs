@@ -19,6 +19,7 @@ public class AcetateSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = new Timer();
         timer.SetStartTime(0, true);
         spawner = new List<Transform>();
         foreach (Transform child in transform)

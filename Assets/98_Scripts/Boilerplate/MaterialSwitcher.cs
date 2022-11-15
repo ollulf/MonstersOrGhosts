@@ -12,11 +12,11 @@ public class MaterialSwitcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GetComponent<MeshRenderer>() != null)
+        if (CheckMeshRenderer())
         {
             defaultMaterial = GetComponent<MeshRenderer>().material;
         }
-        else if (GetComponent<SkinnedMeshRenderer>() != null)
+        else if (CheckSkinnedRenderer())
         {
             defaultMaterial = GetComponent<SkinnedMeshRenderer>().material;
         }
@@ -31,124 +31,98 @@ public class MaterialSwitcher : MonoBehaviour
     public void ChangeMaterial()
     {
         Debug.LogWarning("CHANGE MATERIAL");
-        if (GetComponent<MeshRenderer>() != null)
+        switch ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"])
         {
-            Debug.Log("MeshRenderer active");
-            switch ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"])
-            {
-                case Charakter.Bacteria:
+            case Charakter.Bacteria:
+                {
+                    if (bacteriaMaterial != null)
                     {
                         Debug.LogWarning(gameObject.name + "Bacteria MeshRenderer");
-                        ChangeMeshRendererMaterial(bacteriaMaterial);
-                        break;
+                        CheckRenderer(bacteriaMaterial);
                     }
-                case Charakter.Bird:
+                    break;
+                }
+            case Charakter.Bird:
+                {
+                    if (birdMaterial != null)
                     {
                         Debug.LogWarning(gameObject.name + "Bird MeshRenderer");
-                        ChangeMeshRendererMaterial(birdMaterial);
-                        break;
+                        CheckRenderer(birdMaterial);
                     }
-                case Charakter.Deer:
+                    break;
+                }
+            case Charakter.Deer:
+                {
+                    if (deerMaterial != null)
                     {
                         Debug.LogWarning(gameObject.name + "Deer MeshRenderer");
-                        ChangeMeshRendererMaterial(deerMaterial);
-                        break;
+                        CheckRenderer(deerMaterial);
                     }
-                case Charakter.Fish:
+                    break;
+                }
+            case Charakter.Fish:
+                {
+                    if (fishMaterial != null)
                     {
                         Debug.LogWarning(gameObject.name + "Fish MeshRenderer");
-                        ChangeMeshRendererMaterial(fishMaterial);
-                        break;
+                        CheckRenderer(fishMaterial);
                     }
-                case Charakter.Ice:
+                    break;
+                }
+            case Charakter.Ice:
+                {
+                    if (iceMaterial != null)
                     {
                         Debug.LogWarning(gameObject.name + "Ice MeshRenderer");
-                        ChangeMeshRendererMaterial(iceMaterial);
-                        break;
+                        CheckRenderer(iceMaterial);
                     }
-                case Charakter.Machine:
+                    break;
+                }
+            case Charakter.Machine:
+                {
+                    if (machineMaterial != null)
                     {
                         Debug.LogWarning(gameObject.name + "Machine MeshRenderer");
-                        ChangeMeshRendererMaterial(machineMaterial);
-                        break;
+                        CheckRenderer(machineMaterial);
                     }
-            }
-        }
-        else if (GetComponent<SkinnedMeshRenderer>() != null)
-        {
-            Debug.Log("Skinned MeshRenderer active");
-            switch ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"])
-            {
-                case Charakter.Bacteria:
-                    {
-                        Debug.LogWarning(gameObject.name + "Bacteria Skinned MeshRenderer");
-                        ChangeSkinned(bacteriaMaterial);
-                        break;
-                    }
-                case Charakter.Bird:
-                    {
-                        Debug.LogWarning(gameObject.name + "Bird Skinned MeshRenderer");
-                        ChangeSkinned(birdMaterial);
-                        break;
-                    }
-                case Charakter.Deer:
-                    {
-                        Debug.LogWarning(gameObject.name + "Deer Skinned MeshRenderer");
-                        ChangeSkinned(deerMaterial);
-                        break;
-                    }
-                case Charakter.Fish:
-                    {
-                        Debug.LogWarning(gameObject.name + "Fish Skinned MeshRenderer");
-                        ChangeSkinned(fishMaterial);
-                        break;
-                    }
-                case Charakter.Ice:
-                    {
-                        Debug.LogWarning(gameObject.name + "Ice Skinned MeshRenderer");
-                        ChangeSkinned(iceMaterial);
-                        break;
-                    }
-                case Charakter.Machine:
-                    {
-                        Debug.LogWarning(gameObject.name + "Machine Skinned MeshRenderer");
-                        ChangeSkinned(machineMaterial);
-                        break;
-                    }
-            }
-        }
-        else
-        {
-            Debug.LogError("Something went wrong. No renderer found!");
+                    break;
+                }
         }
     }
 
     public void ChangeMaterialToDefault()
     {
         Debug.LogWarning(gameObject.name + "Back to Normal");
-        if (GetComponent<MeshRenderer>() != null)
+        CheckRenderer(defaultMaterial);
+    }
+
+    private void CheckRenderer(Material newMaterial)
+    {
+        if (CheckMeshRenderer())
         {
-            Debug.LogWarning(gameObject.name + "MeshRenderer normal");
-            ChangeMeshRendererMaterial(defaultMaterial);
+            ChangeMeshRendererMaterial(newMaterial);
         }
-        else if (GetComponent<SkinnedMeshRenderer>() != null)
+        else if (CheckSkinnedRenderer())
         {
-            Debug.LogWarning(gameObject.name + "Skinned normal");
-            ChangeSkinned(defaultMaterial);
+            ChangeSkinned(newMaterial);
         }
         else
         {
-            Debug.LogError("Something went wrong. No renderer found!");
+            Debug.LogError("No renderer found on " + gameObject.name);
         }
     }
 
-    private void ChangeMeshRendererMaterial(Material newMaterial)
-    {
-        GetComponent<MeshRenderer>().material = newMaterial;
-    }
+    private bool CheckMeshRenderer() => GetComponent<MeshRenderer>() != null;
 
-    private void ChangeSkinned(Material newMaterial)
+    private bool CheckSkinnedRenderer() => GetComponent<SkinnedMeshRenderer>() != null;
+
+    private void ChangeMeshRendererMaterial(Material newMaterial) => GetComponent<MeshRenderer>().material = newMaterial;
+
+    private void ChangeSkinned(Material newMaterial) => GetComponent<SkinnedMeshRenderer>().material = newMaterial;
+
+    private void OnDestroy()
     {
-        GetComponent<SkinnedMeshRenderer>().material = newMaterial;
+        ChangeMaterialToDefault();
+        MaterialHandler.RemoveListener(this);
     }
 }

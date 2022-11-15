@@ -30,14 +30,14 @@ public class MaterialSwitcher : MonoBehaviour
 
     public void ChangeMaterial()
     {
-        Debug.LogWarning("CHANGE MATERIAL");
+        //Debug.LogWarning("CHANGE MATERIAL");
         switch ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"])
         {
             case Charakter.Bacteria:
                 {
                     if (bacteriaMaterial != null)
                     {
-                        Debug.LogWarning(gameObject.name + "Bacteria MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Bacteria MeshRenderer");
                         CheckRenderer(bacteriaMaterial);
                     }
                     break;
@@ -46,7 +46,7 @@ public class MaterialSwitcher : MonoBehaviour
                 {
                     if (birdMaterial != null)
                     {
-                        Debug.LogWarning(gameObject.name + "Bird MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Bird MeshRenderer");
                         CheckRenderer(birdMaterial);
                     }
                     break;
@@ -55,7 +55,7 @@ public class MaterialSwitcher : MonoBehaviour
                 {
                     if (deerMaterial != null)
                     {
-                        Debug.LogWarning(gameObject.name + "Deer MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Deer MeshRenderer");
                         CheckRenderer(deerMaterial);
                     }
                     break;
@@ -64,7 +64,7 @@ public class MaterialSwitcher : MonoBehaviour
                 {
                     if (fishMaterial != null)
                     {
-                        Debug.LogWarning(gameObject.name + "Fish MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Fish MeshRenderer");
                         CheckRenderer(fishMaterial);
                     }
                     break;
@@ -73,7 +73,7 @@ public class MaterialSwitcher : MonoBehaviour
                 {
                     if (iceMaterial != null)
                     {
-                        Debug.LogWarning(gameObject.name + "Ice MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Ice MeshRenderer");
                         CheckRenderer(iceMaterial);
                     }
                     break;
@@ -82,7 +82,7 @@ public class MaterialSwitcher : MonoBehaviour
                 {
                     if (machineMaterial != null)
                     {
-                        Debug.LogWarning(gameObject.name + "Machine MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Machine MeshRenderer");
                         CheckRenderer(machineMaterial);
                     }
                     break;
@@ -92,7 +92,7 @@ public class MaterialSwitcher : MonoBehaviour
 
     public void ChangeMaterialToDefault()
     {
-        Debug.LogWarning(gameObject.name + "Back to Normal");
+        //Debug.LogWarning(gameObject.name + "Back to Normal");
         CheckRenderer(defaultMaterial);
     }
 

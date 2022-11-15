@@ -27,20 +27,20 @@ public class MaterialHandler : Singleton<MaterialHandler>
     {
         foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
+            //Debug.Log("Start event");
             materialSwitcher.ChangeMaterial();
-            Debug.Log("Start event");
-            Debug.Log("End Event");
+            //Debug.Log("End Event");
         }
     }
 
     public static void StartDefaultEvent()
     {
-        Debug.Log("Start default event");
+        //Debug.Log("Start default event");
         foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
+            //Debug.Log("Start event");
             materialSwitcher.ChangeMaterialToDefault();
-            Debug.Log("Start event");
-            Debug.Log("End Event");
+            //Debug.Log("End Event");
         }
     }
 }

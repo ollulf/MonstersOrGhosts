@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1840202236748203022}
   - component: {fileID: 2838541856013324660}
   - component: {fileID: 2816125960717426578}
+  - component: {fileID: 104844541791738326}
   m_Layer: 0
   m_Name: Jotun B
   m_TagString: Untagged
@@ -83,6 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &104844541791738326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996650939006317102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 2100000, guid: 7062cae554e9b4ac7a7225fdddb7243c, type: 2}
+  birdMaterial: {fileID: 2100000, guid: 77291483200f949e7baa4bab792c2c84, type: 2}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: 4729784589cf74545a02f28573590ea5, type: 2}
+  iceMaterial: {fileID: 0}
 --- !u!1 &6517510736564226150
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +142,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5852720011009118940}
     m_Modifications:
+    - target: {fileID: 5632259126329896371, guid: 23ee4e021cf1849ca94e02ff1b71e9e0,
+        type: 3}
+      propertyPath: iceMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632259126329896371, guid: 23ee4e021cf1849ca94e02ff1b71e9e0,
+        type: 3}
+      propertyPath: fishMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632259126329896371, guid: 23ee4e021cf1849ca94e02ff1b71e9e0,
+        type: 3}
+      propertyPath: bacteriaMaterial
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7411417073593816047, guid: 23ee4e021cf1849ca94e02ff1b71e9e0,
         type: 3}
       propertyPath: m_Name
@@ -203,7 +237,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5632259126329896371, guid: 23ee4e021cf1849ca94e02ff1b71e9e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 23ee4e021cf1849ca94e02ff1b71e9e0, type: 3}
 --- !u!4 &1693673362988147564 stripped
 Transform:

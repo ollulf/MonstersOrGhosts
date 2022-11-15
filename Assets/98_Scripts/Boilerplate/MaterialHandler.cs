@@ -15,28 +15,32 @@ public class MaterialHandler : Singleton<MaterialHandler>
 
     public static void AddListener(MaterialSwitcher newMatFunc)
     {
-        Debug.Log("KOMM SCHON");
         Instance.materialEvents.Add(newMatFunc);
+    }
+
+    public static void RemoveListener(MaterialSwitcher newMatFunc)
+    {
+        Instance.materialEvents.Remove(newMatFunc);
     }
 
     public static void StartEvent()
     {
         foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
-            Debug.Log("Start event");
+            //Debug.Log("Start event");
             materialSwitcher.ChangeMaterial();
-            Debug.Log("End Event");
+            //Debug.Log("End Event");
         }
     }
 
     public static void StartDefaultEvent()
     {
-        Debug.Log("Start default event");
+        //Debug.Log("Start default event");
         foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
-            Debug.Log("Start event");
+            //Debug.Log("Start event");
             materialSwitcher.ChangeMaterialToDefault();
-            Debug.Log("End Event");
+            //Debug.Log("End Event");
         }
     }
 }

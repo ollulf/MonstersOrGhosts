@@ -314,22 +314,19 @@ MonoBehaviour:
   speed: 5
   fishFog: 0.02
   overviewFog: 0
-  characterAmbient: {fileID: 2239387252895569514}
+  characterAmbient: {fileID: 6847821832432840291}
   arcticAmbient: {fileID: 4542733449462934095}
   underwaterAmbient: {fileID: 6847821832432840291}
   enterWaterSound: {fileID: 9202725103082763869}
   exitWaterSound: {fileID: 844700746609045517}
   characterAmbientClip: {fileID: 8300000, guid: bab8ceedface24de3bcc4bd0ca640968,
     type: 3}
-  arcticAmbientClip: {fileID: 8300000, guid: 50eb5a67ff04d4acabe8b11778e0c610, type: 3}
-  underwaterAmbientClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
-    type: 3}
+  arcticAmbientClip: {fileID: 0}
+  underwaterAmbientClip: {fileID: 0}
   characterAmbientVariantClip: {fileID: 8300000, guid: 38bc1429f9cc741acb3639e730e2d4db,
     type: 3}
-  arcticAmbientVariantClip: {fileID: 8300000, guid: 50eb5a67ff04d4acabe8b11778e0c610,
-    type: 3}
-  underwaterAmbientVariantClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
-    type: 3}
+  arcticAmbientVariantClip: {fileID: 0}
+  underwaterAmbientVariantClip: {fileID: 0}
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -1074,8 +1071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51998b2d09dad0d4f90c7254d4d5877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonHoverSound: {fileID: 8300000, guid: 868bc555b25b47344b1dcfc8518a1ba2, type: 3}
-  buttonClickSound: {fileID: 8300000, guid: df25a5d75987bdc4bba4c6ad4de23e05, type: 3}
+  buttonHoverSound: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 4c5efdb02124c4547a48ec39648f001d, type: 3}
 --- !u!1 &7954062857363133456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,7 +1345,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 15e355691a81646bcaf83f725d4c44e2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1446,8 +1443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51998b2d09dad0d4f90c7254d4d5877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonHoverSound: {fileID: 8300000, guid: 868bc555b25b47344b1dcfc8518a1ba2, type: 3}
-  buttonClickSound: {fileID: 8300000, guid: df25a5d75987bdc4bba4c6ad4de23e05, type: 3}
+  buttonHoverSound: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 15e355691a81646bcaf83f725d4c44e2, type: 3}
 --- !u!1 &8530489382166416565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2022,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4297875774875403962, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.509
+      objectReference: {fileID: 0}
+    - target: {fileID: -4297875774875403962, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 38bc1429f9cc741acb3639e730e2d4db, type: 3}
@@ -2150,6 +2152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269967400647844216, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.506
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269967400647844216, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: bab8ceedface24de3bcc4bd0ca640968, type: 3}
@@ -2176,12 +2183,6 @@ GameObject:
 --- !u!4 &1337398832740059470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
-    type: 3}
-  m_PrefabInstance: {fileID: 4317902532544958235}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &2239387252895569514 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
     type: 3}
   m_PrefabInstance: {fileID: 4317902532544958235}
   m_PrefabAsset: {fileID: 0}

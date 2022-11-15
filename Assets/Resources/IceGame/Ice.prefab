@@ -369,14 +369,12 @@ MonoBehaviour:
   exitWaterSound: {fileID: 3691330739151253436}
   characterAmbientClip: {fileID: 8300000, guid: efdf8f9fcc64243b5ba71381bb411ee7,
     type: 3}
-  arcticAmbientClip: {fileID: 8300000, guid: b5b69c6448e084d65b3c0a8d7bd30a95, type: 3}
-  underwaterAmbientClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
-    type: 3}
+  arcticAmbientClip: {fileID: 8300000, guid: d6f0cd7f42c67472293a01c2844a96db, type: 3}
+  underwaterAmbientClip: {fileID: 0}
   characterAmbientVariantClip: {fileID: 8300000, guid: a6e34c13a5cc84f50b352f1d92d8cfab,
     type: 3}
   arcticAmbientVariantClip: {fileID: 0}
-  underwaterAmbientVariantClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
-    type: 3}
+  underwaterAmbientVariantClip: {fileID: 0}
   mask:
     serializedVersion: 2
     m_Bits: 0
@@ -663,7 +661,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: d6f0cd7f42c67472293a01c2844a96db, type: 3}
     m_RemovedComponents:
     - {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aad67955ecabdda45ac93d397db23027, type: 3}
@@ -716,6 +714,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2641122049075274676}
     m_Modifications:
+    - target: {fileID: 602514294169212040, guid: c761b9bfa9140f845b60ed8636d86206,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: df25a5d75987bdc4bba4c6ad4de23e05, type: 3}
     - target: {fileID: 1405365339869426153, guid: c761b9bfa9140f845b60ed8636d86206,
         type: 3}
       propertyPath: m_text
@@ -869,7 +872,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ce08314e445cd264d979b355722efe4b,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3802663095975595700, guid: c761b9bfa9140f845b60ed8636d86206, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c761b9bfa9140f845b60ed8636d86206, type: 3}
 --- !u!1 &1071275189377318314 stripped
 GameObject:

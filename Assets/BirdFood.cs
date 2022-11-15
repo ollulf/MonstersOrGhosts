@@ -12,7 +12,7 @@ public class BirdFood : MonoBehaviourPun
     private int foodAmount;
     private SphereCollider clickCollider;
     [SerializeField ]private Animator anim;
-    [SerializeField] private GameObject soundObject;
+    [SerializeField] private GameObject soundObject, effectObject;
 
     public int FoodAmount { get => foodAmount;}
 
@@ -25,7 +25,7 @@ public class BirdFood : MonoBehaviourPun
     internal void DestroySelf()
     {
         Instantiate(soundObject, transform.position, transform.rotation);
-        PhotonNetwork.Instantiate("BirdGame/CollectEffect", transform.position, transform.rotation);
+        Instantiate(effectObject, transform.position, transform.rotation);
         PhotonNetwork.Destroy(gameObject);
     }
 

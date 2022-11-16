@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7913559495945390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7913559495945377}
+  m_Layer: 0
+  m_Name: Arctic Cod-flock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7913559495945377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913559495945390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1896830529841969136}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1805669740637333228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9018790147711427257}
+  - component: {fileID: 8356332960954030937}
+  m_Layer: 0
+  m_Name: CodFlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9018790147711427257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805669740637333228}
+  m_LocalRotation: {x: -0, y: -0.9693048, z: -0, w: -0.2458622}
+  m_LocalPosition: {x: -3, y: -21.22, z: -10.5}
+  m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.15}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1896830529841969136}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8356332960954030937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805669740637333228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c0c330d8b534f0aaff173d0acaee7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flockUnitPrefab: {fileID: 6232477372916375930}
+  flockSize: 20
+  spawnBounds: {x: 1, y: 1, z: 2}
+  _minSpeed: 0.28
+  _maxSpeed: 0.88
+  _cohesionDistance: 9.65
+  _avoidanceDistance: 3.82
+  _aligementDistance: 9.32
+  _obstacleDistance: 9.53
+  _boundsDistance: 90.7
+  _cohesionWeight: 1.39
+  _avoidanceWeight: 8.99
+  _aligementWeight: 8.03
+  _boundsWeight: 0.46
+  _obstacleWeight: 2.1
+--- !u!1 &7506227230746106058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896830529841969136}
+  m_Layer: 0
+  m_Name: animation Arctic Cod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896830529841969136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506227230746106058}
+  m_LocalRotation: {x: -0, y: -0.9693048, z: -0, w: -0.2458622}
+  m_LocalPosition: {x: -123.36, y: -21.22, z: 424.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 9018790147711427257}
+  - {fileID: 5789389967960871621}
+  m_Father: {fileID: 7913559495945377}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1504391355628157712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1896830529841969136}
+    m_Modifications:
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.2458622
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9693048
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_Name
+      value: Arctic Cod
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671313094653839936, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+        type: 3}
+      propertyPath: hoverAmount
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37ae53f7f4c644b0482e9ed1310d5e82, type: 3}
+--- !u!4 &5789389967960871621 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4951884224226847189, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504391355628157712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6562830064037447807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504391355628157712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6232477372916375930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6562830064037447807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOVAngle: 35
+  smoothDamp: 2
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  directionsToCheckWhenAvoidingObstacles:
+  - {x: 1, y: 0, z: 1}
+  - {x: 1, y: 10, z: 1}
+  - {x: 1, y: 0, z: 1}

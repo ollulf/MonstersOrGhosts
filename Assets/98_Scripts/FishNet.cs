@@ -6,9 +6,11 @@ using Photon.Pun;
 public class FishNet : MonoBehaviourPun
 {
     private int fishLoss;
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         fishLoss = FirstDataGive.FishNetLoss;
         if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Fish) Destroy(gameObject);
     }
@@ -17,7 +19,8 @@ public class FishNet : MonoBehaviourPun
     {
         if (other.GetComponent<FishMovment>())
         {
-                other.GetComponent<FishMovment>().ReducePopulation(fishLoss);
+            audioSource.Play();
+            other.GetComponent<FishMovment>().ReducePopulation(fishLoss);
         }
     }
 }

@@ -9730,11 +9730,10 @@ MonoBehaviour:
   exitWaterSound: {fileID: 218396293071657954}
   characterAmbientClip: {fileID: 8300000, guid: f813a74ab46e78943bf7441bd935ebdf,
     type: 3}
-  arcticAmbientClip: {fileID: 8300000, guid: d6f0cd7f42c67472293a01c2844a96db, type: 3}
+  arcticAmbientClip: {fileID: 8300000, guid: ffceb4882f8bb224c868c15ec85005d2, type: 3}
   underwaterAmbientClip: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed,
     type: 3}
-  characterAmbientVariantClip: {fileID: 8300000, guid: db822068cdf964747bac2188b37152e6,
-    type: 3}
+  characterAmbientVariantClip: {fileID: 0}
   arcticAmbientVariantClip: {fileID: 0}
   underwaterAmbientVariantClip: {fileID: 8300000, guid: 8ff7aab3e4791c7459b8c13ed2b017a2,
     type: 3}
@@ -38672,11 +38671,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7954062857363133460}
     m_Modifications:
+    - target: {fileID: -4297875774875403962, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db822068cdf964747bac2188b37152e6, type: 3}
+    - target: {fileID: 353336278388827476, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d61903a8ea21c3345a0e4cfdc02ddd65, type: 3}
     - target: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ffceb4882f8bb224c868c15ec85005d2, type: 3}
+      objectReference: {fileID: 8300000, guid: 7a56a0f25331e81479d0ec2addd459ed, type: 3}
     - target: {fileID: 2982262970364741205, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: m_RootOrder
@@ -38737,6 +38746,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: OverviewCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3482619120346316566, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cb7e3dafd54f0a42bc049378b7bfba2, type: 3}
+    - target: {fileID: 7269967400647844216, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f813a74ab46e78943bf7441bd935ebdf, type: 3}
+    - target: {fileID: 9054532837799713885, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ffceb4882f8bb224c868c15ec85005d2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad67955ecabdda45ac93d397db23027, type: 3}
 --- !u!82 &218396293071657954 stripped
@@ -39162,6 +39186,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3615303098211768854}
     m_Modifications:
+    - target: {fileID: 602514294169212040, guid: c761b9bfa9140f845b60ed8636d86206,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: df25a5d75987bdc4bba4c6ad4de23e05, type: 3}
     - target: {fileID: 1405365339869426153, guid: c761b9bfa9140f845b60ed8636d86206,
         type: 3}
       propertyPath: m_text
@@ -39320,7 +39349,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ce08314e445cd264d979b355722efe4b,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3802663095975595700, guid: c761b9bfa9140f845b60ed8636d86206, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c761b9bfa9140f845b60ed8636d86206, type: 3}
 --- !u!224 &3293130970104823389 stripped
 RectTransform:
@@ -39865,7 +39895,7 @@ PrefabInstance:
     - target: {fileID: 4304403388214245250, guid: 73ee7df948a54c946a66897e34475e6b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4304403388214245251, guid: 73ee7df948a54c946a66897e34475e6b,
         type: 3}

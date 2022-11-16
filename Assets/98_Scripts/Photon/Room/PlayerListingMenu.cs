@@ -9,14 +9,21 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
     [SerializeField] private Transform content;
     [SerializeField] private GameObject playerListing;
     [SerializeField] private GameObject button;
+    [SerializeField] private float timeTillStart;
+    [SerializeField] private int testingStart;
 
     private List<GameObject> listings = new List<GameObject>();
 
+    private Timer timer;
 
+    private bool isLoading;
 
     public override void OnEnable()
     {
         base.OnEnable();
+        timer = new Timer();
+        timer.SetStartTime(timeTillStart, true);
+        isLoading = false;
         SetInActive();
         GetAllPlayer();
     }
@@ -62,6 +69,19 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
             {
                 listing.GetComponent<PlayerListing>().SetPlayerInfo(newPlayer);
                 listings.Add(listing);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if(PhotonNetwork.IsMasterClient && testingStart <= PhotonNetwork.CurrentRoom.PlayerCount)
+        {
+            timer.Tick();
+            if(timer.CurrentTime <= 0 && !isLoading)
+            {
+                isLoading = true;
+                OnClickStartGame();
             }
         }
     }

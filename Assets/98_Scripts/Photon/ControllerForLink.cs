@@ -31,6 +31,7 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
             if (timer.CurrentTime <= 0 && !isLoading)
             {
                 isLoading = true;
+                PhotonNetwork.AutomaticallySyncScene = true;
                 PhotonNetwork.LoadLevel(2);
             }
         }

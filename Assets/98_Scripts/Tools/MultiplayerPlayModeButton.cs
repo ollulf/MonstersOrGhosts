@@ -31,7 +31,7 @@ namespace UnityToolbarExtender
 
 				EditorApplication.isPlaying = true;
 				EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
-				EditorSceneManager.OpenScene("Assets/00_Scenes/MultiplayerTestScene.unity");
+				EditorSceneManager.OpenScene("Assets/00_Scenes/MenuScene.unity");
 			}
 		}
 		static class ToolbarStyles

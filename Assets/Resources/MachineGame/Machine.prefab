@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Invest  in Environment:'
+  m_text: environmental regulations
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Invest  in Industry:'
+  m_text: industry investments
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -822,7 +822,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -10, y: 0}
-  m_SizeDelta: {x: 300, y: 80}
+  m_SizeDelta: {x: 250, y: 70}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &2803247239987628381
 CanvasRenderer:
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -928,7 +928,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4c5efdb02124c4547a48ec39648f001d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1194,7 +1194,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 300, y: 80}
+  m_SizeDelta: {x: 250, y: 70}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8117629207928659494
 CanvasRenderer:
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1353,7 +1353,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 184
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

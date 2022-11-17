@@ -71,5 +71,6 @@ public enum Charakter
     Deer,
     Machine,
     Bacteria,
-    Ice
+    Ice,
+    MiddleProjection
 }

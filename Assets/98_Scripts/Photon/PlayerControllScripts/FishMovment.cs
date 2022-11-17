@@ -48,6 +48,8 @@ public class FishMovment : MonoBehaviourPun
         {
             AddFlock();
         }
+
+        CallInEndValues.SetFish(this);
     }
 
     void Update()

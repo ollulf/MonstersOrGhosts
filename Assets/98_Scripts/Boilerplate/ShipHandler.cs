@@ -29,6 +29,7 @@ public class ShipHandler : Singleton<ShipHandler>
     public static float ShipCost { get => Instance.shipCost; }
     public static List<GameObject> Ship { get => Instance.ship; }
     public static float EnviCost { get => Instance.enviCost; }
+    public static int CarbonProduced { get => Instance.carbonProduced;}
 
     public void Start()
     {
@@ -51,7 +52,12 @@ public class ShipHandler : Singleton<ShipHandler>
 
     public static void AddShip(GameObject newShip)
     {
-        Instance.ship.Add(newShip);
+       //Instance.photonView.RPC("AllAddShip", RpcTarget.All, newShip);
+        if (!Instance.ship.Contains(newShip))
+        {
+            Instance.ship.Add(newShip);
+        }
+
     }
 
     public static void SetMoney(float cost)
@@ -115,8 +121,9 @@ public class ShipHandler : Singleton<ShipHandler>
 
                 timer.ResetTimer();
             }
+            photonView.RPC("ShowAllData", RpcTarget.All, CarbonIncreasePerSecond(), TotalCarbonProduced());
         }
-        if (photonView.Owner.IsMasterClient)
+        else if (photonView.Owner.IsMasterClient)
         {
             photonView.RPC("ShowAllData", RpcTarget.All, CarbonIncreasePerSecond(), TotalCarbonProduced());
         }
@@ -129,6 +136,14 @@ public class ShipHandler : Singleton<ShipHandler>
         carbonProduceText.text = totalCarbonProd.ToString();
     }
 
+    [PunRPC]
+    private void AllAddShip(GameObject newShip)
+    {
+        if (!ship.Contains(newShip))
+        {
+            ship.Add(newShip);
+        }
+    }
 
     public static int CarbonIncreasePerSecond()
     {

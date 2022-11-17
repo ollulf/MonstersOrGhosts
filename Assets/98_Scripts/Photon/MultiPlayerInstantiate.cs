@@ -9,7 +9,6 @@ public class MultiPlayerInstantiate : MonoBehaviour
 
     private void Awake()
     {
-
         Charakter newCharakter = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];
 
         switch (newCharakter)
@@ -57,6 +56,5 @@ public class MultiPlayerInstantiate : MonoBehaviour
                     break;
                 }
         }
-
     }
 }

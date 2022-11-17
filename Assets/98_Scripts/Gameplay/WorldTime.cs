@@ -50,14 +50,14 @@ public class WorldTime : MonoBehaviourPun
             photonView.RPC("UpdateUI", RpcTarget.All, years, day);
             if (years >= maxYears)
             {
-                photonView.RPC("LevelLoad", RpcTarget.All);
+                CallInEndValues.SetValues();
             }
         }
     }
 
     private void LateUpdate()
     {
-        if(PhotonNetwork.IsMasterClient)
+        if (PhotonNetwork.IsMasterClient)
         {
             photonView.RPC("UpdateAnimator", RpcTarget.All, years, month);
         }

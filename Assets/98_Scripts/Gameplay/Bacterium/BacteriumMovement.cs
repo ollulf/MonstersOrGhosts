@@ -14,13 +14,19 @@ public class BacteriumMovement : MonoBehaviourPun
 
     private bool timerRunning;
 
+    private int acetateCount;
+
+    public int AcetateCount { get => acetateCount;}
+
     // Start is called before the first frame update
     void Start()
     {
+        acetateCount = 0;
         rigidbody = GetComponent<Rigidbody>();
         timer = new Timer();
         timer.SetStartTime(0, false);
         timerRunning = false;
+        CallInEndValues.SetBacteria(this);
     }
 
     // Update is called once per frame
@@ -62,6 +68,7 @@ public class BacteriumMovement : MonoBehaviourPun
             collision.gameObject.GetComponent<BacteriaFood>().RemoveFromList();
             Destroy(collision.gameObject);
             Instantiate(clone, transform.position, Quaternion.identity);
+            acetateCount++;
             //PhotonNetwork.Instantiate("BacteriaGame/BacteriaClone", transform.position, Quaternion.identity);
         }
     }

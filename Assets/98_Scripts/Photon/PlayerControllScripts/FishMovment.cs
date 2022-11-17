@@ -24,6 +24,12 @@ public class FishMovment : MonoBehaviourPun
 
     private Timer timer;
 
+    [SerializeField] private float yMax = -1, yMin = -5, hoverSpeed = 2f;
+    private bool goesUp = true;
+    private float volumeDif;
+    [SerializeField] private GameObject fogVolume1, fogVolume2, fogVolume3, fogVolume4, fogVolume5, fogVolume6, fogVolume7;
+    [ShowNonSerializedField] private GameObject activeFog;
+
     public int Population { get => population; }
 
 
@@ -36,6 +42,7 @@ public class FishMovment : MonoBehaviourPun
         PlayerBaseDataHandler.SetFish(this);
         PlayerBaseDataHandler.RaiseBirdFood(population);
 
+        volumeDif = (yMax - yMin) / 7;
 
         for (int i = 0; i < 20; i++)
         {
@@ -67,7 +74,48 @@ public class FishMovment : MonoBehaviourPun
             MovePlayer();
             TurnFish();
             TurnFishPref();
+            MoveUpDown();
         }
+    }
+
+    private void MoveUpDown()
+    {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            Vector3 t  = transform.position;
+            goesUp = (t.y < yMin && !goesUp || t.y < yMax && goesUp) ? true : false;
+            transform.position = goesUp ? new Vector3(t.x, transform.position.y + 0.1f * hoverSpeed, t.z) 
+                : new Vector3(t.x, transform.position.y - 0.1f * hoverSpeed, t.z);
+        }
+
+        //UpdateVolumes();
+
+    }
+
+    private void UpdateVolumes()
+    {
+        fogVolume1.SetActive(false);
+        fogVolume2.SetActive(false);
+        fogVolume3.SetActive(false);
+        fogVolume4.SetActive(false);
+        fogVolume5.SetActive(false);
+        fogVolume6.SetActive(false);
+        fogVolume7.SetActive(false);
+
+        GetActiveVolume().SetActive(true);
+        activeFog = GetActiveVolume();
+    }
+
+    private GameObject GetActiveVolume()
+    {
+        float t = transform.position.y;
+        if (t < yMax - 6 * volumeDif) return fogVolume7;
+        else if (t < yMax - 5 * volumeDif) return fogVolume6;
+        else if (t < yMax - 4 * volumeDif) return fogVolume5;
+        else if (t < yMax - 3 * volumeDif) return fogVolume4;
+        else if (t < yMax - 2 * volumeDif) return fogVolume3;
+        else if (t < yMax - 1 * volumeDif) return fogVolume2;
+        else return fogVolume1;
     }
 
     private void UpdateUI()

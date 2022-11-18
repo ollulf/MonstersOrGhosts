@@ -15,13 +15,13 @@ public class DeerController : MonoBehaviourPun
     private float co2CompressedTotal;
 
     public float co2Compressed;
-    public float population;
+    public int population;
     public float hunger = 0;
     public float hungerIncrease = 5;
     public float hungerDecrease = 15;
     public float hungerValueUntilStarving = 100;
     public float eatAmount = 50;
-    public float populationGrowth;
+    public int populationGrowth;
     public float timeUntilTick = 1f;
 
     [SerializeField] private TextMeshProUGUI populationTF, co2TF, co2SecTF, hungerTF;

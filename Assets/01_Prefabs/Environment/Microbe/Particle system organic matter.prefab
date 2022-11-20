@@ -42,7 +42,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2199261509943817231}
   serializedVersion: 8
   lengthInSec: 30
-  simulationSpeed: 0.1
+  simulationSpeed: 0.05
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 4
       minScalar: 4
       maxCurve:
         serializedVersion: 2
@@ -285,8 +285,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 6
-      minScalar: 1
+      scalar: 4
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -565,7 +565,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 200
+    maxNumParticles: 100
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -943,7 +943,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 1
       scalar: 1
-      minScalar: 1
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -957,26 +957,26 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.17070329
+          time: 0.17681628
           value: 1
-          inSlope: -0.22050944
-          outSlope: -0.22050944
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.24152926
         - serializedVersion: 3
-          time: 0.70346445
-          value: 0.8833597
-          inSlope: -1.7619503
-          outSlope: -1.7619503
+          time: 0.77112514
+          value: 1
+          inSlope: -0.7538286
+          outSlope: -0.7538286
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.2446147
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9967041
-          value: 0
+          time: 0.9580771
+          value: 0.16438359
           inSlope: 0
           outSlope: 0
           tangentMode: 0

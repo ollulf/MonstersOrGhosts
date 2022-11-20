@@ -408,7 +408,7 @@ MonoBehaviour:
   exitWaterSound: {fileID: 7675584104520440324}
   characterAmbientClip: {fileID: 8300000, guid: ed0915f8ea66b41548309e0489136f0f,
     type: 3}
-  arcticAmbientClip: {fileID: 8300000, guid: 1c675f5970bad4fc48db2dc0006b8e14, type: 3}
+  arcticAmbientClip: {fileID: 0}
   underwaterAmbientClip: {fileID: 0}
   characterAmbientVariantClip: {fileID: 8300000, guid: 55aa40022889449f6863cf62d44d3f27,
     type: 3}
@@ -607,9 +607,14 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2cb7e3dafd54f0a42bc049378b7bfba2, type: 3}
     - target: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2666029474704447857, guid: aad67955ecabdda45ac93d397db23027,
+        type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1c675f5970bad4fc48db2dc0006b8e14, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2982262970364741202, guid: aad67955ecabdda45ac93d397db23027,
         type: 3}
       propertyPath: sceneViewId

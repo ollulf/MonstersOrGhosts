@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 6335318894254558133, guid: 4623d2c871d0a4d0691a560f9ec196b4,
         type: 3}
       propertyPath: m_Name
-      value: Caribou grazing
+      value: Caribou grazing Variant_flock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4623d2c871d0a4d0691a560f9ec196b4, type: 3}
@@ -96,8 +96,8 @@ MonoBehaviour:
   smoothDamp: 10
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   directionsToCheckWhenAvoidingObstacles:
-  - {x: 10, y: 0, z: 10}
-  - {x: 10, y: 0, z: 10}
-  - {x: 10, y: 0, z: 10}
+  - {x: 1, y: 0, z: 1}
+  - {x: 1, y: 0, z: 1}
+  - {x: 1, y: 0, z: 1}

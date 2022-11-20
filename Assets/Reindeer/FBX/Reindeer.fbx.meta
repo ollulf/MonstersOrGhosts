@@ -1,114 +1,326 @@
 fileFormatVersion: 2
 guid: 6bd84281401a6dc4292061601d46d67b
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Base
-    100002: BL_IK.L
-    100004: BL_IK.R
-    100006: ear.L
-    100008: ear.L.001
-    100010: ear.R
-    100012: ear.R.001
-    100014: eye.L
-    100016: eye.R
-    100018: f_hoof.L
-    100020: f_hoof.R
-    100022: f_toe.L
-    100024: f_toe.R
-    100026: FL_IK.L
-    100028: FL_IK.R
-    100030: forearm.L
-    100032: forearm.R
-    100034: forearm_IK.L
-    100036: forearm_IK.R
-    100038: forefoot.L
-    100040: forefoot.R
-    100042: head
-    100044: hind_foot.L
-    100046: hind_foot.R
-    100048: jaw
-    100050: lower_leg.L
-    100052: lower_leg.R
-    100054: neck.001
-    100056: neck.002
-    100058: Pelvis
-    100060: r_hoof.L
-    100062: r_hoof.R
-    100064: r_toe.L
-    100066: r_toe.R
-    100068: //RootNode
-    100070: Reindeer
-    100072: Reindeer_Mesh
-    100074: Root
-    100076: shoulder.L
-    100078: shoulder.R
-    100080: spine.002
-    100082: spine.003
-    100084: spine.004
-    100086: spine.005
-    100088: spine.006
-    100090: tail.001
-    100092: tail.002
-    100094: thigh.L
-    100096: thigh.R
-    100098: upper_arm.L
-    100100: upper_arm.R
-    400000: Base
-    400002: BL_IK.L
-    400004: BL_IK.R
-    400006: ear.L
-    400008: ear.L.001
-    400010: ear.R
-    400012: ear.R.001
-    400014: eye.L
-    400016: eye.R
-    400018: f_hoof.L
-    400020: f_hoof.R
-    400022: f_toe.L
-    400024: f_toe.R
-    400026: FL_IK.L
-    400028: FL_IK.R
-    400030: forearm.L
-    400032: forearm.R
-    400034: forearm_IK.L
-    400036: forearm_IK.R
-    400038: forefoot.L
-    400040: forefoot.R
-    400042: head
-    400044: hind_foot.L
-    400046: hind_foot.R
-    400048: jaw
-    400050: lower_leg.L
-    400052: lower_leg.R
-    400054: neck.001
-    400056: neck.002
-    400058: Pelvis
-    400060: r_hoof.L
-    400062: r_hoof.R
-    400064: r_toe.L
-    400066: r_toe.R
-    400068: //RootNode
-    400070: Reindeer
-    400072: Reindeer_Mesh
-    400074: Root
-    400076: shoulder.L
-    400078: shoulder.R
-    400080: spine.002
-    400082: spine.003
-    400084: spine.004
-    400086: spine.005
-    400088: spine.006
-    400090: tail.001
-    400092: tail.002
-    400094: thigh.L
-    400096: thigh.R
-    400098: upper_arm.L
-    400100: upper_arm.R
-    2100000: Reindeer
-    4300000: Reindeer_Mesh
-    9500000: //RootNode
-    13700000: Reindeer_Mesh
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Base
+  - first:
+      1: 100002
+    second: BL_IK.L
+  - first:
+      1: 100004
+    second: BL_IK.R
+  - first:
+      1: 100006
+    second: ear.L
+  - first:
+      1: 100008
+    second: ear.L.001
+  - first:
+      1: 100010
+    second: ear.R
+  - first:
+      1: 100012
+    second: ear.R.001
+  - first:
+      1: 100014
+    second: eye.L
+  - first:
+      1: 100016
+    second: eye.R
+  - first:
+      1: 100018
+    second: f_hoof.L
+  - first:
+      1: 100020
+    second: f_hoof.R
+  - first:
+      1: 100022
+    second: f_toe.L
+  - first:
+      1: 100024
+    second: f_toe.R
+  - first:
+      1: 100026
+    second: FL_IK.L
+  - first:
+      1: 100028
+    second: FL_IK.R
+  - first:
+      1: 100030
+    second: forearm.L
+  - first:
+      1: 100032
+    second: forearm.R
+  - first:
+      1: 100034
+    second: forearm_IK.L
+  - first:
+      1: 100036
+    second: forearm_IK.R
+  - first:
+      1: 100038
+    second: forefoot.L
+  - first:
+      1: 100040
+    second: forefoot.R
+  - first:
+      1: 100042
+    second: head
+  - first:
+      1: 100044
+    second: hind_foot.L
+  - first:
+      1: 100046
+    second: hind_foot.R
+  - first:
+      1: 100048
+    second: jaw
+  - first:
+      1: 100050
+    second: lower_leg.L
+  - first:
+      1: 100052
+    second: lower_leg.R
+  - first:
+      1: 100054
+    second: neck.001
+  - first:
+      1: 100056
+    second: neck.002
+  - first:
+      1: 100058
+    second: Pelvis
+  - first:
+      1: 100060
+    second: r_hoof.L
+  - first:
+      1: 100062
+    second: r_hoof.R
+  - first:
+      1: 100064
+    second: r_toe.L
+  - first:
+      1: 100066
+    second: r_toe.R
+  - first:
+      1: 100068
+    second: //RootNode
+  - first:
+      1: 100070
+    second: Reindeer
+  - first:
+      1: 100072
+    second: Reindeer_Mesh
+  - first:
+      1: 100074
+    second: Root
+  - first:
+      1: 100076
+    second: shoulder.L
+  - first:
+      1: 100078
+    second: shoulder.R
+  - first:
+      1: 100080
+    second: spine.002
+  - first:
+      1: 100082
+    second: spine.003
+  - first:
+      1: 100084
+    second: spine.004
+  - first:
+      1: 100086
+    second: spine.005
+  - first:
+      1: 100088
+    second: spine.006
+  - first:
+      1: 100090
+    second: tail.001
+  - first:
+      1: 100092
+    second: tail.002
+  - first:
+      1: 100094
+    second: thigh.L
+  - first:
+      1: 100096
+    second: thigh.R
+  - first:
+      1: 100098
+    second: upper_arm.L
+  - first:
+      1: 100100
+    second: upper_arm.R
+  - first:
+      4: 400000
+    second: Base
+  - first:
+      4: 400002
+    second: BL_IK.L
+  - first:
+      4: 400004
+    second: BL_IK.R
+  - first:
+      4: 400006
+    second: ear.L
+  - first:
+      4: 400008
+    second: ear.L.001
+  - first:
+      4: 400010
+    second: ear.R
+  - first:
+      4: 400012
+    second: ear.R.001
+  - first:
+      4: 400014
+    second: eye.L
+  - first:
+      4: 400016
+    second: eye.R
+  - first:
+      4: 400018
+    second: f_hoof.L
+  - first:
+      4: 400020
+    second: f_hoof.R
+  - first:
+      4: 400022
+    second: f_toe.L
+  - first:
+      4: 400024
+    second: f_toe.R
+  - first:
+      4: 400026
+    second: FL_IK.L
+  - first:
+      4: 400028
+    second: FL_IK.R
+  - first:
+      4: 400030
+    second: forearm.L
+  - first:
+      4: 400032
+    second: forearm.R
+  - first:
+      4: 400034
+    second: forearm_IK.L
+  - first:
+      4: 400036
+    second: forearm_IK.R
+  - first:
+      4: 400038
+    second: forefoot.L
+  - first:
+      4: 400040
+    second: forefoot.R
+  - first:
+      4: 400042
+    second: head
+  - first:
+      4: 400044
+    second: hind_foot.L
+  - first:
+      4: 400046
+    second: hind_foot.R
+  - first:
+      4: 400048
+    second: jaw
+  - first:
+      4: 400050
+    second: lower_leg.L
+  - first:
+      4: 400052
+    second: lower_leg.R
+  - first:
+      4: 400054
+    second: neck.001
+  - first:
+      4: 400056
+    second: neck.002
+  - first:
+      4: 400058
+    second: Pelvis
+  - first:
+      4: 400060
+    second: r_hoof.L
+  - first:
+      4: 400062
+    second: r_hoof.R
+  - first:
+      4: 400064
+    second: r_toe.L
+  - first:
+      4: 400066
+    second: r_toe.R
+  - first:
+      4: 400068
+    second: //RootNode
+  - first:
+      4: 400070
+    second: Reindeer
+  - first:
+      4: 400072
+    second: Reindeer_Mesh
+  - first:
+      4: 400074
+    second: Root
+  - first:
+      4: 400076
+    second: shoulder.L
+  - first:
+      4: 400078
+    second: shoulder.R
+  - first:
+      4: 400080
+    second: spine.002
+  - first:
+      4: 400082
+    second: spine.003
+  - first:
+      4: 400084
+    second: spine.004
+  - first:
+      4: 400086
+    second: spine.005
+  - first:
+      4: 400088
+    second: spine.006
+  - first:
+      4: 400090
+    second: tail.001
+  - first:
+      4: 400092
+    second: tail.002
+  - first:
+      4: 400094
+    second: thigh.L
+  - first:
+      4: 400096
+    second: thigh.R
+  - first:
+      4: 400098
+    second: upper_arm.L
+  - first:
+      4: 400100
+    second: upper_arm.R
+  - first:
+      21: 2100000
+    second: Reindeer
+  - first:
+      43: 4300000
+    second: Reindeer_Mesh
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Reindeer_Mesh
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -116,7 +328,7 @@ ModelImporter:
       name: Reindeer
     second: {fileID: 2100000, guid: fee7fef2731af54469570ea0409db912, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -125,6 +337,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -145,29 +358,38 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.6
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -176,10 +398,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -189,13 +411,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.6
     rootMotionBoneName: Root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6042106975463296695}
   - component: {fileID: 6042106975463296694}
   - component: {fileID: 6042106975463296697}
+  - component: {fileID: 1234570930}
   m_Layer: 10
   m_Name: 'Terrain '
   m_TagString: Untagged
@@ -78,3 +79,16 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: dc40139ea5e099a48a94dbde5e4a6d65, type: 2}
   m_EnableTreeColliders: 1
+--- !u!114 &1234570930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6042106975463296696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f83e703a9adee343b6268da047e12fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 6042106975463296694}

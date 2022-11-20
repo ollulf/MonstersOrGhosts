@@ -1902,7 +1902,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94bca32eb55954fc9b554fe593cf369b, type: 2}
+  - {fileID: 2100000, guid: cc2df2ebfb6fe406cab473c0b3b7705d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7128,6 +7128,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrecipitationPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 6203957942235494713, guid: f160838bdab284c60890e7f737321fe7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6724773972721312643, guid: f160838bdab284c60890e7f737321fe7,
         type: 3}
       propertyPath: m_RootOrder
@@ -7270,6 +7275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: carbonPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 1813093834688971600, guid: 3123bd972177b40eb96f5bb05ffe414d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3123bd972177b40eb96f5bb05ffe414d, type: 3}
 --- !u!4 &3860760374809738596 stripped
@@ -7301,6 +7311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cloudfractionPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739621907475052952, guid: 4f2bebaeff4e24d24aab1cd5d136bd0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3264765791267840802, guid: 4f2bebaeff4e24d24aab1cd5d136bd0f,
         type: 3}
@@ -7365,6 +7380,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4594975755110850054}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6385842283089392311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7447743924298083505, guid: 4f2bebaeff4e24d24aab1cd5d136bd0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4594975755110850054}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764cfca1f770dd41a081645a68b2edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4841829753832662930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7432,6 +7459,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeatemperaturePlane
       objectReference: {fileID: 0}
+    - target: {fileID: 6520373387241977247, guid: a7a6c03bf6d344104abeffc8990160ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a6c03bf6d344104abeffc8990160ea, type: 3}
 --- !u!4 &1299138005631191223 stripped
@@ -7463,6 +7495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NearSurfaceTemperaturePlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203957942235494713, guid: bca871fab77687e47b016782a2de0340,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724773972721312643, guid: bca871fab77687e47b016782a2de0340,
         type: 3}
@@ -7639,12 +7676,12 @@ PrefabInstance:
     - target: {fileID: 758275271796541023, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 758275271796541023, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 758275271796541023, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
@@ -7659,12 +7696,12 @@ PrefabInstance:
     - target: {fileID: 758275271796541023, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 758275271796541023, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -255.04288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 833174259976248158, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
@@ -9003,8 +9040,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5988379546338205032, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
+      propertyPath: m_Name
+      value: 'clloudfractionButton '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988379546338205032, guid: b2ced7d7ab798664489f76efb40b2883,
+        type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6089490006232454168, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
@@ -9526,6 +9568,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -199.33035
       objectReference: {fileID: 0}
+    - target: {fileID: 7983051119625216354, guid: b2ced7d7ab798664489f76efb40b2883,
+        type: 3}
+      propertyPath: m_text
+      value: 'cloud fraction
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 8041097704569110652, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
       propertyPath: m_IsActive
@@ -9650,7 +9699,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7611055756232412997}
+      objectReference: {fileID: 6385842283089392311}
+    - target: {fileID: 8594590021288249429, guid: b2ced7d7ab798664489f76efb40b2883,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIToggle
+      objectReference: {fileID: 0}
     - target: {fileID: 8597266137009114799, guid: b2ced7d7ab798664489f76efb40b2883,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10061,6 +10115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EastwardWindPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203957942235494713, guid: dc18fd3a26a6443d7a58d5599dd450fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724773972721312643, guid: dc18fd3a26a6443d7a58d5599dd450fe,
         type: 3}

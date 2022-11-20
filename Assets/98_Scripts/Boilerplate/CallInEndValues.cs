@@ -21,25 +21,25 @@ public class CallInEndValues : Singleton<CallInEndValues>
 
 
 
-    public static void SetFish(FishMovment newFish)
-    {
-        Instance.photonView.RPC("SetAllFish", RpcTarget.MasterClient, newFish);
-    }
-
-    public static void SetBird(BirdController newBird)
-    {
-        Instance.photonView.RPC("SetAllBirds", RpcTarget.MasterClient, newBird);
-    }
-
-    public static void SetDeer(DeerController newDeer)
-    {
-        Instance.photonView.RPC("SetAllDeer", RpcTarget.MasterClient, newDeer);
-    }
-
-    public static void SetBacteria(BacteriumMovement newBacteria)
-    {
-        Instance.photonView.RPC("SetAllBacteria", RpcTarget.MasterClient, newBacteria);
-    }
+   public static void SetFish(FishMovment newFish)
+   {
+       Instance.photonView.RPC("SetAllFish", RpcTarget.MasterClient, newFish);
+   }
+   
+   public static void SetBird(BirdController newBird)
+   {
+       Instance.photonView.RPC("SetAllBirds", RpcTarget.MasterClient, newBird);
+   }
+   
+   public static void SetDeer(DeerController newDeer)
+   {
+       Instance.photonView.RPC("SetAllDeer", RpcTarget.MasterClient, newDeer);
+   }
+   
+   public static void SetBacteria(BacteriumMovement newBacteria)
+   {
+       Instance.photonView.RPC("SetAllBacteria", RpcTarget.MasterClient, newBacteria);
+   }
 
 
     public static void SetValues()
@@ -70,7 +70,7 @@ public class CallInEndValues : Singleton<CallInEndValues>
 
         EndGameValues endGameValues = new EndGameValues(Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, birdValue, fishValue, deerValue);
 
-        //Instance.photonView.RPC("ShowEnd", RpcTarget.All, endGameValues);
+        Instance.photonView.RPC("ShowEnd", RpcTarget.All, endGameValues);
 
         Instance.ShowEnd(endGameValues);
     }

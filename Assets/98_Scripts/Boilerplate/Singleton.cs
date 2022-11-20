@@ -10,6 +10,12 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 
     protected virtual void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogWarning(instance.name);
+            instance = null;
+        }
+
         if (instance == null)
         {
             instance = (T)this;
@@ -22,6 +28,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         else
         {
             Destroy(gameObject);
+            Debug.LogWarning(gameObject.name + "was deleted");
         }
     }
 
@@ -41,6 +48,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
             var gs = go.AddComponent<T>();
             go.hideFlags = HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor;
             instance = gs;
+            instance.name = gs.name + "-----";
         }
         return instance;
     }

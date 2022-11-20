@@ -6,8 +6,6 @@ using TMPro;
 
 public class TempretureHandler : Singleton<TempretureHandler>
 {
-
-
     private float cO2, tempreture;
     [SerializeField] private TextMeshProUGUI tempretureText;
 

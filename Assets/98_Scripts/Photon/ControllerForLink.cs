@@ -27,7 +27,7 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount <= test)
         {
             timer.Tick();
-            Debug.LogError(timer.CurrentTime);
+            //Debug.LogError(timer.CurrentTime);
             if (timer.CurrentTime <= 0 && !isLoading)
             {
                 isLoading = true;

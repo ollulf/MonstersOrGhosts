@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7304701721736946512}
   - component: {fileID: 7998057456929992834}
   - component: {fileID: 4202480272075695819}
+  - component: {fileID: 6455756009747331684}
   m_Layer: 0
   m_Name: DeerFoodSource
   m_TagString: DeerFood
@@ -167,6 +168,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.6315675
   m_Center: {x: 0.18641233, y: 0, z: 0.06743097}
+--- !u!114 &6455756009747331684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304701721736946526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bc023dbb8340742a9b84e38fd9d3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectEffekt: {fileID: 847321869315758378, guid: aa8f1ea2031414e8c9eb90a1d55598f1,
+    type: 3}
 --- !u!1001 &193436675709522640
 PrefabInstance:
   m_ObjectHideFlags: 0

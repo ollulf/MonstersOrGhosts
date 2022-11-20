@@ -5,13 +5,7 @@ using UnityEngine;
 
 public class MaterialHandler : Singleton<MaterialHandler>
 {
-    private List<MaterialSwitcher> materialEvents;
-
-    protected override void Awake()
-    {
-        base.Awake();
-        materialEvents = new List<MaterialSwitcher>();
-    }
+    private List<MaterialSwitcher> materialEvents = new List<MaterialSwitcher>();
 
     public static void AddListener(MaterialSwitcher newMatFunc)
     {

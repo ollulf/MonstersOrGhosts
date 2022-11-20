@@ -63,10 +63,10 @@ public class EndScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EndGameValues endGameValues = new EndGameValues(0.6f ,10000, 10000000, 20,
-            new PopulationPair(99,100), new PopulationPair(99, 80), new PopulationPair(99, 100));
+       EndGameValues endGameValues = new EndGameValues(0.6f ,10000, 10000000, 20,
+           new PopulationPair(99,100), new PopulationPair(99, 80), new PopulationPair(99, 100));
 
-        UpdateGameValues(endGameValues);
+       UpdateGameValues(endGameValues);
     }
 
 }

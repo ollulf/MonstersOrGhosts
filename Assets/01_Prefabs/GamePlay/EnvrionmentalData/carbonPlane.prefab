@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2723952119796799055}
   - component: {fileID: 155826416057442949}
   - component: {fileID: 1578528082293915138}
+  - component: {fileID: 8613963593949316528}
   m_Layer: 0
   m_Name: carbonPlane
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813093834688971600}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -469.6875, y: 20000, z: 0}
   m_LocalScale: {x: 753.06525, y: 753.06525, z: 753.06525}
   m_ConstrainProportionsScale: 0
@@ -277,3 +278,19 @@ MonoBehaviour:
   sinMin: 0.016
   sinMax: 0.984
   nextIndex: 2
+--- !u!114 &8613963593949316528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813093834688971600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764cfca1f770dd41a081645a68b2edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 155826416057442949}
+  materialInstance: {fileID: 0}
+  currentOpacity: 0
+  isActive: 0

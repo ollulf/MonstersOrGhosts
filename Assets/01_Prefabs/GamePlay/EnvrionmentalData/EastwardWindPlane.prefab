@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7709293781322279974}
   - component: {fileID: 5555223747721910508}
   - component: {fileID: 6546416575936054379}
+  - component: {fileID: 54975216758719075}
   m_Layer: 0
   m_Name: EastwardWindPlane
   m_TagString: Untagged
@@ -277,3 +278,19 @@ MonoBehaviour:
   sinMin: 0.016
   sinMax: 0.984
   nextIndex: 2
+--- !u!114 &54975216758719075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203957942235494713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764cfca1f770dd41a081645a68b2edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 5555223747721910508}
+  materialInstance: {fileID: 0}
+  currentOpacity: 0
+  isActive: 0

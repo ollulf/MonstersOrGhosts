@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1936860813118860423}
   - component: {fileID: 4397180010633500749}
   - component: {fileID: 3081726918263866570}
+  - component: {fileID: 7447743924298083505}
   m_Layer: 0
   m_Name: cloudfractionPlane
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2739621907475052952}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -469.6875, y: 20000, z: 0}
   m_LocalScale: {x: 753.06525, y: 753.06525, z: 753.06525}
   m_ConstrainProportionsScale: 0
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ceea5157e8304f839cc32de10d50033, type: 2}
+  - {fileID: 2100000, guid: 5dc96e7f4ebad4ca99c43b1076d9e586, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,3 +278,19 @@ MonoBehaviour:
   sinMin: 0.016
   sinMax: 0.984
   nextIndex: 2
+--- !u!114 &7447743924298083505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739621907475052952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764cfca1f770dd41a081645a68b2edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 4397180010633500749}
+  materialInstance: {fileID: 0}
+  currentOpacity: 0
+  isActive: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1934471700}
-  m_IndirectSpecularColor: {r: 0.18220283, g: 0.18424045, b: 0.52470464, a: 1}
+  m_IndirectSpecularColor: {r: 0.21611679, g: 0.2009208, b: 0.5447411, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8800,6 +8800,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f83e703a9adee343b6268da047e12fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bacteriaMat: {fileID: 0}
+  birdMat: {fileID: 0}
+  centralProjectionMat: {fileID: 0}
+  deerMat: {fileID: 0}
+  fishMat: {fileID: 0}
+  machineMat: {fileID: 0}
+  iceMat: {fileID: 0}
+  terrain: {fileID: 0}
 --- !u!1001 &1239322390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13008,52 +13016,52 @@ PrefabInstance:
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31
+      value: 249
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21139
+      value: 20634
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1561
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9425698
+      value: 0.5213339
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.3340093
+      value: -0.4777144
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 80.513
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 328.432
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791569, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 58.078
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5180180863875791570, guid: 3f56eb8462e567745938923c139145bd,
         type: 3}
@@ -14375,7 +14383,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934471696}
-  m_LocalRotation: {x: -0.40261602, y: -0.581293, z: -0.40261462, w: 0.5812919}
+  m_LocalRotation: {x: -0.025965473, y: -0.7066295, z: -0.025963593, w: 0.7066304}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20916,16 +20924,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 447854811178915992, guid: b330160d17e1b1147bad922d9d7f9f28,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -51.95117
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845480228970008186, guid: b330160d17e1b1147bad922d9d7f9f28,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20000
-      objectReference: {fileID: 0}
     - target: {fileID: 2050241605853413178, guid: b330160d17e1b1147bad922d9d7f9f28,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -21016,16 +21014,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataVisualisations
       objectReference: {fileID: 0}
-    - target: {fileID: 6156330665155289654, guid: b330160d17e1b1147bad922d9d7f9f28,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6674218440194193550, guid: b330160d17e1b1147bad922d9d7f9f28,
-        type: 3}
-      propertyPath: worldTime
-      value: 
-      objectReference: {fileID: 237063178869140338}
     - target: {fileID: 7864587235361614653, guid: b330160d17e1b1147bad922d9d7f9f28,
         type: 3}
       propertyPath: m_RootOrder

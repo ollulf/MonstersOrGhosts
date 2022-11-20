@@ -77,20 +77,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flockUnitPrefab: {fileID: 6232477372916375930}
-  flockSize: 10
-  spawnBounds: {x: 1, y: 1, z: 2}
-  _minSpeed: 0.28
-  _maxSpeed: 0.88
-  _cohesionDistance: 9.65
-  _avoidanceDistance: 3.82
-  _aligementDistance: 9.32
-  _obstacleDistance: 9.53
-  _boundsDistance: 90.7
-  _cohesionWeight: 1.39
-  _avoidanceWeight: 8.99
-  _aligementWeight: 8.03
-  _boundsWeight: 0.46
-  _obstacleWeight: 2.1
+  flockSize: 30
+  spawnBounds: {x: 0.1, y: 0.1, z: 0.2}
+  _minSpeed: 0.01
+  _maxSpeed: 0.2
+  _cohesionDistance: 0.1
+  _avoidanceDistance: 0.1
+  _aligementDistance: 0.1
+  _obstacleDistance: 0.1
+  _boundsDistance: 0.5
+  _cohesionWeight: 0.1
+  _avoidanceWeight: 0.1
+  _aligementWeight: 0.1
+  _boundsWeight: 4.49
+  _obstacleWeight: 24.4
 --- !u!1 &7506227230746106058
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,5 +239,5 @@ MonoBehaviour:
     m_Bits: 1024
   directionsToCheckWhenAvoidingObstacles:
   - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 10, z: 1}
+  - {x: 1, y: 1, z: 0.5}
   - {x: 1, y: 0, z: 1}

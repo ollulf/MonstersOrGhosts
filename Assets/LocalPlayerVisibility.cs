@@ -6,12 +6,14 @@ using Photon.Pun;
 public class LocalPlayerVisibility : MonoBehaviour
 {
     [SerializeField] private Charakter charakter;
-    [SerializeField] private bool included;
+    [SerializeField] private bool included = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(included)
+        if (PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == null) return;
+
+        if (included)
         {
             Debug.Log("Try Destroy ");
             if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != charakter)

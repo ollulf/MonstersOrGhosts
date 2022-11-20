@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 894853549952462950}
   - component: {fileID: 4306834347629412291}
   - component: {fileID: 2026624559716109065}
-  - component: {fileID: 8297287679361552774}
   - component: {fileID: -2960428062235658158}
   m_Layer: 0
   m_Name: ice landscape-ICE-part2-quad-3
@@ -85,23 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!111 &8297287679361552774
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513683296657976028}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -7837302995141148760, guid: b2068fdeaca834acfa4078bb0dc406cd,
-    type: 3}
-  m_Animations:
-  - {fileID: -7837302995141148760, guid: b2068fdeaca834acfa4078bb0dc406cd, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &-2960428062235658158
 Animator:
   serializedVersion: 4
@@ -115,7 +97,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 80cf25a5a2e4f1c43812421bc165fb21, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

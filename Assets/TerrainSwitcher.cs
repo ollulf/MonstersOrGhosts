@@ -42,6 +42,6 @@ public class TerrainSwitcher : MonoBehaviour
                 Debug.LogWarning("No new Material assigned to Terrain");
                 break;
         }
-        Debug.Log("Currently used Material on Terrain: " + terrain.materialTemplate);
+        //Debug.Log("Currently used Material on Terrain: " + terrain.materialTemplate);
     }
 }

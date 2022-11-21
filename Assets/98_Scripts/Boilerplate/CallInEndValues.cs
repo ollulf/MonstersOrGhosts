@@ -123,7 +123,7 @@ public class CallInEndValues : Singleton<CallInEndValues>
             if (photonView.Owner.IsMasterClient)
             {
                 timer.Tick();
-                Debug.LogError(timer.CurrentTime);
+                //Debug.LogError(timer.CurrentTime);
                 if (timer.CurrentTime <= 0 && ! loadLevel)
                 {
                     loadLevel = true;

@@ -78,7 +78,7 @@ public class NetSpawner : MonoBehaviour
     {
         int maxDeactive = 0;
 
-        Debug.LogError("Deactivate net: " + maxDeactive);
+        //Debug.LogError("Deactivate net: " + maxDeactive);
 
         if (ShipHandler.Ship.Count > 15)
         {
@@ -106,16 +106,16 @@ public class NetSpawner : MonoBehaviour
         {
             for (int i = 0; i < enviNet.Count; i++)
             {
-                Debug.LogError("Envi");
+                //Debug.LogError("Envi");
                 if (maxDeactive < 3)
                 {
                     if (!enviNet[i].activeSelf)
                     {
-                        Debug.LogError("Envi deactive");
+                        //Debug.LogError("Envi deactive");
                     }
                     else
                     {
-                        Debug.LogError("envi active");
+                        //Debug.LogError("envi active");
                         enviNet[i].SetActive(false);
                         maxDeactive++;
                     }

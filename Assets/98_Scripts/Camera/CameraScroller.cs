@@ -310,7 +310,11 @@ public class CameraScroller : MonoBehaviourPun
     {
         camerChange = !camerChange;
         mainCamera.SetActive(!camerChange);
-        scientificCamera.SetActive(camerChange);
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        {
+            transform.parent.gameObject.GetComponent<MachineController>().ChangeButtonActive(!camerChange);
+        }
+            scientificCamera.SetActive(camerChange);
         scientificPosition.GetComponent<CameraMovement>().SciencesButton.SetActive(camerChange);
     }
 }

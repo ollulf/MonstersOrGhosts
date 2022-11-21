@@ -6,7 +6,7 @@ using Photon.Pun;
 
 public class MachineController : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject canvas, buttons;
     [SerializeField] private List<GameObject> prefab;
 
     private void Start()
@@ -15,6 +15,11 @@ public class MachineController : MonoBehaviourPunCallbacks
         {
             Destroy(canvas);
         }
+    }
+
+    public void ChangeButtonActive(bool newBool)
+    {
+        buttons.SetActive(newBool);
     }
 
     public void BuyOnClick()

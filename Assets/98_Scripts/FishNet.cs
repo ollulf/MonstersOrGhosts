@@ -12,7 +12,7 @@ public class FishNet : MonoBehaviourPun
     {
         audioSource = GetComponent<AudioSource>();
         fishLoss = FirstDataGive.FishNetLoss;
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Fish) Destroy(gameObject);
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.ArcticCod) Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

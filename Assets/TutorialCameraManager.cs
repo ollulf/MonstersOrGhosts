@@ -17,19 +17,19 @@ public class TutorialCameraManager : MonoBehaviour
 
         switch (localChar)
         {
-            case Charakter.Bacteria:
+            case Charakter.Methanosarcina:
                 bacteriaScreen.SetActive(true);
                 break;
-            case Charakter.Bird:
+            case Charakter.ArcticTern:
                 birdScreen.SetActive(true);
                 break;
-            case Charakter.MiddleProjection:
+            case Charakter.Observer:
                 cpScreen.SetActive(true);
                 break;
-            case Charakter.Deer:
+            case Charakter.Caribou:
                 deerScreen.SetActive(true);
                 break;
-            case Charakter.Fish:
+            case Charakter.ArcticCod:
                 fishScreen.SetActive(true);
                 break;
             case Charakter.Machine:

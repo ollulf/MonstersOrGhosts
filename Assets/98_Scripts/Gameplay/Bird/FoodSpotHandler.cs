@@ -21,7 +21,7 @@ public class FoodSpotHandler : MonoBehaviourPun
 
     private void Awake()
     {
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Bird)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.ArcticTern)
         {
             Destroy(gameObject);
         }
@@ -87,7 +87,7 @@ public class FoodSpotHandler : MonoBehaviourPun
     [Button]
     private void CreatePlace()
     {
-        GameObject place = new GameObject("Bird Food Spot");
+        GameObject place = new GameObject("ArcticTern Food Spot");
         place.transform.parent = this.gameObject.transform;
 
         DrawIcon(place, 4);

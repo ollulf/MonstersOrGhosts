@@ -8,12 +8,12 @@ public class LocalButtonEnabler : MonoBehaviourPun
 
     void Start()
     {
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Fish)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.ArcticCod)
         {
             ActivateButtons(fish);
         }
 
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Bird)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.ArcticTern)
         {
             ActivateButtons(bird);
         }
@@ -23,12 +23,12 @@ public class LocalButtonEnabler : MonoBehaviourPun
             ActivateButtons(machine);
         }
 
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Deer)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Caribou)
         {
             ActivateButtons(deer);
         }
 
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Bacteria)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Methanosarcina)
         {
             ActivateButtons(bacteria);
         }

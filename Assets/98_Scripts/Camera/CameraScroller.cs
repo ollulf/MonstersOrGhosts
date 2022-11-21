@@ -210,7 +210,7 @@ public class CameraScroller : MonoBehaviourPun
                             selectedShip.GetComponent<ShipMovement>().SetIsSelected();
                         }
                     }
-                    if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Fish)
+                    if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.ArcticCod)
                     {
                         RenderSettings.fogDensity = fishFog;
                     }

@@ -17,7 +17,7 @@ public class LocalPlayerVisibility : MonoBehaviour
         {
             if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != charakter)
             {
-                //Debug.Log("I am not Fish");
+                //Debug.Log("I am not ArcticCod");
                 Destroy(gameObject);
             }
 
@@ -26,7 +26,7 @@ public class LocalPlayerVisibility : MonoBehaviour
         {
             if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == charakter)
             {
-                //Debug.Log("I am Fish");
+                //Debug.Log("I am ArcticCod");
                 Destroy(gameObject);
             }
         }

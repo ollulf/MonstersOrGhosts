@@ -17,19 +17,19 @@ public class TerrainSwitcher : MonoBehaviour
 
         switch (localChar)
         {
-            case Charakter.Bacteria:
+            case Charakter.Methanosarcina:
                 terrain.materialTemplate = bacteriaMat;
                 break;
-            case Charakter.Bird:
+            case Charakter.ArcticTern:
                 terrain.materialTemplate = birdMat;
                 break;
-            case Charakter.MiddleProjection:
+            case Charakter.Observer:
                 terrain.materialTemplate = centralProjectionMat;
                 break;
-            case Charakter.Deer:
+            case Charakter.Caribou:
                 terrain.materialTemplate = deerMat;
                 break;
-            case Charakter.Fish:
+            case Charakter.ArcticCod:
                 terrain.materialTemplate = fishMat;
                 break;
             case Charakter.Machine:

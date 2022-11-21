@@ -22,19 +22,19 @@ public class NarrationManager : MonoBehaviour
 
         switch (localChar)
         {
-            case Charakter.Bacteria:
+            case Charakter.Methanosarcina:
                 audioSource.clip = bacteriaClip;
                 break;
-            case Charakter.Bird:
+            case Charakter.ArcticTern:
                 audioSource.clip = birdClip;
                 break;
-            case Charakter.MiddleProjection:
+            case Charakter.Observer:
                 audioSource.clip = middleProjectionClip;
                 break;
-            case Charakter.Deer:
+            case Charakter.Caribou:
                 audioSource.clip = deerClip;
                 break;
-            case Charakter.Fish:
+            case Charakter.ArcticCod:
                 audioSource.clip = fishClip;
                 break;
             case Charakter.Machine:

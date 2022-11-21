@@ -33,38 +33,38 @@ public class MaterialSwitcher : MonoBehaviour
         //Debug.LogWarning("CHANGE MATERIAL");
         switch ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"])
         {
-            case Charakter.Bacteria:
+            case Charakter.Methanosarcina:
                 {
                     if (bacteriaMaterial != null)
                     {
-                        //Debug.LogWarning(gameObject.name + "Bacteria MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Methanosarcina MeshRenderer");
                         CheckRenderer(bacteriaMaterial);
                     }
                     break;
                 }
-            case Charakter.Bird:
+            case Charakter.ArcticTern:
                 {
                     if (birdMaterial != null)
                     {
-                        //Debug.LogWarning(gameObject.name + "Bird MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "ArcticTern MeshRenderer");
                         CheckRenderer(birdMaterial);
                     }
                     break;
                 }
-            case Charakter.Deer:
+            case Charakter.Caribou:
                 {
                     if (deerMaterial != null)
                     {
-                        //Debug.LogWarning(gameObject.name + "Deer MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "Caribou MeshRenderer");
                         CheckRenderer(deerMaterial);
                     }
                     break;
                 }
-            case Charakter.Fish:
+            case Charakter.ArcticCod:
                 {
                     if (fishMaterial != null)
                     {
-                        //Debug.LogWarning(gameObject.name + "Fish MeshRenderer");
+                        //Debug.LogWarning(gameObject.name + "ArcticCod MeshRenderer");
                         CheckRenderer(fishMaterial);
                     }
                     break;

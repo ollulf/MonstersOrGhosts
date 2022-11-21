@@ -66,11 +66,11 @@ public class CustomCharakter : MonoBehaviourPunCallbacks
 
 public enum Charakter
 {
-    Fish,
-    Bird,
-    Deer,
+    ArcticCod,
+    ArcticTern,
+    Caribou,
     Machine,
-    Bacteria,
+    Methanosarcina,
     Ice,
-    MiddleProjection
+    Observer
 }

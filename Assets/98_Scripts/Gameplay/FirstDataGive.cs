@@ -10,7 +10,7 @@ public class FirstDataGive : Singleton<FirstDataGive>
     [SerializeField] private int deerPopulationLoss;
     [Header("RegularLoss")]
     [SerializeField] private int birdLoss, fishLoss, deerLoss;
-    [Header("FishNet Fish Loss")]
+    [Header("FishNet ArcticCod Loss")]
     [SerializeField] private int fishNetLoss;
     [Header("Realistic Increase per tick")]
     [SerializeField] private int birdPopulation, deerPopulation;

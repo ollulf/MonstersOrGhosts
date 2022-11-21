@@ -17,7 +17,7 @@ public class FishFoodSpawner : Singleton<FishFoodSpawner>
     {
         base.Awake();
 
-        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Fish)
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.ArcticCod)
         {
             Destroy(gameObject);
         }

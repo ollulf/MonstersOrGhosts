@@ -311,5 +311,6 @@ public class CameraScroller : MonoBehaviourPun
         camerChange = !camerChange;
         mainCamera.SetActive(!camerChange);
         scientificCamera.SetActive(camerChange);
+        scientificPosition.GetComponent<CameraMovement>().SciencesButton.SetActive(camerChange);
     }
 }

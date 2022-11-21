@@ -6,8 +6,10 @@ using Photon.Pun;
 public class CameraMovement : MonoBehaviourPun
 {
     [SerializeField] private float dragSpeed = 15;
-    [SerializeField] private GameObject scinceSpot;
+    [SerializeField] private GameObject scinceSpot, sciencesButton;
     private Vector3 dragOrigin;
+
+    public GameObject SciencesButton { get => sciencesButton;}
 
 
     // Update is called once per frame

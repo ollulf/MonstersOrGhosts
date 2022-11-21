@@ -9,72 +9,82 @@ public class CallInEndValues : Singleton<CallInEndValues>
 {
     [SerializeField] private PhotonView photonView;
     [SerializeField] private GameObject endScreen;
+    [SerializeField] private float timeToWaitForLoad;
 
     private FishMovment fish;
     private BirdController bird;
     private DeerController deer;
     private BacteriumMovement bacterium;
+    private Timer timer;
 
     private float gameTotalTempretureIncrease, totalCarbonDioxide, moneyGeneratedTotal;
 
     private int totalAmountOfCollectedAcetate;
 
+    private bool startEnd = false;
+    private bool loadLevel = false;
 
+    public static void SetFish(FishMovment newFish)
+    {
+        Instance.photonView.RPC("SetAllFish", RpcTarget.MasterClient, newFish);
+    }
 
-   public static void SetFish(FishMovment newFish)
-   {
-       Instance.photonView.RPC("SetAllFish", RpcTarget.MasterClient, newFish);
-   }
-   
-   public static void SetBird(BirdController newBird)
-   {
-       Instance.photonView.RPC("SetAllBirds", RpcTarget.MasterClient, newBird);
-   }
-   
-   public static void SetDeer(DeerController newDeer)
-   {
-       Instance.photonView.RPC("SetAllDeer", RpcTarget.MasterClient, newDeer);
-   }
-   
-   public static void SetBacteria(BacteriumMovement newBacteria)
-   {
-       Instance.photonView.RPC("SetAllBacteria", RpcTarget.MasterClient, newBacteria);
-   }
+    public static void SetBird(BirdController newBird)
+    {
+        Instance.photonView.RPC("SetAllBirds", RpcTarget.MasterClient, newBird);
+    }
+
+    public static void SetDeer(DeerController newDeer)
+    {
+        Instance.photonView.RPC("SetAllDeer", RpcTarget.MasterClient, newDeer);
+    }
+
+    public static void SetBacteria(BacteriumMovement newBacteria)
+    {
+        Instance.photonView.RPC("SetAllBacteria", RpcTarget.MasterClient, newBacteria);
+    }
 
 
     public static void SetValues()
     {
-        PopulationPair fishValue;
-        PopulationPair birdValue;
-        PopulationPair deerValue;
+        if (!Instance.startEnd)
+        {
+            Instance.startEnd = true;
 
-        Instance.gameTotalTempretureIncrease = TempretureHandler.Tempreture;
-        Instance.totalCarbonDioxide = ShipHandler.CarbonProduced;
-        Instance.moneyGeneratedTotal = ShipHandler.Money;
+            PopulationPair fishValue;
+            PopulationPair birdValue;
+            PopulationPair deerValue;
 
-        Instance.totalAmountOfCollectedAcetate = Instance.bacterium != null 
-            ? Instance.bacterium.AcetateCount 
-            : 0;
+            Instance.timer = new Timer();
+            Instance.timer.SetStartTime(Instance.timeToWaitForLoad, true);
 
-        fishValue = Instance.fish != null
-            ? new PopulationPair(FirstDataGive.FishStartPopulation, Instance.fish.Population)
-            : new PopulationPair(FirstDataGive.FishStartPopulation, FirstDataGive.FishStartPopulation);
+            Instance.gameTotalTempretureIncrease = TempretureHandler.Tempreture;
+            Instance.totalCarbonDioxide = ShipHandler.CarbonProduced;
+            Instance.moneyGeneratedTotal = ShipHandler.Money;
 
-        birdValue = Instance.bird != null
-            ? new PopulationPair(FirstDataGive.BirdStartPopulation, Instance.bird.BirdPopulation)
-            : new PopulationPair(FirstDataGive.BirdStartPopulation, FirstDataGive.BirdStartPopulation);
+            Instance.totalAmountOfCollectedAcetate = Instance.bacterium != null
+                ? Instance.bacterium.AcetateCount
+                : 0;
 
-        deerValue = Instance.deer != null
-            ? new PopulationPair(FirstDataGive.DeerStartPopulation, Instance.deer.population)
-            : new PopulationPair(FirstDataGive.DeerStartPopulation, FirstDataGive.DeerStartPopulation);
+            fishValue = Instance.fish != null
+                ? new PopulationPair(FirstDataGive.FishStartPopulation, Instance.fish.Population)
+                : new PopulationPair(FirstDataGive.FishStartPopulation, FirstDataGive.FishStartPopulation);
 
-        EndGameValues endGameValues = new EndGameValues(Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, birdValue, fishValue, deerValue);
+            birdValue = Instance.bird != null
+                ? new PopulationPair(FirstDataGive.BirdStartPopulation, Instance.bird.BirdPopulation)
+                : new PopulationPair(FirstDataGive.BirdStartPopulation, FirstDataGive.BirdStartPopulation);
 
-        Instance.photonView.RPC("ShowEnd", RpcTarget.All, endGameValues);
+            deerValue = Instance.deer != null
+                ? new PopulationPair(FirstDataGive.DeerStartPopulation, Instance.deer.population)
+                : new PopulationPair(FirstDataGive.DeerStartPopulation, FirstDataGive.DeerStartPopulation);
 
-        Instance.ShowEnd(endGameValues);
+            EndGameValues endGameValues = new EndGameValues(Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, birdValue, fishValue, deerValue);
+
+            //Instance.photonView.RPC("ShowEnd", RpcTarget.All, endGameValues);
+            Instance.ShowEnd(endGameValues);
+        }
+
     }
-
     [PunRPC]
     private void SetAllFish(FishMovment newFish)
     {
@@ -104,5 +114,22 @@ public class CallInEndValues : Singleton<CallInEndValues>
     {
         Instance.endScreen.SetActive(true);
         Instance.endScreen.GetComponent<EndScreen>().UpdateGameValues(newValues);
+    }
+
+    private void Update()
+    {
+        if (timer != null)
+        {
+            if (photonView.Owner.IsMasterClient)
+            {
+                timer.Tick();
+                Debug.LogError(timer.CurrentTime);
+                if (timer.CurrentTime <= 0 && ! loadLevel)
+                {
+                    loadLevel = true;
+                    PhotonNetwork.LoadLevel(1);
+                }
+            }
+        }
     }
 }

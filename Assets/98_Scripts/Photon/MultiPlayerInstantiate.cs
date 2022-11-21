@@ -51,7 +51,7 @@ public class MultiPlayerInstantiate : MonoBehaviour
                 }
             case Charakter.MiddleProjection:
                 {
-                    GameObject middle = PhotonNetwork.Instantiate("MiddleProjection", machinePosition.position, transform.rotation);
+                    GameObject middle = PhotonNetwork.Instantiate("CentralProjection/CentralProjection", machinePosition.position, transform.rotation);
                     middle.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }

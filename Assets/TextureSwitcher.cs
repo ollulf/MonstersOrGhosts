@@ -13,7 +13,7 @@ public class TextureSwitcher : MonoBehaviour
     [ShowNonSerializedField] float currentSin;
     [SerializeField] WorldTime worldTime;
 
-    public int yearToStart = 1950;
+    public int yearToStart = 1990;
 
     public float sinMin = -1, sinMax = 1;
     public int nextIndex = 2;
@@ -27,11 +27,11 @@ public class TextureSwitcher : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (StartAnimating())
         {
-            currentSin = Time.time % 2 / 2;
+            currentSin = Time.time % 2.725f / 2.725f;
             if (!goesUp) Mathf.Clamp(currentSin = 1 - currentSin, 0, sinMax);
 
             materialInstance.SetFloat("_LerpValue", currentSin);
@@ -56,5 +56,5 @@ public class TextureSwitcher : MonoBehaviour
 
     }
 
-    private bool StartAnimating() => yearToStart >= worldTime.Years + 1950;
+    private bool StartAnimating() => yearToStart >= worldTime.Years + 1990;
 }

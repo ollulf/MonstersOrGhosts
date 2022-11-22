@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class EffektOnDestroy : MonoBehaviour
+public class EffektOnDestroy : MonoBehaviour, IOnPhotonViewPreNetDestroy
 {
-    // Start is called before the first frame update
-    public GameObject objectEffekt;
-    
-    void OnDestroy()
+
+    public GameObject objectEffect, soundEffect;
+
+    public void OnPreNetDestroy(PhotonView rootView)
     {
-        Instantiate(objectEffekt, gameObject.transform);
+        Debug.LogError("Help I am getting Destroyed");
+        if(objectEffect) Instantiate(objectEffect, gameObject.transform);
+        if(soundEffect) Instantiate(soundEffect, gameObject.transform);
     }
 }

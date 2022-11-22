@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3510851891679098114}
   - component: {fileID: 3510851891679098115}
   - component: {fileID: 3660125991002869002}
-  - component: {fileID: -445875731591248252}
   m_Layer: 0
   m_Name: FishFood
   m_TagString: Untagged
@@ -72,6 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ea712f80853c4ea288791f831c8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleEffect: {fileID: 847321869315758378, guid: 069b49239a6a94d3ea2270bc7725e77b,
+    type: 3}
+  soundEffect: {fileID: 5913686864739679657, guid: bfdcddc078e424b198389a9955c67bad,
+    type: 3}
 --- !u!114 &3660125991002869002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,20 +97,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &-445875731591248252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3510851891679098112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72bc023dbb8340742a9b84e38fd9d3eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectEffekt: {fileID: 847321869315758378, guid: 069b49239a6a94d3ea2270bc7725e77b,
-    type: 3}
 --- !u!1001 &1103479486
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,17 +12,8 @@ public class PlayerListing : MonoBehaviourPunCallbacks
 
     public void SetPlayerInfo(Player player)
     {
-
         playerInfo = player;
-        if (player.CustomProperties["PlayerCharakter"] == null)
-        {
-            text.text = playerInfo.NickName;
-
-        }
-        else
-        {
-            text.text = (Charakter)player.CustomProperties["PlayerCharakter"] + ", " + playerInfo.NickName;
-        }
+        text.text = (Charakter)player.CustomProperties["PlayerCharakter"] + "";
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)

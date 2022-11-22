@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4052843547728083944}
   - component: {fileID: -7956732822293331604}
   - component: {fileID: 7952076103608112816}
+  - component: {fileID: -6218180548599557888}
   m_Layer: 0
   m_Name: ice landscape-ICE-part3-quad-1
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2539585763503200829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.737862, y: 0.56, z: -17.49662}
+  m_LocalPosition: {x: -13.737862, y: 0, z: -17.49662}
   m_LocalScale: {x: 92.6, y: 40, z: 92.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -201,3 +202,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6218180548599557888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539585763503200829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 0}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 2100000, guid: a8718446c444c4a129855739682c25fc, type: 2}
+  iceMaterial: {fileID: 0}

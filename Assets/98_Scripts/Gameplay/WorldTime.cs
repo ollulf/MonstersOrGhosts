@@ -7,7 +7,8 @@ using Photon.Pun;
 
 public class WorldTime : MonoBehaviourPun
 {
-    [SerializeField] private int maxYears, oneYearInSeconds;
+    [SerializeField] private int maxYears;
+    [SerializeField] private float oneYearInSeconds;
     [SerializeField] private TextMeshProUGUI showYear, showDay;
     [SerializeField] private Animator animYear, animMonth;
 
@@ -83,7 +84,7 @@ public class WorldTime : MonoBehaviourPun
     [PunRPC]
     private void UpdateUI(int newYear, int newDay)
     {
-        showYear.text = (1950 + newYear).ToString();
+        showYear.text = (1990 + newYear).ToString();
         if (day < 10)
         {
             showDay.text = "0" + newDay.ToString();

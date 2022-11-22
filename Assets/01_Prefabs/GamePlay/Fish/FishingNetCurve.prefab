@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1068920448161211224}
   - component: {fileID: 2222302875465766163}
   - component: {fileID: -2201509093556532135}
+  - component: {fileID: 6547890897439892387}
   m_Layer: 0
   m_Name: FishingNetCurve
   m_TagString: FishNet
@@ -225,6 +226,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6547890897439892387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738673540817112586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e04c3e675073042beee76bfa3c8291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deerMaterial: {fileID: 0}
+  birdMaterial: {fileID: 0}
+  fishMaterial: {fileID: 2100000, guid: 97b49883ad34a432f8d08c7aa1c5cc0b, type: 2}
+  bacteriaMaterial: {fileID: 0}
+  machineMaterial: {fileID: 0}
+  iceMaterial: {fileID: 0}
 --- !u!1 &4754172638205529312
 GameObject:
   m_ObjectHideFlags: 0

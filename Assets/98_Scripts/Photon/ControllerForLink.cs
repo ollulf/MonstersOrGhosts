@@ -7,7 +7,7 @@ using Photon.Realtime;
 public class ControllerForLink : MonoBehaviourPunCallbacks
 {
     [SerializeField] private float timerTime;
-    [SerializeField] private int test;
+    //[SerializeField] private int test;
 
     private Timer timer;
 
@@ -24,7 +24,7 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount <= test)
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)
         {
             timer.Tick();
             //Debug.LogError(timer.CurrentTime);

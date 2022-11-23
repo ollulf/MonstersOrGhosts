@@ -46,6 +46,7 @@ public class DeerController : MonoBehaviourPun
         populationGrowth = FirstDataGive.DeerPopulation;
         timer = new Timer();
         timer.SetStartTime(timeUntilTick, true);
+        CallInEndValues.SetDeer(this);
         DeerHandler.SetTarget(gameObject);
     }
     private void FixedUpdate()

@@ -80,8 +80,46 @@ public class CallInEndValues : Singleton<CallInEndValues>
 
             EndGameValues endGameValues = new EndGameValues(Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, birdValue, fishValue, deerValue);
 
-            //Instance.photonView.RPC("ShowEnd", RpcTarget.All, endGameValues);
-            Instance.ShowEnd(endGameValues);
+            if (Instance.photonView.Owner.IsMasterClient)
+            {
+                int tempBirdValueStart, tempBirdValueEnd, tempFishValueStart, tempFishValueEnd, tempDeerValueStart, tempDeerValueEnd;
+
+                if (Instance.fish != null)
+                {
+                    tempFishValueStart = FirstDataGive.FishStartPopulation;
+                    tempFishValueEnd = Instance.fish.Population;
+                }
+                else
+                {
+                    tempFishValueStart = FirstDataGive.FishStartPopulation;
+                    tempFishValueEnd = FirstDataGive.FishStartPopulation;
+                }
+                if (Instance.bird != null)
+                {
+                    tempBirdValueStart = FirstDataGive.BirdStartPopulation;
+                    tempBirdValueEnd = Instance.bird.BirdPopulation;
+                }
+                else
+                {
+                    tempBirdValueStart = FirstDataGive.BirdStartPopulation;
+                    tempBirdValueEnd = FirstDataGive.BirdStartPopulation;
+                }
+                if (Instance.deer != null)
+                {
+                    tempDeerValueStart = FirstDataGive.DeerStartPopulation;
+                    tempDeerValueEnd = Instance.deer.population;
+                }
+                else
+                {
+                    tempDeerValueStart = FirstDataGive.DeerStartPopulation;
+                    tempDeerValueEnd = FirstDataGive.DeerStartPopulation;
+                }
+
+
+                Instance.photonView.RPC("ShowEnd", RpcTarget.All, Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, tempBirdValueStart, tempBirdValueEnd, tempFishValueStart, tempFishValueEnd, tempDeerValueStart, tempDeerValueEnd);
+
+            }
+            //Instance.ShowEnd(endGameValues);
         }
 
     }
@@ -110,10 +148,19 @@ public class CallInEndValues : Singleton<CallInEndValues>
     }
 
     [PunRPC]
-    private void ShowEnd(EndGameValues newValues)
+    private void ShowEnd(float TotalTempIncrease, float TotalCarbDiox, float totalMoney, int totalCollectedAce, int newtempBirdValueStart, int newtempBirdValueEnd, int newtempFishValueStart, int newtempFishValueEnd, int newtempDeerValueStart, int newtempDeerValueEnd)
     {
+        PopulationPair fishValue;
+        PopulationPair birdValue;
+        PopulationPair deerValue;
+
+        fishValue = new PopulationPair(newtempFishValueStart, newtempFishValueEnd);
+        birdValue = new PopulationPair(newtempBirdValueStart, newtempBirdValueEnd);
+        deerValue = new PopulationPair(newtempDeerValueStart, newtempDeerValueEnd);
+
+        EndGameValues endGameValues = new EndGameValues(TotalTempIncrease, TotalCarbDiox, totalMoney, totalCollectedAce, birdValue, fishValue, deerValue);
         Instance.endScreen.SetActive(true);
-        Instance.endScreen.GetComponent<EndScreen>().UpdateGameValues(newValues);
+        Instance.endScreen.GetComponent<EndScreen>().UpdateGameValues(endGameValues);
     }
 
     private void Update()
@@ -124,7 +171,7 @@ public class CallInEndValues : Singleton<CallInEndValues>
             {
                 timer.Tick();
                 //Debug.LogError(timer.CurrentTime);
-                if (timer.CurrentTime <= 0 && ! loadLevel)
+                if (timer.CurrentTime <= 0 && !loadLevel)
                 {
                     loadLevel = true;
                     PhotonNetwork.LoadLevel(1);

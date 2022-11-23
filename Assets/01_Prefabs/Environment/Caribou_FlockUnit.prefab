@@ -618,7 +618,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6423202391170291968}
   - component: {fileID: 6423202391179654822}
-  - component: {fileID: 8682952539002104171}
   - component: {fileID: -4920288601657930112}
   m_Layer: 0
   m_Name: Caribou_FlockUnit
@@ -664,25 +663,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8682952539002104171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6423202391170123040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 30
-  smoothDamp: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
 --- !u!195 &-4920288601657930112
 NavMeshAgent:
   m_ObjectHideFlags: 0

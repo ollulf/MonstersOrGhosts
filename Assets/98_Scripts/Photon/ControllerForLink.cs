@@ -22,12 +22,11 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)
         {
             timer.Tick();
-            //Debug.LogError(timer.CurrentTime);
             if (timer.CurrentTime <= 0 && !isLoading)
             {
                 isLoading = true;

@@ -941,7 +941,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6335318894254397333}
   - component: {fileID: 6335318894245083187}
-  - component: {fileID: 8097357126358374682}
   m_Layer: 0
   m_Name: Caribou_walking_flock
   m_TagString: Untagged
@@ -986,25 +985,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8097357126358374682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6335318894254558133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 30
-  smoothDamp: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
 --- !u!1 &6335318894254558135
 GameObject:
   m_ObjectHideFlags: 0

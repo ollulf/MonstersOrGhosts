@@ -41,7 +41,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9018790147711427257}
-  - component: {fileID: 8356332960954030937}
   m_Layer: 0
   m_Name: CodFlock
   m_TagString: Untagged
@@ -64,33 +63,6 @@ Transform:
   m_Father: {fileID: 1896830529841969136}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8356332960954030937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805669740637333228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c0c330d8b534f0aaff173d0acaee7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flockUnitPrefab: {fileID: 6232477372916375930}
-  flockSize: 30
-  spawnBounds: {x: 0.1, y: 0.1, z: 0.2}
-  _minSpeed: 0.01
-  _maxSpeed: 0.2
-  _cohesionDistance: 0.1
-  _avoidanceDistance: 0.1
-  _aligementDistance: 0.1
-  _obstacleDistance: 0.1
-  _boundsDistance: 0.5
-  _cohesionWeight: 0.1
-  _avoidanceWeight: 0.1
-  _aligementWeight: 0.1
-  _boundsWeight: 4.49
-  _obstacleWeight: 24.4
 --- !u!1 &7506227230746106058
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,30 +186,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1504391355628157712}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6562830064037447807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
-    type: 3}
-  m_PrefabInstance: {fileID: 1504391355628157712}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6232477372916375930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6562830064037447807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 35
-  smoothDamp: 2
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 1, z: 0.5}
-  - {x: 1, y: 0, z: 1}

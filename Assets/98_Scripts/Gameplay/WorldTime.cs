@@ -34,7 +34,7 @@ public class WorldTime : MonoBehaviourPun
         iceYear = 1990 + years;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (PhotonNetwork.IsMasterClient)
         {

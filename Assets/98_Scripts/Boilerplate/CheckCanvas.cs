@@ -11,7 +11,7 @@ public class CheckCanvas : MonoBehaviourPun
     {
         if(!photonView.IsMine)
         {
-            Destroy(gameObject);
+            Destroy(transform.GetChild(0).gameObject);
         }
     }
 

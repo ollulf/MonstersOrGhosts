@@ -30,11 +30,11 @@ public class Timer
     {
         if (backwards)
         {
-            currentTime -= Time.deltaTime;
+            currentTime -= Time.fixedDeltaTime;
         }
         else
         {
-            currentTime += Time.deltaTime;
+            currentTime += Time.fixedDeltaTime;
         }
     }
 

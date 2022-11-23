@@ -8,7 +8,7 @@ using Photon.Realtime;
 public class CallInEndValues : Singleton<CallInEndValues>
 {
     [SerializeField] private PhotonView photonView;
-    [SerializeField] private GameObject endScreen;
+    [SerializeField] private GameObject endScreen, enviButtons;
     [SerializeField] private float timeToWaitForLoad;
 
     private FishMovment fish;
@@ -160,6 +160,7 @@ public class CallInEndValues : Singleton<CallInEndValues>
 
         EndGameValues endGameValues = new EndGameValues(TotalTempIncrease, TotalCarbDiox, totalMoney, totalCollectedAce, birdValue, fishValue, deerValue);
         Instance.endScreen.SetActive(true);
+        Instance.enviButtons.SetActive(false);
         Instance.endScreen.GetComponent<EndScreen>().UpdateGameValues(endGameValues);
     }
 

@@ -26,26 +26,40 @@ public class IceController : MonoBehaviourPun
         {
             MovePlayer();
             TurnIce();
+            IceView(MaterialHandler.World.IceYear);
         }
+
     }
 
-    private void MovePlayer()
-    {
-        GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
-    }
+    private void MovePlayer() => GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
 
-    private void TurnIce()
-    {
-        transform.Rotate(0, Horizontal() * turnspeed, 0);
-    }
+    private void TurnIce() => transform.Rotate(0, Horizontal() * turnspeed, 0);
 
-    private float Horizontal()
-    {
-        return Input.GetAxisRaw("Horizontal");
-    }
+    private float Horizontal() => Input.GetAxisRaw("Horizontal");
 
-    private float Vertical()
+    private float Vertical() => Input.GetAxisRaw("Vertical");
+
+    private void IceView(int newYear)
     {
-        return Input.GetAxisRaw("Vertical");
+        if(newYear >= 1980 && newYear < 2000)
+        {
+            volume.profile = volume1980;
+        }
+        if(newYear >= 2000 && newYear < 2015)
+        {
+            volume.profile = volume2000;
+        }
+        if(newYear >= 2015 && newYear < 2050)
+        {
+            volume.profile = volume2015;
+        }
+        if(newYear >= 2050 && newYear <2100)
+        {
+            volume.profile = volume2050;
+        }
+        if(newYear >= 2100)
+        {
+            volume.profile = volume2100;
+        }
     }
 }

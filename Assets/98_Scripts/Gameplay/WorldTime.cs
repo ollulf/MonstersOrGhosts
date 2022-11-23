@@ -12,11 +12,12 @@ public class WorldTime : MonoBehaviourPun
     [SerializeField] private TextMeshProUGUI showYear, showDay;
     [SerializeField] private Animator animYear, animMonth;
 
-    private int years, month = 1, day = 1, lastYear;
+    private int years, month = 1, day = 1, lastYear, iceYear;
     private Timer timer, timer2;
     private float motionFloat, dayFloat, monthFloat, motionFloat2, indexFloat;
 
     public int Years { get => years; }
+    public int IceYear { get => iceYear;}
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class WorldTime : MonoBehaviourPun
         dayFloat = monthFloat / 30f;
         indexFloat = 0;
         lastYear = years;
+        iceYear = 1990 + years;
     }
 
     void Update()
@@ -84,6 +86,7 @@ public class WorldTime : MonoBehaviourPun
     [PunRPC]
     private void UpdateUI(int newYear, int newDay)
     {
+        iceYear = 1990 + years;
         showYear.text = (1990 + newYear).ToString();
         if (day < 10)
         {

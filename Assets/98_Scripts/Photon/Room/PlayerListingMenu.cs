@@ -10,7 +10,7 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject playerListing;
     [SerializeField] private GameObject button;
     [SerializeField] private float timeTillStart;
-    [SerializeField] private int testingStart;
+    //[SerializeField] private int testingStart;
 
     private List<GameObject> listings = new List<GameObject>();
 
@@ -75,7 +75,7 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if(PhotonNetwork.IsMasterClient && testingStart <= PhotonNetwork.CurrentRoom.PlayerCount)
+        if(PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.MaxPlayers <= PhotonNetwork.CurrentRoom.PlayerCount)
         {
             timer.Tick();
             if(timer.CurrentTime <= 0 && !isLoading)

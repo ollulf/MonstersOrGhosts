@@ -59,16 +59,6 @@ public class EndScreen : MonoBehaviour
         if (totalAmountOfCollectedAcetate < mediumInAmount) return MethaneProduction.low;
         return (totalAmountOfCollectedAcetate < mediumOutAmount) ? MethaneProduction.medium : MethaneProduction.high;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       EndGameValues endGameValues = new EndGameValues(0.6f ,10000, 10000000, 20,
-           new PopulationPair(99,100), new PopulationPair(99, 80), new PopulationPair(99, 100));
-
-       UpdateGameValues(endGameValues);
-    }
-
 }
 
 [System.Serializable]

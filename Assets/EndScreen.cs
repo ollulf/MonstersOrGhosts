@@ -41,10 +41,10 @@ public class EndScreen : MonoBehaviour
         gameTotalTemperatureIncreaseTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease ? red : green;
         gameTotalTemperatureIncreaseTMP.text = endGameValues.GameTotalTemperatureIncrease.ToString();
 
-        CarbonDioxideTMP.text = endGameValues.TotalCarbonDioxide.ToString();
+        CarbonDioxideTMP.text = (endGameValues.TotalCarbonDioxide / 1000000)  + " mt" ;
         MoneyGeneratedTotalTMP.text = endGameValues.MoneyGeneratedTotal.ToString();
 
-        iceCoverage = (int) (endGameValues.GameTotalTemperatureIncrease / maxTempIncrease * 1000);
+        iceCoverage = (int) ((maxTempIncrease - endGameValues.GameTotalTemperatureIncrease) / maxTempIncrease * 100);
         iceCoverageChangeTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease ? red : green;
         iceCoverageChangeTMP.text = iceCoverage.ToString() + " %";
 

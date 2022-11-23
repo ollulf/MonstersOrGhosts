@@ -29,7 +29,8 @@ public class BirdController : MonoBehaviourPun
 
         birdPopulationIncreaseAmount = FirstDataGive.BirdPopulation;
         birdPopulation = FirstDataGive.BirdStartPopulation;
-        PlayerBaseDataHandler.SetBird(this); 
+        PlayerBaseDataHandler.SetBird(this);
+        CallInEndValues.SetBird(this);
         UpdateUI();
     }
 

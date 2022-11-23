@@ -75,7 +75,7 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if(PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.MaxPlayers <= PhotonNetwork.CurrentRoom.PlayerCount)
+        if(PhotonNetwork.IsMasterClient && 2 <= PhotonNetwork.CurrentRoom.PlayerCount)
         {
             timer.Tick();
             if(timer.CurrentTime <= 0 && !isLoading)

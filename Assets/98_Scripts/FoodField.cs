@@ -6,6 +6,11 @@ using Photon.Pun;
 public class FoodField : MonoBehaviourPun
 {
     [SerializeField] private GameObject particleEffect, soundEffect;
+
+    private void Start()
+    {
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.ArcticCod) Destroy(gameObject);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<FishMovment>())

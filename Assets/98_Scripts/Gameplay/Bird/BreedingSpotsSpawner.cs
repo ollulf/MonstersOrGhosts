@@ -25,7 +25,7 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         timer.Tick();
         if (timer.CurrentTime <= 0)

@@ -22,6 +22,10 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
         {
             breedingSpots.Add(child);
         }
+        if((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.ArcticTern)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

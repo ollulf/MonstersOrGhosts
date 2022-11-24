@@ -150,21 +150,24 @@ public class CallInEndValues : Singleton<CallInEndValues>
     [PunRPC]
     private void ShowEnd(float TotalTempIncrease, float TotalCarbDiox, float totalMoney, int totalCollectedAce, int newtempBirdValueStart, int newtempBirdValueEnd, int newtempFishValueStart, int newtempFishValueEnd, int newtempDeerValueStart, int newtempDeerValueEnd)
     {
-        PopulationPair fishValue;
-        PopulationPair birdValue;
-        PopulationPair deerValue;
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] != Charakter.Observer)
+        {
+            PopulationPair fishValue;
+            PopulationPair birdValue;
+            PopulationPair deerValue;
 
-        fishValue = new PopulationPair(newtempFishValueStart, newtempFishValueEnd);
-        birdValue = new PopulationPair(newtempBirdValueStart, newtempBirdValueEnd);
-        deerValue = new PopulationPair(newtempDeerValueStart, newtempDeerValueEnd);
+            fishValue = new PopulationPair(newtempFishValueStart, newtempFishValueEnd);
+            birdValue = new PopulationPair(newtempBirdValueStart, newtempBirdValueEnd);
+            deerValue = new PopulationPair(newtempDeerValueStart, newtempDeerValueEnd);
 
-        EndGameValues endGameValues = new EndGameValues(TotalTempIncrease, TotalCarbDiox, totalMoney, totalCollectedAce, birdValue, fishValue, deerValue);
-        Instance.endScreen.SetActive(true);
-        Instance.enviButtons.SetActive(false);
-        Instance.endScreen.GetComponent<EndScreen>().UpdateGameValues(endGameValues);
+            EndGameValues endGameValues = new EndGameValues(TotalTempIncrease, TotalCarbDiox, totalMoney, totalCollectedAce, birdValue, fishValue, deerValue);
+            Instance.endScreen.SetActive(true);
+            Instance.enviButtons.SetActive(false);
+            Instance.endScreen.GetComponent<EndScreen>().UpdateGameValues(endGameValues);
+        }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (timer != null)
         {

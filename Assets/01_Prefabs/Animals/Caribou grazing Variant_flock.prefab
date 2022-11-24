@@ -74,30 +74,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4623d2c871d0a4d0691a560f9ec196b4, type: 3}
---- !u!1 &5394511392218580577 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6335318894254558133, guid: 4623d2c871d0a4d0691a560f9ec196b4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2105069369609522644}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6325623797060805679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5394511392218580577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 120
-  smoothDamp: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}

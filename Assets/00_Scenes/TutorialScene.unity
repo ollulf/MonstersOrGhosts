@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1418270258}
-  m_IndirectSpecularColor: {r: 0.24961212, g: 0.23696412, b: 0.5814524, a: 1}
+  m_IndirectSpecularColor: {r: 0.07983428, g: 0.08593737, b: 0.59138924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9723,33 +9723,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 522013251}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &522013253 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
-    type: 3}
-  m_PrefabInstance: {fileID: 522013251}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &522013254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522013253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 35
-  smoothDamp: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1025
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
 --- !u!1001 &530284134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10300,7 +10273,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589962991}
-  - component: {fileID: 589962992}
   m_Layer: 0
   m_Name: CaribouFlock
   m_TagString: Untagged
@@ -10323,33 +10295,6 @@ Transform:
   m_Father: {fileID: 248935055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -19.242, z: 0}
---- !u!114 &589962992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589962990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c0c330d8b534f0aaff173d0acaee7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flockUnitPrefab: {fileID: 1417627017}
-  flockSize: 10
-  spawnBounds: {x: 1, y: 0, z: 1}
-  _minSpeed: 0.28
-  _maxSpeed: 0.88
-  _cohesionDistance: 8.81
-  _avoidanceDistance: 10
-  _aligementDistance: 2.04
-  _obstacleDistance: 9.53
-  _boundsDistance: 90.7
-  _cohesionWeight: 8.82
-  _avoidanceWeight: 10
-  _aligementWeight: 5.39
-  _boundsWeight: 0.7
-  _obstacleWeight: 100
 --- !u!1001 &600505454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25529,7 +25474,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1090516181}
-  - component: {fileID: 1090516182}
   m_Layer: 0
   m_Name: CodFlock
   m_TagString: Untagged
@@ -25552,33 +25496,6 @@ Transform:
   m_Father: {fileID: 1926942890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1090516182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090516180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c0c330d8b534f0aaff173d0acaee7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flockUnitPrefab: {fileID: 1234467002}
-  flockSize: 10
-  spawnBounds: {x: 1, y: 0, z: 1}
-  _minSpeed: 0.28
-  _maxSpeed: 0.88
-  _cohesionDistance: 8.81
-  _avoidanceDistance: 10
-  _aligementDistance: 2.04
-  _obstacleDistance: 9.53
-  _boundsDistance: 90.7
-  _cohesionWeight: 8.82
-  _avoidanceWeight: 10
-  _aligementWeight: 5.39
-  _boundsWeight: 0.7
-  _obstacleWeight: 100
 --- !u!1001 &1091541093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28892,33 +28809,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1234466999}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1234467001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5761072436977513327, guid: 37ae53f7f4c644b0482e9ed1310d5e82,
-    type: 3}
-  m_PrefabInstance: {fileID: 1234466999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1234467002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234467001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 35
-  smoothDamp: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1025
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
 --- !u!1001 &1244844242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30176,33 +30066,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1417627014}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1417627016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6335318894254558133, guid: a310fad2010b54633991c0efce9f395a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1417627014}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1417627017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417627016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b324d0dbbfb444a7a45fe76a211962c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FOVAngle: 200
-  smoothDamp: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1025
-  directionsToCheckWhenAvoidingObstacles:
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
-  - {x: 1, y: 0, z: 1}
 --- !u!1 &1418270254
 GameObject:
   m_ObjectHideFlags: 0
@@ -30229,7 +30092,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418270254}
-  m_LocalRotation: {x: 0.18095455, y: -0.68356043, z: 0.18095678, w: 0.6835608}
+  m_LocalRotation: {x: -0.70065475, y: 0.09530172, z: -0.7006553, w: -0.09530373}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -48860,7 +48723,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1805179197}
-  - component: {fileID: 1805179198}
   m_Layer: 0
   m_Name: CodFlock
   m_TagString: Untagged
@@ -48883,33 +48745,6 @@ Transform:
   m_Father: {fileID: 943182772}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1805179198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805179196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c0c330d8b534f0aaff173d0acaee7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flockUnitPrefab: {fileID: 522013254}
-  flockSize: 10
-  spawnBounds: {x: 1, y: 0, z: 1}
-  _minSpeed: 0.28
-  _maxSpeed: 0.88
-  _cohesionDistance: 8.81
-  _avoidanceDistance: 10
-  _aligementDistance: 2.04
-  _obstacleDistance: 9.53
-  _boundsDistance: 90.7
-  _cohesionWeight: 8.82
-  _avoidanceWeight: 10
-  _aligementWeight: 5.39
-  _boundsWeight: 0.7
-  _obstacleWeight: 100
 --- !u!1 &1812012984
 GameObject:
   m_ObjectHideFlags: 0

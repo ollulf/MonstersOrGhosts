@@ -13,12 +13,12 @@ public class ShipMovement : MonoBehaviour
     public float MovementSpeed { get => movementSpeed; }
     public bool IsSelected { get => isSelected;}
 
-    private void Start()
+    private void Awake()
     {
         isSelected = false;
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         if (wayPoint.Count != 0 && wayPoint != null)
         {

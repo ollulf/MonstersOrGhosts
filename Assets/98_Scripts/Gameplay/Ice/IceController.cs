@@ -31,7 +31,7 @@ public class IceController : MonoBehaviourPun
 
     }
 
-    private void MovePlayer() => GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
+    private void MovePlayer() => rigidbody.AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
 
     private void TurnIce() => transform.Rotate(0, Horizontal() * turnspeed, 0);
 

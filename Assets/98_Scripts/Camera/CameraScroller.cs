@@ -37,7 +37,11 @@ public class CameraScroller : MonoBehaviourPun
         fin = false;
         materialChange = false;
         if (!mainCamera.GetComponent<PhotonView>().IsMine)
+        {
+            Destroy(scientificCamera);
             Destroy(mainCamera);
+            Destroy(gameObject);
+        }
 
         camerChange = false;
     }

@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 2633686500100705987}
   - component: {fileID: 3299582661861353417}
   - component: {fileID: 3628223068149039542}
-  - component: {fileID: 2767648981728247368}
   - component: {fileID: 3762443218838063627}
   - component: {fileID: 1756453625992432054}
   m_Layer: 5
@@ -242,18 +241,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2767648981728247368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204129915791628062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d8225dd9c5b8146bc4ac3b723f2d90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3762443218838063627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2040,7 +2027,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5333417970815060663, guid: fec5e50f50dc66b4687c1dc460d9e31b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fec5e50f50dc66b4687c1dc460d9e31b, type: 3}
 --- !u!1 &7757031246526547779 stripped
 GameObject:
@@ -2208,6 +2196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2982262970364741203, guid: aad67955ecabdda45ac93d397db23027, type: 3}
+    - {fileID: 3582960470675177688, guid: aad67955ecabdda45ac93d397db23027, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aad67955ecabdda45ac93d397db23027, type: 3}
 --- !u!82 &844700746609045517 stripped
 AudioSource:

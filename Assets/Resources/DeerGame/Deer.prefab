@@ -399,7 +399,6 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 6251726003530399802}
   - {fileID: 8201966395124971945}
-  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -685,7 +684,8 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5333417970815060663, guid: fec5e50f50dc66b4687c1dc460d9e31b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fec5e50f50dc66b4687c1dc460d9e31b, type: 3}
 --- !u!4 &4621477966238445136 stripped
 Transform:
@@ -946,7 +946,8 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 65556c5e7b98740deab7e91c8be89cd6, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3582960470675177688, guid: aad67955ecabdda45ac93d397db23027, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aad67955ecabdda45ac93d397db23027, type: 3}
 --- !u!82 &867992000011438512 stripped
 AudioSource:

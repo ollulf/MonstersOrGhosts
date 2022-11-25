@@ -7,7 +7,7 @@ namespace OccaSoftware.SuperSimpleSkybox.Runtime
 {
     
 
-    [ExecuteAlways]
+    //[ExecuteAlways]
     public class SetSunPosition : MonoBehaviour
     {
         [SerializeField] float rotationSpeed = 10f;

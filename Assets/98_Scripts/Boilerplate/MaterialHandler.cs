@@ -6,9 +6,6 @@ using UnityEngine;
 public class MaterialHandler : Singleton<MaterialHandler>
 {
     private List<MaterialSwitcher> materialEvents = new List<MaterialSwitcher>();
-    [SerializeField] private WorldTime world;
-
-    public static WorldTime World { get => Instance.world;}
 
     public static void AddListener(MaterialSwitcher newMatFunc)
     {

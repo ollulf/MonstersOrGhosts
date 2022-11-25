@@ -20,7 +20,7 @@ public class ShipMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (wayPoint.Count != 0 && wayPoint != null)
+        if (wayPoint != null && wayPoint.Count != 0)
         {
             Move();
             if (CheckDistance())

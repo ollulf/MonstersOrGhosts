@@ -30,8 +30,5 @@ public class CreateRoom :MonoBehaviourPunCallbacks
         Debug.Log("Created Room" + this);
         lobbyCanvas.CreateOrJoinRoom();
     }
-    public override void OnCreateRoomFailed(short returnCode, string message)
-    {
-        Debug.LogError("Room creation failed" + message + this);
-    }
+    public override void OnCreateRoomFailed(short returnCode, string message) => Debug.LogError("Room creation failed" + message + this);
 }

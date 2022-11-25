@@ -7,6 +7,8 @@ public class MultiPlayerInstantiate : MonoBehaviour
 {
     [SerializeField] private Transform birdPosition, fishPosition, bacteriaPosition, deerPosition, machinePosition, icePosition, middleProjectionPosition, overViewPosition, scientificOverViewPosition;
 
+    [SerializeField] private WorldTime world;
+
     private void Awake()
     {
         Charakter newCharakter = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];
@@ -46,6 +48,7 @@ public class MultiPlayerInstantiate : MonoBehaviour
             case Charakter.Ice:
                 {
                     GameObject ice = PhotonNetwork.Instantiate("IceGame/Ice", machinePosition.position, transform.rotation);
+                    ice.GetComponent<IceController>().GetWorldTime(world);
                     ice.transform.GetChild(0).GetComponent<CameraScroller>().SetFarPosition(overViewPosition, scientificOverViewPosition);
                     break;
                 }

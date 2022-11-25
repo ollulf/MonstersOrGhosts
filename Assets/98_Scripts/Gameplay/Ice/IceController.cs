@@ -11,22 +11,23 @@ public class IceController : MonoBehaviourPun
     [SerializeField] private VolumeProfile volumeFirst, volume1980, volume2000, volume2015, volume2050, volume2100;
 
     [SerializeField]private Volume volume;
+
+    private WorldTime world;
+
     private Rigidbody rigidbody;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (base.photonView.IsMine)
         {
             MovePlayer();
             TurnIce();
-            IceView(MaterialHandler.World.IceYear);
+            IceView(world.IceYear);
         }
 
     }
@@ -61,5 +62,10 @@ public class IceController : MonoBehaviourPun
         {
             volume.profile = volume2100;
         }
+    }
+
+    public void GetWorldTime(WorldTime newWorld)
+    {
+        world = newWorld;
     }
 }

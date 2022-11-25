@@ -86,7 +86,7 @@ public class WorldTime : MonoBehaviourPun
     [PunRPC]
     private void UpdateUI(int newYear, int newDay)
     {
-        iceYear = 1990 + years;
+        iceYear = 1990 + newYear;
         showYear.text = (1990 + newYear).ToString();
         if (day < 10)
         {

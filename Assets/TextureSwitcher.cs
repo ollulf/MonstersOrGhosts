@@ -27,7 +27,7 @@ public class TextureSwitcher : MonoBehaviour
     {
         if (StartAnimating())
         {
-            currentSin += goesUp ? 1 : (-1) * Time.deltaTime * (1 / 2.725);
+            currentSin += goesUp ? 1 : (-1) * Time.deltaTime * (1 / 2.725f);
             materialInstance.SetFloat("_LerpValue", currentSin);
             if (goesUp)
             {

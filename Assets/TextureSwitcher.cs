@@ -27,24 +27,24 @@ public class TextureSwitcher : MonoBehaviour
     {
         if (StartAnimating())
         {
-            currentSin = Time.time % 2.725f / 2.725f;
-            if (!goesUp) Mathf.Clamp(currentSin = 1 - currentSin, 0, sinMax);
-
+            currentSin += goesUp ? 1 : (-1) * Time.deltaTime * (1 / 2.725);
             materialInstance.SetFloat("_LerpValue", currentSin);
-
-            if (currentSin <= sinMin && !goesUp)
+            if (goesUp)
             {
-                //Debug.LogWarning("Reached sin MIN");
+                if (currentSin >= sinMax)
+                {
+                    currentSin = 2 * sinMax - currentSin;
+                    goesUp = false;
+                    materialInstance.SetTexture("_Texture1", textures[nextIndex]);
+                    nextIndex++;
+                }
+            }
+            else if (currentSin <= sinMin)
+            {
+                currentSin = 2 * sinMin - currentSin;
                 materialInstance.SetTexture("_Texture2", textures[nextIndex]);
                 nextIndex++;
                 goesUp = true;
-            }
-            else if (currentSin >= sinMax && goesUp)
-            {
-                //Debug.LogWarning("Reached sin MAX");
-                materialInstance.SetTexture("_Texture1", textures[nextIndex]);
-                nextIndex++;
-                goesUp = false;
             }
 
             if (nextIndex == textures.Length) nextIndex = textures.Length - 2;
@@ -52,5 +52,5 @@ public class TextureSwitcher : MonoBehaviour
 
     }
 
-    private bool StartAnimating() => yearToStart >= worldTime.Years + 1990;
+    private bool StartAnimating() => yearToStart >= worldTime.IceYear;
 }

@@ -21,13 +21,9 @@ public class TextureSwitcher : MonoBehaviour
     // Start is called before the first frame update
 
     private void Awake() => materialInstance = meshRenderer.material;
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (StartAnimating())
         {

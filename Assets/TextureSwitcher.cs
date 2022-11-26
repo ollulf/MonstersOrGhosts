@@ -23,11 +23,11 @@ public class TextureSwitcher : MonoBehaviour
     private void Awake() => materialInstance = meshRenderer.material;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (StartAnimating())
         {
-            currentSin += goesUp ? 1 : (-1) * Time.deltaTime * (1 / 2.725f);
+            currentSin += (goesUp ? 1 : (-1)) * Time.deltaTime * (1 / 2.725f);
             materialInstance.SetFloat("_LerpValue", currentSin);
             if (goesUp)
             {
@@ -41,7 +41,7 @@ public class TextureSwitcher : MonoBehaviour
             }
             else if (currentSin <= sinMin)
             {
-                currentSin = 2 * sinMin - currentSin;
+                currentSin = -currentSin;
                 materialInstance.SetTexture("_Texture2", textures[nextIndex]);
                 nextIndex++;
                 goesUp = true;

@@ -73,9 +73,6 @@ public class DeerController : MonoBehaviourPun
 
         population-= popoluationLoss;
 
-        if (hunger < hungerValueUntilStarving)
-            population += populationGrowth;
-
         if (isMoving)
         {
             co2CompressedTotal += co2Compressed;
@@ -106,6 +103,11 @@ public class DeerController : MonoBehaviourPun
     void Update()
     {
         timer.Tick();
+        if (hunger < hungerValueUntilStarving && timer.CurrentTime <= 0)
+        {
+            population += populationGrowth;
+        }
+
         CheckTimer();
 
         if (base.photonView.IsMine)

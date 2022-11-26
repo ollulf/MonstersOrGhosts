@@ -71,7 +71,6 @@ public class DeerController : MonoBehaviourPun
             TurnDeerPref();
         }
 
-        population-= popoluationLoss;
 
         if (isMoving)
         {
@@ -106,6 +105,7 @@ public class DeerController : MonoBehaviourPun
         if (hunger < hungerValueUntilStarving && timer.CurrentTime <= 0)
         {
             population += populationGrowth;
+            population -= popoluationLoss;
         }
 
         CheckTimer();

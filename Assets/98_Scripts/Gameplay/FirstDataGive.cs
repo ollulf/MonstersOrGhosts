@@ -74,4 +74,5 @@ public class FirstDataGive : Singleton<FirstDataGive>
     public static int FishNetLoss { get => Instance.fishNetLoss;}
     public static int FishLoss { get => Instance.fishLoss;}
     public static int BirdLoss { get => Instance.birdLoss; }
+    public static int DeerLoss { get => Instance.deerLoss;}
 }

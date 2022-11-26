@@ -23,6 +23,7 @@ public class DeerController : MonoBehaviourPun
     public float eatAmount = 50;
     public int populationGrowth;
     public float timeUntilTick = 1f;
+    private int popoluationLoss;
 
     [SerializeField] private TextMeshProUGUI populationTF, co2TF, co2SecTF, hungerTF;
 
@@ -44,6 +45,7 @@ public class DeerController : MonoBehaviourPun
         population = FirstDataGive.DeerStartPopulation;
         co2Compressed = FirstDataGive.DeerCompress;
         populationGrowth = FirstDataGive.DeerPopulation;
+        popoluationLoss = FirstDataGive.DeerLoss;
         timer = new Timer();
         timer.SetStartTime(timeUntilTick, true);
         CallInEndValues.SetDeer(this);
@@ -69,7 +71,7 @@ public class DeerController : MonoBehaviourPun
             TurnDeerPref();
         }
 
-        population--;
+        population-= popoluationLoss;
 
         if (hunger < hungerValueUntilStarving)
             population += populationGrowth;
@@ -121,7 +123,6 @@ public class DeerController : MonoBehaviourPun
 
     private void TickUpdate()
     {
-        UpdateUI();
 
         if (!currentFoodSource)
         {
@@ -146,6 +147,7 @@ public class DeerController : MonoBehaviourPun
             if (hunger > hungerValueUntilStarving)
                 hunger = hungerValueUntilStarving;
         }
+        UpdateUI();
     }
 
     private void UpdateUI()

@@ -5,11 +5,8 @@ using UnityEditor.SceneManagement;
 [InitializeOnLoadAttribute]
 public static class DefaultSceneLoader
 {
-    static DefaultSceneLoader()
-    {
-        EditorApplication.playModeStateChanged += LoadDefaultScene;
-    }
-   
+    static DefaultSceneLoader() => EditorApplication.playModeStateChanged += LoadDefaultScene;
+
     static void LoadDefaultScene(PlayModeStateChange state)
     {
         if (state == PlayModeStateChange.ExitingEditMode)

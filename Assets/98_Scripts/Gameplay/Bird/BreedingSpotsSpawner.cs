@@ -11,7 +11,6 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
     private List<Transform> breedingSpots;
     private Timer timer;
 
-    // Start is called before the first frame update
     void Start()
     {
         timer = new Timer(spawningTime, true);
@@ -26,7 +25,6 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         timer.Tick();

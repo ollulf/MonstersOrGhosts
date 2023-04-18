@@ -28,7 +28,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         else
         {
             Destroy(gameObject);
-            Debug.LogWarning(gameObject.name + "was deleted");
+            Debug.LogWarning($"{gameObject.name} was deleted");
         }
     }
 

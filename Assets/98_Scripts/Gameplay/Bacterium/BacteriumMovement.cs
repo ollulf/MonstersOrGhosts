@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -16,9 +14,8 @@ public class BacteriumMovement : MonoBehaviourPun
 
     private int acetateCount;
 
-    public int AcetateCount { get => acetateCount;}
+    public int AcetateCount => acetateCount;
 
-    // Start is called before the first frame update
     void Start()
     {
         acetateCount = 0;
@@ -28,7 +25,6 @@ public class BacteriumMovement : MonoBehaviourPun
         CallInEndValues.SetBacteria(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (photonView.IsMine)
@@ -68,7 +64,6 @@ public class BacteriumMovement : MonoBehaviourPun
             Destroy(collision.gameObject);
             Instantiate(clone, transform.position, Quaternion.identity);
             acetateCount++;
-            //PhotonNetwork.Instantiate("BacteriaGame/BacteriaClone", transform.position, Quaternion.identity);
         }
     }
 
@@ -88,6 +83,5 @@ public class BacteriumMovement : MonoBehaviourPun
         }
 
         rigidbody.velocity = transform.forward * velocityMoment;
-
     }
 }

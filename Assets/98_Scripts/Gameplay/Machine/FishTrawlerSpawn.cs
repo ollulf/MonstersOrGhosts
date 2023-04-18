@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,8 +58,6 @@ public class FishTrawlerSpawn : MonoBehaviour
 
     public void DeactivateNet()
     {
-
-
         if (ShipHandler.Ship.Count > 15)
         {
             for (int i = 0; i < induNet.Count; i++)
@@ -92,5 +89,4 @@ public class FishTrawlerSpawn : MonoBehaviour
             }
         }
     }
-
 }

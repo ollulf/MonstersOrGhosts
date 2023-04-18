@@ -1,28 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 public class MachineCanvas : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText, incomeText, shipIndustrieCost, induShips ,enviCost;
 
-    // Start is called before the first frame update
     void Start()
     {        
-        moneyText.text = ShipHandler.Money.ToString() + "€";        
-        incomeText.text = ShipHandler.Income().ToString() + "€";
-        shipIndustrieCost.text = ShipHandler.ShipCost.ToString() + "€";
-        induShips.text = ShipHandler.Ship.Count.ToString();
-        enviCost.text = ShipHandler.EnviCost.ToString() + "€";
+        moneyText.text = $"{ShipHandler.Money}€";        
+        incomeText.text = $"{ShipHandler.Income()}€";
+        shipIndustrieCost.text = $"{ShipHandler.ShipCost}€";
+        induShips.text = $"{ShipHandler.Ship.Count}";
+        enviCost.text = $"{ShipHandler.EnviCost}€";
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        moneyText.text = ShipHandler.Money.ToString() + "€";
-        incomeText.text = ShipHandler.Income().ToString() + "€";
-        shipIndustrieCost.text = ShipHandler.ShipCost.ToString() + "€";
-        induShips.text = ShipHandler.Ship.Count.ToString();
-        enviCost.text = ShipHandler.EnviCost.ToString() + "€";
+        moneyText.text = $"{ShipHandler.Money}€";
+        incomeText.text = $"{ShipHandler.Income()}€";
+        shipIndustrieCost.text = $"{ShipHandler.ShipCost}€";
+        induShips.text = $"{ShipHandler.Ship.Count}";
+        enviCost.text = $"{ShipHandler.EnviCost}€";
     }
 }

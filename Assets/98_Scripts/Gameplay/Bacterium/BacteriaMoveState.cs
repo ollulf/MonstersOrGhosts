@@ -1,20 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BacteriaMoveState : BaseState
 {
     private BacteriaClone clone;
 
-    public BacteriaMoveState(BacteriaClone newClone)
-    {
-        clone = newClone;
-    }
+    public BacteriaMoveState(BacteriaClone newClone) => clone = newClone;
 
-    public override void OnEnter()
-    {
-        Debug.Log(clone.Target);
-    }
+    public override void OnEnter() => Debug.Log(clone.Target);
 
     public override void OnExecute()
     {

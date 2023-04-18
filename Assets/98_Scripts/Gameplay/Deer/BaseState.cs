@@ -8,13 +8,7 @@ public abstract class BaseState
     public abstract void OnExecute();
     public abstract void OnExit();
 
-    public BaseState()
-    {
-        transitions = new List<Transition>();
-    }
+    public BaseState() => transitions = new List<Transition>();
 
-    public void AddTransition(System.Func<bool> condition, BaseState targetState)
-    {
-        transitions.Add(new Transition(condition, targetState));
-    }
+    public void AddTransition(System.Func<bool> condition, BaseState targetState) => transitions.Add(new Transition(condition, targetState));
 }

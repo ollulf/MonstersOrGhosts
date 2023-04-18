@@ -4,7 +4,6 @@ using Photon.Pun;
 
 public class DeerFoodSpawner : MonoBehaviourPun
 {
-
     [SerializeField] float spawningTime;
 
     private List<Transform> foodSpot;
@@ -28,7 +27,6 @@ public class DeerFoodSpawner : MonoBehaviourPun
             SpawningFoodSpot();
             timer.ResetTimer();
         }
-
     }
 
     private void SpawningFoodSpot()
@@ -43,5 +41,4 @@ public class DeerFoodSpawner : MonoBehaviourPun
             }
         }
     }
-
 }

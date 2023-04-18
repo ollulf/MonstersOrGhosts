@@ -94,7 +94,7 @@ public class MaterialSwitcher : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No renderer found on " + gameObject.name);
+            Debug.LogError($"No renderer found on {gameObject.name}");
         }
     }
 

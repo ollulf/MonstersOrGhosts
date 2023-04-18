@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,15 +11,12 @@ public class Deer : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    public GameObject Target { get => target;}
-    public float MovementSpeed { get => movementSpeed;}
-    public float MaxDistance { get => maxDistance;}
-    public NavMeshAgent Agent { get => agent;}
+    public GameObject Target => target;
+    public float MovementSpeed => movementSpeed;
+    public float MaxDistance => maxDistance;
+    public NavMeshAgent Agent => agent;
 
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
+    void Start() => agent = GetComponent<NavMeshAgent>();
 
     private void FixedUpdate()
     {

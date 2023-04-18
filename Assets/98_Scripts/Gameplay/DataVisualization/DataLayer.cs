@@ -1,7 +1,5 @@
 using NaughtyAttributes;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DataLayer : MonoBehaviour
@@ -43,8 +41,5 @@ public class DataLayer : MonoBehaviour
             meshRenderer.enabled = false;
     }
 
-    private void UpdateMaterialBlend(float lerp)
-    {
-        materialInstance.SetFloat("_blend", lerp);
-    }
+    private void UpdateMaterialBlend(float lerp) => materialInstance.SetFloat("_blend", lerp);
 }

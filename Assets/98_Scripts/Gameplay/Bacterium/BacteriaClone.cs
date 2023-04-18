@@ -13,9 +13,9 @@ public class BacteriaClone : MonoBehaviour
 
     private Timer timer;
 
-    public GameObject Target { get => target;}
-    public Rigidbody _Rigidbody { get => rigidbody;}
-    public float MovementSpeed { get => movementSpeed; }
+    public GameObject Target => target;
+    public Rigidbody _Rigidbody => rigidbody;
+    public float MovementSpeed => movementSpeed;
 
     void Start()
     {

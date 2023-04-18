@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FishMoveState : BaseState
@@ -7,14 +5,11 @@ public class FishMoveState : BaseState
     private FalseFlock falseFlock;
     private float offsetX, offsetY, offsetZ;
 
-    public FishMoveState(FalseFlock newFalseFlock)
-    {
-        falseFlock = newFalseFlock;
-    }
+    public FishMoveState(FalseFlock newFalseFlock) => falseFlock = newFalseFlock;
 
-    public float OffsetX { get => offsetX;}
-    public float OffsetY { get => offsetY;}
-    public float OffsetZ { get => offsetZ;}
+    public float OffsetX => offsetX;
+    public float OffsetY => offsetY;
+    public float OffsetZ => offsetZ;
 
     public override void OnEnter()
     {

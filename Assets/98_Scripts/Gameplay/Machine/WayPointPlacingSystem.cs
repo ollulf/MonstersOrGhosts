@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
@@ -9,18 +8,11 @@ public class WayPointPlacingSystem : MonoBehaviour
     [SerializeField] private int numberOfWayPoints, remove;
     [SerializeField] private List<GameObject> wayPoints;
 
-    public List<GameObject> WayPoints { get => wayPoints; }
+    public List<GameObject> WayPoints => wayPoints;
 
+    public List<GameObject> GetWayPoints() => WayPoints;
 
-    public List<GameObject> GetWayPoints()
-    {
-        return WayPoints;
-    }
-
-    public Transform GetStartPoint()
-    {
-        return WayPoints[0].transform;
-    }
+    public Transform GetStartPoint() => WayPoints[0].transform;
 
 #if UNITY_EDITOR
 

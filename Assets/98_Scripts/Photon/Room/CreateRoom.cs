@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
@@ -27,8 +25,8 @@ public class CreateRoom :MonoBehaviourPunCallbacks
 
     public override void OnCreatedRoom()
     {
-        Debug.Log("Created Room" + this);
+        Debug.Log($"Created Room {this}");
         lobbyCanvas.CreateOrJoinRoom();
     }
-    public override void OnCreateRoomFailed(short returnCode, string message) => Debug.LogError("Room creation failed" + message + this);
+    public override void OnCreateRoomFailed(short returnCode, string message) => Debug.LogError($"Room creation failed {message} {this}");
 }

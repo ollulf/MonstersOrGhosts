@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FalseFlock : MonoBehaviour
@@ -11,11 +9,11 @@ public class FalseFlock : MonoBehaviour
     private GameObject target;
     private Rigidbody _rigidbody;
 
-    public float MovementSpeed { get => movementSpeed;}
-    public float MaxDistance { get => maxDistance;}
-    public GameObject Target { get => target;}
-    public float OffSetToTarget { get => offSetToTarget;}
-    public Rigidbody _Rigidbody { get => _rigidbody;}
+    public float MovementSpeed => movementSpeed;
+    public float MaxDistance => maxDistance;
+    public GameObject Target => target;
+    public float OffSetToTarget => offSetToTarget;
+    public Rigidbody _Rigidbody => _rigidbody;
 
     void Update()
     {
@@ -30,6 +28,5 @@ public class FalseFlock : MonoBehaviour
         target = newTarget;
         _rigidbody = GetComponent<Rigidbody>();
         fishControll = new FishStateMachine(this);
-
     }
 }

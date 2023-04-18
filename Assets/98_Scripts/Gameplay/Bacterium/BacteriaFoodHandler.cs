@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class BacteriaFoodHandler : Singleton<BacteriaFoodHandler>
 {
     private List<GameObject> food;
 
-    public static List<GameObject> Food { get => Instance.food;}
+    public static List<GameObject> Food => Instance.food;
 
     protected override void Awake()
     {

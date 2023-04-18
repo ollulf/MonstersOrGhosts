@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -29,8 +27,5 @@ public class SimpelMoveScript : MonoBehaviourPun
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
-    private void MovePlayer()
-    {
-        transform.position = new Vector3(transform.position.x + movement.x * movementSpeed * Time.fixedDeltaTime, transform.position.y, transform.position.z + movement.y * movementSpeed * Time.deltaTime);
-    }
+    private void MovePlayer() => transform.position = new Vector3(transform.position.x + movement.x * movementSpeed * Time.fixedDeltaTime, transform.position.y, transform.position.z + movement.y * movementSpeed * Time.deltaTime);
 }

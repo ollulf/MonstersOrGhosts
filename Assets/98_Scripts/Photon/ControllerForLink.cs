@@ -15,7 +15,6 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
         timer = new Timer(timerTime, true);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)

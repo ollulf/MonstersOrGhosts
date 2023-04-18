@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -74,10 +73,7 @@ public class FoodSpotHandler : MonoBehaviourPun
         }
     }
 
-    private void GetCurrentTemp()
-    {
-        currentTempIncrease = TempretureHandler.Tempreture;
-    }
+    private void GetCurrentTemp() => currentTempIncrease = TempretureHandler.Tempreture;
 
 #if UNITY_EDITOR
 

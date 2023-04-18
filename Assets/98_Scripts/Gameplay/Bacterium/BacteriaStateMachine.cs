@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class BacteriaStateMachine : BaseStateMachine
 {
     private BacteriaClone bacteriaClone;
 
-    private BaseState trackState, moveState, cloneState;
+    private BaseState trackState, moveState;
 
     public BacteriaStateMachine(BacteriaClone newClone)
     {

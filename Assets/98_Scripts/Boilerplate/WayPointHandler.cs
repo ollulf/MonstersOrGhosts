@@ -5,6 +5,6 @@ public class WayPointHandler : Singleton<WayPointHandler>
 {
     [SerializeField] List<WayPointPlacingSystem> wayPoints;
 
-    public static List<WayPointPlacingSystem> WayPoints { get => Instance.wayPoints; }
+    public static List<WayPointPlacingSystem> WayPoints => Instance.wayPoints;
 
 }

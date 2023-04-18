@@ -6,7 +6,7 @@ public class Timer
 
     private bool backwards;
 
-    public float CurrentTime { get => currentTime;}
+    public float CurrentTime => currentTime;
 
     public Timer(float time, bool backward)
     {

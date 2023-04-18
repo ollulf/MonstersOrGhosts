@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
@@ -16,7 +15,6 @@ public class Flocking : MonoBehaviourPun
 
     private float speedX, speedY, speedZ;
 
-    // Start is called before the first frame update
     void Start()
     {
         flock = new List<Transform>();
@@ -25,13 +23,11 @@ public class Flocking : MonoBehaviourPun
         speedZ = Random.Range(0.5f, 10f);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (target != null)
         {
             direction = target.position - transform.position;
-
 
             if (CheckTurning())
             {
@@ -67,10 +63,7 @@ public class Flocking : MonoBehaviourPun
         }
     }
 
-    private bool CheckTurning()
-    {
-        return Vector3.Distance(transform.position, target.position) >= maxDistance;
-    }
+    private bool CheckTurning() => Vector3.Distance(transform.position, target.position) >= maxDistance;
 
     private void Movement()
     {
@@ -159,23 +152,11 @@ public class Flocking : MonoBehaviourPun
         }
     }
 
-    public void SetMotherFlock(Transform newMother)
-    {
-        motherFlock = newMother;
-    }
+    public void SetMotherFlock(Transform newMother) => motherFlock = newMother;
 
-    public void SetTarget(Transform newTarget)
-    {
-        target = newTarget;
-    }
+    public void SetTarget(Transform newTarget) => target = newTarget;
 
-    public void DestroyFlock()
-    {
-        PhotonNetwork.Destroy(gameObject);
-    }
+    public void DestroyFlock() => PhotonNetwork.Destroy(gameObject);
 
-    public void SetFlock(List<Transform> newList)
-    {
-        flock = new List<Transform>(newList);
-    }
+    public void SetFlock(List<Transform> newList) => flock = new List<Transform>(newList);
 }

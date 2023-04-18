@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +9,10 @@ public class ShipMovement : MonoBehaviour
 
     private bool isSelected;
 
-    public float MovementSpeed { get => movementSpeed; }
-    public bool IsSelected { get => isSelected;}
+    public float MovementSpeed => movementSpeed;
+    public bool IsSelected => isSelected;
 
-    private void Awake()
-    {
-        isSelected = false;
-    }
+    private void Awake() => isSelected = false;
 
     private void LateUpdate()
     {
@@ -49,20 +45,11 @@ public class ShipMovement : MonoBehaviour
         }
     }
 
-    private bool CheckDistance()
-    {
-        return Vector3.Distance(transform.position, wayPoint[0].transform.position + transform.right * routeOffSet) <= maxDistance;
-    }
+    private bool CheckDistance() => Vector3.Distance(transform.position, wayPoint[0].transform.position + transform.right * routeOffSet) <= maxDistance;
 
-    public void GetWayPoint(WayPointPlacingSystem newWayPointPlacingSystem)
-    {
-        wayPoint = new List<GameObject>(newWayPointPlacingSystem.GetWayPoints());
-    }
+    public void GetWayPoint(WayPointPlacingSystem newWayPointPlacingSystem) => wayPoint = new List<GameObject>(newWayPointPlacingSystem.GetWayPoints());
 
-    public void RemoveFromList()
-    {
-        wayPoint.Remove(wayPoint[0]);
-    }
+    public void RemoveFromList() => wayPoint.Remove(wayPoint[0]);
 
     public void SetIsSelected()
     {

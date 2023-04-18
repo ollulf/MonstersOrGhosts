@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using Photon.Pun;
 
 public class MachineController : MonoBehaviourPunCallbacks
@@ -17,10 +15,7 @@ public class MachineController : MonoBehaviourPunCallbacks
         }
     }
 
-    public void ChangeButtonActive(bool newBool)
-    {
-        buttons.SetActive(newBool);
-    }
+    public void ChangeButtonActive(bool newBool) => buttons.SetActive(newBool);
 
     public void BuyOnClick()
     {

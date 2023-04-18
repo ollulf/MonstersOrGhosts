@@ -9,10 +9,9 @@ public class CameraMovement : MonoBehaviourPun
     [SerializeField] private GameObject scinceSpot, sciencesButton;
     private Vector3 dragOrigin;
 
-    public GameObject SciencesButton { get => sciencesButton;}
+    public GameObject SciencesButton => sciencesButton;
 
 
-    // Update is called once per frame
     void Update()
     {
         DragMove();

@@ -5,16 +5,12 @@ using TMPro;
 
 public class FishMovment : MonoBehaviourPun
 {
-    private Transform motherFlock;
-
     [SerializeField] private float movementSpeed;
     [SerializeField] private float turnspeed, fishPrefTurnSpeed;
     [SerializeField] private Transform fishPref;
     private Vector2 movement;
     private Rigidbody rigidbody;
 
-    [ShowNonSerializedField] private int food;
-    [ShowNonSerializedField] private int poisen;
     [ShowNonSerializedField] private int population;
 
     [SerializeField] private TextMeshProUGUI populationTextField;
@@ -115,7 +111,7 @@ public class FishMovment : MonoBehaviourPun
 
     private void UpdateUI()
     {
-        populationTextField.text = "" + population;
+        populationTextField.text = $"{population}";
     }
 
     private void GetAxis()

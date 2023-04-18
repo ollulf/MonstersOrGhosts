@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -25,7 +24,6 @@ public class FishFoodSpawner : Singleton<FishFoodSpawner>
 
     void Start()
     {
-
         fishFoodSpawner = new List<Transform>();
         fishFood = new List<GameObject>();
         for (int i = 0; i < transform.childCount; i++)

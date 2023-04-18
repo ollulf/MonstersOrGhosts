@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeerStateMachine : BaseStateMachine
 {
-    private BaseState iDLEState, moveState, eatState;
+    private BaseState iDLEState, moveState;
     private Deer deer;
 
     public DeerStateMachine(Deer newDeer)
@@ -12,7 +10,6 @@ public class DeerStateMachine : BaseStateMachine
         deer = newDeer;
         iDLEState = new IDLEState();
         moveState = new MoveState(deer.Agent, deer.Target);
-        eatState = new EatState();
         DefineTransition();
         ChangeCurrentState(iDLEState);
     }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.Rendering;
@@ -16,10 +14,7 @@ public class IceController : MonoBehaviourPun
 
     private Rigidbody rigidbody;
 
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
+    void Start() => rigidbody = GetComponent<Rigidbody>();
 
     void FixedUpdate()
     {
@@ -29,7 +24,6 @@ public class IceController : MonoBehaviourPun
             TurnIce();
             IceView(world.IceYear);
         }
-
     }
 
     private void MovePlayer() => rigidbody.AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
@@ -64,8 +58,5 @@ public class IceController : MonoBehaviourPun
         }
     }
 
-    public void GetWorldTime(WorldTime newWorld)
-    {
-        world = newWorld;
-    }
+    public void GetWorldTime(WorldTime newWorld) => world = newWorld;
 }

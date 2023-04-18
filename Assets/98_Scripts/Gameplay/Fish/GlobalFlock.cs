@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,15 +5,10 @@ public class GlobalFlock : Singleton<GlobalFlock>
 {
     private List<Transform> fishFlock;
 
-    public static List<Transform> FishFlock { get => Instance.fishFlock;}
+    public static List<Transform> FishFlock => Instance.fishFlock;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        fishFlock = new List<Transform>();
-    }
+    void Start() => fishFlock = new List<Transform>();
 
-    // Update is called once per frame
     private void Update()
     {
         if (PlayerBaseDataHandler.FishPopulation != null)

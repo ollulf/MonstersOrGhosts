@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
-using System;
 using TMPro;
 
 public class FishMovment : MonoBehaviourPun
@@ -35,8 +32,7 @@ public class FishMovment : MonoBehaviourPun
 
     private void Start()
     {
-        timer = new Timer();
-        timer.SetStartTime(0, false);
+        timer = new Timer(0, false);
         rigidbody = GetComponent<Rigidbody>();
         population = FirstDataGive.FishStartPopulation;
         PlayerBaseDataHandler.SetFish(this);
@@ -89,9 +85,6 @@ public class FishMovment : MonoBehaviourPun
             transform.position = goesUp ? new Vector3(t.x, transform.position.y + 0.1f * hoverSpeed, t.z) 
                 : new Vector3(t.x, transform.position.y - 0.1f * hoverSpeed, t.z);
         }
-
-        //UpdateVolumes();
-
     }
 
     private void UpdateVolumes()
@@ -143,17 +136,11 @@ public class FishMovment : MonoBehaviourPun
                 movement.y = 0;
             }
         }
-
-    }
-    private void MovePlayer()
-    {
-            rigidbody.AddRelativeForce(transform.forward * -movement.y * movementSpeed);
     }
 
-    private void TurnFish()
-    {
-        transform.Rotate(0, 0, -movement.x * turnspeed);
-    }
+    private void MovePlayer() => rigidbody.AddRelativeForce(transform.forward * -movement.y * movementSpeed);
+
+    private void TurnFish() => transform.Rotate(0, 0, -movement.x * turnspeed);
 
     private void TurnFishPref()
     {
@@ -186,11 +173,7 @@ public class FishMovment : MonoBehaviourPun
         }
     }
 
-    public bool CheckMovement()
-    {
-        return movement.y > 0;
-    }
-
+    public bool CheckMovement() => movement.y > 0;
 }
 
 public enum Danger

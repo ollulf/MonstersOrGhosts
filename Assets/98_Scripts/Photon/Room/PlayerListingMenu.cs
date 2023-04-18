@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -10,7 +9,6 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject playerListing;
     [SerializeField] private GameObject button;
     [SerializeField] private float timeTillStart;
-    //[SerializeField] private int testingStart;
 
     private List<GameObject> listings = new List<GameObject>();
 
@@ -21,8 +19,7 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
     public override void OnEnable()
     {
         base.OnEnable();
-        timer = new Timer();
-        timer.SetStartTime(timeTillStart, true);
+        timer = new Timer(timeTillStart, true);
         isLoading = false;
         SetInActive();
         GetAllPlayer();
@@ -86,10 +83,7 @@ public class PlayerListingMenu : MonoBehaviourPunCallbacks
         }
     }
 
-    public override void OnPlayerEnteredRoom(Player newPlayer)
-    {
-        AddPlayerListing(newPlayer);
-    }
+    public override void OnPlayerEnteredRoom(Player newPlayer) => AddPlayerListing(newPlayer);
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {

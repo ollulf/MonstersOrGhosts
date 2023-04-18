@@ -17,8 +17,8 @@ public class FoodField : MonoBehaviourPun
         {
             other.GetComponent<FishMovment>().FeedFish(FirstDataGive.FishPopulation);
             
-            Instantiate(particleEffect, this.transform);
-            Instantiate(soundEffect, this.transform);
+            Instantiate(particleEffect, transform);
+            Instantiate(soundEffect, transform);
             PhotonNetwork.Destroy(gameObject);
         }
     }

@@ -13,14 +13,11 @@ public class AcetateSpawner : MonoBehaviour
 
     private Timer timer;
 
-
     private float randomTime;
 
-    // Start is called before the first frame update
     void Start()
     {
-        timer = new Timer();
-        timer.SetStartTime(0, false);
+        timer = new Timer(0, false);
         spawner = new List<Transform>();
         foreach (Transform child in transform)
         {
@@ -30,25 +27,16 @@ public class AcetateSpawner : MonoBehaviour
         randomTime = Random.Range(minMaxSpawnTime.x, minMaxSpawnTime.y);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         timer.Tick();
         if (timer.CurrentTime >= randomTime)
         {
-            //int spawn = Random.Range(1,GetChildren());
-
-            //for (int i = 0; i < spawn; i++)
-            //{
             Instantiate(acetate, spawner[Random.Range(0, spawner.Count)]);
-            //}
             randomTime = Random.Range(minMaxSpawnTime.x, minMaxSpawnTime.y);
             timer.ResetTimer();
         }
     }
 
-    public int GetChildren()
-    {
-        return transform.childCount;
-    }
+    public int GetChildren() => transform.childCount;
 }

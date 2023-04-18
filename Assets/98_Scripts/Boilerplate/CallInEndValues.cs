@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
 
 
 public class CallInEndValues : Singleton<CallInEndValues>
@@ -24,26 +21,13 @@ public class CallInEndValues : Singleton<CallInEndValues>
     private bool startEnd = false;
     private bool loadLevel = false;
 
-    public static void SetFish(FishMovment newFish)
-    {
-        Instance.photonView.RPC("SetAllFish", RpcTarget.MasterClient, newFish);
-    }
+    public static void SetFish(FishMovment newFish) => Instance.photonView.RPC("SetAllFish", RpcTarget.MasterClient, newFish);
 
-    public static void SetBird(BirdController newBird)
-    {
-        Instance.photonView.RPC("SetAllBirds", RpcTarget.MasterClient, newBird);
-    }
+    public static void SetBird(BirdController newBird) => Instance.photonView.RPC("SetAllBirds", RpcTarget.MasterClient, newBird);
 
-    public static void SetDeer(DeerController newDeer)
-    {
-        Instance.photonView.RPC("SetAllDeer", RpcTarget.MasterClient, newDeer);
-    }
+    public static void SetDeer(DeerController newDeer) => Instance.photonView.RPC("SetAllDeer", RpcTarget.MasterClient, newDeer);
 
-    public static void SetBacteria(BacteriumMovement newBacteria)
-    {
-        Instance.photonView.RPC("SetAllBacteria", RpcTarget.MasterClient, newBacteria);
-    }
-
+    public static void SetBacteria(BacteriumMovement newBacteria) => Instance.photonView.RPC("SetAllBacteria", RpcTarget.MasterClient, newBacteria);
 
     public static void SetValues()
     {
@@ -55,8 +39,7 @@ public class CallInEndValues : Singleton<CallInEndValues>
             PopulationPair birdValue;
             PopulationPair deerValue;
 
-            Instance.timer = new Timer();
-            Instance.timer.SetStartTime(Instance.timeToWaitForLoad, true);
+            Instance.timer = new Timer(Instance.timeToWaitForLoad, true);
 
             Instance.gameTotalTempretureIncrease = TempretureHandler.Tempreture;
             Instance.totalCarbonDioxide = ShipHandler.CarbonProduced;
@@ -77,8 +60,6 @@ public class CallInEndValues : Singleton<CallInEndValues>
             deerValue = Instance.deer != null
                 ? new PopulationPair(FirstDataGive.DeerStartPopulation, Instance.deer.population)
                 : new PopulationPair(FirstDataGive.DeerStartPopulation, FirstDataGive.DeerStartPopulation);
-
-            EndGameValues endGameValues = new EndGameValues(Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, birdValue, fishValue, deerValue);
 
             if (Instance.photonView.Owner.IsMasterClient)
             {
@@ -115,37 +96,23 @@ public class CallInEndValues : Singleton<CallInEndValues>
                     tempDeerValueEnd = FirstDataGive.DeerStartPopulation;
                 }
 
-
                 Instance.photonView.RPC("ShowEnd", RpcTarget.All, Instance.gameTotalTempretureIncrease, Instance.totalCarbonDioxide, Instance.moneyGeneratedTotal, Instance.totalAmountOfCollectedAcetate, tempBirdValueStart, tempBirdValueEnd, tempFishValueStart, tempFishValueEnd, tempDeerValueStart, tempDeerValueEnd);
 
             }
-            //Instance.ShowEnd(endGameValues);
         }
-
-    }
-    [PunRPC]
-    private void SetAllFish(FishMovment newFish)
-    {
-        fish = newFish;
     }
 
     [PunRPC]
-    private void SetAllBirds(BirdController newBird)
-    {
-        bird = newBird;
-    }
+    private void SetAllFish(FishMovment newFish) => fish = newFish;
 
     [PunRPC]
-    private void SetAllDeer(DeerController newDeer)
-    {
-        deer = newDeer;
-    }
+    private void SetAllBirds(BirdController newBird) => bird = newBird;
 
     [PunRPC]
-    private void SetAllBacteria(BacteriumMovement newBacteria)
-    {
-        bacterium = newBacteria;
-    }
+    private void SetAllDeer(DeerController newDeer) => deer = newDeer;
+
+    [PunRPC]
+    private void SetAllBacteria(BacteriumMovement newBacteria) => bacterium = newBacteria;
 
     [PunRPC]
     private void ShowEnd(float TotalTempIncrease, float TotalCarbDiox, float totalMoney, int totalCollectedAce, int newtempBirdValueStart, int newtempBirdValueEnd, int newtempFishValueStart, int newtempFishValueEnd, int newtempDeerValueStart, int newtempDeerValueEnd)
@@ -174,7 +141,6 @@ public class CallInEndValues : Singleton<CallInEndValues>
             if (photonView.Owner.IsMasterClient)
             {
                 timer.Tick();
-                //Debug.LogError(timer.CurrentTime);
                 if (timer.CurrentTime <= 0 && !loadLevel)
                 {
                     loadLevel = true;

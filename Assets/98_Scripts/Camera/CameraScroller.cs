@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
-using System;
 
 public class CameraScroller : MonoBehaviourPun
 {
@@ -12,10 +9,10 @@ public class CameraScroller : MonoBehaviourPun
     [SerializeField] float speed = 1f, fishFog, overviewFog;
 
     [SerializeField] private AudioSource characterAmbient, arcticAmbient, underwaterAmbient, enterWaterSound, exitWaterSound;
-    [SerializeField] private AudioClip characterAmbientClip, arcticAmbientClip, underwaterAmbientClip, characterAmbientVariantClip, arcticAmbientVariantClip, underwaterAmbientVariantClip; 
+    [SerializeField] private AudioClip characterAmbientClip, arcticAmbientClip, underwaterAmbientClip, characterAmbientVariantClip, arcticAmbientVariantClip, underwaterAmbientVariantClip;
     [ShowNonSerializedField] private bool isCameraUnderwater, camerChange;
 
-    [ShowNonSerializedField] private float distance, currentDistance = 1;
+    [ShowNonSerializedField] private float currentDistance = 1;
 
     [SerializeField] private LayerMask mask;
 
@@ -49,7 +46,6 @@ public class CameraScroller : MonoBehaviourPun
     void Start()
     {
         mainCamera.transform.position = closePosition.position;
-        distance = Vector3.Distance(farPosition.position, closePosition.position);
         RenderSettings.fogDensity = overviewFog;
 
         if (!(gameObject.transform.position.y < 0))
@@ -69,12 +65,8 @@ public class CameraScroller : MonoBehaviourPun
         scientificPosition = newScientificPosition;
     }
 
-    public void SetIndex(int newInt)
-    {
-        index = newInt;
-    }
+    public void SetIndex(int newInt) => index = newInt;
 
-    // Update is called once per frame
     void Update()
     {
         if (camerChange == false)
@@ -85,7 +77,6 @@ public class CameraScroller : MonoBehaviourPun
             }
             UpdateAmbientSound();
 
-            distance = Vector3.Distance(farPosition.position, closePosition.position);
             float t = acellerationCurve.Evaluate(currentDistance);
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0f) //forward
@@ -96,7 +87,6 @@ public class CameraScroller : MonoBehaviourPun
                     index = 0;
                 }
             }
-
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f) //backwards
             {
                 index++;
@@ -115,7 +105,6 @@ public class CameraScroller : MonoBehaviourPun
 
     private void LateUpdate()
     {
-        //Debug.LogError(camerChange);
         if (camerChange == false)
         {
             IndexChecker();
@@ -149,14 +138,13 @@ public class CameraScroller : MonoBehaviourPun
                 arcticAmbient.UnPause();
             }
         }
-
     }
 
     private void TogglePerceptionSounds()
     {
         if (lastIndex != index)
         {
-            if (underwaterAmbient.clip) 
+            if (underwaterAmbient.clip)
             {
                 if (index == 0) underwaterAmbient.clip = underwaterAmbientVariantClip;
                 else if (index == 1) underwaterAmbient.clip = underwaterAmbientClip;
@@ -170,21 +158,19 @@ public class CameraScroller : MonoBehaviourPun
                 arcticAmbient.Play();
             }
 
-            if (characterAmbient.clip) 
-            { 
+            if (characterAmbient.clip)
+            {
                 if (index == 0) characterAmbient.clip = characterAmbientVariantClip;
                 else if (index == 1) characterAmbient.clip = characterAmbientClip;
-                 characterAmbient.Play();
+                characterAmbient.Play();
             }
 
             lastIndex = index;
         }
-        
     }
 
     private void IndexChecker()
     {
-
         switch (index)
         {
             case 0:
@@ -265,7 +251,7 @@ public class CameraScroller : MonoBehaviourPun
 
     private void MaterialChange()
     {
-        if(!materialChange)
+        if (!materialChange)
         {
             MaterialHandler.StartEvent();
             materialChange = true;
@@ -318,8 +304,7 @@ public class CameraScroller : MonoBehaviourPun
         {
             transform.parent.gameObject.GetComponent<MachineController>().ChangeButtonActive(!camerChange);
         }
-            scientificCamera.SetActive(camerChange);
+        scientificCamera.SetActive(camerChange);
         scientificPosition.GetComponent<CameraMovement>().SciencesButton.SetActive(camerChange);
     }
-
 }

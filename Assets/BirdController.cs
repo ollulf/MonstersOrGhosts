@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using System;
 using TMPro;
 using Photon.Pun;
 
@@ -21,11 +19,9 @@ public class BirdController : MonoBehaviourPun
 
     public int BirdPopulation { get => birdPopulation;}
 
-
     void Start()
     {
-        timer = new Timer();
-        timer.SetStartTime(0,false);
+        timer = new Timer(0, false);
 
         birdPopulationIncreaseAmount = FirstDataGive.BirdPopulation;
         birdPopulation = FirstDataGive.BirdStartPopulation;
@@ -50,9 +46,7 @@ public class BirdController : MonoBehaviourPun
 
             UpdateUI();
             timer.ResetTimer();
-        }
-
-        
+        }        
     }
 
     private void FixedUpdate()
@@ -76,7 +70,6 @@ public class BirdController : MonoBehaviourPun
     {
         foodAmount.SetText("" + birdFood);
         population.SetText("" + birdPopulation);
-
     }
 
     private void CheckforClick()
@@ -86,8 +79,6 @@ public class BirdController : MonoBehaviourPun
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
            
-            //Debug.DrawRay(ray.origin, ray.direction * 1000f , Color.yellow, Mathf.Infinity);
-
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) 
             {
                 Debug.Log(hit.collider.gameObject);
@@ -109,8 +100,6 @@ public class BirdController : MonoBehaviourPun
                     {
                         hit.collider.gameObject.GetComponentInChildren<BreedingSpot>().DestroySelf();
                     }
-
-
                 }
             }
         }
@@ -149,14 +138,8 @@ public class BirdController : MonoBehaviourPun
         }
     }
 
-    public void RemoveFromList()
-    {
-        birdRoute.Remove(birdRoute[0]);
-    }
+    public void RemoveFromList() => birdRoute.Remove(birdRoute[0]);
 
-    private bool CheckDistance()
-    {
-        return Vector3.Distance(transform.position, birdRoute[0].transform.position) <= maxDistance;
-    }
+    private bool CheckDistance() => Vector3.Distance(transform.position, birdRoute[0].transform.position) <= maxDistance;
 
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -21,19 +18,15 @@ public class BacteriaManager : MonoBehaviour
     private Timer timer;
     private bool waitingForGameToStart = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetNewKey();
         GameObject obj = Instantiate(bacteriaObject,spawnPoint);
         obj.GetComponent<Bacteria>().SetCenterTransform(spawnPoint);
 
-        timer = new Timer();
-        timer.SetStartTime(time, true);
+        timer = new Timer(time, true);
     }
 
-  
-    // Update is called once per frame
     void Update()
     {
         if(!waitingForGameToStart) timer.Tick();
@@ -58,10 +51,7 @@ public class BacteriaManager : MonoBehaviour
         
     }
 
-    private void ToggleStartUI()
-    {
-        startUI.SetActive(!startUI.activeSelf);
-    }
+    private void ToggleStartUI() => startUI.SetActive(!startUI.activeSelf);
 
     private void CheckTimer()
     {
@@ -93,8 +83,5 @@ public class BacteriaManager : MonoBehaviour
         highscoreUI.SetText("" + highscore);
     }
 
-    private void SetNewKey()
-    {
-        currendKey = keyCodes[UnityEngine.Random.Range(0, keyCodes.Length - 1 )];
-    }
+    private void SetNewKey() => currendKey = keyCodes[UnityEngine.Random.Range(0, keyCodes.Length - 1)];
 }

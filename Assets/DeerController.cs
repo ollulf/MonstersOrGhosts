@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using TMPro;
-using System;
 using Photon.Pun;
 
 public class DeerController : MonoBehaviourPun
@@ -34,11 +31,8 @@ public class DeerController : MonoBehaviourPun
     [SerializeField] private float turnspeed, fishPrefTurnSpeed;
     [SerializeField] private Transform deerPref;
     [SerializeField] private Animator anim;
-    private Vector2 movement;
     private Rigidbody rigidbody;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -46,8 +40,7 @@ public class DeerController : MonoBehaviourPun
         co2Compressed = FirstDataGive.DeerCompress;
         populationGrowth = FirstDataGive.DeerPopulation;
         popoluationLoss = FirstDataGive.DeerLoss;
-        timer = new Timer();
-        timer.SetStartTime(timeUntilTick, true);
+        timer = new Timer(timeUntilTick, true);
         CallInEndValues.SetDeer(this);
         DeerHandler.SetTarget(gameObject);
     }
@@ -55,7 +48,7 @@ public class DeerController : MonoBehaviourPun
     {
         if (base.photonView.IsMine)
         {
-            if (movement.y < 0 || movement.y > 0)
+            if (GetVertical() < 0 || GetVertical() > 0)
             {
                 isMoving = true;
                 anim.SetBool("IsWalking", true);
@@ -79,25 +72,17 @@ public class DeerController : MonoBehaviourPun
         }
     }
 
-    private void MovePlayer()
-    {
-        rigidbody.AddRelativeForce(Vector3.forward * movement.y * movementSpeed);
-    }
+    private void MovePlayer() => rigidbody.AddRelativeForce(Vector3.forward * GetVertical() * movementSpeed);
 
-    private void TurnDeer()
-    {
-        transform.Rotate(0, movement.x * turnspeed, 0);
-    }
+    private void TurnDeer() => transform.Rotate(0, GetHorizontal() * turnspeed, 0);
 
     private void TurnDeerPref()
     {
         Quaternion tempEulerAngles = Quaternion.Euler(gameObject.transform.eulerAngles.x, gameObject.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
 
-
-        Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y - movement.x * 20, tempEulerAngles.eulerAngles.z), Time.deltaTime * fishPrefTurnSpeed);
+        Quaternion rotation = Quaternion.Lerp(Quaternion.Euler(tempEulerAngles.eulerAngles), Quaternion.Euler(tempEulerAngles.eulerAngles.x, tempEulerAngles.eulerAngles.y - GetHorizontal() * 20, tempEulerAngles.eulerAngles.z), Time.deltaTime * fishPrefTurnSpeed);
         deerPref.transform.eulerAngles = rotation.eulerAngles;
     }
-
 
     void Update()
     {
@@ -109,19 +94,11 @@ public class DeerController : MonoBehaviourPun
         }
 
         CheckTimer();
-
-        if (base.photonView.IsMine)
-        {
-            GetAxis();
-        }
     }
 
-    private void GetAxis()
-    {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-    }
+    private float GetHorizontal() => Input.GetAxisRaw("Horizontal");
 
+    private float GetVertical() => Input.GetAxisRaw("Vertical");
 
     private void TickUpdate()
     {
@@ -158,8 +135,6 @@ public class DeerController : MonoBehaviourPun
         hungerTF.text = HungerToState(hunger).ToString();
         co2TF.text = co2CompressedTotal.ToString();
         if (isMoving) co2SecTF.text = UnityEngine.Random.Range(45, 55).ToString();
-
-
     }
 
     private HungerState HungerToState(float hunger)
@@ -197,6 +172,7 @@ public class DeerController : MonoBehaviourPun
             currentFoodSource = collision.gameObject.GetComponent<DeerFood>();
         }
     }
+
     private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "DeerFood" && currentFoodSource)

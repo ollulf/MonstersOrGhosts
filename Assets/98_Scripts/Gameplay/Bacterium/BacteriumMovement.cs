@@ -23,8 +23,7 @@ public class BacteriumMovement : MonoBehaviourPun
     {
         acetateCount = 0;
         rigidbody = GetComponent<Rigidbody>();
-        timer = new Timer();
-        timer.SetStartTime(0, false);
+        timer = new Timer(0, false);
         timerRunning = false;
         CallInEndValues.SetBacteria(this);
     }

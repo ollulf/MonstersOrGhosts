@@ -7,11 +7,8 @@ public class TestCamera : MonoBehaviour
 
     [SerializeField] private LayerMask mask;
 
-    // Update is called once per frame
     void Update()
     {
-        //  if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
-        //  {
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -29,8 +26,5 @@ public class TestCamera : MonoBehaviour
                 }
             }
         }
-
-        // }
-
     }
 }

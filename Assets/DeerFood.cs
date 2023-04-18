@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 
@@ -21,14 +19,12 @@ public class DeerFood : MonoBehaviour
 
     private Timer timer;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         startPosition = transform.position;
         foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
         tempfoodCapacity = foodCapacity;
-        timer = new Timer();
+        timer = new Timer(0,true);
     }
 
     public void ReduceFoodCapacity(float amount)
@@ -37,7 +33,7 @@ public class DeerFood : MonoBehaviour
 
         if (foodCapacity <= 0)
         {
-            timer.SetStartTime(60/ 1 + currentTempIncrease, true);
+            timer.SetNewTime(60/ 1 + currentTempIncrease, true);
             foodCapacity = 0;
         }
     }
@@ -51,7 +47,7 @@ public class DeerFood : MonoBehaviour
         if(timer.CurrentTime < 0)
         {
             foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
-            timer.SetStartTime(60 / 1 + currentTempIncrease, true);
+            timer.SetNewTime(60 / 1 + currentTempIncrease, true);
             timer.ResetTimer();
         }
 
@@ -61,8 +57,5 @@ public class DeerFood : MonoBehaviour
         }
     }
 
-    private void GetCurrentTemp()
-    {
-        currentTempIncrease = TempretureHandler.Tempreture;
-    }
+    private void GetCurrentTemp() => currentTempIncrease = TempretureHandler.Tempreture;
 }

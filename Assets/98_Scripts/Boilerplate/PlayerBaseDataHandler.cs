@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using NaughtyAttributes;
 
 public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
@@ -18,44 +15,19 @@ public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
     public static int FisherBoats { get => Instance.fisherBoats;}
     public static float Temperature { get => Instance.temperature;}
 
-    public static void SetFish(FishMovment newFish)
-    {
-        Instance.fishPopulation = newFish;
-    }
+    public static void SetFish(FishMovment newFish) => Instance.fishPopulation = newFish;
 
-    public static void SetBird(BirdController newBird)
-    {
-        Instance.birdPopulation = newBird;
-    }
+    public static void SetBird(BirdController newBird) => Instance.birdPopulation = newBird;
 
+    public static int GetFishPopulation() => FishPopulation.Population;
 
-    public static int GetFishPopulation()
-    {
-        return FishPopulation.Population;
-    }
+    public static int GetBirdPopulation() => BirdPopulation.BirdPopulation;
 
-    public static int GetBirdPopulation()
-    {
-        return BirdPopulation.BirdPopulation;
-    }
+    public static int GetOilRigs() => ShipHandler.Ship.Count;
 
-    public static int GetOilRigs()
-    {
-        return ShipHandler.Ship.Count;
-    }
+    public static void RaiseBirdFood(int newFood) => Instance.birdFood += newFood;
 
-    public static void RaiseBirdFood(int newFood)
-    {
-        Instance.birdFood += newFood;
-    }
+    public static void ReduceBirdFood(int newFood) => Instance.birdFood -= newFood;
 
-    public static void ReduceBirdFood(int newFood)
-    {
-        Instance.birdFood -= newFood;
-    }
-
-    public static int GetBirdFood()
-    {
-        return Instance.birdFood;
-    }
+    public static int GetBirdFood() => Instance.birdFood;
 } 

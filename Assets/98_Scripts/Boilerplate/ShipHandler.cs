@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using NaughtyAttributes;
 using TMPro;
 
 public class ShipHandler : Singleton<ShipHandler>
@@ -35,8 +33,7 @@ public class ShipHandler : Singleton<ShipHandler>
     {
         audioSource = GetComponent<AudioSource>();
         ship = new List<GameObject>();
-        timer = new Timer();
-        timer.SetStartTime(timerForMoney, true);
+        timer = new Timer(timerForMoney, true);
         money = FirstDataGive.StartMoney;
         moneyPerShip = FirstDataGive.Income;
         shipCost = FirstDataGive.ShipCost;
@@ -52,23 +49,15 @@ public class ShipHandler : Singleton<ShipHandler>
 
     public static void AddShip(GameObject newShip)
     {
-       //Instance.photonView.RPC("AllAddShip", RpcTarget.All, newShip);
         if (!Instance.ship.Contains(newShip))
         {
             Instance.ship.Add(newShip);
         }
-
     }
 
-    public static void SetMoney(float cost)
-    {
-        Instance.money -= cost;
-    }
+    public static void SetMoney(float cost) => Instance.money -= cost;
 
-    public static float Income()
-    {
-        return FirstDataGive.PassiveIncome + Instance.moneyPerShip * Ship.Count + Instance.enviIncome * Instance.amountOfEnvi;
-    }
+    public static float Income() => FirstDataGive.PassiveIncome + Instance.moneyPerShip * Ship.Count + Instance.enviIncome * Instance.amountOfEnvi;
 
     public static void RiseShipCost()
     {
@@ -78,11 +67,7 @@ public class ShipHandler : Singleton<ShipHandler>
         Instance.shipCost += Mathf.RoundToInt(ShipCost * FirstDataGive.InduShipMulti);
     }
 
-    private void RiseEnviCost()
-    {
-        Instance.enviCost += Mathf.RoundToInt(enviCost * FirstDataGive.EcoShipMulti);
-    }
-
+    private void RiseEnviCost() => Instance.enviCost += Mathf.RoundToInt(enviCost * FirstDataGive.EcoShipMulti);
 
     private void SpawnNPCShips()
     {
@@ -145,10 +130,7 @@ public class ShipHandler : Singleton<ShipHandler>
         }
     }
 
-    public static int CarbonIncreasePerSecond()
-    {
-        return Ship.Count * FirstDataGive.InduShipCo2 + FirstDataGive.PassiveCo2;
-    }
+    public static int CarbonIncreasePerSecond() => Ship.Count * FirstDataGive.InduShipCo2 + FirstDataGive.PassiveCo2;
 
     public static int TotalCarbonProduced()
     {
@@ -169,9 +151,6 @@ public class ShipHandler : Singleton<ShipHandler>
         audioSource.Play();
     }
 
-    public static GameObject StartShip()
-    {
-        return Ship[Random.Range(0, Ship.Count)];
-    }
+    public static GameObject StartShip() => Ship[Random.Range(0, Ship.Count)];
 
 }

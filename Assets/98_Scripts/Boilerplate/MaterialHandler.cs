@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 
 public class MaterialHandler : Singleton<MaterialHandler>
@@ -21,20 +19,15 @@ public class MaterialHandler : Singleton<MaterialHandler>
     {
         foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
-            //Debug.Log("Start event");
             materialSwitcher.ChangeMaterial();
-            //Debug.Log("End Event");
         }
     }
 
     public static void StartDefaultEvent()
     {
-        //Debug.Log("Start default event");
         foreach (MaterialSwitcher materialSwitcher in Instance.materialEvents)
         {
-            //Debug.Log("Start event");
             materialSwitcher.ChangeMaterialToDefault();
-            //Debug.Log("End Event");
         }
     }
 }

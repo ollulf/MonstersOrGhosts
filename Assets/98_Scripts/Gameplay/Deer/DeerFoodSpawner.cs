@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -11,12 +10,9 @@ public class DeerFoodSpawner : MonoBehaviourPun
     private List<Transform> foodSpot;
     private Timer timer;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        timer = new Timer();
-        timer.SetStartTime(spawningTime, true);
+        timer = new Timer(spawningTime, true);
         foodSpot = new List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -24,7 +20,6 @@ public class DeerFoodSpawner : MonoBehaviourPun
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer.Tick();

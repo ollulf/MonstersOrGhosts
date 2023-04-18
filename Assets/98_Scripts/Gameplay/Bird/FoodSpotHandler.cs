@@ -29,12 +29,9 @@ public class FoodSpotHandler : MonoBehaviourPun
 
     void Start()
     {
-        
-
-        timer = new Timer();
+        timer = new Timer(0, true);
         foodSpots = new List<Transform>();
         foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
-        timer.SetStartTime(0, true);
         foreach (Transform child in transform)
         {
             foodSpots.Add(child);
@@ -55,7 +52,7 @@ public class FoodSpotHandler : MonoBehaviourPun
         {
             SpawningFeedSpots();
             foodCapacity = Random.Range(minFoodCapacity, maxFoodCapacity);
-            timer.SetStartTime(60 / 1 + currentTempIncrease, true);
+            timer.SetNewTime(60 / 1 + currentTempIncrease, true);
             timer.ResetTimer();
         }
     }

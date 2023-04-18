@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Timer
@@ -10,7 +8,7 @@ public class Timer
 
     public float CurrentTime { get => currentTime;}
 
-    public void SetStartTime(float time, bool backward)
+    public Timer(float time, bool backward)
     {
         if (backward)
         {
@@ -20,8 +18,24 @@ public class Timer
         }
         else
         {
-            startTime = 0;
-            currentTime = 0;
+            startTime = time;
+            currentTime = time;
+            backwards = backward;
+        }
+    }
+
+    public void SetNewTime(float newTime, bool backward)
+    {
+        if (backward)
+        {
+            startTime = newTime;
+            currentTime = newTime;
+            backwards = backward;
+        }
+        else
+        {
+            startTime = newTime;
+            currentTime = newTime;
             backwards = backward;
         }
     }
@@ -37,8 +51,6 @@ public class Timer
             currentTime += Time.fixedDeltaTime;
         }
     }
-
-
 
     public void ResetTimer()
     {

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -15,8 +14,7 @@ public class BreedingSpotsSpawner : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        timer = new Timer();
-        timer.SetStartTime(spawningTime, true);
+        timer = new Timer(spawningTime, true);
         breedingSpots = new List<Transform>();
         foreach (Transform child in transform)
         {

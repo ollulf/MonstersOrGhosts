@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BacteriaClone : MonoBehaviour
@@ -21,8 +19,7 @@ public class BacteriaClone : MonoBehaviour
 
     void Start()
     {
-        timer = new Timer();
-        timer.SetStartTime(lifeTime, true);
+        timer = new Timer(lifeTime, true);
         rigidbody = GetComponent<Rigidbody>();
         stateMachine = new BacteriaStateMachine(this);
     }
@@ -47,7 +44,6 @@ public class BacteriaClone : MonoBehaviour
             collision.gameObject.GetComponent<BacteriaFood>().RemoveFromList();
             Destroy(collision.gameObject);
             Instantiate(clone, transform.position, Quaternion.identity);
-            //PhotonNetwork.Instantiate("BacteriaGame/BacteriaClone", transform.position, Quaternion.identity);
         }
     }
 }

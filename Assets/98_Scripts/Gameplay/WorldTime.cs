@@ -21,12 +21,10 @@ public class WorldTime : MonoBehaviourPun
 
     void Start()
     {
-        timer = new Timer();
-        timer2 = new Timer();
+        timer = new Timer(0, false);
+        timer2 = new Timer(0, false);
         motionFloat = 1f / maxYears;
         motionFloat2 = 1f / 12f;
-        timer.SetStartTime(0, false);
-        timer2.SetStartTime(0, false);
         monthFloat = oneYearInSeconds / 12f;
         dayFloat = monthFloat / 30f;
         indexFloat = 0;
@@ -107,9 +105,6 @@ public class WorldTime : MonoBehaviourPun
     }
 
     [PunRPC]
-    private void LevelLoad()
-    {
-        PhotonNetwork.LoadLevel(1);
-    }
+    private void LevelLoad() => PhotonNetwork.LoadLevel(1);
 
 }

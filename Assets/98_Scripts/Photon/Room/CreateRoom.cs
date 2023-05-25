@@ -2,11 +2,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class CreateRoom :MonoBehaviourPunCallbacks
 {
     [SerializeField] private Text roomName;
     [SerializeField] private LobbyCanvas lobbyCanvas;
+    [SerializeField] private TextMeshProUGUI playerButton;
+
+    private byte maxPlayerNumber = 7;
+
+    public void OnClickChangePlayerNumber()
+    {
+        maxPlayerNumber++;
+        if(maxPlayerNumber > 7)
+        {
+            maxPlayerNumber = 1;
+        }
+
+        playerButton.text = maxPlayerNumber.ToString();
+    }
 
     public void OnClickCreateRoom()
     {
@@ -17,7 +32,7 @@ public class CreateRoom :MonoBehaviourPunCallbacks
         }
         RoomOptions options = new RoomOptions();
         options.BroadcastPropsChangeToAll = true;
-        options.MaxPlayers = 7;
+        options.MaxPlayers = maxPlayerNumber;
 
         PhotonNetwork.JoinOrCreateRoom(roomName.text, options, TypedLobby.Default);
 

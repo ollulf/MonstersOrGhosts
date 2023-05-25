@@ -26,5 +26,5 @@ public class TernFloatAndFly : MonoBehaviour
         }
     }
 
-    private void ToggleFlyAndFloat() => animator.SetBool("IsFloating", !animator.GetBool("IsFloating"));
+    private void ToggleFlyAndFloat() => animator.SetBool(id: Animator.StringToHash("IsFloating"), !animator.GetBool("IsFloating"));
 }

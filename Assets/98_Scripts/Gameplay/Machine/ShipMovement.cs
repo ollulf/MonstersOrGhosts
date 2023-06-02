@@ -28,6 +28,7 @@ public class ShipMovement : MonoBehaviour
         {
             GetWayPoint(WayPointHandler.WayPoints[Random.Range(0, WayPointHandler.WayPoints.Count)]);
             transform.position = wayPoint[0].transform.position + transform.right * routeOffSet;
+            RemoveFromList();
         }
     }
 

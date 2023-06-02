@@ -24,7 +24,9 @@ public class MachineController : MonoBehaviourPunCallbacks
             WayPointPlacingSystem wayPoint = WayPointHandler.WayPoints[Random.Range(0, WayPointHandler.WayPoints.Count)];
 
             GameObject ship = PhotonNetwork.Instantiate("MachineGame/" + prefab[Random.Range(0,prefab.Count)].name, wayPoint.GetStartPoint().position, Quaternion.identity);
-            ship.GetComponent<ShipMovement>().GetWayPoint(wayPoint);
+            ship.TryGetComponent<ShipMovement>(out ShipMovement shipMovement);
+            shipMovement.GetWayPoint(wayPoint);
+            shipMovement.RemoveFromList();
             ShipHandler.AddShip(ship);
             ShipHandler.SetMoney(ShipHandler.ShipCost);
             ShipHandler.RiseShipCost();

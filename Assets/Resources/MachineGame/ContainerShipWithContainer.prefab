@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 8783381885617709902}
   - component: {fileID: 340832659285343843}
   - component: {fileID: 7270633820282486061}
+  - component: {fileID: -937859470195473642}
   m_Layer: 0
   m_Name: ContainerShipWithContainer
   m_TagString: Ship
@@ -226,6 +227,22 @@ CapsuleCollider:
   m_Height: 25.6
   m_Direction: 2
   m_Center: {x: 0, y: 1.12, z: 0}
+--- !u!114 &-937859470195473642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686914158683961998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1001 &255712076664701285
 PrefabInstance:
   m_ObjectHideFlags: 0

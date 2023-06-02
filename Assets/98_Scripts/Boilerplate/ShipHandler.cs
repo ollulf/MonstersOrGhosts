@@ -44,7 +44,11 @@ public class ShipHandler : Singleton<ShipHandler>
         carbonProduced = 0;
         indexTime = 0;
         photonView = GetComponent<PhotonView>();
-        SpawnNPCShips();
+
+        if ((Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == Charakter.Machine)
+        {
+            SpawnNPCShips();
+        }
     }
 
     public static void AddShip(GameObject newShip)

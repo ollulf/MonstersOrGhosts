@@ -38,8 +38,8 @@ public class EndScreen : MonoBehaviour
 
         realTemperatureIncreaseTMP.text = realTotalTemperatureIncrease.ToString();
         
-        gameTotalTemperatureIncreaseTMP.color = realTotalTemperatureIncrease < endGameValues.GameTotalTemperatureIncrease ? red : green;
-        gameTotalTemperatureIncreaseTMP.text = endGameValues.GameTotalTemperatureIncrease.ToString();
+        gameTotalTemperatureIncreaseTMP.text = (endGameValues.TotalCarbonDioxide / 1000000 / 100).ToString();
+        gameTotalTemperatureIncreaseTMP.color = realTotalTemperatureIncrease < endGameValues.TotalCarbonDioxide / 1000000 / 100 ? red : green;
 
         CarbonDioxideTMP.text = (endGameValues.TotalCarbonDioxide / 1000000)  + " mt" ;
         MoneyGeneratedTotalTMP.text = endGameValues.MoneyGeneratedTotal.ToString();

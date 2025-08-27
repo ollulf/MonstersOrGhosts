@@ -82,6 +82,6 @@ public class BacteriumMovement : MonoBehaviourPun
             velocityMoment = 0;
         }
 
-        rigidbody.velocity = transform.forward * velocityMoment;
+        rigidbody.linearVelocity = transform.forward * velocityMoment;
     }
 }

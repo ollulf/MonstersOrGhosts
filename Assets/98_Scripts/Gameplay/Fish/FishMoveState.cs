@@ -28,11 +28,11 @@ public class FishMoveState : BaseState
 
         if (Vector3.Distance(new Vector3(falseFlock.Target.transform.position.x + offsetX, falseFlock.Target.transform.position.y + offsetY, falseFlock.Target.transform.position.z + offsetZ), falseFlock.transform.position) > falseFlock.MaxDistance)
         {
-            falseFlock._Rigidbody.velocity = direction * falseFlock.MovementSpeed;
+            falseFlock._Rigidbody.linearVelocity = direction * falseFlock.MovementSpeed;
         }
         else
         {
-            falseFlock._Rigidbody.velocity = Vector3.zero;
+            falseFlock._Rigidbody.linearVelocity = Vector3.zero;
         }
     }
 

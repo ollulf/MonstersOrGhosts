@@ -12,9 +12,9 @@ public class IceController : MonoBehaviourPun
 
     private WorldTime world;
 
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
 
-    void Start() => rigidbody = GetComponent<Rigidbody>();
+    void Start() => _rigidbody = GetComponent<Rigidbody>();
 
     void FixedUpdate()
     {
@@ -26,7 +26,7 @@ public class IceController : MonoBehaviourPun
         }
     }
 
-    private void MovePlayer() => rigidbody.AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
+    private void MovePlayer() => _rigidbody.AddRelativeForce(Vector3.forward * Vertical() * movementSpeed);
 
     private void TurnIce() => transform.Rotate(0, Horizontal() * turnspeed, 0);
 

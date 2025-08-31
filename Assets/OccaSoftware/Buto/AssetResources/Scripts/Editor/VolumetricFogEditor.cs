@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace OccaSoftware.Buto.Editor
 {
-	[VolumeComponentEditor(typeof(VolumetricFog))]
+	[CustomEditor(typeof(VolumetricFog))]
     public class VolumetricFogEditor : VolumeComponentEditor
     {
         SerializedDataParameter mode;

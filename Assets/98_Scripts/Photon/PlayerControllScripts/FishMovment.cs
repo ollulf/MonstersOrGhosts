@@ -9,7 +9,7 @@ public class FishMovment : MonoBehaviourPun
     [SerializeField] private float turnspeed, fishPrefTurnSpeed;
     [SerializeField] private Transform fishPref;
     private Vector2 movement;
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
 
     [ShowNonSerializedField] private int population;
 
@@ -29,7 +29,7 @@ public class FishMovment : MonoBehaviourPun
     private void Start()
     {
         timer = new Timer(0, false);
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         population = FirstDataGive.FishStartPopulation;
         PlayerBaseDataHandler.SetFish(this);
         PlayerBaseDataHandler.RaiseBirdFood(population);
@@ -134,7 +134,7 @@ public class FishMovment : MonoBehaviourPun
         }
     }
 
-    private void MovePlayer() => rigidbody.AddRelativeForce(transform.forward * -movement.y * movementSpeed);
+    private void MovePlayer() => _rigidbody.AddRelativeForce(transform.forward * -movement.y * movementSpeed);
 
     private void TurnFish() => transform.Rotate(0, 0, -movement.x * turnspeed);
 

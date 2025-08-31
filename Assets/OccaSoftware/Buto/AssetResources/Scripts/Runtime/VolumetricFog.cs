@@ -18,7 +18,7 @@ namespace OccaSoftware.Buto
     }
 
 
-    [Serializable, VolumeComponentMenuForRenderPipeline("Volumetrics/Buto Volumetric Fog", typeof(UniversalRenderPipeline))]
+    [Serializable, VolumeComponentMenu("Volumetrics/Buto Volumetric Fog")]
     public sealed class VolumetricFog : VolumeComponent, IPostProcessComponent
     {
         [Tooltip("Set to On to enable Volumetric Fog.")]

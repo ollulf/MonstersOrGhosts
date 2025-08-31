@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 1
   m_FogColor: {r: 0.22352941, g: 0.22745098, b: 0.32156864, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1934471700}
-  m_IndirectSpecularColor: {r: 0.043342352, g: 0.039862856, b: 0.5435578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -104,7 +100,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +113,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -134,6 +130,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -197,6 +194,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5667116}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &5667114 stripped
 Transform:
@@ -248,6 +252,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11308371}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -236, y: 12.3, z: 524}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -265,7 +270,6 @@ Transform:
   - {fileID: 64039771}
   - {fileID: 72348578}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11308373
 MonoBehaviour:
@@ -287,6 +291,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -350,6 +355,13 @@ PrefabInstance:
       value: Arctic Tern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 13419142}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &13419140 stripped
 Transform:
@@ -382,6 +394,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -445,6 +458,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2077068189}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1 &23079879
 GameObject:
@@ -469,6 +489,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23079879}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -485,7 +506,6 @@ Transform:
   - {fileID: 151230069}
   - {fileID: 1494850506}
   m_Father: {fileID: 1851466894}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &27873889 stripped
 Transform:
@@ -498,6 +518,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1489565704}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -561,6 +582,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 38269135}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &38269133 stripped
 Transform:
@@ -593,6 +621,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -656,6 +685,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 46441019}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &46441017 stripped
 Transform:
@@ -688,6 +724,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: cf7f4bfed17a34138928e97559471b76,
@@ -751,6 +788,9 @@ PrefabInstance:
       value: Reindeer_idle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7f4bfed17a34138928e97559471b76, type: 3}
 --- !u!4 &63868609 stripped
 Transform:
@@ -763,6 +803,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -826,6 +867,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 64039773}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &64039771 stripped
 Transform:
@@ -858,6 +906,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -921,6 +970,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 72348580}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &72348578 stripped
 Transform:
@@ -979,6 +1035,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2116170401}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -1042,6 +1099,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 89598026}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &89598024 stripped
 Transform:
@@ -1074,6 +1138,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1558369014}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -1137,6 +1202,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 95502246}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &95502244 stripped
 Transform:
@@ -1169,6 +1241,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1251183503}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -1232,6 +1305,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 97536294}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &97536292 stripped
 Transform:
@@ -1264,6 +1344,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 649983165541458532, guid: a37cef01492d8d74388d7869ea316ea0,
@@ -1332,12 +1413,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a37cef01492d8d74388d7869ea316ea0, type: 3}
 --- !u!1001 &117824412
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -1401,6 +1486,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 117824415}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &117824413 stripped
 Transform:
@@ -1433,6 +1525,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 11435318628794324, guid: fda73c4a89043e64292e321c4afb1c33,
@@ -1761,6 +1854,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5618496116043574431, guid: fda73c4a89043e64292e321c4afb1c33,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 137278253}
   m_SourcePrefab: {fileID: 100100000, guid: fda73c4a89043e64292e321c4afb1c33, type: 3}
 --- !u!1 &137278250 stripped
 GameObject:
@@ -1799,6 +1899,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -1900,6 +2001,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &151230069 stripped
 Transform:
@@ -1918,6 +2022,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1489565704}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -1981,6 +2086,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 163626597}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &163626595 stripped
 Transform:
@@ -2013,6 +2125,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2076,6 +2189,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 194298900}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &194298898 stripped
 Transform:
@@ -2108,6 +2228,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2171,6 +2292,13 @@ PrefabInstance:
       value: Arctic Tern (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 214655565}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &214655563 stripped
 Transform:
@@ -2203,6 +2331,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2266,6 +2395,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 242709007}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &242709005 stripped
 Transform:
@@ -2298,6 +2434,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 979163953}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2361,6 +2498,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 245097596}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &245097594 stripped
 Transform:
@@ -2393,6 +2537,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1558369014}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2456,6 +2601,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 253929420}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &253929418 stripped
 Transform:
@@ -2488,6 +2640,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 979163953}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2551,6 +2704,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 287286353}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &287286351 stripped
 Transform:
@@ -2583,6 +2743,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2646,6 +2807,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 308942402}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &308942400 stripped
 Transform:
@@ -2678,6 +2846,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2741,6 +2910,13 @@ PrefabInstance:
       value: Arctic Tern (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 314070182}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &314070180 stripped
 Transform:
@@ -2773,6 +2949,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2836,6 +3013,13 @@ PrefabInstance:
       value: Arctic Tern (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 324727709}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &324727707 stripped
 Transform:
@@ -2886,19 +3070,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326447155}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 290622189448861076}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &345839244
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 979163953}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -2962,6 +3147,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 345839247}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &345839245 stripped
 Transform:
@@ -2994,6 +3186,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1851466894}
     m_Modifications:
     - target: {fileID: 3573336335250521804, guid: 8e172d57cbd7548878aed4c54fb38718,
@@ -3063,6 +3256,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7849042637217407068, guid: 8e172d57cbd7548878aed4c54fb38718, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e172d57cbd7548878aed4c54fb38718, type: 3}
 --- !u!4 &385592655 stripped
 Transform:
@@ -3101,6 +3297,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -3164,6 +3361,13 @@ PrefabInstance:
       value: Arctic Tern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411552125}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &411552123 stripped
 Transform:
@@ -3196,6 +3400,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -3297,6 +3502,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &412798366 stripped
 Transform:
@@ -3328,6 +3536,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426930107}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 454.6, y: 16, z: -124.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -3345,7 +3554,6 @@ Transform:
   - {fileID: 1647770811}
   - {fileID: 1409518610}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &426930109
 MonoBehaviour:
@@ -3373,6 +3581,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1251183503}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -3436,6 +3645,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 436519469}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &436519467 stripped
 Transform:
@@ -3494,6 +3710,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -3557,6 +3774,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 461322922}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &461322920 stripped
 Transform:
@@ -3589,6 +3813,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3279700879018672429, guid: a2ae8948680845b4a858405eed643709,
@@ -3657,12 +3882,16 @@ PrefabInstance:
       value: TempretureHandler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2ae8948680845b4a858405eed643709, type: 3}
 --- !u!1001 &470358091
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1558369014}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -3726,6 +3955,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 470358094}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &470358092 stripped
 Transform:
@@ -3758,6 +3994,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -3821,6 +4058,13 @@ PrefabInstance:
       value: Arctic Tern (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 477313117}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &477313115 stripped
 Transform:
@@ -3853,6 +4097,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -3916,6 +4161,13 @@ PrefabInstance:
       value: Arctic Tern (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 504517121}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &504517119 stripped
 Transform:
@@ -3948,6 +4200,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1426348522}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -4011,6 +4264,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507257085}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &507257083 stripped
 Transform:
@@ -4043,6 +4303,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -4106,6 +4367,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 509744575}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &509744573 stripped
 Transform:
@@ -4138,6 +4406,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: cf7f4bfed17a34138928e97559471b76,
@@ -4201,6 +4470,9 @@ PrefabInstance:
       value: Reindeer_idle(2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7f4bfed17a34138928e97559471b76, type: 3}
 --- !u!4 &519416768 stripped
 Transform:
@@ -4213,6 +4485,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -4276,6 +4549,13 @@ PrefabInstance:
       value: Arctic Tern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 519776706}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &519776704 stripped
 Transform:
@@ -4327,6 +4607,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543335097}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 251, y: 16, z: 116.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4344,7 +4625,6 @@ Transform:
   - {fileID: 2040472220}
   - {fileID: 2077452956}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &543335099
 MonoBehaviour:
@@ -4366,6 +4646,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ca7ddc35a207eda4998394dabbd26c54,
@@ -4440,7 +4721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ca7ddc35a207eda4998394dabbd26c54,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6eb1e4cd5f1894242b2bac00c2103770, type: 2}
     - target: {fileID: 919132149155446097, guid: ca7ddc35a207eda4998394dabbd26c54,
@@ -4454,12 +4735,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca7ddc35a207eda4998394dabbd26c54, type: 3}
 --- !u!1001 &552394480
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -4561,6 +4846,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &552394481 stripped
 Transform:
@@ -4573,6 +4861,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1558369014}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -4636,6 +4925,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 561334937}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &561334935 stripped
 Transform:
@@ -4692,6 +4988,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611517118}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4709,13 +5006,13 @@ Transform:
   - {fileID: 1014446129}
   - {fileID: 1040741347}
   m_Father: {fileID: 1851466894}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &612157358
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1426348522}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -4779,6 +5076,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 612157361}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &612157359 stripped
 Transform:
@@ -4811,6 +5115,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6042106975463296695, guid: 406114ca3d735334da3a01d9ed0da937,
@@ -4874,6 +5179,9 @@ PrefabInstance:
       value: 'Terrain '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406114ca3d735334da3a01d9ed0da937, type: 3}
 --- !u!1 &620854462
 GameObject:
@@ -4898,13 +5206,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620854462}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &621537245 stripped
 Transform:
@@ -4917,6 +5225,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6697721799234689400, guid: c418daef35a722e4dbed700df1e5d6ee,
@@ -4990,12 +5299,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c418daef35a722e4dbed700df1e5d6ee, type: 3}
 --- !u!1001 &645865779
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7612931870060931444, guid: 7f38bd084e3b6a940972575348152734,
@@ -5064,12 +5377,16 @@ PrefabInstance:
       value: MaterialHandler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f38bd084e3b6a940972575348152734, type: 3}
 --- !u!1001 &648845520
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2116170401}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5133,6 +5450,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 648845523}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &648845521 stripped
 Transform:
@@ -5165,6 +5489,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5228,12 +5553,20 @@ PrefabInstance:
       value: Arctic Tern (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 386188702}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1001 &687154133
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5297,6 +5630,13 @@ PrefabInstance:
       value: Arctic Tern (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 687154136}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &687154134 stripped
 Transform:
@@ -5329,6 +5669,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5392,6 +5733,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2077452957}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1 &734630475
 GameObject:
@@ -5417,6 +5765,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734630475}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -492, y: 16, z: -45}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -5434,7 +5783,6 @@ Transform:
   - {fileID: 748624594}
   - {fileID: 308942400}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &734630477
 MonoBehaviour:
@@ -5456,6 +5804,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5519,6 +5868,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 748624596}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &748624594 stripped
 Transform:
@@ -5551,6 +5907,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5614,6 +5971,13 @@ PrefabInstance:
       value: Arctic Tern (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 760561527}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &760561525 stripped
 Transform:
@@ -5646,6 +6010,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5709,6 +6074,13 @@ PrefabInstance:
       value: Arctic Tern (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 776762991}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &776762989 stripped
 Transform:
@@ -5741,6 +6113,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 979163953}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5804,6 +6177,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 811800647}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &811800645 stripped
 Transform:
@@ -5836,6 +6216,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5899,6 +6280,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 819672491}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &819672489 stripped
 Transform:
@@ -5931,6 +6319,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -5994,6 +6383,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 837295227}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &837295225 stripped
 Transform:
@@ -6026,6 +6422,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: ac6461b26d9e94ba9b8067371ac71c74,
@@ -6089,6 +6486,9 @@ PrefabInstance:
       value: Reindeer_grazing (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6461b26d9e94ba9b8067371ac71c74, type: 3}
 --- !u!4 &865659243 stripped
 Transform:
@@ -6119,6 +6519,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868943402}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -6126,13 +6527,13 @@ Transform:
   m_Children:
   - {fileID: 602026516}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &892567545
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -6196,6 +6597,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 892567548}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &892567546 stripped
 Transform:
@@ -6228,6 +6636,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -6329,6 +6738,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &893312078 stripped
 Transform:
@@ -6341,6 +6753,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1489565704}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -6404,6 +6817,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 896118171}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &896118169 stripped
 Transform:
@@ -6461,6 +6881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -6490,19 +6911,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897964229}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.869995, y: -12.570001, z: -10.609985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &902384815
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -6604,6 +7026,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &902384816 stripped
 Transform:
@@ -6616,6 +7041,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -6679,6 +7105,13 @@ PrefabInstance:
       value: Arctic Tern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 903384737}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &903384735 stripped
 Transform:
@@ -6711,6 +7144,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: ac6461b26d9e94ba9b8067371ac71c74,
@@ -6774,6 +7208,9 @@ PrefabInstance:
       value: Reindeer_grazing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6461b26d9e94ba9b8067371ac71c74, type: 3}
 --- !u!4 &908849554 stripped
 Transform:
@@ -6804,6 +7241,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916728761}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -6812,13 +7250,13 @@ Transform:
   - {fileID: 1598933404}
   - {fileID: 1934471697}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &925412620
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2116170401}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -6882,6 +7320,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 925412623}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &925412621 stripped
 Transform:
@@ -6914,6 +7359,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -7015,6 +7461,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &946794026 stripped
 Transform:
@@ -7027,6 +7476,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -7090,6 +7540,13 @@ PrefabInstance:
       value: Arctic Tern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 962655593}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &962655591 stripped
 Transform:
@@ -7122,6 +7579,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -7185,6 +7643,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193310215}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1 &963523398 stripped
 GameObject:
@@ -7217,6 +7682,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1426348522}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -7280,6 +7746,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 966143764}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &966143762 stripped
 Transform:
@@ -7312,6 +7785,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1851466894}
     m_Modifications:
     - target: {fileID: 411620797181492777, guid: 6371f51d684fb2045ba236e90de59b32,
@@ -7510,6 +7984,9 @@ PrefabInstance:
       value: 0.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6371f51d684fb2045ba236e90de59b32, type: 3}
 --- !u!4 &974070476 stripped
 Transform:
@@ -7541,6 +8018,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979163952}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -396, y: 9.34, z: -259.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -7553,7 +8031,6 @@ Transform:
   - {fileID: 345839245}
   - {fileID: 245097594}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &979163954
 MonoBehaviour:
@@ -7575,6 +8052,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -7638,6 +8116,13 @@ PrefabInstance:
       value: Arctic Tern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963523400}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1007415997 stripped
 Transform:
@@ -7650,6 +8135,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: ac6461b26d9e94ba9b8067371ac71c74,
@@ -7713,6 +8199,9 @@ PrefabInstance:
       value: Reindeer_grazing (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6461b26d9e94ba9b8067371ac71c74, type: 3}
 --- !u!4 &1014446129 stripped
 Transform:
@@ -7725,6 +8214,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 979163953}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -7788,6 +8278,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1017345487}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1017345485 stripped
 Transform:
@@ -7820,6 +8317,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -7883,6 +8381,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040113495}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1040113493 stripped
 Transform:
@@ -7915,6 +8420,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: cf7f4bfed17a34138928e97559471b76,
@@ -7978,6 +8484,9 @@ PrefabInstance:
       value: Reindeer_idle (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7f4bfed17a34138928e97559471b76, type: 3}
 --- !u!4 &1040741347 stripped
 Transform:
@@ -7990,6 +8499,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1426348522}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8053,6 +8563,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057990942}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1057990940 stripped
 Transform:
@@ -8085,6 +8602,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8148,6 +8666,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1064877211}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1064877209 stripped
 Transform:
@@ -8180,6 +8705,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1426348522}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8243,6 +8769,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1087072779}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1087072777 stripped
 Transform:
@@ -8275,6 +8808,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8338,6 +8872,13 @@ PrefabInstance:
       value: Arctic Tern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1097479449}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1097479447 stripped
 Transform:
@@ -8402,6 +8943,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1251183503}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8465,6 +9007,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196783526}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1196783524 stripped
 Transform:
@@ -8515,6 +9064,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197844304}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8523,13 +9073,13 @@ Transform:
   - {fileID: 3615003106551465638}
   - {fileID: 1446871542}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209673198
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8593,6 +9143,13 @@ PrefabInstance:
       value: Arctic Tern (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1209673201}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1209673199 stripped
 Transform:
@@ -8625,6 +9182,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1426348522}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8688,6 +9246,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1210919614}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1210919612 stripped
 Transform:
@@ -8720,6 +9285,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3270144018855037154, guid: 4e6b8a17c26ac96458bda0b4b189beeb,
@@ -8838,6 +9404,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e6b8a17c26ac96458bda0b4b189beeb, type: 3}
 --- !u!1 &1251183502
 GameObject:
@@ -8863,6 +9432,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251183502}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -354.4, y: 9.34, z: 487.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8875,7 +9445,6 @@ Transform:
   - {fileID: 1557515548}
   - {fileID: 2106345700}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1251183504
 MonoBehaviour:
@@ -8897,6 +9466,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -8960,6 +9530,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1252298553}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1252298551 stripped
 Transform:
@@ -8992,6 +9569,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2116170401}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9055,6 +9633,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1253135109}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1253135107 stripped
 Transform:
@@ -9087,6 +9672,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2116170401}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9150,6 +9736,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1262292161}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1262292159 stripped
 Transform:
@@ -9182,6 +9775,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9245,6 +9839,13 @@ PrefabInstance:
       value: Arctic Tern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1307684928}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1307684926 stripped
 Transform:
@@ -9277,6 +9878,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: cf7f4bfed17a34138928e97559471b76,
@@ -9340,6 +9942,9 @@ PrefabInstance:
       value: Reindeer_idle(2) (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7f4bfed17a34138928e97559471b76, type: 3}
 --- !u!4 &1316095014 stripped
 Transform:
@@ -9352,6 +9957,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9415,6 +10021,13 @@ PrefabInstance:
       value: Arctic Tern (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335242973}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1335242971 stripped
 Transform:
@@ -9447,6 +10060,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4590347716874179110, guid: 79950b0f00f95b84aa9a5c2a6d32f840,
@@ -9510,12 +10124,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79950b0f00f95b84aa9a5c2a6d32f840, type: 3}
 --- !u!1001 &1351299076
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9579,6 +10197,13 @@ PrefabInstance:
       value: Arctic Tern (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1351299079}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1351299077 stripped
 Transform:
@@ -9611,6 +10236,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9674,6 +10300,13 @@ PrefabInstance:
       value: Arctic Tern (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1352216159}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1352216157 stripped
 Transform:
@@ -9706,6 +10339,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1558369014}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9769,6 +10403,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1362017936}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1362017934 stripped
 Transform:
@@ -9801,6 +10442,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9864,6 +10506,13 @@ PrefabInstance:
       value: Arctic Tern (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1366907256}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1366907254 stripped
 Transform:
@@ -9902,6 +10551,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -9965,6 +10615,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1394651875}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1394651873 stripped
 Transform:
@@ -9997,6 +10654,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -10060,6 +10718,13 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1399509397}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1399509395 stripped
 Transform:
@@ -10092,6 +10757,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -10155,6 +10821,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1409518612}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1409518610 stripped
 Transform:
@@ -10206,6 +10879,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426348521}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -432.9, y: 9.34, z: 314.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -10218,7 +10892,6 @@ Transform:
   - {fileID: 507257083}
   - {fileID: 966143762}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1426348523
 MonoBehaviour:
@@ -10240,6 +10913,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -10303,6 +10977,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1437433182}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1437433180 stripped
 Transform:
@@ -10335,6 +11016,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1197844305}
     m_Modifications:
     - target: {fileID: 231377753902540966, guid: 3b547700f0ae1d1459e51cc4ef2d8168,
@@ -11388,6 +12070,9 @@ PrefabInstance:
       value: 390.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b547700f0ae1d1459e51cc4ef2d8168, type: 3}
 --- !u!4 &1446871542 stripped
 Transform:
@@ -11445,6 +12130,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489565703}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 211.2, y: 9.34, z: -454.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -11457,7 +12143,6 @@ Transform:
   - {fileID: 896118169}
   - {fileID: 2009190825}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1489565705
 MonoBehaviour:
@@ -11479,6 +12164,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -11580,6 +12266,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &1494850506 stripped
 Transform:
@@ -11592,6 +12281,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -11655,12 +12345,20 @@ PrefabInstance:
       value: Arctic Tern (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751638615}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1001 &1542559460
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -11724,6 +12422,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1542559463}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1542559461 stripped
 Transform:
@@ -11756,6 +12461,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1251183503}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -11819,6 +12525,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1557515550}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1557515548 stripped
 Transform:
@@ -11870,6 +12583,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558369013}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -147.4, y: 9.34, z: -381.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -11882,7 +12596,6 @@ Transform:
   - {fileID: 470358092}
   - {fileID: 1988434667}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1558369015
 MonoBehaviour:
@@ -11923,6 +12636,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559581485}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -323, y: 17.46, z: 270}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -11940,7 +12654,6 @@ Transform:
   - {fileID: 5667114}
   - {fileID: 1904977401}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1559581487
 MonoBehaviour:
@@ -11962,6 +12675,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 158997134309231009, guid: 9e611895863b3b64ebabf6c49c83f235,
@@ -12065,6 +12779,10 @@ PrefabInstance:
       value: 10.101636
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7413380488142533042, guid: 9e611895863b3b64ebabf6c49c83f235, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e611895863b3b64ebabf6c49c83f235, type: 3}
 --- !u!1 &1598933401
 GameObject:
@@ -12096,14 +12814,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
+  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
+  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 1
 --- !u!108 &1598933403
 Light:
   m_ObjectHideFlags: 0
@@ -12112,9 +12833,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598933401}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 11
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.4
   m_Range: 10
@@ -12164,8 +12884,12 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!4 &1598933404
 Transform:
   m_ObjectHideFlags: 0
@@ -12173,19 +12897,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598933401}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 916728763}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1647770810
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 426930108}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12249,6 +12974,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1647770813}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1647770811 stripped
 Transform:
@@ -12281,6 +13013,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12344,12 +13077,20 @@ PrefabInstance:
       value: Arctic Tern (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 75434092}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1001 &1681807703
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3172042148974899337, guid: 3f56eb8462e567745938923c139145bd,
@@ -12433,6 +13174,9 @@ PrefabInstance:
       value: ScientificOverviewPosition
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f56eb8462e567745938923c139145bd, type: 3}
 --- !u!4 &1681807704 stripped
 Transform:
@@ -12451,6 +13195,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12514,6 +13259,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1682368755}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1682368753 stripped
 Transform:
@@ -12546,6 +13298,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1251183503}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12609,6 +13362,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749776743}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1749776741 stripped
 Transform:
@@ -12641,6 +13401,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12704,6 +13465,13 @@ PrefabInstance:
       value: Arctic Tern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2143280748}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1 &1751638613 stripped
 GameObject:
@@ -12766,13 +13534,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790025264}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 505.84708, y: 263.179, z: 44.026894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1806476196
 GameObject:
@@ -12797,19 +13565,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806476196}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.2674265, y: -11.172369, z: 35.92461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1840481037
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12873,6 +13642,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840481040}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1840481038 stripped
 Transform:
@@ -12905,6 +13681,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 979163953}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -12968,6 +13745,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1842017808}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1842017806 stripped
 Transform:
@@ -13018,6 +13802,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851466893}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -13031,13 +13816,13 @@ Transform:
   - {fileID: 385592655}
   - {fileID: 290622189448861074}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1865963709
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13101,6 +13886,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865963712}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1865963710 stripped
 Transform:
@@ -13151,19 +13943,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881813674}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1892233147
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13227,12 +14020,20 @@ PrefabInstance:
       value: Arctic Tern (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1453360616}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1001 &1904694358
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13296,12 +14097,20 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2040472221}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1001 &1904977400
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1559581486}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13365,6 +14174,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904977403}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1904977401 stripped
 Transform:
@@ -13397,6 +14213,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 543335098}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13460,12 +14277,20 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 443004579}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!1001 &1916931633
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13529,6 +14354,13 @@ PrefabInstance:
       value: Arctic Tern (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916931636}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1916931634 stripped
 Transform:
@@ -13561,6 +14393,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2116170401}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13624,6 +14457,13 @@ PrefabInstance:
       value: Arctic Tern (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1925709996}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1925709994 stripped
 Transform:
@@ -13715,13 +14555,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932560471}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1934471696
 GameObject:
@@ -13749,13 +14589,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934471696}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.5831069, y: 0.3999838, z: 0.5831064, w: -0.39998293}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 916728763}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 17.46, y: 10.2, z: 0}
 --- !u!114 &1934471698
 MonoBehaviour:
@@ -13769,14 +14609,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
+  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
+  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 1
 --- !u!114 &1934471699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13798,9 +14641,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934471696}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 11
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.4
   m_Range: 10
@@ -13850,13 +14692,18 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &1938312370
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -13920,6 +14767,13 @@ PrefabInstance:
       value: Arctic Tern (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1938312373}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1938312371 stripped
 Transform:
@@ -13970,6 +14824,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954778240}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -13988,13 +14843,13 @@ Transform:
   - {fileID: 1489565704}
   - {fileID: 2116170401}
   m_Father: {fileID: 1851466894}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1988434666
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1558369014}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14058,6 +14913,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1988434669}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &1988434667 stripped
 Transform:
@@ -14090,6 +14952,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1489565704}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14153,6 +15016,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2009190827}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2009190825 stripped
 Transform:
@@ -14185,6 +15055,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14248,6 +15119,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2011318924}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2011318922 stripped
 Transform:
@@ -14280,6 +15158,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14343,6 +15222,13 @@ PrefabInstance:
       value: Arctic Tern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2022289920}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2022289918 stripped
 Transform:
@@ -14401,6 +15287,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1489565704}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14464,6 +15351,13 @@ PrefabInstance:
       value: Arctic Tern (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2059044980}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2059044978 stripped
 Transform:
@@ -14496,6 +15390,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1489565704}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14559,6 +15454,13 @@ PrefabInstance:
       value: Arctic Tern (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2071081630}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2071081628 stripped
 Transform:
@@ -14643,6 +15545,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -14744,6 +15647,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &2079431087 stripped
 Transform:
@@ -14756,6 +15662,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: ac6461b26d9e94ba9b8067371ac71c74,
@@ -14819,6 +15726,9 @@ PrefabInstance:
       value: Reindeer_grazing (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6461b26d9e94ba9b8067371ac71c74, type: 3}
 --- !u!4 &2086497148 stripped
 Transform:
@@ -14831,6 +15741,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 734630476}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14894,6 +15805,13 @@ PrefabInstance:
       value: Arctic Tern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089526528}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2089526526 stripped
 Transform:
@@ -14926,6 +15844,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -14989,6 +15908,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2103561013}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2103561011 stripped
 Transform:
@@ -15021,6 +15947,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 11308372}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -15084,6 +16011,13 @@ PrefabInstance:
       value: Arctic Tern (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2103649495}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2103649493 stripped
 Transform:
@@ -15116,6 +16050,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1251183503}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -15179,6 +16114,13 @@ PrefabInstance:
       value: Arctic Tern (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2106345702}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2106345700 stripped
 Transform:
@@ -15211,6 +16153,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2110825288}
     m_Modifications:
     - target: {fileID: 6330276140654508001, guid: 3bba1dd3e112e406c9e341f27550e4fc,
@@ -15274,6 +16217,13 @@ PrefabInstance:
       value: Arctic Tern (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6670526149122583899, guid: 3bba1dd3e112e406c9e341f27550e4fc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2110355781}
   m_SourcePrefab: {fileID: 100100000, guid: 3bba1dd3e112e406c9e341f27550e4fc, type: 3}
 --- !u!4 &2110355779 stripped
 Transform:
@@ -15325,6 +16275,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110825287}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 160.1, y: 16, z: -272.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -15342,7 +16293,6 @@ Transform:
   - {fileID: 1840481038}
   - {fileID: 2103561011}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2110825289
 MonoBehaviour:
@@ -15383,6 +16333,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116170400}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 312.8, y: 9.34, z: -45.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -15395,7 +16346,6 @@ Transform:
   - {fileID: 1925709994}
   - {fileID: 1262292159}
   m_Father: {fileID: 1954778241}
-  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2116170402
 MonoBehaviour:
@@ -15417,6 +16367,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -15518,6 +16469,9 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!4 &2125708427 stripped
 Transform:
@@ -15556,6 +16510,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 23079880}
     m_Modifications:
     - target: {fileID: 7913559495945377, guid: f2fdb8339a48340478374113653a32e7, type: 3}
@@ -15657,12 +16612,16 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fdb8339a48340478374113653a32e7, type: 3}
 --- !u!1001 &237063178869140337
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 237063178869140339, guid: 5ca4d96a2b0a9a641a6c18413e9d9844,
@@ -15781,6 +16740,9 @@ PrefabInstance:
       value: 0.7979431
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ca4d96a2b0a9a641a6c18413e9d9844, type: 3}
 --- !u!114 &237063178869140338 stripped
 MonoBehaviour:
@@ -15799,6 +16761,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1851466894}
     m_Modifications:
     - target: {fileID: 73613088950739649, guid: 4127bcc0470cf4a8083b991dd70645a9,
@@ -15938,7 +16901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112240942726709333, guid: 4127bcc0470cf4a8083b991dd70645a9,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 873453a35eae0481c92ee22110b609a7, type: 2}
     - target: {fileID: 2217723612795654986, guid: 4127bcc0470cf4a8083b991dd70645a9,
@@ -16530,6 +17493,13 @@ PrefabInstance:
     - {fileID: 7821877635559678603, guid: 4127bcc0470cf4a8083b991dd70645a9, type: 3}
     - {fileID: 4265110985765864977, guid: 4127bcc0470cf4a8083b991dd70645a9, type: 3}
     - {fileID: 4897613185129619606, guid: 4127bcc0470cf4a8083b991dd70645a9, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9200984037617327569, guid: 4127bcc0470cf4a8083b991dd70645a9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 326447156}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4127bcc0470cf4a8083b991dd70645a9, type: 3}
 --- !u!4 &290622189448861074 stripped
 Transform:
@@ -16560,6 +17530,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 868943403}
     m_Modifications:
     - target: {fileID: 647420155618742019, guid: 08daaa564864244879d495a875a4674e,
@@ -16633,12 +17604,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08daaa564864244879d495a875a4674e, type: 3}
 --- !u!1001 &984498371091512078
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4925306305670994446, guid: 03278cb5db5ece046a63c4683bcaa797,
@@ -16702,12 +17677,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03278cb5db5ece046a63c4683bcaa797, type: 3}
 --- !u!1001 &1287824277005974176
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1287824277470121988, guid: 14381d8c03f9b7a43b0ac957ba000d7f,
@@ -16786,12 +17765,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14381d8c03f9b7a43b0ac957ba000d7f, type: 3}
 --- !u!1001 &2135716850440535996
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2135716848766993317, guid: 4f276c5cc18f5414d8dc9d7028ba51c4,
@@ -16900,6 +17883,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 00ab973a488ffcd4f844b5b7923acabf, type: 3}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2135716848766993317, guid: 4f276c5cc18f5414d8dc9d7028ba51c4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2135716850440535998}
   m_SourcePrefab: {fileID: 100100000, guid: 4f276c5cc18f5414d8dc9d7028ba51c4, type: 3}
 --- !u!1 &2135716850440535997 stripped
 GameObject:
@@ -16934,6 +17924,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 2649797107389794025, guid: deb57244abb0240afbf0398e7dd38b46,
@@ -16997,12 +17988,16 @@ PrefabInstance:
       value: CaribouFlock_walking
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb57244abb0240afbf0398e7dd38b46, type: 3}
 --- !u!1001 &2746502171330216016
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2746502169899952088, guid: 907266c2490af8847bbb6b53571cfd9e,
@@ -17656,6 +18651,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907266c2490af8847bbb6b53571cfd9e, type: 3}
 --- !u!1 &2746502171330216017 stripped
 GameObject:
@@ -17680,6 +18678,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 104386322627709426, guid: 4457ff00102a8f441bb5c206a792f955,
@@ -18448,12 +19447,16 @@ PrefabInstance:
       value: 1.96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4457ff00102a8f441bb5c206a792f955, type: 3}
 --- !u!1001 &3263287051189980054
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3263287051781903664, guid: de6d7bd53bd276f4dbbee6e853a29279,
@@ -18528,16 +19531,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0e4b4ebd33194479b9625271d17ad0ea, type: 2}
     - target: {fileID: 4978348278133985033, guid: de6d7bd53bd276f4dbbee6e853a29279,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6eb1e4cd5f1894242b2bac00c2103770, type: 2}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6d7bd53bd276f4dbbee6e853a29279, type: 3}
 --- !u!1001 &3263323593882178750
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3263323593475798836, guid: 68bc7be863f8a6948bbe1e900af681ed,
@@ -18611,6 +19618,9 @@ PrefabInstance:
       value: -116
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68bc7be863f8a6948bbe1e900af681ed, type: 3}
 --- !u!4 &3263323593882178751 stripped
 Transform:
@@ -18629,6 +19639,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 3344240567983567312, guid: 400cd4922432a40c6b1ecb9761d6565e,
@@ -18722,6 +19733,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400cd4922432a40c6b1ecb9761d6565e, type: 3}
 --- !u!4 &3322280305052760071 stripped
 Transform:
@@ -18734,6 +19748,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3378982533643249380, guid: 85d2e0fcf4dfacf49b0ac36fb0c13d47,
@@ -18807,12 +19822,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1378833705}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85d2e0fcf4dfacf49b0ac36fb0c13d47, type: 3}
 --- !u!1001 &3615003106551465637
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1197844305}
     m_Modifications:
     - target: {fileID: 103474824625214252, guid: e4d85190981399040a6077c63683d198,
@@ -19002,6 +20021,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2035788147438532385, guid: e4d85190981399040a6077c63683d198, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4d85190981399040a6077c63683d198, type: 3}
 --- !u!4 &3615003106551465638 stripped
 Transform:
@@ -19014,6 +20036,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1651633207817102994, guid: fd649e5562ae9c5478b90706afb3835f,
@@ -19086,6 +20109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BirdContent
       objectReference: {fileID: 0}
+    - target: {fileID: 3663403136983830435, guid: fd649e5562ae9c5478b90706afb3835f,
+        type: 3}
+      propertyPath: birdRoute
+      value: 
+      objectReference: {fileID: 3663403136983830434}
     - target: {fileID: 4357124847374663246, guid: fd649e5562ae9c5478b90706afb3835f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19127,12 +20155,28 @@ PrefabInstance:
       value: 530.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd649e5562ae9c5478b90706afb3835f, type: 3}
+--- !u!114 &3663403136983830434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6006766146379685395, guid: fd649e5562ae9c5478b90706afb3835f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3663403136983830433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dca6d0410f095240aa64222a3be8d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5095045331216009750
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 95525894212915042, guid: a6ea5d6351e6755439304a221f37190e,
@@ -19321,6 +20365,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6ea5d6351e6755439304a221f37190e, type: 3}
 --- !u!114 &5095045331216009751 stripped
 MonoBehaviour:
@@ -19363,6 +20410,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2506844026310177304, guid: 3f56eb8462e567745938923c139145bd,
@@ -19486,6 +20534,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f56eb8462e567745938923c139145bd, type: 3}
 --- !u!4 &5180180863435707632 stripped
 Transform:
@@ -19498,6 +20549,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 611517119}
     m_Modifications:
     - target: {fileID: 6500046984547369060, guid: cf7f4bfed17a34138928e97559471b76,
@@ -19561,12 +20613,16 @@ PrefabInstance:
       value: Reindeer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf7f4bfed17a34138928e97559471b76, type: 3}
 --- !u!1001 &6674218439718380705
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1513451742409956044, guid: b330160d17e1b1147bad922d9d7f9f28,
@@ -19705,6 +20761,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b330160d17e1b1147bad922d9d7f9f28, type: 3}
 --- !u!1 &6674218439718380706 stripped
 GameObject:
@@ -19723,6 +20782,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6697721799234689401, guid: c418daef35a722e4dbed700df1e5d6ee,
@@ -19791,12 +20851,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c418daef35a722e4dbed700df1e5d6ee, type: 3}
 --- !u!1001 &7421526826501944441
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7421526825727254864, guid: 683b02f6f4395d04fb1e23a185a20eff,
@@ -19865,12 +20929,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683b02f6f4395d04fb1e23a185a20eff, type: 3}
 --- !u!1001 &7814016932838431103
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3954646424231093195, guid: e65633fb8565db649a8e1553d69dc0fe,
@@ -19939,6 +21007,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65633fb8565db649a8e1553d69dc0fe, type: 3}
 --- !u!114 &7814016932838431104 stripped
 MonoBehaviour:
@@ -19957,6 +21028,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1851466894}
     m_Modifications:
     - target: {fileID: 8694383297209437019, guid: 8fdff4940006af443b7511fed0b2b319,
@@ -20020,4 +21092,48 @@ PrefabInstance:
       value: CellTowers
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fdff4940006af443b7511fed0b2b319, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 5180180863435707631}
+  - {fileID: 1681807703}
+  - {fileID: 117720355}
+  - {fileID: 1806476197}
+  - {fileID: 1584871335}
+  - {fileID: 1197844305}
+  - {fileID: 3263287051189980054}
+  - {fileID: 617647235}
+  - {fileID: 1343738436}
+  - {fileID: 544425653}
+  - {fileID: 984498371091512078}
+  - {fileID: 630242924}
+  - {fileID: 620854463}
+  - {fileID: 1851466894}
+  - {fileID: 1287824277005974176}
+  - {fileID: 868943403}
+  - {fileID: 916728763}
+  - {fileID: 1881813675}
+  - {fileID: 468887201}
+  - {fileID: 645865779}
+  - {fileID: 137278249}
+  - {fileID: 6697721800005200412}
+  - {fileID: 1230265987}
+  - {fileID: 7421526826501944441}
+  - {fileID: 237063178869140337}
+  - {fileID: 3263323593882178750}
+  - {fileID: 2135716850440535996}
+  - {fileID: 7814016932838431103}
+  - {fileID: 3663403136983830433}
+  - {fileID: 3182881444990241426}
+  - {fileID: 3378982533244453932}
+  - {fileID: 6674218439718380705}
+  - {fileID: 5095045331216009750}
+  - {fileID: 1932560474}
+  - {fileID: 2746502171330216016}
+  - {fileID: 1790025265}
+  - {fileID: 897964232}

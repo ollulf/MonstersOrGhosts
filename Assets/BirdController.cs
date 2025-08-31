@@ -9,105 +9,134 @@ public class BirdController : MonoBehaviourPun
     public int amounOfFoodNeededForNest = 10;
     public int birdPopulationIncreaseAmount;
 
-    private List<GameObject> birdRoute;
+    public List<GameObject> birdRoute;
 
-    [ShowNonSerializedField]private int birdFood= 0, birdPopulation;
+    [ShowNonSerializedField] private int birdFood = 0, birdPopulation;
     [SerializeField] public TextMeshProUGUI foodAmount, population;
-    [SerializeField] private float movementSpeed, turnSpeed, maxDistance;
+
+    [Header("Movement")]
+    [SerializeField] private float movementSpeed = 3f;
+    [SerializeField] private float maxDistance = 0.25f;
+
+    [Header("Soft Rotation")]
+    [Tooltip("Zeit (Sek.) bis die Rotation weich auf Ziel einschwingt.")]
+    [SerializeField, Range(0.01f, 1.0f)] private float rotationDampingTime = 0.25f;
+
+    [Tooltip("Voller Speed, wenn Winkel <= dieser Schwelle (Grad).")]
+    [SerializeField, Range(0f, 45f)] private float moveWhenAngleBelowDeg = 10f;
+
+    [Tooltip("Bei großem Winkel wird die Laufgeschwindigkeit runtergeblendet. Ab diesem Winkel steht der Vogel.")]
+    [SerializeField, Range(30f, 180f)] private float maxAngleForNoMove = 120f;
+
+    [Header("Optionales Banking (Neigung beim Kurvenflug)")]
+    [SerializeField] private bool enableBanking = true;
+    [SerializeField, Range(0f, 45f)] private float maxBankDeg = 15f;
+    [SerializeField, Range(0.01f, 0.6f)] private float bankDampingTime = 0.2f;
+    [Tooltip("Faktor wie stark Yaw-Drehgeschwindigkeit in Roll übersetzt wird.")]
+    [SerializeField] private float bankFromYawVelFactor = 0.06f;
+
+    [Header("Input")]
     [SerializeField] private LayerMask layerMask;
+
     private Timer timer;
 
-    public int BirdPopulation { get => birdPopulation;}
+    // SmoothDamp-Werte (Grad/Sek.)
+    private float _yawVel, _pitchVel, _rollVel;
+
+    public int BirdPopulation { get => birdPopulation; }
 
     void Start()
     {
         timer = new Timer(0, false);
+        birdRoute = new List<GameObject>(BirdRouteHandler.BirdRoute.GetWayPoints());
 
         birdPopulationIncreaseAmount = FirstDataGive.BirdPopulation;
         birdPopulation = FirstDataGive.BirdStartPopulation;
         PlayerBaseDataHandler.SetBird(this);
         CallInEndValues.SetBird(this);
         UpdateUI();
+
+        // Falls exakt auf erstem Waypoint stehen, nimm direkt den nächsten
+        if (birdRoute.Count > 0 && (transform.position - birdRoute[0].transform.position).sqrMagnitude < 0.0001f)
+            RemoveFromList();
     }
 
     void Update()
     {
-        if(birdRoute == null)
-        {
-            birdRoute = new List<GameObject>(BirdRouteHandler.BirdRoute.GetWayPoints());
-        }
+        if (PhotonNetwork.IsConnected && photonView && !photonView.IsMine) return;
         CheckforClick();
-        timer.Tick();
-        if(timer.CurrentTime >= 1)
-        {
-            birdPopulation -= FirstDataGive.BirdLoss;
-
-            if (birdPopulation <= 0) birdPopulation = 0; //temporary death state -> please add death state to game
-
-            UpdateUI();
-            timer.ResetTimer();
-        }        
     }
 
     private void FixedUpdate()
     {
-        if (birdRoute.Count != 0)
+        if (PhotonNetwork.IsConnected && photonView && !photonView.IsMine) return;
+
+        timer.Tick();
+        if (timer.CurrentTime >= 1f)
+        {
+            birdPopulation -= FirstDataGive.BirdLoss;
+            if (birdPopulation < 0) birdPopulation = 0; // TODO: Death State
+            UpdateUI();
+            timer.ResetTimer();
+        }
+
+        if (birdRoute.Count > 0)
         {
             Move();
             if (CheckDistance())
-            {
                 RemoveFromList();
-            }
         }
         else
         {
-            birdRoute = new List<GameObject>(BirdRouteHandler.BirdRoute.GetWayPoints());
-            transform.position = birdRoute[0].transform.position;
+            var points = BirdRouteHandler.BirdRoute.GetWayPoints();
+            if (points != null && points.Count > 0)
+                birdRoute = new List<GameObject>(points);
         }
     }
 
     private void UpdateUI()
     {
-        foodAmount.SetText("" + birdFood);
-        population.SetText("" + birdPopulation);
+        if (foodAmount) foodAmount.SetText(birdFood.ToString());
+        if (population) population.SetText(birdPopulation.ToString());
     }
 
     private void CheckforClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!Input.GetMouseButtonDown(0)) return;
+        if (!Camera.main) return;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerMask))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-           
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) 
+            // 6 = BirdFood
+            if (hit.collider.gameObject.layer == 6)
             {
-                Debug.Log(hit.collider.gameObject);
+                var pv = hit.collider.GetComponent<PhotonView>();
+                if (pv) pv.TransferOwnership(PhotonNetwork.LocalPlayer);
 
-                if (hit.collider.gameObject.layer == 6) //6 = BirdFood Layer
+                var bf = hit.collider.GetComponent<BirdFood>();
+                if (bf && TryAddToBirdFood(bf.FoodAmount))
                 {
-                    Debug.Log("Hit FishFood");
-
-                    hit.collider.gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-                    if (TryAddToBirdFood(hit.collider.gameObject.GetComponent<BirdFood>().FoodAmount))
-                        hit.collider.gameObject.GetComponentInChildren<BirdFood>().DestroySelf();
-
+                    var child = hit.collider.GetComponentInChildren<BirdFood>();
+                    if (child) child.DestroySelf();
                 }
-                else if (hit.collider.gameObject.layer == 7) //7 = BirdNest Layer
+            }
+            // 7 = BirdNest
+            else if (hit.collider.gameObject.layer == 7)
+            {
+                if (TryBuildNest())
                 {
-                    Debug.Log("Hit Nest");
-
-                    if (TryBuildNest())
-                    {
-                        hit.collider.gameObject.GetComponentInChildren<BreedingSpot>().DestroySelf();
-                    }
+                    var spot = hit.collider.GetComponentInChildren<BreedingSpot>();
+                    if (spot) spot.DestroySelf();
                 }
             }
         }
     }
-    
+
     public bool TryAddToBirdFood(int amount)
     {
         birdFood += amount;
+        UpdateUI();
         return true;
     }
 
@@ -116,30 +145,68 @@ public class BirdController : MonoBehaviourPun
         if (birdFood < amounOfFoodNeededForNest)
             return false;
 
-        else
-        {
-            birdFood -= amounOfFoodNeededForNest;
-            birdPopulation += birdPopulationIncreaseAmount;
-            return true;
-        }
+        birdFood -= amounOfFoodNeededForNest;
+        birdPopulation += birdPopulationIncreaseAmount;
+        UpdateUI();
+        return true;
     }
 
     private void Move()
     {
-        Vector3 direction = ((birdRoute[0].transform.position) - transform.position).normalized;
+        var targetGo = birdRoute[0];
+        if (!targetGo) { RemoveFromList(); return; }
 
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        Vector3 rotation = lookRotation.eulerAngles;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rotation), Time.fixedDeltaTime * turnSpeed);
+        Vector3 targetPos = targetGo.transform.position;
+        Vector3 to = targetPos - transform.position;
+        float distSqr = to.sqrMagnitude;
+        if (distSqr < 0.000001f) return;
 
-        if (transform.rotation == Quaternion.Euler(new Vector3(rotation.x, rotation.y + 1, rotation.z)) || transform.rotation == Quaternion.Euler(new Vector3(rotation.x, rotation.y - 1, rotation.z))) ;
+        Vector3 dir = to.normalized;
+
+        // Ziel-Yaw/Pitch aus Richtung bestimmen (robust ohne Gimbal-Probleme für typische Vogelbewegung)
+        float targetYaw = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+        float horizLen = Mathf.Max(0.0001f, new Vector2(dir.x, dir.z).magnitude);
+        float targetPitch = -Mathf.Atan2(dir.y, horizLen) * Mathf.Rad2Deg;
+
+        // Aktuelle Euler
+        Vector3 e = transform.rotation.eulerAngles;
+
+        // Weiche Winkel-Annäherung
+        float yaw = Mathf.SmoothDampAngle(e.y, targetYaw, ref _yawVel, rotationDampingTime);
+        float pitch = Mathf.SmoothDampAngle(e.x, targetPitch, ref _pitchVel, rotationDampingTime);
+
+        // Optional: Banking aus Yaw-Drehgeschwindigkeit ableiten
+        float roll = e.z;
+        if (enableBanking)
         {
-            transform.position += direction * movementSpeed * Time.deltaTime;
+            float targetRoll = Mathf.Clamp(-_yawVel * bankFromYawVelFactor, -maxBankDeg, maxBankDeg);
+            roll = Mathf.SmoothDampAngle(e.z, targetRoll, ref _rollVel, bankDampingTime);
         }
+        else
+        {
+            // Zur Sicherheit Roll zurück zu 0 fahren, wenn Banking aus ist
+            roll = Mathf.SmoothDampAngle(e.z, 0f, ref _rollVel, bankDampingTime);
+        }
+
+        transform.rotation = Quaternion.Euler(pitch, yaw, roll);
+
+        // Bewegungs-Blend abhängig vom Ausrichtungswinkel (0..1)
+        float angleToTarget = Quaternion.Angle(transform.rotation, Quaternion.Euler(targetPitch, targetYaw, roll));
+        float moveBlend = Mathf.Clamp01(Mathf.InverseLerp(maxAngleForNoMove, moveWhenAngleBelowDeg, angleToTarget));
+
+        float step = movementSpeed * moveBlend * Time.fixedDeltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
     }
 
-    public void RemoveFromList() => birdRoute.Remove(birdRoute[0]);
+    public void RemoveFromList()
+    {
+        if (birdRoute.Count > 0) birdRoute.RemoveAt(0);
+    }
 
-    private bool CheckDistance() => Vector3.Distance(transform.position, birdRoute[0].transform.position) <= maxDistance;
-
+    private bool CheckDistance()
+    {
+        var target = birdRoute[0];
+        if (!target) return true;
+        return Vector3.Distance(transform.position, target.transform.position) <= maxDistance;
+    }
 }

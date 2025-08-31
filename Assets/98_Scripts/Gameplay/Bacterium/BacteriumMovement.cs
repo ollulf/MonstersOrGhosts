@@ -7,7 +7,7 @@ public class BacteriumMovement : MonoBehaviourPun
     [SerializeField] private AnimationCurve addingForce;
     [SerializeField] private GameObject clone;
 
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
     private Timer timer;
 
     private bool timerRunning;
@@ -19,7 +19,7 @@ public class BacteriumMovement : MonoBehaviourPun
     void Start()
     {
         acetateCount = 0;
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         timer = new Timer(0, false);
         timerRunning = false;
         CallInEndValues.SetBacteria(this);
@@ -82,6 +82,6 @@ public class BacteriumMovement : MonoBehaviourPun
             velocityMoment = 0;
         }
 
-        rigidbody.linearVelocity = transform.forward * velocityMoment;
+        _rigidbody.linearVelocity = transform.forward * velocityMoment;
     }
 }

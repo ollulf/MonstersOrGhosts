@@ -31,11 +31,11 @@ public class DeerController : MonoBehaviourPun
     [SerializeField] private float turnspeed, fishPrefTurnSpeed;
     [SerializeField] private Transform deerPref;
     [SerializeField] private Animator anim;
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         population = FirstDataGive.DeerStartPopulation;
         co2Compressed = FirstDataGive.DeerCompress;
         populationGrowth = FirstDataGive.DeerPopulation;
@@ -72,7 +72,7 @@ public class DeerController : MonoBehaviourPun
         }
     }
 
-    private void MovePlayer() => rigidbody.AddRelativeForce(Vector3.forward * GetVertical() * movementSpeed);
+    private void MovePlayer() => _rigidbody.AddRelativeForce(Vector3.forward * GetVertical() * movementSpeed);
 
     private void TurnDeer() => transform.Rotate(0, GetHorizontal() * turnspeed, 0);
 

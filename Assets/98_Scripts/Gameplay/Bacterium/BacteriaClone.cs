@@ -9,18 +9,18 @@ public class BacteriaClone : MonoBehaviour
 
     private BaseStateMachine stateMachine;
 
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
 
     private Timer timer;
 
     public GameObject Target => target;
-    public Rigidbody _Rigidbody => rigidbody;
+    public Rigidbody _Rigidbody => _rigidbody;
     public float MovementSpeed => movementSpeed;
 
     void Start()
     {
         timer = new Timer(lifeTime, true);
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         stateMachine = new BacteriaStateMachine(this);
     }
 

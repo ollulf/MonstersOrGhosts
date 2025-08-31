@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279785072751179132}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7.015003, y: 0.1057026, z: 22.924068}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5356000030442671290}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9069454604706591675
 MeshFilter:
@@ -58,6 +58,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -107,6 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5035563437318871096}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -114,7 +118,6 @@ Transform:
   m_Children:
   - {fileID: 799755128579289856}
   m_Father: {fileID: 5356000030442671290}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 3.45, y: 0, z: 0}
 --- !u!114 &5614278801011913458
 MonoBehaviour:
@@ -162,6 +165,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6686914158683961998}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -172,7 +176,6 @@ Transform:
   - {fileID: 1004101409533462820}
   - {fileID: 116374949008612248}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8783381885617709902
 MonoBehaviour:
@@ -187,9 +190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 13
-  maxDistance: 4
+  maxDistance: 6
   routeOffSet: 5
-  turnspeed: 3.2
+  turnSpeedDegPerSec: 30
+  rotationDampingTime: 0.25
+  moveWhenAngleBelowDeg: 10
+  maxAngleForNoMove: 120
   selectCircle: {fileID: 1279785072751179132}
 --- !u!114 &340832659285343843
 MonoBehaviour:
@@ -209,7 +215,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -918596508770634298}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -221,8 +228,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6686914158683961998}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 3.6
   m_Height: 18.29
   m_Direction: 2
@@ -248,6 +264,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 5356000030442671290}
     m_Modifications:
     - target: {fileID: 2000168021473005058, guid: fe4e1899510286546bb2e6fe56936dd8,
@@ -311,6 +328,9 @@ PrefabInstance:
       value: ShipParticleTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4e1899510286546bb2e6fe56936dd8, type: 3}
 --- !u!4 &116374949008612248 stripped
 Transform:
@@ -323,6 +343,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3221505023995215674}
     m_Modifications:
     - target: {fileID: 7289544735686755985, guid: 6d31c86c5d6d9844baa651947de3af24,
@@ -386,6 +407,9 @@ PrefabInstance:
       value: Arrow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d31c86c5d6d9844baa651947de3af24, type: 3}
 --- !u!4 &799755128579289856 stripped
 Transform:
@@ -398,6 +422,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 5356000030442671290}
     m_Modifications:
     - target: {fileID: 3686505172118966463, guid: 8ec32ecf6ccecf641913e8147a9c4fc7,
@@ -481,6 +506,9 @@ PrefabInstance:
       value: container ship without Container
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ec32ecf6ccecf641913e8147a9c4fc7, type: 3}
 --- !u!4 &775387527788642684 stripped
 Transform:

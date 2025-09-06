@@ -4,6 +4,8 @@ using Photon.Realtime;
 
 public class TestConnection : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private SinglePlayerRoom _room;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +22,7 @@ public class TestConnection : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to Server");
         Debug.Log(PhotonNetwork.LocalPlayer.NickName);
-        if (!PhotonNetwork.InLobby)
-        {
-            PhotonNetwork.JoinLobby();
-        }
+        _room.Init();
     }
 
     public override void OnDisconnected(DisconnectCause cause) => Debug.LogWarning($"Disconnected from server. Reason: {cause}");

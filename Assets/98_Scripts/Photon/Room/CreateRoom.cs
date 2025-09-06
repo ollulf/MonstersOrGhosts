@@ -35,7 +35,6 @@ public class CreateRoom :MonoBehaviourPunCallbacks
         options.MaxPlayers = maxPlayerNumber;
 
         PhotonNetwork.JoinOrCreateRoom(roomName.text, options, TypedLobby.Default);
-
     }
 
     public override void OnCreatedRoom()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using NaughtyAttributes;
@@ -11,6 +9,8 @@ public class TutorialCameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.LogWarning(PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"]);
+
         if (PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"] == null) return;
 
         localChar = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];

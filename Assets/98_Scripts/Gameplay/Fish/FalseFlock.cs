@@ -6,7 +6,7 @@ public class FalseFlock : MonoBehaviour
 
     [SerializeField] private float movementSpeed, maxDistance, offSetToTarget;
 
-    private GameObject target;
+    [SerializeField] private GameObject target;
     private Rigidbody _rigidbody;
 
     public float MovementSpeed => movementSpeed;
@@ -14,6 +14,13 @@ public class FalseFlock : MonoBehaviour
     public GameObject Target => target;
     public float OffSetToTarget => offSetToTarget;
     public Rigidbody _Rigidbody => _rigidbody;
+
+    private void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+        fishControll = new FishStateMachine(this);
+
+    }
 
     void Update()
     {

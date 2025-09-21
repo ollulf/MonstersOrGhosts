@@ -13,7 +13,7 @@ public class TerrainSwitcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        localChar = (Charakter)PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"];
+        localChar = (Charakter)PhotonNetwork.LocalPlayer?.CustomProperties["PlayerCharakter"];
 
         switch (localChar)
         {

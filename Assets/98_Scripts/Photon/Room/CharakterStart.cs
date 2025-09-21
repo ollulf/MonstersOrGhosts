@@ -17,7 +17,7 @@ public class CharakterStart : MonoBehaviourPunCallbacks, IPointerClickHandler, I
     {
         _image.color = _clicked;
         _myCharakter["PlayerCharakter"] = _charakter;
-        PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel(2);
 
     }
 

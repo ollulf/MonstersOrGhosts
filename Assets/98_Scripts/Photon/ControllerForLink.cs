@@ -20,11 +20,11 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)
         {
             timer.Tick();
-            if (timer.CurrentTime <= 0 && !isLoading || Input.anyKeyDown)
+            if (timer.CurrentTime <= 0 && !isLoading || Input.GetKeyDown(KeyCode.Return))
             {
                 isLoading = true;
                 PhotonNetwork.AutomaticallySyncScene = true;
-                PhotonNetwork.LoadLevel(2);
+                PhotonNetwork.LoadLevel(3);
             }
         }
     }

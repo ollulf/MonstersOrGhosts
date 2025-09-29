@@ -7,7 +7,7 @@ public class TutorialCameraManager : MonoBehaviour
     [ShowNonSerializedField] private Charakter localChar;
     [SerializeField] private GameObject bacteriaScreen, birdScreen, cpScreen, deerScreen, fishScreen, machineScreen, iceScreen;
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         Debug.LogWarning(PhotonNetwork.LocalPlayer.CustomProperties["PlayerCharakter"]);
 

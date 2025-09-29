@@ -1,4 +1,8 @@
 using NaughtyAttributes;
+using Photon.Pun;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
 {
@@ -7,6 +11,8 @@ public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
 
     [ShowNonSerializedField] private FishMovment fishPopulation;
     [ShowNonSerializedField] private BirdController birdPopulation;
+
+    private bool load = false;
 
     public static FishMovment FishPopulation { get => Instance.fishPopulation;}
     public static BirdController BirdPopulation { get => Instance.birdPopulation;}
@@ -30,4 +36,18 @@ public class PlayerBaseDataHandler : Singleton<PlayerBaseDataHandler>
     public static void ReduceBirdFood(int newFood) => Instance.birdFood -= newFood;
 
     public static int GetBirdFood() => Instance.birdFood;
+
+    public void BackToMenu()
+    {
+        PhotonNetwork.LoadLevel(1);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !load)
+        {
+            load = true;
+            BackToMenu();
+        }
+    }
 } 

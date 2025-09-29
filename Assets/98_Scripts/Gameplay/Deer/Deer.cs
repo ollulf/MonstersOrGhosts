@@ -20,7 +20,12 @@ public class Deer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (target != null)
+        if (agent == null)
+        {
+            agent = GetComponent<NavMeshAgent>();
+        }
+
+        if (target != null && agent != null)
         {
             deerControll.ExecuteState();
         }

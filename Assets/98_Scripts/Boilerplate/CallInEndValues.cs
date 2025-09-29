@@ -144,7 +144,7 @@ public class CallInEndValues : Singleton<CallInEndValues>
                 if (timer.CurrentTime <= 0 && !loadLevel)
                 {
                     loadLevel = true;
-                    PhotonNetwork.LoadLevel(2);
+                    PhotonNetwork.LoadLevel(1);
                 }
             }
         }

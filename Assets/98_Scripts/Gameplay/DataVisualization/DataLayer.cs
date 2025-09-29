@@ -17,9 +17,11 @@ public class DataLayer : MonoBehaviour
     {
         PlayTransition(isActive ? 0f : 1f);
         isActive = !isActive;
+
     }
     private void PlayTransition(float targetOpacity)
     {
+        Debug.Log("TOGGLE");
         StopAllCoroutines();
         StartCoroutine(TransitionRoutine(targetOpacity));
     }

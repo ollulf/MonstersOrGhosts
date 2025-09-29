@@ -15,12 +15,12 @@ public class ControllerForLink : MonoBehaviourPunCallbacks
         timer = new Timer(timerTime, true);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)
         {
             timer.Tick();
-            if (timer.CurrentTime <= 0 && !isLoading || Input.GetKeyDown(KeyCode.Return))
+            if ((timer.CurrentTime <= 0  || Input.GetKeyDown(KeyCode.Return)) && !isLoading)
             {
                 isLoading = true;
                 PhotonNetwork.AutomaticallySyncScene = true;

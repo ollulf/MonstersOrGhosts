@@ -177,7 +177,7 @@ PrefabInstance:
         yet your kind faces challenges: overfishing wiped out generations, and noise
         from boats large and small now interrupts your explorations.  Sunlight shifts
         underwater colors\u2014reds to orange, yellows to green, purples to black\u2014shaping
-        your visual perception as you dive."
+        your visual perception as you dive.  \n\nPRESS ARROW KEY TO CONTINUE    >>"
       objectReference: {fileID: 0}
     - target: {fileID: 1132890709717014457, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -652,12 +652,12 @@ PrefabInstance:
     - target: {fileID: 2951548926116398688, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -200
+      value: -195.5
       objectReference: {fileID: 0}
     - target: {fileID: 2951548926116398688, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 3058378078339295991, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -897,12 +897,12 @@ PrefabInstance:
     - target: {fileID: 6811410600701275944, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -195.9
+      value: -195.5
       objectReference: {fileID: 0}
     - target: {fileID: 6811410600701275944, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -70
+      value: -63.4
       objectReference: {fileID: 0}
     - target: {fileID: 7549786987067589965, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -997,7 +997,7 @@ PrefabInstance:
     - target: {fileID: 9081344083579025495, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 9187918338051146549, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -1027,6 +1027,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1472054997}
+    - targetCorrespondingSourceObject: {fileID: 1746624562788080478, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1184131536}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2746502171960012908, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -2048,7 +2052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 100}
+  m_AnchoredPosition: {x: -127.8, y: 120}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &130258513
@@ -2075,7 +2079,8 @@ MonoBehaviour:
     more acetate you ingest, the more methane you will be producing. \n\nUse the
     mouse to look around and o to accelerate. Scroll forward to enter the first person
     view, backward to explore the Arctic terrain and pan across it. Open the scientific
-    overlay to see some spatialized data.  \n"
+    overlay to see some spatialized data.  \n\nPRESS ENTER TO START\nPRESS ESC TO
+    EXIT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -8264,7 +8269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 100}
+  m_AnchoredPosition: {x: -127.8, y: 120}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &298972474
@@ -8292,7 +8297,7 @@ MonoBehaviour:
     voice, yet one that keeps returning and altering its state. \n\nUse the arrow
     keys to move around. Scroll forward to enter the first person view, backward
     to explore the Arctic terrain and pan across it. Open the scientific overlay
-    to see some spatialized data.  \n"
+    to see some spatialized data.  \n\nPRESS ENTER TO START\nPRESS ESC TO EXIT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -12302,6 +12307,12 @@ MonoBehaviour:
   rotationSpeedX: 0
   rotationSpeedY: 50
   rotationSpeedZ: 0
+--- !u!224 &691307231 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7400723886836008124, guid: 5190f2017991840329abf93bbbdf7f60,
+    type: 3}
+  m_PrefabInstance: {fileID: 803129371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &714150127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17504,16 +17515,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: 'Here, you will come into contact with ice, through ice, as an ice island.
-        As glaciers rise and flow, the world appears alive, while Arctic sea ice
-        is predicted to disappear entirely in summer by the end of the century. A
-        lot earlier, the ocean will become traversable, populated by machines and
-        powerful icebreakers that cut right through you. Sea ice grows, floats, melts,
-        and reforms among glaciers. As the years pass and carbon levels rise, your
-        lens will start to blur as the ghostly ice retreats. Darker waters absorb
-        more heat, triggering Arctic amplification. The once bright, reflective ocean
-        blackens, and you become a ghost watching over these landscapes.
+        Arctic sea ice is predicted to disappear entirely in summer by the end of
+        the century. A lot earlier, the ocean will become traversable, populated
+        by machines and powerful icebreakers that cut right through you. Sea ice
+        grows, floats, melts, and reforms among glaciers. As the years pass and carbon
+        levels rise, your lens will start to blur as the ghostly ice retreats. Darker
+        waters absorb more heat, triggering Arctic amplification. The once bright,
+        reflective ocean blackens, and you become a ghost watching over these landscapes.
 
-'
+
+        PRESS
+        ARROW KEY TO CONTINUE    >>'
       objectReference: {fileID: 0}
     - target: {fileID: 840228534963837019, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
@@ -18198,7 +18210,7 @@ PrefabInstance:
     - target: {fileID: 2847401508713175746, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2900525661287384772, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
@@ -18340,6 +18352,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -105.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5124776651638653910, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 5161103903848578244, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_IsActive
@@ -18438,12 +18455,12 @@ PrefabInstance:
     - target: {fileID: 6693635383939688645, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 826.1
+      value: 830.1
       objectReference: {fileID: 0}
     - target: {fileID: 6693635383939688645, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 59
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 7041605130245089482, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
@@ -18593,6 +18610,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 298972473}
+    - targetCorrespondingSourceObject: {fileID: 7400723886836008124, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1487436908}
+    - targetCorrespondingSourceObject: {fileID: 7400723886836008124, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1521888656}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2746502171960012908, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
@@ -20979,7 +21004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 100}
+  m_AnchoredPosition: {x: -127.8, y: 120}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1041872781
@@ -21008,7 +21033,7 @@ MonoBehaviour:
     which will naturally produce more money and pollute the environment. Use the
     mouse to look around. Scroll forward to enter the first person view, backward
     to explore the Arctic terrain and pan across it. Open the scientific overlay
-    to see some spatialized data.  \n"
+    to see some spatialized data.  \n\nPRESS ENTER TO START\nPRESS ESC TO EXIT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -26181,7 +26206,7 @@ PrefabInstance:
     - target: {fileID: 26410577086009862, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.2
+      value: -31.8
       objectReference: {fileID: 0}
     - target: {fileID: 114659354091362600, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -26327,7 +26352,8 @@ PrefabInstance:
         human activity, such as ships and planes, and are familiar with the disruption
         it can cause. You nest in colonies\u2014boreal forests or islands\u2014always
         near water, sand, and rocks.                          Your visual perception
-        is framed by the magnetic field and ultraviolet radiation.\r\n\r\n\n"
+        is framed by the magnetic field and ultraviolet radiation.\r\n\r\nRESS ARROW
+        KEY TO CONTINUE    >>"
       objectReference: {fileID: 0}
     - target: {fileID: 1464249175546109733, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -26342,7 +26368,7 @@ PrefabInstance:
     - target: {fileID: 1684981221019759815, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.2
+      value: -31.8
       objectReference: {fileID: 0}
     - target: {fileID: 1738200234835781540, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -26382,7 +26408,7 @@ PrefabInstance:
     - target: {fileID: 2415969453327598370, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2491131564862059289, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -27432,6 +27458,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1955971770}
+    - targetCorrespondingSourceObject: {fileID: 6384469815301630141, guid: 2bf440300d798445eb4c82540a042f36,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1357602689}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6384469813885746037, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -28044,6 +28074,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1222131163}
     m_Modifications:
+    - target: {fileID: 588057644475771819, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041622819190419953, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271892373276772223, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -202.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271892373276772223, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1463322842385234871, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -28302,7 +28352,7 @@ PrefabInstance:
     - target: {fileID: 3298912745735622841, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13
+      value: -61.6
       objectReference: {fileID: 0}
     - target: {fileID: 3328796821799468994, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
@@ -28332,19 +28382,33 @@ PrefabInstance:
     - target: {fileID: 3760478519964379759, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009880386899202099, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -24.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009880386899202099, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 48.2
       objectReference: {fileID: 0}
     - target: {fileID: 4740857865502557848, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_text
-      value: Networks of buildings and infrastructures now extend across Arctic land
-        and sea. Northern routes enable traffic between Russia and Asia, while unmanned
-        ships are tested under remote radio guidance. Each drum and pipe, every connection
-        and structure, is a critical component of a planetary-scale robot that supports
-        contemporary life, mediating between humans, the environment, and its forces.
-        Sonar scans and bathymetric maps guide icebreakers, cargo ships, and oil
-        tankers in exploiting the seafloor. Fossil carbon that took millions of years
-        to form is now burned in just hundreds.
+      value: 'Networks of buildings and infrastructures now extend across Arctic
+        land and sea. Northern routes enable traffic between Russia and Asia, while
+        unmanned ships are tested under remote radio guidance. Each drum and pipe,
+        every connection and structure, is a critical component of a planetary-scale
+        robot that supports contemporary life, mediating between humans, the environment,
+        and its forces. Sonar scans and bathymetric maps guide icebreakers, cargo
+        ships, and oil tankers in exploiting the seafloor. Fossil carbon that took
+        millions of years to form is now burned in just hundreds.
+
+
+        PRESS
+        ARROW KEY TO CONTINUE    >>'
       objectReference: {fileID: 0}
     - target: {fileID: 4740857865502557848, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
@@ -28474,6 +28538,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1041872780}
+    - targetCorrespondingSourceObject: {fileID: 1306016338786249140, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1298040075}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2746502171960012908, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
@@ -28715,6 +28783,143 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatTimeMin: 1
   floatTimeMax: 5
+--- !u!1 &1184131535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184131536}
+  - component: {fileID: 1184131538}
+  - component: {fileID: 1184131537}
+  m_Layer: 5
+  m_Name: movement controls (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1184131536
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184131535}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7681824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -127.399994, y: -241.4}
+  m_SizeDelta: {x: -270.8, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1184131537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184131535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: movement controls
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1184131538
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184131535}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1195781410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29477,6 +29682,143 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatTimeMin: 1
   floatTimeMax: 5
+--- !u!1 &1270557112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270557113}
+  - component: {fileID: 1270557115}
+  - component: {fileID: 1270557114}
+  m_Layer: 5
+  m_Name: movement controls (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1270557113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270557112}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1496496413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -128.14998, y: -240.83}
+  m_SizeDelta: {x: -269.29996, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1270557114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270557112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: movement controls
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1270557115
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270557112}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1295152980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29566,6 +29908,143 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1295152980}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1298040074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1298040075}
+  - component: {fileID: 1298040077}
+  - component: {fileID: 1298040076}
+  m_Layer: 5
+  m_Name: movement controls (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1298040075
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298040074}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1173330749}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -133.75264, y: -242.04997}
+  m_SizeDelta: {x: -270, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1298040076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298040074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: interaction controls
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1298040077
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298040074}
+  m_CullTransparentMesh: 1
 --- !u!1 &1298770235
 GameObject:
   m_ObjectHideFlags: 0
@@ -30075,6 +30554,143 @@ MonoBehaviour:
   rotationSpeedX: 0
   rotationSpeedY: 70
   rotationSpeedZ: 0
+--- !u!1 &1357602688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357602689}
+  - component: {fileID: 1357602691}
+  - component: {fileID: 1357602690}
+  m_Layer: 5
+  m_Name: movement controls (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1357602689
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357602688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1099224498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -127.8, y: -240.99997}
+  m_SizeDelta: {x: -270, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1357602690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357602688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: movement controls
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1357602691
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357602688}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1363678904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30971,7 +31587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 100}
+  m_AnchoredPosition: {x: -127.8, y: 120}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1472054998
@@ -30999,7 +31615,7 @@ MonoBehaviour:
     companions might get caught. \n\nUse the arrow keys to move around and o to go
     up and down. Scroll forward to enter the first person view, backward to explore
     the Arctic terrain and pan across it. Open the scientific overlay to see some
-    spatialized data.  \n"
+    spatialized data.  \n\nPRESS ENTER TO START\nPRESS ESC TO EXIT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -31182,6 +31798,143 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatTimeMin: 1
   floatTimeMax: 5
+--- !u!1 &1487436907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1487436908}
+  - component: {fileID: 1487436910}
+  - component: {fileID: 1487436909}
+  m_Layer: 5
+  m_Name: movement controls (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1487436908
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487436907}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4285717, y: 1.4285717, z: 1.4285717}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691307231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 595.9285, y: -31.357178}
+  m_SizeDelta: {x: 60.700043, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1487436909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487436907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: movement controls
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1487436910
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487436907}
+  m_CullTransparentMesh: 1
 --- !u!1 &1494049609
 GameObject:
   m_ObjectHideFlags: 0
@@ -31319,7 +32072,8 @@ PrefabInstance:
         growth, enriching minerals, and compressing carbon into the ground. You pause
         to graze on lichen and work with the land, helping keep carbon stably stored.
         It may eventually be metabolized by plants and critters.                              
-        Your visual perspective is defined by ultraviolet vision."
+        Your visual perspective is defined by ultraviolet vision.\n\nPRESS ARROW
+        KEY TO CONTINUE    >>"
       objectReference: {fileID: 0}
     - target: {fileID: 1464249175546109733, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -31399,7 +32153,7 @@ PrefabInstance:
     - target: {fileID: 2415969453327598370, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2729316915754137732, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -31424,12 +32178,12 @@ PrefabInstance:
     - target: {fileID: 3204350974065254005, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -200
+      value: -196.27
       objectReference: {fileID: 0}
     - target: {fileID: 3204350974065254005, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 3360353506077811599, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -32184,6 +32938,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1785955067}
+    - targetCorrespondingSourceObject: {fileID: 6384469815301630141, guid: 001d30b8de3b64558ad3a03a47f406fd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270557113}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6384469813885746037, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -32514,6 +33272,143 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatTimeMin: 1
   floatTimeMax: 5
+--- !u!1 &1521888655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521888656}
+  - component: {fileID: 1521888658}
+  - component: {fileID: 1521888657}
+  m_Layer: 5
+  m_Name: ESC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1521888656
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4285717, y: 1.4285717, z: 1.4285717}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691307231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 595.9287, y: 132.4}
+  m_SizeDelta: {x: 60.700317, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1521888657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: PRESS ESC TO EXIT
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1521888658
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888655}
+  m_CullTransparentMesh: 1
 --- !u!1 &1530739224
 GameObject:
   m_ObjectHideFlags: 0
@@ -48661,6 +49556,143 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1742225670}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1772414530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1772414531}
+  - component: {fileID: 1772414533}
+  - component: {fileID: 1772414532}
+  m_Layer: 5
+  m_Name: movement controls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1772414531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772414530}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014030072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -127.8, y: -241}
+  m_SizeDelta: {x: -270, y: 8}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1772414532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772414530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: movement controls
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
+  m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -254.22122, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1772414533
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772414530}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1773525311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48866,7 +49898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1785955067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48883,7 +49915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 100}
+  m_AnchoredPosition: {x: -127.8, y: 120}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1785955068
@@ -48910,7 +49942,8 @@ MonoBehaviour:
     sustain this collective migratory behaviour, so make sure you secure enough lichen.
     \n\nUse the arrow keys to move around and the mouse to look around. Scroll forward
     to enter the first person view, backward to explore the Arctic terrain and pan
-    across it. Open the scientific overlay to see some spatialized data.  \n"
+    across it. Open the scientific overlay to see some spatialized data.  \n\nPRESS
+    ENTER TO START\nPRESS ESC TO EXIT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -55828,7 +56861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 100}
+  m_AnchoredPosition: {x: -127.8, y: 120}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1955971771
@@ -55855,7 +56888,8 @@ MonoBehaviour:
     to increase your population. Your colony will thrive with enough fish and breeding
     grounds. \n\nUse the mouse to look around, click to eat, nest and breed. Scroll
     forward to enter the first person view, backward to explore the Arctic terrain
-    and pan across it. Open the scientific overlay to see some spatialized data.  "
+    and pan across it. Open the scientific overlay to see some spatialized data. 
+    \n\nPRESS ENTER TO START\nPRESS ESC TO EXIT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed94afbfb45f890498d7f8252e97801c, type: 2}
   m_sharedMaterial: {fileID: -2982382774787164795, guid: ed94afbfb45f890498d7f8252e97801c,
@@ -56254,7 +57288,7 @@ PrefabInstance:
     - target: {fileID: 1577632684985552761, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -70.1
+      value: -62.3
       objectReference: {fileID: 0}
     - target: {fileID: 1790604587205815028, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -57154,7 +58188,7 @@ PrefabInstance:
     - target: {fileID: 5325156772397787811, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5560068564532918055, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -57255,7 +58289,7 @@ PrefabInstance:
         is released. Will it stay stored in the ground, or be metabolized into methane,
         a powerful greenhouse gas? In the dark, small traces of light guide your
         movement. Feeding on organic matter, your cells divide and your community
-        expands."
+        expands.          \n\nPRESS ARROW KEY TO CONTINUE    >>"
       objectReference: {fileID: 0}
     - target: {fileID: 7636877759499653234, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -57395,6 +58429,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 130258512}
+    - targetCorrespondingSourceObject: {fileID: 3051351683976949968, guid: a4247b2ec2c4a415cae883071a335adf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772414531}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2746502171960012908, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -65668,7 +66706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2982262970621471656
 MonoBehaviour:
   m_ObjectHideFlags: 0

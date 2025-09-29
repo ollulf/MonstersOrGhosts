@@ -175,9 +175,9 @@ PrefabInstance:
         You feed on sun-fed plankton but are hunted by seals, belugas, and humans.
         Plankton blooms have increased cod populations in parts of the Northern Seas,
         yet your kind faces challenges: overfishing wiped out generations, and noise
-        from boats large and small now interrupts your explorations. Sunlight shifts
+        from boats large and small now interrupts your explorations.  Sunlight shifts
         underwater colors\u2014reds to orange, yellows to green, purples to black\u2014shaping
-        your perception as you dive."
+        your visual perception as you dive."
       objectReference: {fileID: 0}
     - target: {fileID: 1132890709717014457, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -213,6 +213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171504345517452035, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130.73
       objectReference: {fileID: 0}
     - target: {fileID: 2299646737661062273, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -646,8 +651,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2951548926116398688, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951548926116398688, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 49.3
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3058378078339295991, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -819,6 +829,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 5445090235159632327, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5465435230125385648, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -838,6 +853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228923123415230419, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6693808746649496902, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -876,8 +896,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6811410600701275944, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -195.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6811410600701275944, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50.4
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 7549786987067589965, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -898,6 +923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575014412042047673, guid: eccad8ccbdb6b46a1983d714ef2754e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7876242754386008460, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -967,7 +997,7 @@ PrefabInstance:
     - target: {fileID: 9081344083579025495, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9187918338051146549, guid: eccad8ccbdb6b46a1983d714ef2754e5,
         type: 3}
@@ -2018,7 +2048,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 87.1}
+  m_AnchoredPosition: {x: -127.8, y: 100}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &130258513
@@ -8217,7 +8247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &298972473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8234,7 +8264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 87.1}
+  m_AnchoredPosition: {x: -127.8, y: 100}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &298972474
@@ -17445,6 +17475,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 467764534393401489, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 591120540293188292, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -18163,12 +18198,12 @@ PrefabInstance:
     - target: {fileID: 2847401508713175746, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2900525661287384772, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3045360493031465891, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
@@ -18305,6 +18340,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -105.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5161103903848578244, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256014566074442942, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5401318090919978991, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -18392,8 +18437,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6693635383939688645, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 826.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693635383939688645, guid: 5190f2017991840329abf93bbbdf7f60,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69.68
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 7041605130245089482, guid: 5190f2017991840329abf93bbbdf7f60,
         type: 3}
@@ -20912,7 +20962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1041872780
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20929,7 +20979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 120}
+  m_AnchoredPosition: {x: -127.8, y: 100}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1041872781
@@ -26125,6 +26175,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 26410577086009862, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -128
+      objectReference: {fileID: 0}
+    - target: {fileID: 26410577086009862, guid: 2bf440300d798445eb4c82540a042f36,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 9.2
       objectReference: {fileID: 0}
@@ -26271,9 +26326,18 @@ PrefabInstance:
         fish and krill to sustain their journey. You have encountered increasing
         human activity, such as ships and planes, and are familiar with the disruption
         it can cause. You nest in colonies\u2014boreal forests or islands\u2014always
-        near water, sand, and rocks.\r\n\r\nYour visual perception is framed by the
-        magnetic field and ultraviolet light, allowing sharp dives and precise long-distance
-        focus in search of fish and breeding grounds.\n\n\n"
+        near water, sand, and rocks.                          Your visual perception
+        is framed by the magnetic field and ultraviolet radiation.\r\n\r\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464249175546109733, guid: 2bf440300d798445eb4c82540a042f36,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684981221019759815, guid: 2bf440300d798445eb4c82540a042f36,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -279.6
       objectReference: {fileID: 0}
     - target: {fileID: 1684981221019759815, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -26318,7 +26382,7 @@ PrefabInstance:
     - target: {fileID: 2415969453327598370, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2491131564862059289, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -26510,6 +26574,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -119.399994
       objectReference: {fileID: 0}
+    - target: {fileID: 4413929805471350550, guid: 2bf440300d798445eb4c82540a042f36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4602824942829802494, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -26564,6 +26633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790777099655474835, guid: 2bf440300d798445eb4c82540a042f36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4838853925977754582, guid: 2bf440300d798445eb4c82540a042f36,
         type: 3}
@@ -28025,6 +28099,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 2063617803182048976, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2067883102732446183, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -28046,6 +28125,11 @@ PrefabInstance:
       value: -12.6
       objectReference: {fileID: 0}
     - target: {fileID: 2189034740999983475, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208460053561200667, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -28212,8 +28296,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3298912745735622841, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -79.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298912745735622841, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.2
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3328796821799468994, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
@@ -28235,25 +28324,27 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -79.200005
       objectReference: {fileID: 0}
+    - target: {fileID: 3468911324278894233, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3760478519964379759, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 104.6
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4740857865502557848, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_text
-      value: 'Networks of buildings and infrastructures now extend across Arctic
-        land and sea. Northern routes see traffic between Russia and Asia, while
-        unmanned ships are tested under remote radio guidance. Each drum and pipe,
-        every connection and structure, is a critical component of a planetary-scale
-        robot that supports contemporary life, mediating between humans, the environment,
-        and its forces.
-
-
-        Sonar scans and bathymetric maps guide icebreakers,
-        cargo ships, and oil tankers in exploiting the seafloor. Fossil carbon that
-        took millions of years to form is now burned in just hundreds.'
+      value: Networks of buildings and infrastructures now extend across Arctic land
+        and sea. Northern routes enable traffic between Russia and Asia, while unmanned
+        ships are tested under remote radio guidance. Each drum and pipe, every connection
+        and structure, is a critical component of a planetary-scale robot that supports
+        contemporary life, mediating between humans, the environment, and its forces.
+        Sonar scans and bathymetric maps guide icebreakers, cargo ships, and oil
+        tankers in exploiting the seafloor. Fossil carbon that took millions of years
+        to form is now burned in just hundreds.
       objectReference: {fileID: 0}
     - target: {fileID: 4740857865502557848, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
@@ -28363,9 +28454,14 @@ PrefabInstance:
     - target: {fileID: 8323481145854267769, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8426842054008539520, guid: bd6c796f65e274ebb8624a712d092a99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933024219026904558, guid: bd6c796f65e274ebb8624a712d092a99,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -30875,7 +30971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 87.1}
+  m_AnchoredPosition: {x: -127.8, y: 100}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1472054998
@@ -31222,7 +31318,8 @@ PrefabInstance:
         soil, regulate vegetation, and support Arctic ecology\u2014preventing shrub
         growth, enriching minerals, and compressing carbon into the ground. You pause
         to graze on lichen and work with the land, helping keep carbon stably stored.
-        It may eventually be metabolized by plants and critters."
+        It may eventually be metabolized by plants and critters.                              
+        Your visual perspective is defined by ultraviolet vision."
       objectReference: {fileID: 0}
     - target: {fileID: 1464249175546109733, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -31302,7 +31399,7 @@ PrefabInstance:
     - target: {fileID: 2415969453327598370, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2729316915754137732, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -31326,8 +31423,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3204350974065254005, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204350974065254005, guid: 001d30b8de3b64558ad3a03a47f406fd,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 54.6
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360353506077811599, guid: 001d30b8de3b64558ad3a03a47f406fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3455477364985377385, guid: 001d30b8de3b64558ad3a03a47f406fd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4240015533906737045, guid: 001d30b8de3b64558ad3a03a47f406fd,
         type: 3}
@@ -48771,7 +48883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 87.1}
+  m_AnchoredPosition: {x: -127.8, y: 100}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1785955068
@@ -55716,7 +55828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -127.8, y: 87.1}
+  m_AnchoredPosition: {x: -127.8, y: 100}
   m_SizeDelta: {x: -270, y: 8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1955971771
@@ -56136,8 +56248,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577632684985552761, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -189.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577632684985552761, guid: a4247b2ec2c4a415cae883071a335adf,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 72.1
+      value: -70.1
       objectReference: {fileID: 0}
     - target: {fileID: 1790604587205815028, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -56208,6 +56325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700208734479550228, guid: a4247b2ec2c4a415cae883071a335adf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 2746502169899952088, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -57032,7 +57154,7 @@ PrefabInstance:
     - target: {fileID: 5325156772397787811, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5560068564532918055, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -57180,6 +57302,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8399879315128189218, guid: a4247b2ec2c4a415cae883071a335adf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1020.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399879315128189218, guid: a4247b2ec2c4a415cae883071a335adf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -61
+      objectReference: {fileID: 0}
     - target: {fileID: 8449663924721176875, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
       propertyPath: m_RootOrder
@@ -57229,6 +57361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -105.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757448048804454636, guid: a4247b2ec2c4a415cae883071a335adf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9084750456088719671, guid: a4247b2ec2c4a415cae883071a335adf,
         type: 3}
@@ -67262,7 +67399,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
